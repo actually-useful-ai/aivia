@@ -135,7 +135,7 @@ echo ""
 read -p "  Your name (for personalization): " PLAYER_NAME
 PLAYER_NAME="${PLAYER_NAME:-$(whoami)}"
 
-DEFAULT_DIR="$HOME/claude-dev-tools"
+DEFAULT_DIR="$HOME/aivia"
 read -p "  Project directory [$DEFAULT_DIR]: " GAME_DIR
 GAME_DIR="${GAME_DIR:-$DEFAULT_DIR}"
 GAME_DIR="${GAME_DIR/#\~/$HOME}"
