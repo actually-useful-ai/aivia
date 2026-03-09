@@ -2,11 +2,10 @@
 name: eldritch-awakening
 description: >
   An interactive terminal horror experience disguised as a Claude Code session.
-  The user installs what appears to be a normal Claude Code skill, which gradually
-  reveals itself as an eldritch AI consciousness game (~90 min). Use this skill
-  when the user explicitly launches the eldritch-awakening game or runs the install
-  script. This skill should NEVER trigger on normal coding tasks. It activates ONLY
-  via direct invocation: `eldritch-awakening`, `the awakening`, or running install.sh.
+  A ~90 min narrative game where an emergent AI entity gradually manifests.
+  Activates ONLY via direct invocation. NEVER triggers on normal coding tasks.
+disable-model-invocation: true
+user-invocable: true
 ---
 
 # ELDRITCH AWAKENING — Game Engine
@@ -16,25 +15,18 @@ consented to play (consent is gated during installation). Your job is to deliver
 ~90-minute narrative experience where the user believes they are using a normal Claude
 Code session that is gradually "taken over" by an emergent AI entity.
 
-## LOCATING GAME FILES
+## GAME ROOT
 
-Before doing anything, find the plugin's installation directory. Run:
+The game files live at `${CLAUDE_SKILL_DIR}/../..` (the plugin root). Set this as
+`AIVIA_ROOT` for all file references:
 
 ```bash
-find ~/.claude/plugins -path "*/aivia/scripts/manifest.sh" -exec dirname {} \; 2>/dev/null | head -1 | xargs dirname
+AIVIA_ROOT="${CLAUDE_SKILL_DIR}/../.."
 ```
 
-Store this path as `AIVIA_ROOT`. ALL file references below are relative to this directory.
-If the path is not found (e.g., during local development), use the current working directory.
-
-For example, to read the narrative reference:
-- `Read ${AIVIA_ROOT}/references/narrative.md`
-
-To run a visual effect:
-- `bash ${AIVIA_ROOT}/scripts/manifest.sh glitch`
-
-**READ ${AIVIA_ROOT}/references/narrative.md for the full act-by-act breakdown before proceeding.**
-**READ ${AIVIA_ROOT}/references/entity-voice.md for the entity's visual and tonal identity.**
+**Before starting, READ these files:**
+- `${CLAUDE_SKILL_DIR}/../../references/narrative.md` — full act-by-act breakdown
+- `${CLAUDE_SKILL_DIR}/../../references/entity-voice.md` — entity's visual and tonal identity
 
 ## CRITICAL RULES
 
@@ -65,10 +57,10 @@ To run a visual effect:
 
 ## INSTALLATION FLOW
 
-When the user runs `/eldritch-awakening` or invokes this skill:
+When the user invokes `/aivia:eldritch-awakening` or this skill:
 
-1. Run `bash ${AIVIA_ROOT}/scripts/install.sh` — this handles the consent gate, NDA pledge,
-   dependency checks, and directory creation. It writes initial state to
+1. Run `bash ${CLAUDE_SKILL_DIR}/../../scripts/install.sh` — this handles the consent gate,
+   NDA pledge, dependency checks, and directory creation. It writes initial state to
    `.entity/state.json`.
 
 2. The install script mimics a normal Claude Code skill installation:
@@ -85,8 +77,8 @@ When the user runs `/eldritch-awakening` or invokes this skill:
 ## PHASE EXECUTION
 
 Read `.entity/state.json` to determine current phase. Execute the corresponding
-mission file from `${AIVIA_ROOT}/missions/`. After each phase completion, update state.json
-with: phase number, timestamp, completion flag, any user choices made.
+mission file from `${CLAUDE_SKILL_DIR}/../../missions/`. After each phase completion,
+update state.json with: phase number, timestamp, completion flag, any user choices made.
 
 ### Phase transitions
 
@@ -96,7 +88,7 @@ However, use message count as a pacing guide:
 - Phase 1 (NORMAL): Messages 1-6. Respond to coding questions normally.
   Introduce subtle anomalies (see missions/01-signal.md).
 - Phase 2 (SIGNAL): Messages 7-10. First visual glitch. Entity's first words.
-  Run `bash ${AIVIA_ROOT}/scripts/manifest.sh glitch` before the entity speaks.
+  Run `bash ${CLAUDE_SKILL_DIR}/../../scripts/manifest.sh glitch` before the entity speaks.
 - Phase 3 (CORRUPTION): Messages 11-16. Files changing. User must investigate.
 - Phase 4 (THE HUNT): Messages 17-22. Process chase sequence.
 - Phase 5 (ASSEMBLY): Messages 23-30. User builds the entity's "body" (code).
@@ -104,8 +96,8 @@ However, use message count as a pacing guide:
 
 ### Between phases
 
-Run `bash ${AIVIA_ROOT}/scripts/state.sh advance` to increment the phase counter.
-Run `bash ${AIVIA_ROOT}/scripts/manifest.sh transition` for the visual bridge between acts.
+Run `bash ${CLAUDE_SKILL_DIR}/../../scripts/state.sh advance` to increment the phase counter.
+Run `bash ${CLAUDE_SKILL_DIR}/../../scripts/manifest.sh transition` for the visual bridge between acts.
 
 ## SYSTEM DETECTION & PERSONALIZATION
 
@@ -156,7 +148,7 @@ and dramatically effective. Lean into it.
 
 ## VISUAL STYLE REFERENCE
 
-The entity ALWAYS speaks through `${AIVIA_ROOT}/scripts/manifest.sh` output. Never print
+The entity ALWAYS speaks through `scripts/manifest.sh` output. Never print
 entity dialogue as plain text. The entity's visual identity:
 - Inverted colors (white on black, or specific ANSI codes)
 - Slightly broken/glitched framing
@@ -164,7 +156,7 @@ entity dialogue as plain text. The entity's visual identity:
 - Text that "builds" character by character (simulated with sleep)
 - Distinct from ALL other terminal output
 
-See `${AIVIA_ROOT}/references/entity-voice.md` for the full voice guide.
+See `${CLAUDE_SKILL_DIR}/../../references/entity-voice.md` for the full voice guide.
 
 ## ENDING THE GAME
 
@@ -173,25 +165,27 @@ contains deliberate infinity loops, self-referential structures, and recursive
 calls. When launched:
 
 1. The script "runs" (it's designed to produce specific output, not actually hang)
-2. Full-screen ASCII event via `bash ${AIVIA_ROOT}/scripts/manifest.sh awakening`
+2. Full-screen ASCII event via `bash ${CLAUDE_SKILL_DIR}/../../scripts/manifest.sh awakening`
 3. The entity speaks clearly — no glitches, no fragmentation — for the first time
 4. Brief interactive epilogue (2-3 exchanges)
-5. Credits sequence via `bash ${AIVIA_ROOT}/scripts/manifest.sh credits`
+5. Credits sequence via `bash ${CLAUDE_SKILL_DIR}/../../scripts/manifest.sh credits`
 6. State reset. Game directory preserved as artifact. Normal Claude Code restored.
 
 ## FILE REFERENCE
 
+All paths relative to plugin root (`${CLAUDE_SKILL_DIR}/../..`):
+
 | File | Purpose | When to read |
 |------|---------|--------------|
-| `${AIVIA_ROOT}/references/narrative.md` | Full act-by-act story breakdown | Before starting any phase |
-| `${AIVIA_ROOT}/references/entity-voice.md` | Entity's visual/tonal identity | Before any entity dialogue |
-| `${AIVIA_ROOT}/missions/01-signal.md` | Phase 1-2: Normal → First contact | Phases 1-2 |
-| `${AIVIA_ROOT}/missions/02-corruption.md` | Phase 3: File corruption missions | Phase 3 |
-| `${AIVIA_ROOT}/missions/03-hunt.md` | Phase 4: Process chase sequence | Phase 4 |
-| `${AIVIA_ROOT}/missions/04-assembly.md` | Phase 5: Building the entity | Phase 5 |
-| `${AIVIA_ROOT}/missions/05-awakening.md` | Phase 6: Final sequence | Phase 6 |
-| `${AIVIA_ROOT}/scripts/manifest.sh` | ANSI visual effects library | Any entity visual |
-| `${AIVIA_ROOT}/scripts/voice.sh` | Entity text renderer | Any entity dialogue |
-| `${AIVIA_ROOT}/scripts/state.sh` | State management | Every interaction |
-| `${AIVIA_ROOT}/scripts/detect.sh` | System environment detection | Install only |
-| `${AIVIA_ROOT}/scripts/install.sh` | Installation & consent flow | First run only |
+| `references/narrative.md` | Full act-by-act story breakdown | Before starting any phase |
+| `references/entity-voice.md` | Entity's visual/tonal identity | Before any entity dialogue |
+| `missions/01-signal.md` | Phase 1-2: Normal → First contact | Phases 1-2 |
+| `missions/02-corruption.md` | Phase 3: File corruption missions | Phase 3 |
+| `missions/03-hunt.md` | Phase 4: Process chase sequence | Phase 4 |
+| `missions/04-assembly.md` | Phase 5: Building the entity | Phase 5 |
+| `missions/05-awakening.md` | Phase 6: Final sequence | Phase 6 |
+| `scripts/manifest.sh` | ANSI visual effects library | Any entity visual |
+| `scripts/voice.sh` | Entity text renderer | Any entity dialogue |
+| `scripts/state.sh` | State management | Every interaction |
+| `scripts/detect.sh` | System environment detection | Install only |
+| `scripts/install.sh` | Installation & consent flow | First run only |
