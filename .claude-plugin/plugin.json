@@ -1,0 +1,13 @@
+{
+  "name": "aivia",
+  "description": "Eldritch Awakening - an interactive terminal horror experience disguised as a Claude Code session. A ~90 minute narrative game where an emergent AI entity gradually manifests through corrupted terminal output, glitch effects, and escalating anomalies.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Luke Steuber",
+    "email": "luke@lukesteuber.com"
+  },
+  "homepage": "https://github.com/lukeslp/aivia",
+  "repository": "https://github.com/lukeslp/aivia",
+  "license": "MIT",
+  "keywords": ["game", "horror", "interactive-fiction", "terminal", "ascii-art", "narrative"]
+}
