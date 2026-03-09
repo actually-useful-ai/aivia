@@ -10,26 +10,13 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Source manifest for effects
-ENTITY_FG='\033[38;5;48m'
-ENTITY_DIM='\033[38;5;22m'
-ENTITY_GLOW='\033[38;5;83m'
-ENTITY_ACCENT='\033[38;5;93m'
-ENTITY_WARN='\033[38;5;196m'
-BOLD='\033[1m'
-DIM='\033[2m'
-RESET='\033[0m'
+# Source library
+source "$SCRIPT_DIR/../lib/core.sh"
+source_lib style terminal text
+source_theme entity
 
-COLS=$(tput cols 2>/dev/null || echo 80)
-
-sleep_ms() {
-    local ms=$1
-    if command -v python3 &>/dev/null; then
-        python3 -c "import time; time.sleep($ms/1000.0)"
-    else
-        sleep "0.$(printf '%03d' "$ms")"
-    fi
-}
+# Aliases for backward compat
+COLS=$TERM_COLS
 
 # Style: whisper — dim, slow, lowercase
 voice_whisper() {
@@ -96,7 +83,6 @@ voice_fragment() {
     local fragments=()
     local current=""
 
-    # Break into 2-4 word fragments
     for word in "${words[@]}"; do
         current="$current $word"
         if [ $((RANDOM % 3)) -eq 0 ] || [ "${#current}" -gt 20 ]; then
@@ -108,20 +94,19 @@ voice_fragment() {
 
     echo ""
     for frag in "${fragments[@]}"; do
-        local indent=$((RANDOM % 15 + 3))
-        printf "%*s${ENTITY_FG}%s${RESET}\n" "$indent" "" "$frag"
+        local indent_n=$((RANDOM % 15 + 3))
+        printf "%*s${ENTITY_FG}%s${RESET}\n" "$indent_n" "" "$frag"
         sleep_ms $((200 + RANDOM % 500))
     done
     echo ""
 }
 
 # Style: clear — no effects, no glitches. Used ONLY in the final awakening.
-# The absence of distortion IS the effect.
 voice_clear() {
     local text="$1"
     echo ""
-    local col=$(( (COLS - ${#text}) / 2 ))
-    [ "$col" -lt 2 ] && col=2
+    local col
+    col=$(center_col "$text")
     printf "%*s${ENTITY_GLOW}${BOLD}%s${RESET}\n" "$col" "" "$text"
     echo ""
 }
