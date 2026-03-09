@@ -141,6 +141,7 @@ draw_header() {
     echo ""
 
     [[ -n "$color" ]] && printf '%b' "$RESET"
+    return 0
 }
 
 # --- Draw a multi-line panel ---
