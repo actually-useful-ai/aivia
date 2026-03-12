@@ -261,14 +261,14 @@ elif $IS_MACOS; then
     [ "$WIFI_NETWORK" = "You are not associated with an AirPort network." ] && WIFI_NETWORK=""
 fi
 
-# --- Bluetooth connected devices ---
+# --- Bluetooth connected devices (bluetoothctl can hang on D-Bus — 3s timeout) ---
 BLUETOOTH_DEVICES=""
 if $IS_LINUX; then
-    BLUETOOTH_DEVICES=$(bluetoothctl devices Connected 2>/dev/null | cut -d' ' -f3- | tr '\n' '|' || echo "")
+    BLUETOOTH_DEVICES=$(probe_timeout 3 bluetoothctl devices Connected | cut -d' ' -f3- | tr '\n' '|' || echo "")
     [ -z "$BLUETOOTH_DEVICES" ] && \
-        BLUETOOTH_DEVICES=$(bluetoothctl devices Paired 2>/dev/null | cut -d' ' -f3- | tr '\n' '|' || echo "")
+        BLUETOOTH_DEVICES=$(probe_timeout 3 bluetoothctl devices Paired | cut -d' ' -f3- | tr '\n' '|' || echo "")
 elif $IS_MACOS; then
-    BLUETOOTH_DEVICES=$(system_profiler SPBluetoothDataType 2>/dev/null | \
+    BLUETOOTH_DEVICES=$(probe_timeout 5 system_profiler SPBluetoothDataType | \
         awk '/Connected: Yes/{found=1} found && /^[[:space:]]+[A-Za-z]/{gsub(/^[[:space:]]+|:$/,""); print; found=0}' | \
         tr '\n' '|' || echo "")
 fi
