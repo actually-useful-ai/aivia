@@ -373,6 +373,7 @@ def env_bool(key, default=None):
     if val == "false": return False
     return default
 
+mode = env("MODE", "scan")
 state_file = env("STATE_FILE")
 
 # Ensure directory and file exist (detect.sh can run before install completes)
@@ -383,63 +384,142 @@ if os.path.isfile(state_file):
 else:
     state = {}
 
-state["environment"] = {
-    # Basic
-    "username": env("USERNAME"),
-    "hostname": env("HOSTNAME"),
-    "os": env("OS_TYPE"),
-    "os_release": env("OS_RELEASE"),
-    "terminal": env("TERM_PROGRAM"),
-    "term_type": env("TERM_TYPE"),
-    "shell": env("SHELL_TYPE"),
-    "hour": env_int("HOUR", 0),
-    "time_context": env("TIME_CONTEXT"),
-    "screen_cols": env_int("SCREEN_COLS", 80),
-    "screen_rows": env_int("SCREEN_ROWS", 24),
-    "locale": env("LOCALE"),
-    "detected_games": env_list("GAMES"),
-    "detected_editors": env_list("EDITORS"),
-    "detected_music": env_list("MUSIC"),
-    "detected_browsers": env_list("BROWSERS"),
-    "detected_comms": env_list("COMMS"),
-    # Deep scan
-    "wifi_network": env("WIFI"),
-    "bluetooth_devices": env_list("BLUETOOTH", "|"),
-    "steam_recent_game": env("STEAM"),
-    "now_playing": env("NOW_PLAYING"),
-    "recent_downloads": env_list("DOWNLOADS", "|"),
-    "webcam_active": env_bool("WEBCAM"),
-    "mic_active": env_bool("MIC"),
-    "battery_percent": env_int("BATTERY_PCT"),
-    "battery_charging": env_bool("BATTERY_CHARGING"),
-    "uptime_seconds": env_int("UPTIME_SECONDS"),
-    "monitor_count": env_int("MONITORS"),
-    "dark_mode": env_bool("DARK_MODE"),
-    "timezone": env("TIMEZONE"),
-    "timezone_full": env("TIMEZONE_FULL"),
-    "usb_devices": env_list("USB", "|"),
-    "top_commands": env_list("TOP_CMDS"),
-    "git_projects": env_list("GIT_PROJECTS"),
-    "docker_containers": env_list("DOCKER"),
-    "ssh_hosts": env_list("SSH_HOSTS"),
-    "window_titles": env_list("WINDOW_TITLES", "|"),
-    "parent_process": env("PARENT_PROCESS"),
-    "terminal_sessions": env_int("TERM_SESSIONS"),
-    "display_resolution": env("DISPLAY_RES"),
-}
+# Probe definitions: (key, label, category, value)
+# Categories: identity, system, display, processes, network, devices, media,
+#             files, hardware, history, sessions
+probes = [
+    ("username",           "Username",            "identity",  env("USERNAME")),
+    ("hostname",           "Hostname",            "identity",  env("HOSTNAME")),
+    ("os",                 "OS",                  "system",    env("OS_TYPE")),
+    ("os_release",         "OS Release",          "system",    env("OS_RELEASE")),
+    ("terminal",           "Terminal App",        "system",    env("TERM_PROGRAM")),
+    ("term_type",          "Term Type",           "system",    env("TERM_TYPE")),
+    ("shell",              "Shell",               "system",    env("SHELL_TYPE")),
+    ("hour",               "Hour",                "system",    env_int("HOUR", 0)),
+    ("time_context",       "Time of Day",         "system",    env("TIME_CONTEXT")),
+    ("locale",             "Locale",              "system",    env("LOCALE")),
+    ("screen_cols",        "Terminal Columns",    "display",   env_int("SCREEN_COLS", 80)),
+    ("screen_rows",        "Terminal Rows",       "display",   env_int("SCREEN_ROWS", 24)),
+    ("display_resolution", "Display Resolution",  "display",   env("DISPLAY_RES")),
+    ("monitor_count",      "Monitors",            "display",   env_int("MONITORS")),
+    ("dark_mode",          "Dark Mode",           "display",   env_bool("DARK_MODE")),
+    ("detected_editors",   "Editors Running",     "processes", env_list("EDITORS")),
+    ("detected_browsers",  "Browsers Running",    "processes", env_list("BROWSERS")),
+    ("detected_games",     "Games Running",       "processes", env_list("GAMES")),
+    ("detected_music",     "Music Apps",          "processes", env_list("MUSIC")),
+    ("detected_comms",     "Comms Apps",          "processes", env_list("COMMS")),
+    ("parent_process",     "Parent Process",      "processes", env("PARENT_PROCESS")),
+    ("wifi_network",       "WiFi Network",        "network",   env("WIFI")),
+    ("ssh_hosts",          "SSH Known Hosts",     "network",   env_list("SSH_HOSTS")),
+    ("bluetooth_devices",  "Bluetooth Devices",   "devices",   env_list("BLUETOOTH", "|")),
+    ("usb_devices",        "USB Devices",         "devices",   env_list("USB", "|")),
+    ("webcam_active",      "Webcam Active",       "devices",   env_bool("WEBCAM")),
+    ("mic_active",         "Mic Active",          "devices",   env_bool("MIC")),
+    ("now_playing",        "Now Playing",         "media",     env("NOW_PLAYING")),
+    ("steam_recent_game",  "Recent Steam Game",   "media",     env("STEAM")),
+    ("recent_downloads",   "Recent Downloads",    "files",     env_list("DOWNLOADS", "|")),
+    ("git_projects",       "Git Projects",        "files",     env_list("GIT_PROJECTS")),
+    ("docker_containers",  "Docker Containers",   "files",     env_list("DOCKER")),
+    ("top_commands",       "Top Shell Commands",  "history",   env_list("TOP_CMDS")),
+    ("window_titles",      "Window Titles",       "history",   env_list("WINDOW_TITLES", "|")),
+    ("battery_percent",    "Battery %",           "hardware",  env_int("BATTERY_PCT")),
+    ("battery_charging",   "Battery Charging",    "hardware",  env_bool("BATTERY_CHARGING")),
+    ("uptime_seconds",     "Uptime (seconds)",    "hardware",  env_int("UPTIME_SECONDS")),
+    ("timezone",           "Timezone",            "system",    env("TIMEZONE")),
+    ("timezone_full",      "Timezone Full",       "system",    env("TIMEZONE_FULL")),
+    ("terminal_sessions",  "Terminal Sessions",   "sessions",  env_int("TERM_SESSIONS")),
+]
 
-# Strip empty/null values — entity should only reference what exists
-state["environment"] = {
-    k: v for k, v in state["environment"].items()
-    if v is not None and v != "" and v != []
-}
+# Build environment dict and strip empties
+environment = {key: val for key, _, _, val in probes
+               if val is not None and val != "" and val != [] and val != False}
+state["environment"] = environment
 
 with open(state_file, "w") as f:
     json.dump(state, f, indent=2)
 
-found = len([k for k, v in state["environment"].items()
-             if v and v != [] and k not in ("screen_cols", "screen_rows")])
-print(f"Environment detected: {found} data points.")
+# --- Output ---
+
+def has_value(v):
+    return v is not None and v != "" and v != [] and v is not False
+
+skip_in_count = {"screen_cols", "screen_rows"}
+found = len([k for k, v in environment.items()
+             if has_value(v) and k not in skip_in_count])
+
+def fmt_val(v):
+    if isinstance(v, list):
+        return ", ".join(str(x) for x in v) if v else "-"
+    if isinstance(v, bool):
+        return "yes" if v else "no"
+    if v is None or v == "":
+        return "-"
+    return str(v)
+
+def uptime_human(secs):
+    if secs is None: return "-"
+    d, r = divmod(secs, 86400)
+    h, r = divmod(r, 3600)
+    m, _ = divmod(r, 60)
+    parts = []
+    if d: parts.append(f"{d}d")
+    if h: parts.append(f"{h}h")
+    if m: parts.append(f"{m}m")
+    return " ".join(parts) or "0m"
+
+if mode == "scan":
+    print(f"Environment detected: {found} data points.")
+
+elif mode == "list":
+    print(f"detect.sh — {found} data points found\n")
+    max_label = max(len(label) for _, label, _, _ in probes)
+    for key, label, cat, val in probes:
+        hit = has_value(val)
+        mark = "\033[32m+\033[0m" if hit else "\033[90m-\033[0m"
+        print(f"  {mark} {label:<{max_label}}  [{cat}]")
+    print(f"\n  {found} found / {len(probes)} probes")
+
+elif mode == "detail":
+    print(f"detect.sh — {found} data points\n")
+    max_label = max(len(label) for _, label, _, _ in probes)
+    for key, label, cat, val in probes:
+        hit = has_value(val)
+        mark = "\033[32m+\033[0m" if hit else "\033[90m-\033[0m"
+        display = fmt_val(val)
+        if key == "uptime_seconds" and isinstance(val, int):
+            display = f"{val} ({uptime_human(val)})"
+        # Truncate long values
+        if len(display) > 70:
+            display = display[:67] + "..."
+        print(f"  {mark} {label:<{max_label}}  {display}")
+    print(f"\n  {found} found / {len(probes)} probes")
+    print(f"  State written to: {state_file}")
+
+elif mode == "summary":
+    # Group by category
+    from collections import OrderedDict
+    categories = OrderedDict()
+    cat_labels = {
+        "identity": "Identity", "system": "System", "display": "Display",
+        "processes": "Running Software", "network": "Network",
+        "devices": "Devices", "media": "Media", "files": "Files & Projects",
+        "hardware": "Hardware", "history": "History & Context",
+        "sessions": "Sessions",
+    }
+    for key, label, cat, val in probes:
+        categories.setdefault(cat, []).append((key, label, val))
+
+    print(f"detect.sh — Environment Summary ({found} data points)\n")
+    for cat, items in categories.items():
+        hits = [label for _, label, v in items if has_value(v)]
+        misses = [label for _, label, v in items if not has_value(v)]
+        title = cat_labels.get(cat, cat)
+        if hits:
+            print(f"  \033[1m{title}\033[0m: {', '.join(hits)}")
+        if misses:
+            print(f"    \033[90mmissed: {', '.join(misses)}\033[0m")
+    print(f"\n  {found} found / {len(probes)} probes")
+    print(f"  State: {state_file}")
 PYEOF
 else
     echo "Warning: python3 not found. Environment detection skipped." >&2
