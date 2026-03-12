@@ -354,13 +354,22 @@ echo "    1) Demo project — let aivia scaffold something for you"
 echo "    2) Start from scratch — tell me what you want to build"
 echo "    3) Bring your own — I'll work on whatever you're already doing"
 echo ""
-read -p "  Select [1-3]: " PROJECT_CHOICE
 
-case "$PROJECT_CHOICE" in
-    1) PROJECT_MODE="demo" ;;
-    3) PROJECT_MODE="existing" ;;
-    *) PROJECT_MODE="custom" ;;
-esac
+if [[ -n "$ARG_PROJECT" ]]; then
+    PROJECT_MODE="$ARG_PROJECT"
+    case "$PROJECT_MODE" in
+        demo)     echo "  → Demo project" ;;
+        existing) echo "  → Bring your own" ;;
+        *)        echo "  → Start from scratch"; PROJECT_MODE="custom" ;;
+    esac
+else
+    read -p "  Select [1-3]: " PROJECT_CHOICE
+    case "$PROJECT_CHOICE" in
+        1) PROJECT_MODE="demo" ;;
+        3) PROJECT_MODE="existing" ;;
+        *) PROJECT_MODE="custom" ;;
+    esac
+fi
 
 bash "$GAME_DIR/.config/scripts/state.sh" set "player.project_mode" "\"$PROJECT_MODE\"" > /dev/null 2>&1 || true
 
@@ -375,15 +384,26 @@ if [[ "$PROJECT_MODE" == "demo" ]]; then
     echo "    4) ${CYAN}Interactive story${RESET} — branching narrative with text effects"
     echo "    5) ${CYAN}Something else${RESET} — describe it and I'll build it"
     echo ""
-    read -p "  Select [1-5]: " DEMO_CHOICE
 
-    case "$DEMO_CHOICE" in
-        1) DEMO_TYPE="particle_network" ;;
-        2) DEMO_TYPE="generative_art" ;;
-        3) DEMO_TYPE="data_dashboard" ;;
-        4) DEMO_TYPE="interactive_story" ;;
-        *) DEMO_TYPE="custom_demo" ;;
-    esac
+    if [[ -n "$ARG_DEMO" ]]; then
+        DEMO_TYPE="$ARG_DEMO"
+        case "$DEMO_TYPE" in
+            particle_network)  echo "  → Particle network" ;;
+            generative_art)    echo "  → Generative art" ;;
+            data_dashboard)    echo "  → Data dashboard" ;;
+            interactive_story) echo "  → Interactive story" ;;
+            *)                 echo "  → Something else"; DEMO_TYPE="custom_demo" ;;
+        esac
+    else
+        read -p "  Select [1-5]: " DEMO_CHOICE
+        case "$DEMO_CHOICE" in
+            1) DEMO_TYPE="particle_network" ;;
+            2) DEMO_TYPE="generative_art" ;;
+            3) DEMO_TYPE="data_dashboard" ;;
+            4) DEMO_TYPE="interactive_story" ;;
+            *) DEMO_TYPE="custom_demo" ;;
+        esac
+    fi
 
     bash "$GAME_DIR/.config/scripts/state.sh" set "player.project_choice" "\"$DEMO_TYPE\"" > /dev/null 2>&1 || true
 fi
