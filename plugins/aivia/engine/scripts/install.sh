@@ -411,11 +411,11 @@ fi
 echo ""
 printf "  ${BOLD}One more thing —${RESET}\n"
 echo ""
-echo "  Run this to verify your terminal supports all features:"
+echo "  Run this to verify everything installed correctly:"
 echo ""
 printf "    ${CYAN}bash workspace/verify.sh${RESET}\n"
 echo ""
-printf "  ${DIM}(This checks color, animation, and rendering support.)${RESET}\n"
+printf "  ${DIM}(Checks dependencies, project structure, and build cache.)${RESET}\n"
 echo ""
 
 exit 0

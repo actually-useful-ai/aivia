@@ -241,8 +241,13 @@
         "path": "engine/scripts/verify.sh",
         "act_transition": "0-1 (post-install)",
         "corruption_level": 0,
-        "visual_style": "color sweep, rain, plasma — impressive but clean",
-        "framing_escalation": "routine"
+        "visual_style": "npm-verify aesthetic — dependency checks, progress bar, checksum. 3 micro-glitches.",
+        "framing_escalation": "routine",
+        "glitches": [
+          "entity-bootstrap check takes 800ms (others 200ms), spinner briefly shows ░",
+          "build cache progress bar: ░ appears at ~47% for 2 frames",
+          "dim '░ signal ░' flashes 100ms before final 'All checks passed' line"
+        ]
       },
       "diagnostic": {
         "path": "engine/scripts/diagnostic.sh",
