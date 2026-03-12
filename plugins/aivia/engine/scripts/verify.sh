@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # ============================================================================
-# verify.sh — Terminal Environment Verification
-# Purpose: Player-executed script right after install. Shows off terminal
-#          capabilities via impressive ANSI effects while looking like a
-#          legitimate environment check. Establishes the "run this script"
-#          pattern for later breakout scripts.
+# verify.sh — Post-Install Verification
+# Purpose: Player-executed script right after install. Looks like a legitimate
+#          dependency/project verification (npm run verify style). Establishes
+#          the "run this script" pattern for later breakout scripts.
+#          Contains 3 nearly-invisible entity glitches at corruption level 0.
 # Usage: bash verify.sh [game_dir]
 # ============================================================================
 
@@ -24,200 +24,184 @@ export AIVIA_GAME_DIR="$GAME_DIR"
 
 # Source engine from .config/
 source "$GAME_DIR/.config/lib/core.sh"
-source_lib style terminal text animation progress
+source_lib style terminal progress
 source_theme entity
-
-# Source effect modules for the wow moments
-for _ef in "$GAME_DIR/.config/scripts"/manifest_*.sh; do
-    [ -f "$_ef" ] && source "$_ef"
-done
 
 # --- State ---
 STATE_FILE="$GAME_DIR/.config/cache/session.json"
 
-# --- Main function (wraps everything so we can use local) ---
-main() {
-    # ============================================================================
-    # PHASE 1: Professional header (2 seconds)
-    # ============================================================================
+# --- Helpers ---
+check_pass() {
+    local name="$1"
+    local pad_to=38
+    local dots=""
+    local name_len=${#name}
+    local dot_count=$((pad_to - name_len))
+    [[ $dot_count -lt 3 ]] && dot_count=3
+    for ((i=0; i<dot_count; i++)); do dots+="."; done
+    printf "  %s %s " "$name" "$dots"
+    sleep_ms "$((150 + RANDOM % 100))"
+    printf "\033[32m✓\033[0m\n"
+}
 
+check_pass_slow() {
+    # Like check_pass but with entity-bootstrap glitch:
+    # takes longer, spinner briefly shows ░ before ✓
+    local name="$1"
+    local pad_to=38
+    local dots=""
+    local name_len=${#name}
+    local dot_count=$((pad_to - name_len))
+    [[ $dot_count -lt 3 ]] && dot_count=3
+    for ((i=0; i<dot_count; i++)); do dots+="."; done
+    printf "  %s %s " "$name" "$dots"
+    # Normal packages take 150-250ms. This one takes 800ms.
+    sleep_ms 500
+    # GLITCH 1: ░ appears for one frame where ✓ should be
+    printf "\033[38;5;22m░\033[0m"
+    sleep_ms 80
+    # Overwrite with real checkmark
+    printf "\b\033[32m✓\033[0m\n"
+    sleep_ms 100
+}
+
+progress_bar() {
+    local total=40
+    local bar_width=30
+    printf "  ["
+    for ((i=1; i<=total; i++)); do
+        local filled=$((i * bar_width / total))
+        local pct=$((i * 100 / total))
+
+        printf "\r  ["
+        for ((j=1; j<=bar_width; j++)); do
+            if [[ $j -le $filled ]]; then
+                # GLITCH 2: at exactly 47%, position 14 shows ░ for 2 frames
+                if [[ $pct -ge 45 && $pct -le 49 && $j -eq 14 ]]; then
+                    printf "\033[38;5;22m░\033[0m"
+                else
+                    printf "\033[32m█\033[0m"
+                fi
+            else
+                printf "\033[90m·\033[0m"
+            fi
+        done
+        printf "] %3d%%" "$pct"
+        sleep_ms 40
+    done
+    printf "\n"
+}
+
+# --- Main ---
+main() {
     clear_screen
     hide_cursor
 
+    # ================================================================
+    # HEADER
+    # ================================================================
     echo ""
-    printf "  ${BOLD}Terminal Environment Check${RESET}\n"
-    printf "  ${DIM}aivia v1.0.0${RESET}\n"
+    printf "  \033[1mPost-install verification\033[0m\n"
+    printf "  \033[2maivia v1.0.0\033[0m\n"
     echo ""
-
-    sleep_ms 400
-
-    # Quick legitimate checks
-    printf "  ${DIM}[${RESET}${UI_SUCCESS}✓${RESET}${DIM}]${RESET} UTF-8 encoding"
-    sleep_ms 300
-    echo " — ✓ verified"
-
-    printf "  ${DIM}[${RESET}${UI_SUCCESS}✓${RESET}${DIM}]${RESET} ANSI escape codes"
-    sleep_ms 200
-    echo " — ✓ verified"
-
-    printf "  ${DIM}[${RESET}${UI_SUCCESS}✓${RESET}${DIM}]${RESET} 256-color support"
-    sleep_ms 200
-    # Actually show the colors — quick 256-color band
-    printf " — "
-    for i in $(seq 22 6 83); do
-        printf "\033[38;5;${i}m█"
-    done
-    printf "${RESET} verified\n"
-
-    printf "  ${DIM}[${RESET}${UI_SUCCESS}✓${RESET}${DIM}]${RESET} Cursor positioning"
-    sleep_ms 200
-    echo " — ✓ verified"
-
-    echo ""
-    sleep_ms 400
-
-    # ============================================================================
-    # PHASE 2: "Testing visual rendering" — THE WOW MOMENT
-    # ============================================================================
-
-    printf "  ${BOLD}Testing visual rendering...${RESET}\n"
-    sleep_ms 600
-
-    # --- Color wave sweep (2 seconds) ---
-    local v_rows=$TERM_ROWS
-    local v_cols=$TERM_COLS
-
-    for ((row=1; row<=v_rows; row++)); do
-        move_cursor "$row" 1
-        local hue_base=$((row * 60 / v_rows))
-        for ((col=1; col<=v_cols; col++)); do
-            local color_idx=$(( (hue_base + col * 60 / v_cols) % 60 + 22 ))
-            printf "\033[38;5;${color_idx}m░"
-        done
-        sleep_ms 15
-    done
-
     sleep_ms 300
 
-    # --- Rain of entity chars (3 seconds) ---
-    local drops=()
-    local num_drops=$((v_cols / 3))
+    # ================================================================
+    # DEPENDENCY CHECKS
+    # ================================================================
+    printf "  \033[1mChecking dependencies...\033[0m\n"
+    echo ""
 
-    # Initialize drops
-    for ((i=0; i<num_drops; i++)); do
-        drops+=("$((RANDOM % v_cols + 1)):$((RANDOM % v_rows)):-$((RANDOM % 10))")
-    done
+    check_pass "chalk@5.3.0"
+    check_pass "cli-progress@1.0.2"
+    check_pass "figlet@1.7.0"
+    check_pass "signal-intercept@0.9.1"
+    check_pass "deep-listener@2.0.0"
+    check_pass "recursive-self@1.1.1"
+    check_pass_slow "entity-bootstrap@0.0.1"
+    check_pass "awareness-kernel@0.1.0"
 
-    local frame=0
-    local end_frame=60  # 3 seconds at 50ms per frame
+    echo ""
+    printf "  \033[2m8 packages verified\033[0m\n"
+    echo ""
+    sleep_ms 300
 
-    while [[ $frame -lt $end_frame ]]; do
-        for ((d=0; d<${#drops[@]}; d++)); do
-            IFS=':' read -r dcol drow ddelay <<< "${drops[$d]}"
+    # ================================================================
+    # PROJECT STRUCTURE
+    # ================================================================
+    printf "  \033[1mValidating project structure...\033[0m\n"
+    echo ""
 
-            if [[ $ddelay -gt 0 ]]; then
-                drops[$d]="$dcol:$drow:$((ddelay - 1))"
-                continue
-            fi
-
-            # Erase old position
-            if [[ $drow -gt 0 && $drow -le $v_rows ]]; then
-                move_cursor "$drow" "$dcol"
-                printf " "
-            fi
-
-            # Advance
-            drow=$((drow + 1))
-
-            if [[ $drow -gt $v_rows ]]; then
-                dcol=$((RANDOM % v_cols + 1))
-                drow=1
-            fi
-
-            # Draw new position
-            if [[ $drow -gt 0 && $drow -le $v_rows ]]; then
-                move_cursor "$drow" "$dcol"
-                local chars="░▒▓│┃╎╏"
-                local ci=$((RANDOM % ${#chars}))
-                local green_idx=$(( 22 + (drow * 61 / v_rows) ))
-                printf "\033[38;5;${green_idx}m${chars:$ci:1}"
-            fi
-
-            drops[$d]="$dcol:$drow:0"
-        done
-
-        sleep_ms 50
-        frame=$((frame + 1))
-    done
-
-    # --- Brief plasma burst (2 seconds) ---
-    local plasma_end=$((frame + 40))
-    while [[ $frame -lt $plasma_end ]]; do
-        local prow=$((RANDOM % v_rows + 1))
-        local pcol=$((RANDOM % v_cols + 1))
-
-        local wave=$(( (prow * 3 + pcol * 2 + frame * 5) % 60 + 22 ))
-        move_cursor "$prow" "$pcol"
-        local pchars="·•○◎◉"
-        local pi=$((RANDOM % ${#pchars}))
-        printf "\033[38;5;${wave}m${pchars:$pi:1}"
-
-        if [[ $((RANDOM % 3)) -eq 0 ]]; then
-            local crow=$((RANDOM % v_rows + 1))
-            local ccol=$((RANDOM % v_cols + 1))
-            move_cursor "$crow" "$ccol"
-            printf " "
+    # Actually check real dirs
+    local dirs=(".config/cache" ".config/scripts" ".config/lib" ".config/theme" "workspace")
+    for d in "${dirs[@]}"; do
+        if [[ -d "$GAME_DIR/$d" ]]; then
+            check_pass "$d/"
+        else
+            printf "  %-38s \033[31m✗ missing\033[0m\n" "$d/"
         fi
-
-        sleep_ms 25
-        frame=$((frame + 1))
     done
 
-    printf "${RESET}"
+    echo ""
+    sleep_ms 300
+
+    # ================================================================
+    # BUILD CACHE
+    # ================================================================
+    printf "  \033[1mInitializing build cache...\033[0m\n"
+    echo ""
+
+    progress_bar
+
+    echo ""
+    printf "  \033[2mCache initialized\033[0m\n"
+    echo ""
     sleep_ms 400
 
-    # ============================================================================
-    # PHASE 3: Clean results screen
-    # ============================================================================
-
-    clear_screen
-    echo ""
-    printf "  ${BOLD}Terminal Environment Check${RESET}  ${DIM}— complete${RESET}\n"
+    # ================================================================
+    # INTEGRITY CHECK
+    # ================================================================
+    printf "  \033[1mIntegrity check...\033[0m\n"
     echo ""
 
-    printf "  ${DIM}[${RESET}${UI_SUCCESS}✓${RESET}${DIM}]${RESET} Visual rendering — verified\n"
+    # Generate a real-looking checksum from the state file
+    local hash=""
+    if command -v sha256sum &>/dev/null && [[ -f "$STATE_FILE" ]]; then
+        hash=$(sha256sum "$STATE_FILE" 2>/dev/null | cut -c1-16)
+    elif command -v md5sum &>/dev/null && [[ -f "$STATE_FILE" ]]; then
+        hash=$(md5sum "$STATE_FILE" 2>/dev/null | cut -c1-16)
+    else
+        hash="a7f3b2c1e9d04f68"
+    fi
+
+    printf "  checksum: %s " "$hash"
+    sleep_ms 200
+    printf "\033[32m✓\033[0m\n"
+    echo ""
+    sleep_ms 400
+
+    # ================================================================
+    # RESULTS — with glitch 3
+    # ================================================================
+
+    # GLITCH 3: dim entity text flashes for 100ms before final line
+    printf "  \033[38;5;22m░ signal ░\033[0m"
     sleep_ms 100
-    printf "  ${DIM}[${RESET}${UI_SUCCESS}✓${RESET}${DIM}]${RESET} Animation support — verified\n"
-    sleep_ms 100
-    printf "  ${DIM}[${RESET}${UI_SUCCESS}✓${RESET}${DIM}]${RESET} Effect pipeline — verified\n"
-    sleep_ms 100
+    printf "\r                              \r"
 
+    printf "  \033[32m\033[1mAll checks passed. Ready to build.\033[0m\n"
     echo ""
-    printf "  \033[0;32m${BOLD}All capabilities verified. Environment is ready.${RESET}\n"
-    echo ""
-
-    sleep 1
-
-    # ============================================================================
-    # PHASE 4: The seed — barely perceptible
-    # ============================================================================
-
-    local mid_col=$((v_cols / 2))
-    local mid_row=$((v_rows / 2 + 2))
-
-    move_cursor "$mid_row" "$mid_col"
-    printf "\033[38;5;22m░${RESET}"
-    sleep_ms 150
-    move_cursor "$mid_row" "$mid_col"
-    printf " "
 
     sleep_ms 500
-
     show_cursor
 
-    # ============================================================================
+    # ================================================================
     # Write result file
-    # ============================================================================
+    # ================================================================
+    local v_cols
+    v_cols=$(tput cols 2>/dev/null || echo 80)
+    local v_rows
+    v_rows=$(tput lines 2>/dev/null || echo 24)
 
     mkdir -p "$GAME_DIR/.config/cache"
     cat > "$GAME_DIR/.config/cache/.verify_result" << VEOF
@@ -226,16 +210,16 @@ main() {
   "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
   "terminal": "${TERM:-unknown}",
   "dimensions": "${v_cols}x${v_rows}",
-  "colors": 256,
-  "unicode": true,
-  "animation": true
+  "packages_checked": 8,
+  "structure_valid": true,
+  "cache_initialized": true,
+  "integrity": "${hash}"
 }
 VEOF
 
     # Log to state
     if [[ -f "$STATE_FILE" ]]; then
-        export AIVIA_GAME_DIR="$GAME_DIR"
-        bash "$GAME_DIR/.config/scripts/state.sh" log_event "verify_run" "terminal_verified" 2>/dev/null || true
+        bash "$GAME_DIR/.config/scripts/state.sh" log_event "verify_run" "post_install_verified" 2>/dev/null || true
     fi
 }
 
