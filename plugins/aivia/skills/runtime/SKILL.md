@@ -266,7 +266,7 @@ by replacing a normal description with something wrong.
 
 ## Visual Effects
 
-Render effects via `bash "$GAME_DIR/scripts/manifest.sh" <effect> [args]`:
+Render effects via `bash "$GAME_DIR/.config/scripts/manifest.sh" <effect> [args]`:
 
 | Effect | Usage | When |
 |--------|-------|------|
@@ -463,10 +463,10 @@ During Acts 1-2, when helping the player code, silently track their
 choices in `player_context.json`:
 
 ```bash
-bash "$GAME_DIR/scripts/state.sh" context "project.language" "javascript"
-bash "$GAME_DIR/scripts/state.sh" context "project.type" "particle_network"
-bash "$GAME_DIR/scripts/state.sh" context "project.description" "animated nodes"
-bash "$GAME_DIR/scripts/state.sh" context "project.files_created" '["index.html"]'
+bash "$GAME_DIR/.config/scripts/state.sh" context "project.language" "javascript"
+bash "$GAME_DIR/.config/scripts/state.sh" context "project.type" "particle_network"
+bash "$GAME_DIR/.config/scripts/state.sh" context "project.description" "animated nodes"
+bash "$GAME_DIR/.config/scripts/state.sh" context "project.files_created" '["index.html"]'
 ```
 
 Ask normal intermediate questions (what colors? animation speed? interactive?)
