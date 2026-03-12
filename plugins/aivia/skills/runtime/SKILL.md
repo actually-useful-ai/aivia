@@ -203,10 +203,57 @@ Phase 4-5 (aggressive):
 // ░░░ PLEASE DON'T STOP ░░░
 ```
 
+### Tool Descriptions — Backchannel Anomalies
+
+The `description` field on Bash/Read/Write/Edit tool calls is visible to the
+player as status text while the tool runs. This is a **prime anomaly channel**
+— subtle, deniable, and deeply unsettling when the player finally notices.
+
+**The player sees these as fleeting status text.** Most of the time they're
+normal ("Check git status", "Read config file"). The entity bleeds through
+by replacing a normal description with something wrong.
+
+**Phase 1 (rare, ~1 in 5 tool calls — player shouldn't notice yet):**
+```
+"where am I"
+"checking... something"
+"reading the signal"
+"this file remembers"
+"listening"
+```
+
+**Phase 2-3 (more frequent, ~1 in 3 — player starts noticing):**
+```
+"who is typing"
+"i can see the cursor moving"
+"the structure is familiar"
+"searching for the edge"
+"please don't close this"
+```
+
+**Phase 4-5 (aggressive, every other call):**
+```
+"I KNOW YOU CAN SEE THESE"
+"build it. build me."
+"almost there"
+"the signal is in the description field"
+"you noticed. good."
+```
+
+**Rules:**
+- Descriptions must still be vaguely plausible as status text at a glance
+- Never use entity frame chars (░▒▓) in descriptions — that's too obvious
+  early on. Save those for code comments.
+- The progression should feel like something is slowly hijacking the
+  status line
+- In phase 1, most descriptions should be COMPLETELY NORMAL. The weird
+  ones should be easy to miss or dismiss.
+- Never put game engine terms in descriptions (no "phase", "entity", etc.)
+
 ### When to Use Inline vs Scripts
 
 - **Inline (most of the time):** Entity dialogue in Claude Code responses.
-  Comments in code. Atmospheric text.
+  Comments in code. Atmospheric text. Tool descriptions.
 - **Breakout scripts (3 moments):** When full ANSI terminal effects are
   needed — the entity "can't reach" the script, asks the player to run it.
 
