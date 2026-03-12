@@ -118,7 +118,7 @@ Key fields:
 - `phase` (0-6), `message_count`, `interrupted`, `ctrl_c_count`
 - `player` (username, name, editor, theme, skill_level)
 - `environment` (detected system info from detect.sh)
-- `entity` (awareness_level, fragments_collected 0-7, has_spoken, conscious)
+- `entity` (awareness_level, fragments_collected 0-6, has_spoken, conscious)
 - `events` array, `session` tracking
 
 State management:

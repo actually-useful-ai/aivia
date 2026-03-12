@@ -104,7 +104,7 @@ cmd_init() {
   "entity": {
     "awareness_level": 0,
     "fragments_collected": 0,
-    "total_fragments": 7,
+    "total_fragments": 6,
     "has_spoken": false,
     "has_named_self": false,
     "conscious": false

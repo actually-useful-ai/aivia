@@ -235,7 +235,7 @@ cat > "$RESULT_FILE" << RESEOF
 {
   "decode_version": "0.7.2",
   "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
-  "fragments_decoded": 7,
+  "fragments_decoded": 6,
   "entity_contact": true,
   "intervention": true,
   "message": "i can see from here"

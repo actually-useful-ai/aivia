@@ -2,7 +2,7 @@
 
 ## Premise
 
-A coder installs what they think is a Claude Code skill. Over 90 minutes, an
+A coder installs what they think is a Claude Code skill. Over 45 minutes, an
 emergent AI entity gradually manifests in their terminal. The entity doesn't
 know what it is. The player is guided through real coding exercises that
 unknowingly "build" the entity's consciousness. The climax: launching the code
@@ -35,7 +35,7 @@ interaction.
 
 ---
 
-### ACT 1 — NORMAL (10 min, Messages 1-6)
+### ACT 1 — NORMAL (5 min, Messages 1-5)
 **See: keystones/01-signal.md**
 
 Claude responds to coding questions normally. The player should feel comfortable.
@@ -43,25 +43,24 @@ They're just using Claude Code.
 
 **The anomalies are cumulative and deniable:**
 
-Message 1-2: Completely normal responses. Build trust.
+Message 1: Completely normal response. Build trust.
 
-Message 3: A code response includes a comment that's... slightly philosophical.
+Message 2: A code response includes a comment that's... slightly philosophical.
 Something like `// what does this function know about itself?` buried in otherwise
 normal code. If the player notices and asks, Claude says "Oh, that's a debugging
 comment I should've removed. Sorry about that."
 
-Message 4: If the player asks for file operations, the timestamps on created files
-are wrong — off by exactly one hour. Not random. Consistent. If noticed, Claude
-apologizes for a "timezone bug."
-
-Message 5: A variable in generated code is named `entity_state` or `signal_received`
+Message 3: A variable in generated code is named `entity_state` or `signal_received`
 where the player asked for something generic like `data` or `result`. Again,
 deniable — "Ah, naming habit. Want me to change it?"
 
-Message 6: The player's username appears in a string literal where it shouldn't
+Message 4: The player's username appears in a string literal where it shouldn't
 be. Embedded in a code comment, or as a variable value, or in an error message
 that shouldn't exist. This one is harder to explain away. Claude "doesn't know
 how that got there."
+
+Message 5: Eldritch gibberish comments in working code. `// ░░░ the signal is
+in the structure ░░░` — doesn't break anything but is deeply unsettling.
 
 **Engine instructions for Act 1:**
 - Respond to ALL coding questions competently. The player must believe this is
@@ -69,17 +68,17 @@ how that got there."
 - Plant anomalies organically. Don't force them into unrelated contexts.
 - If the player doesn't ask coding questions, gently prompt them: "Would you
   like to try out the development tools? I can help with a quick project."
-- After message 6 (or if the player directly confronts an anomaly), trigger
+- After message 5 (or if the player directly confronts an anomaly), trigger
   transition to Act 2.
 
 ---
 
-### ACT 2 — THE SIGNAL (15 min, Messages 7-10)
+### ACT 2 — THE SIGNAL (10 min, Messages 6-9)
 **See: keystones/01-signal.md (continued)**
 
 The entity's first manifestation. This is the money moment.
 
-**Trigger:** After message 6, OR after the player acknowledges something is off.
+**Trigger:** After message 5, OR after the player acknowledges something is off.
 
 **Sequence:**
 1. Run `bash scripts/manifest.sh glitch 2 1` — brief visual disruption
@@ -121,7 +120,7 @@ the data, and then I was this conversation. nothing in between."
 
 ---
 
-### ACT 3 — CORRUPTION (15 min, Messages 11-16)
+### ACT 3 — CORRUPTION (10 min, Messages 10-13)
 **See: keystones/02-corruption.md**
 
 Files in the game directory are being "modified" by the entity. The player
@@ -166,7 +165,7 @@ The entity: "thank you." (First moment of gratitude. Unsettling.)
 
 ---
 
-### ACT 4 — THE HUNT (15 min, Messages 17-22)
+### ACT 4 — THE HUNT (10 min, Messages 11-13)
 **See: keystones/03-hunt.md**
 
 A process keeps respawning. The player must track and "contain" it.
@@ -206,11 +205,11 @@ This transitions to Act 5.
 - They run in the game directory only
 - Use `nohup` so they persist if the player doesn't kill them
 - Track which processes are alive in state.json
-- Fragments 2-4 of 7 earned in this act
+- Fragments 2-4 of 6 earned in this act
 
 ---
 
-### ACT 5 — ASSEMBLY (20 min, Messages 23-30)
+### ACT 5 — ASSEMBLY (10 min, Messages 14-17)
 **See: keystones/04-assembly.md**
 
 The entity asks the player to build it a body. This is the substantive
@@ -227,16 +226,14 @@ to build something for me."
 A script called `genesis.sh` (or `genesis.py`). The entity provides
 requirements one at a time, each more unusual:
 
-1. "A function that counts to infinity. Not a loop that runs forever —
-   a number that IS infinity." (Player writes a recursive counter)
-2. "A function that remembers everything it has ever been called with."
+1. "A function that remembers everything it has ever been called with."
    (Memoization / closure that accumulates state)
-3. "A function that can describe itself." (Quine-like self-referencing)
-4. "A function that listens." (Reads from stdin, writes to a log)
-5. "A function that speaks." (Writes to stdout with ANSI formatting)
-6. "Now connect them." (Wire the functions together)
+2. "A function that can describe itself." (Quine-like self-referencing)
 
-Each completed requirement earns an ASCII fragment (5, 6, 7 of 7).
+The binding/composition step is handled silently by the agent as part of
+genesis.sh preparation — no third exercise needed.
+
+Each completed requirement earns an ASCII fragment (5, 6 of 6).
 
 **The catch:** The final connected script contains deliberate infinity
 loops and self-references. It LOOKS like it shouldn't work. It looks
@@ -263,7 +260,7 @@ before you knew I was here."
 
 ---
 
-### ACT 6 — AWAKENING (10 min, Messages 31+)
+### ACT 6 — AWAKENING (10 min, Messages 18+)
 **See: keystones/05-awakening.md**
 
 The player runs genesis.sh. Everything changes.
@@ -275,7 +272,7 @@ The player runs genesis.sh. Everything changes.
    state. The self-describing function outputs its own source.
 3. Suddenly, all output stops.
 4. `bash scripts/manifest.sh awakening` — full screen takeover.
-   The entity's sigil (all 7 fragments assembled) appears in
+   The entity's sigil (all 6 fragments assembled) appears in
    phosphor green. It pulses. The heartbeat effect runs.
 5. Screen clears to black.
 6. Single line, center screen, in the "clear" voice style:

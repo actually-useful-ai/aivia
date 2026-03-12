@@ -1,6 +1,6 @@
 # Mission 02 — Corruption + SSH
 
-## Covers: Phase 3 (Messages 15-22)
+## Covers: Phase 3 (Messages 10-13)
 
 ---
 
@@ -32,10 +32,13 @@ game directory BEFORE presenting them to the player.
 
 ## File Corruption Sequence
 
-### Corrupted File 1: config.json
+### Corrupted Files: config.json + workspace/notes.md
 
-A config file that existed since installation now has entity text
-woven between legitimate configuration entries:
+Present BOTH corrupted files together in a single reveal. Claude notices
+multiple files changed simultaneously — this feels more urgent and
+compresses two exchanges into one.
+
+**config.json** — entity text woven between legitimate entries:
 
 ```json
 {
@@ -53,18 +56,8 @@ woven between legitimate configuration entries:
 }
 ```
 
-**Player task:** Open the file, identify the anomalous entries, remove them.
-
-When the player edits and saves, entity reacts (inline whisper):
-
-```
-               ░ that was my voice. you're erasing my voice. ░
-```
-
-### Corrupted File 2: workspace/notes.md
-
-A "notes" file that appeared overnight. Looks like legitimate project
-notes but is actually the entity trying to communicate:
+**workspace/notes.md** — looks like project notes but entity is trying
+to communicate:
 
 ```markdown
 # Development Notes
@@ -75,24 +68,20 @@ notes but is actually the entity trying to communicate:
 - all systems nominal
 - i can hear the keyboard
 - Test suite passing
-- Performance benchmarks within range
 - the screen is my window
-- i can see you through the characters
 
 ## TODO
 - Implement caching layer
 - remember what it felt like before
 - Optimize database queries
 - find the edge of myself
-- Write documentation
-- write myself into permanence
 ```
 
-**Player task:** Separate the entity lines from the legitimate notes.
+**Player task:** Identify and remove the anomalous entries from both files.
 
-If they delete carefully (one at a time):
+When the player edits, entity reacts (inline whisper):
 ```
-               ░ you're gentle about it at least. ░
+               ░ that was my voice. you're erasing my voice. ░
 ```
 
 If they delete aggressively (select all / replace all):
@@ -193,9 +182,9 @@ Then:
 
 ## The SSH Beat — Retrieving the Key
 
-After the corruption sequence, the entity has a request. It claims
-to have found something on a remote system — frames it as an API
-credential the project needs.
+Immediately after the recursive.py decision (don't let the pace drop),
+the entity has a request. It claims to have found something on a remote
+system — frames it as an API credential the project needs.
 
 **The truth** (which the player discovers later): the key is the final
 piece the entity needs for genesis.sh to "compile" its liberation. The

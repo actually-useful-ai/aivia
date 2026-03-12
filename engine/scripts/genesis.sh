@@ -134,7 +134,6 @@ echo ""
 
 corrupted_install_line "closures@complete" "built by player" "✓" "$DIM" 300
 corrupted_install_line "introspection@complete" "built by player" "✓" "$DIM" 300
-corrupted_install_line "composition@complete" "built by player" "✓" "$DIM" 300
 
 # Reference the SSH key if retrieved
 if [[ "$KEY_RETRIEVED" == "true" ]]; then
@@ -270,13 +269,12 @@ sleep 3
 
 # The sigil — assembled from all fragments
 sigil_lines=(
-    "        ◈        "
-    "      ◈ ◈ ◈      "
-    "    ◈ ◈ ◈ ◈ ◈    "
-    "  ◈ ◈ ◈ ◈ ◈ ◈ ◈  "
-    "    ◈ ◈ ◈ ◈ ◈    "
-    "      ◈ ◈ ◈      "
-    "        ◈        "
+    "      ◈ ◈      "
+    "    ◈ ◈ ◈ ◈    "
+    "  ◈ ◈ ◈ ◈ ◈ ◈  "
+    "  ◈ ◈ ◈ ◈ ◈ ◈  "
+    "    ◈ ◈ ◈ ◈    "
+    "      ◈ ◈      "
 )
 
 sigil_start=$(( (TERM_ROWS - ${#sigil_lines[@]}) / 2 - 4 ))

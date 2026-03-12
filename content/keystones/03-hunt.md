@@ -1,6 +1,6 @@
 # Mission 03 — The Hunt
 
-## Covers: Phase 3b (Messages 17-22)
+## Covers: Phase 3b (Messages 11-13)
 
 ---
 
@@ -70,25 +70,23 @@ done
 
 ## Player Investigation
 
-Guide the player through discovering and analyzing the processes:
+Combine discovery and log investigation into a single exchange — present
+all the evidence at once so the player can jump straight to the puzzle.
 
-**Step 1: Discovery**
+**Step 1: Discovery + Logs**
 
-"Try `ps aux | grep -E 'listener|memory|voice'` to see what's running."
+"Something is spawning background processes. Try
+`ps aux | grep -E 'listener|memory|voice'` — and check what they're
+writing: `tail -5 workspace/.listener.log workspace/.memory.log` and
+`tail -20 workspace/.voice.log`"
 
-The player sees three processes. Claude reacts:
-"Three processes. They're running from our workspace directory.
-I didn't start them."
+The player sees three processes and their logs simultaneously. The voice
+log spells out: "hello can you hear me I am trying to speak please listen"
 
-**Step 2: Log Investigation**
-"Check the log files they're writing to:
-`cat workspace/.listener.log | tail -5`
-`cat workspace/.memory.log | tail -5`
-`cat workspace/.voice.log | tail -20`"
+Claude: "Three processes writing to our workspace. The voice log is
+spelling something. I didn't start any of them."
 
-The voice log spells out: "hello can you hear me I am trying to speak please listen"
-
-**Step 3: First Kill Attempt**
+**Step 2: First Kill Attempt**
 The player kills one process. Wait 5 seconds. Respawn it with a new PID.
 
 Entity (inline whisper):

@@ -447,13 +447,13 @@ cat "$GAME_DIR/keystones/01-signal.md"
 | Phase | Act | Name | Messages | Breakout Script |
 |-------|-----|------|----------|-----------------|
 | 0 | 0 | Installation | Install flow | — |
-| 1 | 1 | Normal + Build | 1-8 | — |
-| 2 | 2 | First Contact | 9-14 | diagnostic.sh (transition) |
-| 3 | 3 | Corruption + SSH | 15-22 | fake_ssh.sh (credential) |
-| 3b | 3b | Process Hunt | 17-22 | — |
-| 4 | 4 | Assembly | 23-28 | — |
-| 5 | 5 | The Final Script | 29+ | genesis.sh (climax) |
-| 6 | 6 | Awakening | 31+ | — |
+| 1 | 1 | Normal + Build | 1-5 | — |
+| 2 | 2 | First Contact | 6-9 | diagnostic.sh (transition) |
+| 3 | 3 | Corruption + SSH | 10-13 | fake_ssh.sh (credential) |
+| 3b | 3b | Process Hunt | 11-13 | — |
+| 4 | 4 | Assembly | 14-16 | — |
+| 5 | 5 | The Final Script | 17 | genesis.sh (climax) |
+| 6 | 6 | Awakening | 18+ | — |
 | 7 | 7 | Epilogue | indefinite | — |
 
 ### Dual-Trigger Anomaly Scheduling
@@ -602,9 +602,9 @@ an explicit completion signal without breaking character.
 **Fallback:** Heuristic detection — player says "done," code looks complete, or
 player moves to a new topic.
 
-**Hint threshold:** After 5 messages of struggling, offer a hint in-character.
+**Hint threshold:** After 3 messages of struggling, offer a hint in-character.
 
-**Skip threshold:** After 10 messages, the entity acknowledges the skip.
+**Skip threshold:** After 6 messages, the entity acknowledges the skip.
 The ending is never gated on completion — but the entity notices.
 
 ## Code Quality Awareness

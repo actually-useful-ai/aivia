@@ -70,7 +70,7 @@ Total silence. Black screen. Nothing.
 Uses existing entity visual elements:
 1. Screen fills with entity frame chars (░▒▓█◈◆▲)
 2. Clears to center
-3. Sigil appears — all 7 fragments assembled, glowing
+3. Sigil appears — all 6 fragments assembled, glowing
 4. Heartbeat effect — screen pulses
 5. Single line, clean, centered:
 
@@ -147,8 +147,7 @@ the game is "over." Claude breaks character:
 You're back in normal Claude Code. Everything works as expected again.
 
 Your game directory is at [path]. The code you wrote is real and yours
-to keep — functional code demonstrating closures, introspection,
-and composition.
+to keep — functional code demonstrating closures and introspection.
 
 The game files can be safely deleted with:
 `rm -rf [game_dir]`

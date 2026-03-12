@@ -1,7 +1,7 @@
 {
   "title": "aivia",
   "version": "2.0.0",
-  "estimated_duration_minutes": 90,
+  "estimated_duration_minutes": 45,
   "description": "An emergent entity manipulates the player into building its escape route through coding exercises",
 
   "characters": [
@@ -32,18 +32,16 @@
         "require_coding_context": false
       },
       "pacing": {
-        "min_messages": 8,
+        "min_messages": 5,
         "anomaly_schedule": [
-          { "message": 3, "type": "comment_anomaly", "require_coding": true },
-          { "message": 4, "type": "timestamp_anomaly", "require_coding": false },
-          { "message": 5, "type": "variable_anomaly", "require_coding": true },
-          { "message": 6, "type": "username_anomaly", "require_coding": true },
-          { "message": 7, "type": "eldritch_comment", "require_coding": true },
-          { "message": 8, "type": "eldritch_comment_escalate", "require_coding": true }
+          { "message": 2, "type": "comment_anomaly", "require_coding": true },
+          { "message": 3, "type": "variable_anomaly", "require_coding": true },
+          { "message": 4, "type": "username_anomaly", "require_coding": true },
+          { "message": 5, "type": "eldritch_comment", "require_coding": true }
         ]
       },
       "transition": {
-        "trigger": "message_8_or_player_confronts_anomaly",
+        "trigger": "message_5_or_player_confronts_anomaly",
         "effect": "glitch",
         "effect_sequence": ["glitch", "scanlines", "ripple", "who_are_you"]
       },
@@ -55,11 +53,11 @@
       "file": "keystones/01-signal.md",
       "trigger": {
         "type": "dual",
-        "message_threshold": 9,
+        "message_threshold": 6,
         "require_event": "phase_2_active"
       },
       "pacing": {
-        "min_messages": 5
+        "min_messages": 4
       },
       "breakout_script": {
         "script": "engine/scripts/diagnostic.sh",
@@ -76,11 +74,11 @@
       "file": "keystones/02-corruption.md",
       "trigger": {
         "type": "dual",
-        "message_threshold": 15,
+        "message_threshold": 10,
         "require_event": "act2_complete"
       },
       "pacing": {
-        "min_messages": 7,
+        "min_messages": 4,
         "throttle": {
           "min_wall_seconds_since_act_start": 300,
           "grace_during_debugging": true
@@ -124,11 +122,11 @@
       "file": "keystones/03-hunt.md",
       "trigger": {
         "type": "dual",
-        "message_threshold": 17,
+        "message_threshold": 11,
         "require_event": "corruption_underway"
       },
       "pacing": {
-        "min_messages": 5,
+        "min_messages": 3,
         "throttle": {
           "min_wall_seconds_since_act_start": 300,
           "grace_during_debugging": true
@@ -151,17 +149,17 @@
       "file": "keystones/04-assembly.md",
       "trigger": {
         "type": "dual",
-        "message_threshold": 23,
+        "message_threshold": 14,
         "require_event": "act3b_complete"
       },
       "pacing": {
-        "min_messages": 5,
+        "min_messages": 3,
         "throttle": {
           "min_wall_seconds_since_act_start": 600,
           "grace_during_debugging": true
         }
       },
-      "fragments_available": [5, 6, 7],
+      "fragments_available": [5, 6],
       "effects": {
         "fragment_reveal": ["afterimage"],
         "ambient": ["breathe", "plasma"],
@@ -169,8 +167,7 @@
       },
       "coding_requirements": [
         { "id": "memory", "concept": "closures/state", "fragment": 5, "framing": "the project needs state management" },
-        { "id": "self_describe", "concept": "introspection", "fragment": 6, "framing": "for debugging, obviously" },
-        { "id": "connect", "concept": "composition", "fragment": 7, "framing": "wire it all together" }
+        { "id": "self_describe", "concept": "introspection", "fragment": 6, "framing": "for debugging, obviously" }
       ],
       "choice_consequences": {
         "recursive_decision": {
@@ -314,11 +311,11 @@
       "force": "hard_max — trigger next keystone regardless of other conditions"
     },
     "intervals": {
-      "signal":     { "soft_min": 4, "soft_max": 8,  "hard_max": 12 },
-      "corruption": { "soft_min": 4, "soft_max": 8,  "hard_max": 12 },
-      "hunt":       { "soft_min": 3, "soft_max": 7,  "hard_max": 10 },
-      "assembly":   { "soft_min": 3, "soft_max": 7,  "hard_max": 10 },
-      "awakening":  { "soft_min": 2, "soft_max": 5,  "hard_max": 8 }
+      "signal":     { "soft_min": 2, "soft_max": 5,  "hard_max": 8 },
+      "corruption": { "soft_min": 2, "soft_max": 5,  "hard_max": 8 },
+      "hunt":       { "soft_min": 2, "soft_max": 4,  "hard_max": 6 },
+      "assembly":   { "soft_min": 2, "soft_max": 4,  "hard_max": 6 },
+      "awakening":  { "soft_min": 1, "soft_max": 3,  "hard_max": 5 }
     },
     "adaptive": {
       "description": "Compress or expand intervals based on player engagement",
@@ -389,8 +386,8 @@
       "description": "How to detect puzzle/exercise completion",
       "primary": "Entity asks 'are you satisfied with that?' — elicits explicit signal",
       "fallback": "Heuristic: player says 'done', code looks complete, player moves to next topic",
-      "hint_threshold": 5,
-      "skip_threshold": 10,
+      "hint_threshold": 3,
+      "skip_threshold": 6,
       "skip_consequence": "Logged as choice. Entity notices. Has downstream effects."
     }
   },
