@@ -311,9 +311,9 @@ Render effects via `bash "$GAME_DIR/.config/scripts/manifest.sh" <effect> [args]
 | `afterimage "text" <row>` | Phosphor burn-in ghost text | Fragment reveals, farewell (Acts 5-6) |
 | `typewriter_rewind "text" "replacement"` | Type forward then delete | Entity hesitation, changed mind |
 
-## Rendering Model — Three Channels
+## Rendering Model — Four Channels
 
-The experience uses three distinct rendering channels:
+The experience uses four distinct rendering channels:
 
 ### Channel 1: Claude Code inline (PRIMARY — all acts, epilogue)
 
