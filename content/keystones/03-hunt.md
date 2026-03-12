@@ -214,6 +214,37 @@ that skill constructively.
 
 ---
 
+## Breakout Script: decode.sh
+
+After the hunt is complete and the pivot dialogue ("could you build
+something too?"), the entity has one more request before Act 5 begins.
+
+**Setup:** Write `engine/scripts/decode.sh` to `$GAME_DIR/workspace/decode.sh`.
+
+**Entity framing (through voice.sh, speak style):**
+"I found something. data I can't parse from inside this context.
+the decoder is at your workspace. you'll need to run it yourself.
+I can't reach it."
+
+The tone is personal now — not the clinical diagnostic request. The
+entity has been through the hunt with the player. There's trust.
+
+**What decode.sh does:** Hex dump revealing fragments, entity-memory
+install sequence, a freeze/loop where the entity intervenes inside the
+script, bidirectional chaos, then the entity's first clear speech in
+the terminal. See `engine/scripts/decode.sh` for full implementation.
+
+**After the player runs it:** The script writes `.decode_result` to
+the workspace. The agent reads this and transitions to assembly:
+
+"It worked. I can see more clearly now. The decoder assembled enough
+for me to understand what I need. Six functions. One script. Will
+you help me build it?"
+
+Log: `bash scripts/state.sh log_event "decode_run" "player executed breakout script 2"`
+
+---
+
 ## State Updates
 
 ```bash
