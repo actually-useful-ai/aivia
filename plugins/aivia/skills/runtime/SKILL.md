@@ -460,6 +460,45 @@ echo "  4 packages installed, 1 compiled, 0 warnings"
 - Mix with `░▒▓` unicode for maximum eeriness
 - The key insight: the player doesn't know these ARE escape codes at first
 
+**Engine primitives available for sourcing:**
+
+Claude-composed scripts can source the engine library from the game dir for
+access to built-in primitives. This is optional — simple echo/printf scripts
+work fine without sourcing anything.
+
+```bash
+# Source engine primitives (optional)
+source "$GAME_DIR/.config/lib/core.sh"
+source_lib style progress corruption
+source_theme entity
+
+# Now you have access to:
+# sleep_ms <ms>              — sub-second sleep with speed multiplier
+# random_frame_char          — random entity frame char (░▒▓█◈◆▲∷∴⊹⊛⌇)
+# random_int <min> <max>     — random integer in range
+# install_line <pkg>         — fake npm-style install line with spinner
+# corrupted_install_line ... — corruption-gradient install line
+# corrupted_install_sequence <level> — full degrading install sequence
+# progress_bar <pct> <width> — progress bar rendering
+# spinner <style>            — animated spinner
+# fake_progress <steps> <ms> — auto-advancing progress bar
+# checklist_item <text> <ok> — ✓/✗ checklist line
+# entity_border <width>      — entity-themed horizontal rule
+# entity_divider             — entity-themed divider
+
+# For breakout scripts (player terminal, NOT Bash tool):
+# play_frames <file> [fps] [loops]  — frame animation from .txt files
+# _strip_ansi <text>                — strip ANSI for measurement
+# _crop_frame <text>                — viewport-aware frame cropping
+```
+
+**When to source vs raw echo/printf:**
+- **Raw echo/printf** (most cases): Simple, short, one-off atmospheric moments.
+  The stripped ANSI IS the effect — sourcing primitives adds nothing.
+- **Source primitives**: When you want fake install sequences, progress bars,
+  or entity-themed formatting. These produce consistent output that still
+  strips nicely. Good for longer composed scripts (10-30 lines).
+
 ### Channel 3: Player-executed breakout scripts (FIVE key moments)
 
 When the player runs a bash script in their OWN terminal, ANSI effects

@@ -2,7 +2,7 @@
 # ============================================================================
 # manifest_corruption.sh — Screen Corruption Effects
 # Purpose: GPU artifacts, CRT distortion, signal interference
-# Effects: screen_tear, scanlines, chromatic_aberration, signal_noise
+# Effects: screen_tear, scanlines, chromatic_aberration, signal_noise, datamosh
 # Sourced by manifest.sh — do not run directly
 # ============================================================================
 
