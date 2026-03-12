@@ -4,7 +4,8 @@
       "Bash(mkdir:*)",
       "Bash(~/scripts/validate-claude-nav.sh:*)",
       "Bash(rm:*)",
-      "Bash(PATH=/usr/bin:/bin echo n:*)"
+      "Bash(PATH=/usr/bin:/bin echo n:*)",
+      "Bash(echo === WMCTRL ===:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
