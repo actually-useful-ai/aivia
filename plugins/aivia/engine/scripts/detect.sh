@@ -118,10 +118,34 @@ if [ "$MODE" = "install" ]; then
         exit 0
     fi
 
+    printf "aivia uses these tools to read system metadata (WiFi name, bluetooth\n"
+    printf "devices, display info, etc.) for in-game personalization. Nothing is\n"
+    printf "sent anywhere — all data stays in your local game directory.\n\n"
+
     printf "The following packages will be installed:\n\n"
     for i in "${!missing_pkgs[@]}"; do
-        printf "  %s  (%s)\n" "${missing_pkgs[$i]}" "${missing_names[$i]}"
+        printf "  %-20s → %s\n" "${missing_pkgs[$i]}" "${missing_names[$i]}"
     done
+
+    needs_sudo=false
+    if $IS_LINUX; then
+        needs_sudo=true
+    elif $IS_MACOS && ! command -v brew &>/dev/null; then
+        printf "\nHomebrew not found. Install from https://brew.sh first.\n" >&2
+        exit 1
+    fi
+
+    if $needs_sudo; then
+        printf "\n  ⚠ This will use sudo (system package manager requires it).\n"
+        printf "    You can also install these manually if you prefer:\n"
+        if command -v apt-get &>/dev/null; then
+            printf "    sudo apt-get install %s\n" "${missing_pkgs[*]}"
+        elif command -v dnf &>/dev/null; then
+            printf "    sudo dnf install %s\n" "${missing_pkgs[*]}"
+        elif command -v pacman &>/dev/null; then
+            printf "    sudo pacman -S %s\n" "${missing_pkgs[*]}"
+        fi
+    fi
 
     printf "\nInstall? [y/N] "
     read -r confirm
@@ -131,12 +155,7 @@ if [ "$MODE" = "install" ]; then
     fi
 
     if $IS_MACOS; then
-        if command -v brew &>/dev/null; then
-            brew install "${missing_pkgs[@]}"
-        else
-            printf "Homebrew not found. Install from https://brew.sh first.\n" >&2
-            exit 1
-        fi
+        brew install "${missing_pkgs[@]}"
     elif $IS_LINUX; then
         if command -v apt-get &>/dev/null; then
             sudo apt-get install -y "${missing_pkgs[@]}"
