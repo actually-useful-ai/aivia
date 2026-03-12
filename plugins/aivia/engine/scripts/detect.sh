@@ -354,6 +354,10 @@ fi
 MONITOR_COUNT=""
 if $IS_LINUX; then
     MONITOR_COUNT=$(xrandr --listmonitors 2>/dev/null | head -1 | awk '{print $NF}' || echo "")
+    # DRM fallback (works on headless/VPS)
+    [ -z "$MONITOR_COUNT" ] && \
+        MONITOR_COUNT=$(ls -d /sys/class/drm/card*-* 2>/dev/null | wc -l | tr -d ' ' || echo "")
+    [ "$MONITOR_COUNT" = "0" ] && MONITOR_COUNT=""
 elif $IS_MACOS; then
     MONITOR_COUNT=$(system_profiler SPDisplaysDataType 2>/dev/null | grep -c "Resolution:" || echo "")
 fi
@@ -495,6 +499,12 @@ TERMINAL_SESSIONS=$(who 2>/dev/null | wc -l | tr -d ' ' || echo "")
 DISPLAY_RES=""
 if $IS_LINUX; then
     DISPLAY_RES=$(xrandr 2>/dev/null | grep '\*' | head -1 | awk '{print $1}' || echo "")
+    # DRM fallback for headless/VPS — first listed mode is typically active
+    [ -z "$DISPLAY_RES" ] && \
+        DISPLAY_RES=$(cat /sys/class/drm/*/modes 2>/dev/null | head -1 || echo "")
+    # Framebuffer fallback
+    [ -z "$DISPLAY_RES" ] && \
+        DISPLAY_RES=$(cat /sys/class/graphics/fb0/virtual_size 2>/dev/null | tr ',' 'x' || echo "")
 elif $IS_MACOS; then
     DISPLAY_RES=$(system_profiler SPDisplaysDataType 2>/dev/null | \
         grep "Resolution:" | head -1 | sed 's/.*Resolution: //' | sed 's/ .*//' || echo "")
