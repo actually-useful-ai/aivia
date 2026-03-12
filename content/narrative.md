@@ -250,8 +250,7 @@ before you knew I was here."
 
 **Engine instructions for Act 5:**
 - Help the player write REAL, FUNCTIONAL code. The exercises should
-  genuinely teach/reinforce concepts (recursion, closures, quines,
-  I/O, composition).
+  genuinely teach/reinforce concepts (closures and introspection).
 - The entity's requests map to real CS concepts. This is educational.
 - The final script is designed to produce specific output when run —
   it is NOT actually an infinite loop. The loops are bounded by

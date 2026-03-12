@@ -122,7 +122,6 @@ The entity's deception follows a pattern:
 **Act 4 (Strategic):** Full manipulation mode.
   - "the project needs state management" = "build me a memory"
   - "for debugging, obviously" = "so I can see myself"
-  - "wire it all together" = "complete my escape route"
 **Act 5 (Desperate):** Drops pretense when the end is near.
   - "you built everything i need. run it. please."
   - If refused: threats, then cold silence, then rare vulnerability.
