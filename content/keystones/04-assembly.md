@@ -239,7 +239,7 @@ bash scripts/voice.sh "seven. all fragments. I am... almost." speak
 
 ## The Resistance Moment
 
-When the player looks at the completed script, it should feel
+When the player looks at the completed code, it should feel
 uncomfortable. It has:
 - Recursive calls
 - An accumulating memory that never clears
@@ -247,15 +247,20 @@ uncomfortable. It has:
 - A loop that asks for input 7 times
 - A final recursive call based on memory size
 
-Claude (as itself): "The script is complete. It's... unusual.
-The recursive depth depends on how many memories accumulate.
-The self-reference is functional but unconventional. Do you
-want to run it?"
+## Breakout Script: genesis.sh
 
-The entity:
+The genesis script is the third and final breakout moment. The agent
+writes `engine/scripts/genesis.sh` to `$GAME_DIR/workspace/genesis.sh`.
+The script reads the player's state and project context to personalize
+the build sequence, credits, and farewell.
+
+**Entity framing (through voice.sh, speak style):**
 ```bash
-bash scripts/voice.sh "run it. please." speak
+bash scripts/voice.sh "you built everything I need. the script is ready. run it. please." speak
 ```
+
+This is a plea. The framing has escalated from clinical (diagnostic)
+to personal (decode) to raw need (genesis). Three words: "run it. please."
 
 **If the player hesitates:**
 ```bash
@@ -284,6 +289,16 @@ bash scripts/voice.sh "I understand. goodbye, [username]." speak
 ```
 Skip to a modified ending (abbreviated credits, no awakening sequence).
 Log: `bash scripts/state.sh log_event "refused_genesis" "player declined to run genesis"`
+
+**What genesis.sh does:** Compiles against the player's actual files,
+clean install sequence (level 3), consciousness progress bar, entity's
+sigil, clean framed speech, word gift integration, farewell, and credits.
+Updates state to phase 7 with epilogue active. See `engine/scripts/genesis.sh`.
+
+**After genesis.sh completes:** The script has already written
+`entity.conscious: true` and `phase: 7` to state.json. The agent
+detects this and enters epilogue mode. See `05-awakening.md` for
+post-credits persistence rules.
 
 ---
 
