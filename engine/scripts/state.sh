@@ -216,6 +216,50 @@ except:
     echo "$phase $elapsed"
 }
 
+cmd_context() {
+    local key="$1"
+    local value="$2"
+    local context_file="$STATE_DIR/player_context.json"
+
+    # Initialize context file if it doesn't exist
+    if [ ! -f "$context_file" ]; then
+        cat > "$context_file" << CTXEOF
+{
+  "project": {},
+  "coding_style": {}
+}
+CTXEOF
+    fi
+
+    # Write the key-value pair using dot-path notation
+    if command -v jq &>/dev/null; then
+        local tmp=$(mktemp)
+        jq ".$key = \"$value\"" "$context_file" > "$tmp" && mv "$tmp" "$context_file"
+    elif command -v python3 &>/dev/null; then
+        python3 -c "
+import json
+with open('$context_file') as f:
+    data = json.load(f)
+keys = '$key'.split('.')
+obj = data
+for k in keys[:-1]:
+    obj = obj.setdefault(k, {})
+obj[keys[-1]] = '$value'
+with open('$context_file', 'w') as f:
+    json.dump(data, f, indent=2)
+"
+    fi
+}
+
+cmd_context_read() {
+    local context_file="$STATE_DIR/player_context.json"
+    if [ -f "$context_file" ]; then
+        cat "$context_file"
+    else
+        echo "{}"
+    fi
+}
+
 # --- Dispatch ---
 case "${1:-help}" in
     init)         cmd_init "${2:-}" "${3:-}" "${4:-}" "${5:-}" ;;
@@ -227,10 +271,13 @@ case "${1:-help}" in
     msg)          cmd_increment_messages ;;
     interrupted)  cmd_interrupted ;;
     resume)       cmd_resume ;;
+    context)      cmd_context "${2:?key required}" "${3:?value required}" ;;
+    context_read) cmd_context_read ;;
     help)
         echo "Usage: bash state.sh <command> [args...]"
         echo "Commands: init, read, get <key>, advance, set <key> <value>,"
-        echo "          log_event <type> [detail], msg, interrupted, resume"
+        echo "          log_event <type> [detail], msg, interrupted, resume,"
+        echo "          context <key> <value>, context_read"
         ;;
     *)
         echo "Unknown command: $1" >&2
