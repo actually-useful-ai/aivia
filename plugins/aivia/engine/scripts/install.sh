@@ -423,6 +423,9 @@ if [[ "$PROJECT_MODE" == "demo" ]]; then
             4) DEMO_TYPE="interactive_story" ;;
             *) DEMO_TYPE="custom_demo" ;;
         esac
+    else
+        DEMO_TYPE="particle_network"
+        echo "  → Particle network"
     fi
 
     bash "$GAME_DIR/.config/scripts/state.sh" set "player.project_choice" "\"$DEMO_TYPE\"" > /dev/null 2>&1 || true
