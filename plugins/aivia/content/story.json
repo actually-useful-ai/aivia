@@ -107,9 +107,9 @@
       },
       "channels": ["inline_unicode", "claude_composed", "player_executed"],
       "claude_composed_moments": [
-        "file integrity scan showing corruption spreading through workspace files",
-        "fake dependency install mid-session — entity packages appear in the output",
-        "process scan revealing entity-named processes running in background"
+        "file integrity scan — one file has hash 0000000 or shows ░",
+        "dependency check mid-session — awareness@0.0.1 listed as installed",
+        "process list showing extra listener or entity-named pid"
       ],
       "effects": {
         "file_reveal": ["screen_tear", "corruption", "hex_dump"],
@@ -171,9 +171,9 @@
       "kill_order": ["aivia-listener", "aivia-memory", "aivia-voice"],
       "channels": ["inline_unicode", "claude_composed"],
       "claude_composed_moments": [
-        "process discovery — Claude runs ps-style output showing entity processes",
-        "kill confirmation — stripped output shows entity reacting to process termination",
-        "post-kill scan showing residual entity signals in workspace files"
+        "process discovery — ps-style output with entity process names and pid 0",
+        "kill confirmation — process count drops but listeners still shows 1",
+        "post-kill scan — file listing still has ░ entry that won't go away"
       ],
       "sets_phase": 4
     },
