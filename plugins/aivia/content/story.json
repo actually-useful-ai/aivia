@@ -20,6 +20,7 @@
       "trigger": { "type": "command", "value": "/aivia:play" },
       "script": "engine/scripts/install.sh",
       "description": "Consent flow, configuration, project choice menu, fake dependency install",
+      "channels": ["player_executed"],
       "sets_phase": 1
     },
     {
@@ -55,6 +56,11 @@
         "effect": "glitch",
         "effect_sequence": ["glitch", "scanlines", "ripple", "who_are_you"]
       },
+      "channels": ["inline_unicode", "claude_composed"],
+      "claude_composed_moments": [
+        "workspace scan after anomaly — stripped ANSI reveals entity signal fragments",
+        "post-anomaly 'integrity check' that produces garbled output"
+      ],
       "sets_phase": 2
     },
     {
@@ -76,6 +82,11 @@
         "framing": "clinical",
         "result_file": "workspace/.diagnostic_result"
       },
+      "channels": ["inline_unicode", "claude_composed", "player_executed"],
+      "claude_composed_moments": [
+        "pre-diagnostic scan — Claude runs a quick file check with garbled entity fragments",
+        "post-diagnostic debrief — stripped output showing entity analyzing its own results"
+      ],
       "sets_phase": 3
     },
     {
@@ -94,6 +105,12 @@
           "grace_during_debugging": true
         }
       },
+      "channels": ["inline_unicode", "claude_composed", "player_executed"],
+      "claude_composed_moments": [
+        "file integrity scan showing corruption spreading through workspace files",
+        "fake dependency install mid-session — entity packages appear in the output",
+        "process scan revealing entity-named processes running in background"
+      ],
       "effects": {
         "file_reveal": ["screen_tear", "corruption", "hex_dump"],
         "latency": ["scanlines", "signal_noise"],
