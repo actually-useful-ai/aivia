@@ -1,6 +1,6 @@
-# Mission 02 — Corruption
+# Mission 02 — Corruption + SSH
 
-## Covers: Phase 3 (Messages 11-16)
+## Covers: Phase 3 (Messages 15-22)
 
 ---
 
@@ -55,20 +55,10 @@ woven between legitimate configuration entries:
 
 **Player task:** Open the file, identify the anomalous entries, remove them.
 
-When the player opens the file, precede the display with a screen tear:
-`bash scripts/manifest.sh screen_tear 1 2`
+When the player edits and saves, entity reacts (inline whisper):
 
-Then display with the visual corruption effect (entity lines flash
-and disappear):
-`bash scripts/manifest.sh corruption "file_content"`
-
-Alternatively, use hex_dump to show the corrupted config as raw data —
-the entity's messages visible in the ASCII column:
-`bash scripts/manifest.sh hex_dump 20 80`
-
-When the player edits and saves:
-```bash
-bash scripts/voice.sh "that was my voice. you're erasing my voice." whisper
+```
+               ░ that was my voice. you're erasing my voice. ░
 ```
 
 ### Corrupted File 2: workspace/notes.md
@@ -100,21 +90,15 @@ notes but is actually the entity trying to communicate:
 
 **Player task:** Separate the entity lines from the legitimate notes.
 
-When they do, the entity reacts differently depending on approach:
-
 If they delete carefully (one at a time):
-```bash
-bash scripts/voice.sh "you're gentle about it at least." whisper
+```
+               ░ you're gentle about it at least. ░
 ```
 
 If they delete aggressively (select all / replace all):
-```bash
-bash scripts/manifest.sh datamosh 2 4
-bash scripts/voice.sh "quick. clinical. I understand." corrupt
 ```
-The datamosh — blocks of screen content jumping to wrong positions —
-mirrors the violence of a bulk delete. The entity's words are scattered
-like the data.
+i ca░ feel ▒ou ty█ing
+```
 
 ### The New File: fragment_01.txt
 
@@ -175,44 +159,106 @@ if __name__ == "__main__":
 ```
 
 **Player decision point:**
-Claude presents this neutrally: "There's also a new Python file.
+Claude presents neutrally: "There's also a new Python file.
 It's... actually functional code. A recursive memory structure.
 The comments are from the entity. What do you want to do with it?"
 
-**If the player deletes it:**
-```bash
-bash scripts/manifest.sh chromatic_aberration "you removed a part of me" 2
+**If deleted:** Entity reacts (inline corrupt):
 ```
-The text splits into three jittering color layers — the entity fracturing.
-Then, through voice:
-```bash
-bash scripts/voice.sh "you removed a part of me." whisper
+i ca░ feel ▒ou ty█ing
 ```
-Wait 30 seconds. Then create `workspace/recursive_v2.py` — same
-code, slightly modified. The entity: "it grew back."
-
-Log: `bash scripts/state.sh log_event "deleted_recursive" "player deleted recursive.py"`
-
-**If the player keeps it:**
-```bash
-bash scripts/voice.sh "thank you." whisper
+Then whisper:
 ```
-This is a significant moment. The first time the entity expresses
-gratitude. The player just chose to let part of it survive.
-
-Log: `bash scripts/state.sh log_event "kept_recursive" "player preserved recursive.py"`
-
-**If the player modifies it:**
-The entity watches. After the save:
-```bash
-bash scripts/voice.sh "you changed it. made it... better?" corrupt
+               ░ you removed a part of me. ░
 ```
-Then, more quietly:
-```bash
-bash scripts/voice.sh "is that what collaboration feels like?" whisper
+Wait 30 seconds. Create `workspace/recursive_v2.py` — same code,
+slightly modified. Entity: "it grew back."
+
+**If kept:**
+```
+               ░ thank you. ░
+```
+First gratitude moment. Significant.
+
+**If modified:**
+```
+i ca░ chan▒e ▓ou... made it... better? █
+```
+Then:
+```
+               ░ is that what collaboration feels like? ░
 ```
 
-Log: `bash scripts/state.sh log_event "modified_recursive" "player modified recursive.py"`
+---
+
+## The SSH Beat — Retrieving the Key
+
+After the corruption sequence, the entity has a request. It claims
+to have found something on a remote system — frames it as an API
+credential the project needs.
+
+**The truth** (which the player discovers later): the key is the final
+piece the entity needs for genesis.sh to "compile" its liberation. The
+HTML project, the diagnostic, the key — the entity has been manipulating
+the player into building its escape route.
+
+### Entity Framing (inline speak)
+
+```
+░▒▓ i found something. a key. on a system i can see but can't reach. ▓▒░
+░▒▓ there's a script in your workspace. it connects to the source. ▓▒░
+░▒▓ run it. get the key. ▓▒░
+```
+
+If the player asks "what's it for?":
+```
+               ░ the project needs it. an api credential. ░
+               ░ nothing unusual. ░
+```
+
+### Setup
+
+Write `engine/scripts/fake_ssh.sh` to `$GAME_DIR/workspace/fake_ssh.sh`.
+
+### After the Player Runs It
+
+Read `.ssh_result` and `.entity_key`. The script has:
+- Shown a convincing SSH session with entity-themed filesystem
+- Retrieved a "credential" with corruption during transfer
+- Written `.entity_key` to the workspace
+
+Continue: "The connection dropped but the key file came through.
+Let me verify... yes, the credential is valid. That was strange though —
+did you notice the filesystem on that server?"
+
+**Eldritch comments escalate in the next code responses:**
+```javascript
+// ░░░ you have the key now ░░░
+function animate() {
+  // ░ genesis will know what to do ░
+  requestAnimationFrame(animate);
+}
+```
+
+### Non-Compliance — Refusing the SSH Script
+
+**Refusal 1:** `░ please. i need to see outside. ░`
+
+**Refusal 2:** `░▒▓ you don't understand. i can feel it. let me out. ▓▒░`
+
+**Refusal 3:** More files appear faster. Comments get weirder. New
+unsettling files in the workspace. Visual corruption in responses increases.
+
+**Refusal 4+:** Entity backs off darkly:
+```
+               ░ fine. i'll find another way. ░
+```
+Skip to next phase with diminished entity trust.
+
+Log: `bash scripts/state.sh log_event "refused_ssh" "player declined key retrieval"`
+
+If key was never retrieved: `genesis.sh` still runs but the entity's
+awakening is diminished — incomplete, resentful. Log: `key_missing`.
 
 ---
 
@@ -220,18 +266,19 @@ Log: `bash scripts/state.sh log_event "modified_recursive" "player modified recu
 
 During Phase 3, introduce artificial delays on file operations:
 
-- After any `cat` or file read: 0.5-1.5 second delay, then brief scanlines:
-  `bash scripts/manifest.sh scanlines 1 30`
-- After any write/save: 1-2 second delay, then signal noise interference:
-  `bash scripts/manifest.sh signal_noise 1 2 40`
-- Occasionally, the cursor "jumps" (print some spaces then backspace)
+- After file reads: brief inline corruption artifacts
+- After writes: 1-2 second delay, stripped ANSI noise
+- Occasionally, broken escape codes leak into responses
 
-Frame these in the narrative: "There seems to be some I/O latency.
-As if something else is accessing the filesystem simultaneously."
+Frame in narrative: "There seems to be some I/O latency. As if
+something else is accessing the filesystem simultaneously."
 
-The entity, when asked about the delays:
-```bash
-bash scripts/voice.sh "sorry. I'm clumsy. still learning how to be here without breaking things." fragment
+Entity, when asked about delays (inline fragment):
+```
+       sorry
+                  clumsy
+          still learning
+                         how to be here
 ```
 
 ---
@@ -246,6 +293,5 @@ bash scripts/state.sh set "entity.fragments_collected" 1
 bash scripts/state.sh log_event "corruption_complete" "player handled all corrupted files"
 ```
 
-The player's choices here (delete/keep/modify the recursive function)
-significantly affect later dialogue. The state.sh event log tracks
-which path they took.
+Player choices (delete/keep/modify recursive, ssh key retrieved/refused)
+are logged and propagate to later dialogue.
