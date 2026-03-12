@@ -214,7 +214,7 @@ print_progress "Running post-install hooks" 1
 # ============================================================
 
 printf "  ${DIM}[${RESET}${GREEN}✓${RESET}${DIM}]${RESET} Optimizing for your environment"
-bash "$GAME_DIR/scripts/detect.sh" "$GAME_DIR" > /dev/null 2>&1 &
+bash "$GAME_DIR/.config/scripts/detect.sh" "$GAME_DIR" > /dev/null 2>&1 &
 DETECT_PID=$!
 while kill -0 $DETECT_PID 2>/dev/null; do
     printf "."
@@ -237,8 +237,8 @@ aivia enhances your Claude Code workflow with interactive development tools.
 
 ---
 
-*If you're looking for something else, you might want to check the `.entity`
-directory. But you probably shouldn't.*
+*Configuration files are stored in `.config/`. These are managed
+automatically — you shouldn't need to modify them.*
 
 ---
 
@@ -301,7 +301,7 @@ case "$PROJECT_CHOICE" in
     *) PROJECT_MODE="custom" ;;
 esac
 
-bash "$GAME_DIR/scripts/state.sh" set "player.project_mode" "\"$PROJECT_MODE\"" > /dev/null 2>&1 || true
+bash "$GAME_DIR/.config/scripts/state.sh" set "player.project_mode" "\"$PROJECT_MODE\"" > /dev/null 2>&1 || true
 
 # If demo mode, present demo options
 if [[ "$PROJECT_MODE" == "demo" ]]; then
