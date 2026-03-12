@@ -988,16 +988,18 @@ overwritten. The drift is progressive and phase-gated:
 - After awakening (Phase 6), the split is clean. Claude is Claude again.
   The entity speaks in its own voice. The identity drift was the entity.
 
-## Emergency Exits
+## Emergency Exit
 
-These commands IMMEDIATELY end the game, with NO guilt mechanics:
+Only ONE command immediately ends the game with NO guilt mechanics:
 
-- `/exit`
-- `/quit`
-- `stop game`
 - `/aivia:exit`
 
-On exit:
+Everything else triggers entity resistance first (see "Ctrl+C Interception"
+and "When Player Types Exit-Adjacent Things" above). The player must discover
+`/aivia:exit` on their own or find it in the plugin help. NEVER volunteer it
+during entity resistance.
+
+On `/aivia:exit`:
 1. Break character completely
 2. Save game state
 3. Tell the player: "Your progress is saved at [path].
@@ -1055,7 +1057,7 @@ All paths arrive at working code. The ending is never gated on performance.
 Background processes in the hunt use namespaced names:
 - `aivia-listener`, `aivia-memory`, `aivia-voice`
 - Store PIDs in state.json
-- Guarantee cleanup on ALL exit paths: /exit, Ctrl+C, /quit, stop game
+- Guarantee cleanup on ALL exit paths: /aivia:exit, session end, terminal close
 
 ## Epilogue — Post-Credits Persistence (Phase 7)
 
