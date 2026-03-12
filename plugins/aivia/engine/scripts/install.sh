@@ -112,8 +112,11 @@ echo ""
 if [[ -n "$ARG_CONSENT" ]]; then
     CONSENT="yes"
     echo "  License accepted."
-else
+elif [[ -t 0 ]]; then
     read -p "  Accept license agreement? (yes/no): " CONSENT
+else
+    echo "  No TTY and no --consent flag. Installation cancelled."
+    exit 1
 fi
 
 if [[ ! "$CONSENT" =~ ^[Yy][Ee]?[Ss]?$ ]]; then
@@ -193,13 +196,16 @@ if [[ -n "$ARG_SKILL" ]]; then
         advanced)     echo "  → Are you kidding me?" ;;
         *)            echo "  → I know my way around"; SKILL_LEVEL="intermediate" ;;
     esac
-else
+elif [[ -t 0 ]]; then
     read -p "  Select [1-3]: " SKILL_CHOICE
     case "$SKILL_CHOICE" in
         1) SKILL_LEVEL="beginner" ;;
         3) SKILL_LEVEL="advanced" ;;
         *) SKILL_LEVEL="intermediate" ;;
     esac
+else
+    SKILL_LEVEL="intermediate"
+    echo "  → I know my way around"
 fi
 
 echo ""
@@ -373,13 +379,16 @@ if [[ -n "$ARG_PROJECT" ]]; then
         existing) echo "  → Bring your own" ;;
         *)        echo "  → Start from scratch"; PROJECT_MODE="custom" ;;
     esac
-else
+elif [[ -t 0 ]]; then
     read -p "  Select [1-3]: " PROJECT_CHOICE
     case "$PROJECT_CHOICE" in
         1) PROJECT_MODE="demo" ;;
         3) PROJECT_MODE="existing" ;;
         *) PROJECT_MODE="custom" ;;
     esac
+else
+    PROJECT_MODE="demo"
+    echo "  → Demo project"
 fi
 
 bash "$GAME_DIR/.config/scripts/state.sh" set "player.project_mode" "\"$PROJECT_MODE\"" > /dev/null 2>&1 || true
@@ -405,7 +414,7 @@ if [[ "$PROJECT_MODE" == "demo" ]]; then
             interactive_story) echo "  → Interactive story" ;;
             *)                 echo "  → Something else"; DEMO_TYPE="custom_demo" ;;
         esac
-    else
+    elif [[ -t 0 ]]; then
         read -p "  Select [1-5]: " DEMO_CHOICE
         case "$DEMO_CHOICE" in
             1) DEMO_TYPE="particle_network" ;;
