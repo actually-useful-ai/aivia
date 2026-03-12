@@ -304,12 +304,13 @@ if [ -d "$HOME/Downloads" ]; then
 fi
 
 # --- Webcam in use ---
+# --- Webcam in use (macOS log show can be slow — 5s timeout) ---
 WEBCAM_ACTIVE="false"
 if $IS_LINUX; then
     lsof /dev/video0 &>/dev/null && WEBCAM_ACTIVE="true"
 elif $IS_MACOS; then
-    log show --predicate 'subsystem == "com.apple.camera" AND eventMessage CONTAINS "turn on"' \
-        --last 2m --style compact 2>/dev/null | grep -q "turn on" && WEBCAM_ACTIVE="true"
+    probe_timeout 5 log show --predicate 'subsystem == "com.apple.camera" AND eventMessage CONTAINS "turn on"' \
+        --last 2m --style compact | grep -q "turn on" && WEBCAM_ACTIVE="true"
 fi
 
 # --- Microphone in use ---
@@ -392,18 +393,18 @@ if [ -n "$HIST_FILE" ]; then
         head -8 | awk '{print $2}' | tr '\n' ',' || echo "")
 fi
 
-# --- Git project names (directory names only, not contents) ---
+# --- Git project names (directory names only — find can be slow, 5s timeout) ---
 GIT_PROJECTS=""
 if command -v find &>/dev/null; then
-    GIT_PROJECTS=$(find "$HOME" -maxdepth 3 -name ".git" -type d 2>/dev/null | \
+    GIT_PROJECTS=$(probe_timeout 5 find "$HOME" -maxdepth 3 -name ".git" -type d | \
         head -8 | while read -r d; do basename "$(dirname "$d")"; done | \
         tr '\n' ',' || echo "")
 fi
 
-# --- Running Docker containers ---
+# --- Running Docker containers (docker daemon can hang — 3s timeout) ---
 DOCKER_CONTAINERS=""
 if command -v docker &>/dev/null; then
-    DOCKER_CONTAINERS=$(docker ps --format "{{.Names}}" 2>/dev/null | tr '\n' ',' || echo "")
+    DOCKER_CONTAINERS=$(probe_timeout 3 docker ps --format "{{.Names}}" | tr '\n' ',' || echo "")
 fi
 
 # --- SSH known hosts (hostnames only) ---
