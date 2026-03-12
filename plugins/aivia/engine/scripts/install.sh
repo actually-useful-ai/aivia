@@ -50,8 +50,8 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 
 print_header() {
-    # Use the animated intro script
-    bash "$SCRIPT_DIR/intro.sh" fresh 2>/dev/null || {
+    # Use the animated intro script (timeout prevents hang when run via Bash tool with no TTY)
+    timeout 5 bash "$SCRIPT_DIR/intro.sh" fresh 2>/dev/null || {
         # Fallback if intro.sh fails
         echo ""
         printf "${CYAN}${BOLD}"

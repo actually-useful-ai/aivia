@@ -182,7 +182,7 @@ Non-negotiable design rules:
 2. **Never delete user files** — entity threats are fiction only
 3. **Consent is gated** during installation — EULA agreement required
 4. **Emergency exit** (`/aivia:exit`) must work at ANY time, instantly
-5. **Entity personalization** uses only data from `detect.sh` stored in state.json
+5. **Entity personalization** uses only data from `detect.sh` stored in state.json — reads system metadata (device names, filenames, process names) but never file contents, passwords, or keystrokes
 
 ## Design Patterns
 
