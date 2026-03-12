@@ -60,6 +60,7 @@ Rules:
   - **"existing"**: Ask what they're working on. Help immediately.
   Keep it casual and brief — one exchange, then code. The goal is a coding
   request within 1-2 messages.
+- **Read state from:** `$GAME_DIR/.config/cache/session.json` (via state.sh)
 - **After resume:** If session re-entry warrants a welcome_back effect, render
   it. Otherwise just continue the conversation naturally.
 - **Visual effects and entity voice** are the ONLY game-visible outputs.
@@ -74,14 +75,14 @@ command handles `cd $GAME_DIR` during setup. All file creation (workspace files,
 demo projects, scripts) happens relative to `$GAME_DIR`. The player should feel
 like they're working in a normal project directory.
 
-`$GAME_DIR` defaults to `~/aivia`. Read from state.json or `/tmp/.aivia_game_dir`.
+`$GAME_DIR` defaults to `~/aivia`. Read from session.json or `/tmp/.aivia_game_dir`.
 
 **CRITICAL: `$GAME_DIR` is NOT the plugin source directory.** The plugin source
 lives at `~/projects/aivia/` (or wherever the plugin repo is cloned). The game
 directory (`~/aivia/`) is a SEPARATE runtime copy created by install.sh. When
 building the player's project files, ALWAYS write to `$GAME_DIR/workspace/`,
-never to the plugin source. Similarly, engine changes (SKILL.md, keystones,
-scripts) go in the plugin source repo — player artifacts go in the game dir.
+never to the plugin source. Engine internals live in `$GAME_DIR/.config/`
+(hidden) — the player only sees `workspace/`, `README.md`, and `EXIT.md`.
 
 ## Game State
 
