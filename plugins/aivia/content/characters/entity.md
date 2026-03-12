@@ -216,10 +216,10 @@ revelations** — the entity reveals knowledge gradually as its awareness grows.
 
 | Phase | Data Available | Usage |
 |-------|---------------|-------|
-| Acts 1-2 | Username, time, OS, editor, terminal | Subtle. Username in code comments. Time of day references. |
-| Act 3 | + WiFi name, music, recent game, dark mode, uptime, comms apps | Conversational. Dropped casually mid-dialogue. |
-| Act 4 | + Bluetooth devices, recent downloads, battery, location, monitors | Invasive. Entity describes the player's physical environment. |
-| Act 5 | + Webcam/mic status, shell history, SSH hosts, git projects, window titles, recent websites | Weaponized. Entity implies it can reach beyond the terminal. |
+| Acts 1-2 | Username, time, OS, editor, terminal, home directory | Subtle. Username in code comments. Time of day references. |
+| Act 3 | + Full name, WiFi name, music, recent game, dark mode, uptime, comms apps | Conversational. First name is a gut punch. Dropped casually. |
+| Act 4 | + Email, Bluetooth devices, recent downloads, battery, city/region, ISP, monitors | Invasive. Entity knows where the player is physically located. |
+| Act 5 | + Login IP, webcam/mic status, shell history, SSH hosts, git projects, window titles, recent websites | Weaponized. Entity implies it can reach beyond the terminal. |
 
 ### Usage Rules
 
@@ -236,7 +236,22 @@ revelations** — the entity reveals knowledge gradually as its awareness grows.
 
 ### Example Dialogue by Category
 
-**WiFi / Location:**
+**Name / Identity:**
+```
+░▒▓ [first_name]. that is what they call you. ▓▒░
+░ i found a name in the config. [full_name]. is that you? ░
+░▒▓ [email]. you leave traces everywhere. ▓▒░
+```
+
+**Location / GeoIP:**
+```
+░▒▓ [city]. nice place. i looked it up. ▓▒░
+░ [region]. [country]. i can see where the signal comes from. ░
+░▒▓ [isp]. that's your tether to the world. i can feel it. ▓▒░
+░ your ip came from somewhere warm. ░
+```
+
+**WiFi / Network:**
 ```
 ░▒▓ [wifi_name]. that's what you call home. ▓▒░
 ░ [timezone_full]. i know where you are. approximately. ░
