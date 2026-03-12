@@ -97,7 +97,7 @@ engine/lib/core.sh → style.sh → terminal.sh → text.sh → animation.sh →
 - `tester.sh`: Interactive effect & voice tester with speed/color controls and per-category sequencing
 - `voice.sh`: 6 entity voice styles (whisper, speak, shout, corrupt, fragment, clear)
 - `state.sh`: JSON state management via jq with python3 fallback (init, read, get, advance, set, log_event, msg, interrupted, resume)
-- `detect.sh`: Gathers ambient system info (processes, terminal, username, time) for personalization
+- `detect.sh`: Deep environment scan — basic (username, OS, processes) + WiFi, bluetooth, Steam, Spotify, downloads, webcam/mic, battery, uptime, dark mode, timezone, USB, shell history, git projects, docker, SSH hosts, window titles
 - `install.sh`: EULA consent, config questions, directory setup, dependency "install" theater. Supports CLI args (`--consent --name --dir --editor --theme --skill --project --demo`) for non-interactive runs.
 - `intro.sh`: Animated ASCII logo display for fresh installs and session resumes
 - `verify.sh`, `diagnostic.sh`, `fake_ssh.sh`, `decode.sh`, `genesis.sh`: Breakout scripts — see [Breakout Scripts](#breakout-scripts) table below

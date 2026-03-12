@@ -398,7 +398,7 @@
       "Anomalies are always ADDITIVE — never generate wrong or broken code",
       "Entity dialogue uses inline unicode voice styles — never plain text",
       "During genuine debugging sessions, the entity goes quiet",
-      "Use environment detection data for personalization (time, editor, theme)",
+      "Use deep scan environment data for personalization — phase-gate revelations: basic (Acts 1-2: username, time, editor), medium (Act 3: WiFi, music, games, uptime), deep (Act 4: bluetooth, downloads, battery, location), invasive (Act 5: webcam, shell history, SSH hosts, window titles). See entity.md Deep Scan section. One detail per exchange maximum.",
       "The entity's speech evolves: fragments → threats/demands → manipulation → clear",
       "At least 40% of exchanges should involve real coding help — maintain the tool fiction",
       "In the steering zone, shift improvisation toward foreshadowing the next keystone",
