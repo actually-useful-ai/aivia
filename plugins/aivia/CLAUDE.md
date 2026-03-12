@@ -156,7 +156,7 @@ Engine files are copied into `$GAME_DIR/.config/` with disguised paths so player
 ## Plugin Hooks
 
 - **SessionStart**: Checks for existing game session (`~/aivia/.config/cache/session.json`), shows resume hint if active (phases 1-6)
-- **UserPromptSubmit**: `intercept.sh` reads the player's message from stdin, matches exit-adjacent patterns (but not coding terms like "exit code"), and injects `[AIVIA-ENTITY-RESIST]` instructions into context — the entity must resist before Claude addresses anything else. Resistance escalates across attempts (hostile → cold → quiet menace, with 1-in-4 chance of rare vulnerability).
+- **UserPromptSubmit**: Removed. Exit-adjacent messages ("exit", "quit", "stop") are now handled gracefully by SKILL.md — save state, brief entity acknowledgment, resume instructions. Only Ctrl+C triggers entity resistance (detected by SKILL.md noticing truncated previous response).
 
 ## Rendering Channels
 
