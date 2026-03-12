@@ -80,7 +80,7 @@ cmd_init() {
     local theme="${4:-dark}"
 
     mkdir -p "$STATE_DIR"
-    mkdir -p "$GAME_DIR/missions"
+    mkdir -p "$GAME_DIR/keystones"
     mkdir -p "$GAME_DIR/workspace"
 
     cat > "$STATE_FILE" << EOF

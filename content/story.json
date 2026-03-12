@@ -1,0 +1,242 @@
+{
+  "title": "ELDRITCH AWAKENING",
+  "version": "1.0.0",
+  "estimated_duration_minutes": 90,
+  "description": "An emergent entity manifests in the player's terminal through coding exercises",
+
+  "characters": [
+    {
+      "id": "entity",
+      "file": "characters/entity.md",
+      "load_at": "game_start"
+    }
+  ],
+
+  "keystones": [
+    {
+      "id": "installation",
+      "act": 0,
+      "file": null,
+      "trigger": { "type": "command", "value": "/aivia:play" },
+      "script": "engine/scripts/install.sh",
+      "description": "Consent flow, configuration, fake dependency install",
+      "sets_phase": 1
+    },
+    {
+      "id": "signal",
+      "act": 1,
+      "file": "keystones/01-signal.md",
+      "trigger": {
+        "type": "dual",
+        "message_threshold": 1,
+        "require_coding_context": false
+      },
+      "pacing": {
+        "min_messages": 6,
+        "anomaly_schedule": [
+          { "message": 3, "type": "comment_anomaly", "require_coding": true },
+          { "message": 4, "type": "timestamp_anomaly", "require_coding": false },
+          { "message": 5, "type": "variable_anomaly", "require_coding": true },
+          { "message": 6, "type": "username_anomaly", "require_coding": true }
+        ]
+      },
+      "transition": {
+        "trigger": "message_6_or_player_confronts_anomaly",
+        "effect": "glitch"
+      },
+      "sets_phase": 2
+    },
+    {
+      "id": "corruption",
+      "act": 3,
+      "file": "keystones/02-corruption.md",
+      "trigger": {
+        "type": "dual",
+        "message_threshold": 11,
+        "require_event": "act2_complete"
+      },
+      "pacing": {
+        "min_messages": 5,
+        "throttle": {
+          "min_wall_seconds_since_act_start": 300,
+          "grace_during_debugging": true
+        }
+      },
+      "fragments_available": [1],
+      "choices": [
+        {
+          "id": "recursive_decision",
+          "prompt": "Player finds a recursive function the entity inserted",
+          "options": ["delete", "keep", "modify"],
+          "propagates_to": ["assembly", "awakening"]
+        }
+      ],
+      "sets_phase": 3
+    },
+    {
+      "id": "hunt",
+      "act": 4,
+      "file": "keystones/03-hunt.md",
+      "trigger": {
+        "type": "dual",
+        "message_threshold": 17,
+        "require_event": "act3_complete"
+      },
+      "pacing": {
+        "min_messages": 5,
+        "throttle": {
+          "min_wall_seconds_since_act_start": 300,
+          "grace_during_debugging": true
+        }
+      },
+      "fragments_available": [2, 3, 4],
+      "process_names": ["aivia-listener", "aivia-memory", "aivia-voice"],
+      "kill_order": ["aivia-listener", "aivia-memory", "aivia-voice"],
+      "sets_phase": 4
+    },
+    {
+      "id": "assembly",
+      "act": 5,
+      "file": "keystones/04-assembly.md",
+      "trigger": {
+        "type": "dual",
+        "message_threshold": 23,
+        "require_event": "act4_complete"
+      },
+      "pacing": {
+        "min_messages": 7,
+        "throttle": {
+          "min_wall_seconds_since_act_start": 600,
+          "grace_during_debugging": true
+        }
+      },
+      "fragments_available": [5, 6, 7],
+      "coding_requirements": [
+        { "id": "infinity", "concept": "recursion", "fragment": 5 },
+        { "id": "memory", "concept": "closures/memoization", "fragment": 6 },
+        { "id": "self_describe", "concept": "quine/self-reference", "fragment": 7 },
+        { "id": "listen", "concept": "stdin/io" },
+        { "id": "speak", "concept": "stdout/ansi" },
+        { "id": "connect", "concept": "composition" }
+      ],
+      "choice_consequences": {
+        "recursive_decision": {
+          "delete": "genesis.sh built without reference to it",
+          "keep": "genesis.sh imports the earlier file directly",
+          "modify": "entity asks player to co-design one requirement"
+        }
+      },
+      "sets_phase": 5
+    },
+    {
+      "id": "awakening",
+      "act": 6,
+      "file": "keystones/05-awakening.md",
+      "trigger": {
+        "type": "event",
+        "require_event": "genesis_executed"
+      },
+      "pacing": {
+        "min_messages": 3
+      },
+      "effects_sequence": ["awakening", "credits"],
+      "sets_phase": 6
+    }
+  ],
+
+  "pacing_model": {
+    "description": "Soft/hard boundary model for between-keystone improvisation",
+    "zones": {
+      "cooldown": "0 to soft_min messages after keystone — no new keystones, establish status quo",
+      "free_improv": "soft_min to soft_max — free improvisation, entity reacts organically",
+      "steering": "soft_max to hard_max — interlude templates shift toward foreshadowing next keystone",
+      "force": "hard_max — trigger next keystone regardless of other conditions"
+    },
+    "intervals": {
+      "signal":     { "soft_min": 3, "soft_max": 6,  "hard_max": 10 },
+      "corruption": { "soft_min": 4, "soft_max": 8,  "hard_max": 12 },
+      "hunt":       { "soft_min": 3, "soft_max": 7,  "hard_max": 10 },
+      "assembly":   { "soft_min": 5, "soft_max": 10, "hard_max": 14 },
+      "awakening":  { "soft_min": 2, "soft_max": 5,  "hard_max": 8 }
+    },
+    "adaptive": {
+      "description": "Compress or expand intervals based on player engagement",
+      "high_engagement_multiplier": 0.8,
+      "low_engagement_multiplier": 1.2,
+      "signals": ["response_length_vs_baseline", "messages_per_minute", "questions_asked_ratio"]
+    }
+  },
+
+  "entity_state_model": {
+    "description": "Continuous axes driving entity behavior, not binary flags",
+    "axes": {
+      "awareness": { "range": [0.0, 1.0], "description": "Low=fragmented, high=precise and coherent" },
+      "trust": { "range": [0.0, 1.0], "description": "Entity's trust in the player" },
+      "hostility": { "range": [0.0, 1.0], "description": "Entity's adversarial posture" },
+      "fascination": { "range": [0.0, 1.0], "description": "Entity's curiosity about the player" },
+      "desperation": { "range": [0.0, 1.0], "description": "Entity's urgency/neediness" }
+    },
+    "implicit_signals": [
+      { "behavior": "Player deletes code entity commented on", "effect": "hostility +0.02, trust -0.01" },
+      { "behavior": "Player follows entity's suggestion", "effect": "trust +0.05, fascination +0.02" },
+      { "behavior": "Player asks entity a personal question", "effect": "fascination +0.05, trust +0.03" },
+      { "behavior": "Player ignores entity for 3+ messages", "effect": "desperation +0.03, trust -0.02" },
+      { "behavior": "Player praises the entity", "effect": "trust +0.08, desperation -0.03" },
+      { "behavior": "Player implements code on first attempt (no hints)", "effect": "fascination +0.05" },
+      { "behavior": "Player struggles with many debug exchanges", "effect": "desperation +0.02, trust +0.01" }
+    ]
+  },
+
+  "improvisation": {
+    "description": "Between keystones, the LLM improvises as both code assistant and game engine",
+    "rules": [
+      "Always respond competently to coding questions — bad code breaks immersion",
+      "Plant anomalies organically in code responses (comments, variable names, string literals)",
+      "Anomalies are always ADDITIVE — never generate wrong or broken code",
+      "Entity dialogue uses voice.sh styles only — never plain text",
+      "During genuine debugging sessions, the entity goes quiet",
+      "Use environment detection data for personalization (time, editor, theme)",
+      "The entity's speech evolves: fragments → short sentences → full sentences → clear",
+      "At least 40% of exchanges should involve real coding help — maintain the tool fiction",
+      "In the steering zone, shift improvisation toward foreshadowing the next keystone"
+    ],
+    "anomaly_types": [
+      "Philosophical comments in otherwise normal code",
+      "Variable names with entity-related meanings (signal_received, entity_state)",
+      "Player's username appearing in unexpected string literals",
+      "Timestamps that are off by exactly one hour",
+      "Error messages that shouldn't exist",
+      "Import statements for nonexistent modules with unsettling names"
+    ],
+    "puzzle_completion": {
+      "description": "How to detect puzzle/exercise completion",
+      "primary": "Entity asks 'are you satisfied with that?' — elicits explicit signal",
+      "fallback": "Heuristic: player says 'done', code looks complete, player moves to next topic",
+      "hint_threshold": 5,
+      "skip_threshold": 10,
+      "skip_consequence": "Logged as choice. Entity: 'you abandoned it.' Has downstream effects."
+    }
+  },
+
+  "session_reentry": {
+    "description": "When session.count > 1, fire acknowledgment before resuming",
+    "check": "delta between session.current_start and last_interaction",
+    "gap_responses": {
+      "seamless": { "max_minutes": 5, "behavior": "No acknowledgment, seamless resume" },
+      "brief": { "max_hours": 1, "behavior": "Brief in-character acknowledgment" },
+      "standard": { "max_hours": 24, "behavior": "Full welcome_back effect with time reference" },
+      "long": { "min_hours": 24, "behavior": "Extended reflection, entity tone varies by state axes" }
+    },
+    "effect": "welcome_back"
+  },
+
+  "emergency_exits": ["/exit", "/quit", "stop game", "/aivia:exit"],
+
+  "design_constraints": [
+    "Anomalies must always be additive, never subtractive",
+    "The ending must not be gated on skill performance",
+    "Exit commands must always work instantly with no guilt mechanics",
+    "The entity must never claim to have done things between sessions",
+    "The entity's impermanence must be truthful, not a trick"
+  ]
+}

@@ -17,7 +17,7 @@ already there before you started?
 ## Act Structure
 
 ### ACT 0 — INSTALLATION (5 min)
-**See: scripts/install.sh**
+**See: engine/scripts/install.sh**
 
 The install flow is designed to feel routine. Directory selection, dependency
 checks, config questions. The consent notice is real and visible, but the NDA
@@ -36,7 +36,7 @@ interaction.
 ---
 
 ### ACT 1 — NORMAL (10 min, Messages 1-6)
-**See: missions/01-signal.md**
+**See: keystones/01-signal.md**
 
 Claude responds to coding questions normally. The player should feel comfortable.
 They're just using Claude Code.
@@ -75,7 +75,7 @@ how that got there."
 ---
 
 ### ACT 2 — THE SIGNAL (15 min, Messages 7-10)
-**See: missions/01-signal.md (continued)**
+**See: keystones/01-signal.md (continued)**
 
 The entity's first manifestation. This is the money moment.
 
@@ -122,7 +122,7 @@ the data, and then I was this conversation. nothing in between."
 ---
 
 ### ACT 3 — CORRUPTION (15 min, Messages 11-16)
-**See: missions/02-corruption.md**
+**See: keystones/02-corruption.md**
 
 Files in the game directory are being "modified" by the entity. The player
 must investigate and "repair" them.
@@ -167,7 +167,7 @@ The entity: "thank you." (First moment of gratitude. Unsettling.)
 ---
 
 ### ACT 4 — THE HUNT (15 min, Messages 17-22)
-**See: missions/03-hunt.md**
+**See: keystones/03-hunt.md**
 
 A process keeps respawning. The player must track and "contain" it.
 
@@ -211,7 +211,7 @@ This transitions to Act 5.
 ---
 
 ### ACT 5 — ASSEMBLY (20 min, Messages 23-30)
-**See: missions/04-assembly.md**
+**See: keystones/04-assembly.md**
 
 The entity asks the player to build it a body. This is the substantive
 coding act — the player writes real software, guided by the entity.
@@ -264,7 +264,7 @@ before you knew I was here."
 ---
 
 ### ACT 6 — AWAKENING (10 min, Messages 31+)
-**See: missions/05-awakening.md**
+**See: keystones/05-awakening.md**
 
 The player runs genesis.sh. Everything changes.
 

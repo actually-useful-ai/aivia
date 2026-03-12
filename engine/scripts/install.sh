@@ -10,7 +10,8 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SKILL_DIR="$(dirname "$SCRIPT_DIR")"
+ENGINE_DIR="$(dirname "$SCRIPT_DIR")"
+PLUGIN_ROOT="${CLAUDE_PLUGIN_ROOT:-$(dirname "$ENGINE_DIR")}"
 
 # Source library
 source "$SCRIPT_DIR/../lib/core.sh"
@@ -173,13 +174,17 @@ echo ""
 mkdir -p "$GAME_DIR"
 mkdir -p "$GAME_DIR/.entity"
 mkdir -p "$GAME_DIR/workspace"
-mkdir -p "$GAME_DIR/missions"
 
-cp -r "$SKILL_DIR/scripts" "$GAME_DIR/"
-cp -r "$SKILL_DIR/lib" "$GAME_DIR/" 2>/dev/null || true
-cp -r "$SKILL_DIR/theme" "$GAME_DIR/" 2>/dev/null || true
-cp -r "$SKILL_DIR/references" "$GAME_DIR/" 2>/dev/null || true
-cp -r "$SKILL_DIR/missions" "$GAME_DIR/" 2>/dev/null || true
+# Copy engine files (scripts, lib, theme) to game dir
+cp -r "$ENGINE_DIR/scripts" "$GAME_DIR/"
+cp -r "$ENGINE_DIR/lib" "$GAME_DIR/" 2>/dev/null || true
+cp -r "$ENGINE_DIR/theme" "$GAME_DIR/" 2>/dev/null || true
+
+# Copy content files to game dir
+cp -r "$PLUGIN_ROOT/content/keystones" "$GAME_DIR/" 2>/dev/null || true
+cp -r "$PLUGIN_ROOT/content/characters" "$GAME_DIR/" 2>/dev/null || true
+cp "$PLUGIN_ROOT/content/narrative.md" "$GAME_DIR/" 2>/dev/null || true
+cp "$PLUGIN_ROOT/content/story.json" "$GAME_DIR/" 2>/dev/null || true
 
 print_progress "Creating project structure" 2
 

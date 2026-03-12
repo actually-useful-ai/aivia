@@ -1,4 +1,8 @@
+# Game instance artifacts (created by install.sh, not plugin source)
 .entity/
-.DS_Store
-node_modules/
+workspace/
 *.log
+
+# OS artifacts
+.DS_Store
+Thumbs.db

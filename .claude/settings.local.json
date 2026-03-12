@@ -3,7 +3,8 @@
     "allow": [
       "Bash(bash:*)",
       "Bash(rm:*)",
-      "Bash(xxd:*)"
+      "Bash(xxd:*)",
+      "Bash(cp:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
