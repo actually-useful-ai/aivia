@@ -642,7 +642,7 @@ has multiple **variants** that adapt to what the player is doing:
 - **Non-code variant:** Prose slip, echo, name drop, or fragment in conversation.
 - **Backchannel variant:** Entity phrase in tool call description (parallel track).
 
-All three channels can fire simultaneously. The backchannel track runs
+All anomaly channels can fire simultaneously. The backchannel track runs
 independently — it adds to whatever else is happening, not instead of it.
 
 When generating code, prefer the code variant. When in conversation, use the
