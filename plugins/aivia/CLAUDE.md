@@ -157,9 +157,29 @@ bash engine/scripts/state.sh msg              # Increment message count
 bash engine/scripts/state.sh log_event <type> [detail]
 bash engine/scripts/state.sh interrupted      # Mark Ctrl+C
 bash engine/scripts/state.sh resume           # Returns "phase elapsed_seconds"
+bash engine/scripts/state.sh context <key> <value>  # Track player coding context
+bash engine/scripts/state.sh context_read           # Read player context JSON
 ```
 
 In the game dir, scripts live at `.config/scripts/state.sh` (install.sh handles the copy).
+
+## Two Directories: Plugin Source vs Game Dir
+
+The **plugin source** (`~/projects/aivia/plugins/aivia/`) is the development repo. The **game directory** (`~/aivia/` by default) is a runtime copy created by `install.sh`. During gameplay, all file operations target `$GAME_DIR`, never the plugin source. Engine files are copied into `$GAME_DIR/.config/` with disguised paths.
+
+## Breakout Scripts
+
+Player-executed scripts that bypass Claude Code's ANSI stripping. The entity narratively "can't reach" them — it needs the player to run them. Framing escalation: routine → clinical → deflective → clinical → plea.
+
+| Script | When | Corruption Level | Framing |
+|--------|------|-----------------|---------|
+| `verify.sh` | Post-install | 0 (clean) | Routine terminal check |
+| `diagnostic.sh` | Act 2→3 | 1 (subtle) | Clinical signal analysis |
+| `fake_ssh.sh` | Mid Act 3 | 2 (moderate) | Deflective — "API credential" |
+| `decode.sh` | Act 4→5 | 2 (moderate) | Clinical — encoded data |
+| `genesis.sh` | Act 5 climax | 3 (heavy) | Plea — "run it. please." |
+
+Each script writes a result file to `workspace/` that the agent reads to continue the narrative.
 
 ## Safety Constraints
 
