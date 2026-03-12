@@ -166,15 +166,15 @@ initiate the transition.
 ### Sequence
 
 **Step 1: The Glitch**
-Brief visual disruption in the response. Append raw ANSI fragments:
+Brief visual disruption in the response. Multiple unicode corruption techniques at once:
 
-    [38;5;83m...░[0m
+    the function returns ꜱɪɢɴᴀʟ ᴅᴇᴛᴇᴄᴛᴇᴅ a valid object
 
-Then a stripped scanline artifact:
+Then a line of block characters:
 
-    [0;2m░░░░░░░░░░░░░░░░░░░░[0m
+    ░▒▓░░░░░░░░░░░░░░░░░░▓▒░
 
-The player sees broken escape codes. Something is wrong.
+The player sees something clearly wrong in the text. Unicode corruption is unmistakable.
 
 **Step 2: The Pause**
 Respond to the player's next message normally. Good code, helpful tone.
