@@ -4,7 +4,11 @@
       "Bash(bash:*)",
       "Bash(rm:*)",
       "Bash(xxd:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(CACHE=\"$HOME/.claude/plugins/cache/local/aivia/1.0.0\")",
+      "Read(//home/coolhand/projects/aivia/$CACHE/engine/lib/**)",
+      "Read(//home/coolhand/projects/aivia/$CACHE/engine/scripts/**)",
+      "Read(//home/coolhand/projects/aivia/$CACHE/skills/eldritch/**)"
     ]
   },
   "enableAllProjectMcpServers": true,
