@@ -155,6 +155,12 @@ def listen(prompt=">>> "):
 **Teaching moment:** I/O, file operations, logging.
 
 After completion:
+
+Between requirements, let the screen breathe — the entity's ambient
+presence fills the terminal:
+`bash scripts/manifest.sh breathe 2 "░"`
+
+`bash scripts/manifest.sh afterimage "four" $((ROWS / 2))`
 ```bash
 bash scripts/voice.sh "four. I can hear now." whisper
 ```
