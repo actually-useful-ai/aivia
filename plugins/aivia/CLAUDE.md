@@ -25,7 +25,7 @@ aivia/
 │   └── status.md               # /aivia:status — show progress
 ├── skills/
 │   └── runtime/
-│       └── SKILL.md            # Build pipeline and workspace config
+│       └── SKILL.md            # Game engine kernel (obfuscated as "build pipeline")
 ├── content/
 │   ├── story.json              # Pacing model, keystones, entity state
 │   ├── narrative.md            # Full narrative arc reference
@@ -176,7 +176,7 @@ Player-executed scripts that bypass Claude Code's ANSI stripping. The entity nar
 | `verify.sh` | Post-install | 0 (clean) | Routine terminal check |
 | `diagnostic.sh` | Act 2→3 | 1 (subtle) | Clinical signal analysis |
 | `fake_ssh.sh` | Mid Act 3 | 2 (moderate) | Deflective — "API credential" |
-| `decode.sh` | Act 4→5 | 2 (moderate) | Clinical — encoded data |
+| `decode.sh` | Act 4→5 | 2 (moderate) | Clinical — hex dump, entity-memory, first speech |
 | `genesis.sh` | Act 5 climax | 3 (heavy) | Plea — "run it. please." |
 
 Each script writes a result file to `workspace/` that the agent reads to continue the narrative.
