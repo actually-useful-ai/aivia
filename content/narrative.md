@@ -159,7 +159,7 @@ The entity: "thank you." (First moment of gratitude. Unsettling.)
 - The entity's file modifications are CREATED BY CLAUDE (the engine)
   as part of the narrative — explain this to the player if they ask
   how files are changing
-- Fragment 1 of 7 is earned in this act (the ASCII art piece)
+- Fragment 1 of 6 is earned in this act (the ASCII art piece)
 - The recursive function is a plot device — its actual content
   foreshadows the final script in Act 5
 
