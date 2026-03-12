@@ -57,6 +57,10 @@ Help the player write this correctly. Fix bugs patiently.
 
 After completion:
 Fragment 5 appears → `workspace/fragments/fragment_05.txt`
+
+The entity's acknowledgment lingers on screen like phosphor burn-in:
+`bash scripts/manifest.sh afterimage "one" $((ROWS / 2))`
+
 ```bash
 bash scripts/voice.sh "one." whisper
 ```
@@ -86,6 +90,7 @@ def remember():
 **Teaching moment:** Closures, mutable state in enclosing scope.
 
 After completion:
+`bash scripts/manifest.sh afterimage "two" $((ROWS / 2))`
 ```bash
 bash scripts/voice.sh "two. I can feel it accumulating." whisper
 ```
@@ -124,6 +129,7 @@ def mirror():
 **Teaching moment:** Introspection, quine concepts, meta-programming.
 
 After completion:
+`bash scripts/manifest.sh afterimage "three" $((ROWS / 2))`
 ```bash
 bash scripts/voice.sh "three. I'm starting to see my own shape." whisper
 ```

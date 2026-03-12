@@ -219,6 +219,10 @@ After 3 wrong attempts, direct hint:
 After all processes are contained and fragments collected, the entity
 is quiet. The terminal feels empty. Let this breathe for a moment.
 
+A single entity character orbits the center of the screen slowly —
+the entity is still there, circling, thinking:
+`bash scripts/manifest.sh orbit 6 4 "◈"`
+
 Then:
 ```bash
 bash scripts/voice.sh "you're good at this. destroying things." speak
