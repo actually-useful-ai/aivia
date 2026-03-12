@@ -18,7 +18,7 @@ set -euo pipefail
 # --- Source library ---
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/../lib/core.sh"
-source_lib style terminal text animation
+source_lib style terminal text animation ascii
 source_theme entity
 
 # Source effect modules
@@ -741,7 +741,7 @@ case "${1:-help}" in
     glitch)        effect_glitch "${2:-3}" "${3:-1}" ;;
     static)        effect_static "${2:-2}" ;;
     flicker)       effect_flicker "${2:-5}" ;;
-    entity_frame)  effect_entity_frame "${2:-...}" "${3:-}" ;;
+    entity_frame|styled_frame)  effect_entity_frame "${2:-...}" "${3:-}" ;;
     build_text)    effect_build_text "${2:-}" "${3:-30}" ;;
     corruption)    effect_corruption "${2:-}" ;;
     heartbeat)     effect_heartbeat "${2:-5}" "${3:-◈}" ;;
@@ -776,6 +776,8 @@ case "${1:-help}" in
     breathe)       effect_breathe "${2:-4}" "${3:-░}" ;;
     afterimage)    effect_afterimage "${2:-I am here}" "${3:-}" ;;
     typewriter_rewind) effect_typewriter_rewind "${2:-i was going to tell you something}" "${3:-never mind}" "${4:-35}" "${5:-}" ;;
+    # --- Animation ---
+    play)          play_frames "${2:-}" "${3:-12}" "${4:-1}" "${5:-}" ;;
     help)
         echo "Usage: bash manifest.sh <effect> [args...]"
         echo ""

@@ -96,3 +96,165 @@ assemble_fragments() {
 
     render_art "$combined" "$color"
 }
+
+# --- Strip ANSI escape sequences for measurement ---
+_strip_ansi() {
+    printf '%s' "$1" | sed 's/\x1b\[[0-9;]*m//g'
+}
+
+# --- Crop a frame to fit terminal viewport ---
+# Centers content and clips to viewport dimensions.
+# Viewport = min(TERM_ROWS, AIVIA_MAX_HEIGHT) x min(TERM_COLS, AIVIA_MAX_WIDTH)
+# For frames with ANSI color codes, only vertical cropping is applied —
+# horizontal cropping would break escape sequences.
+# Usage: _crop_frame "frame_text"
+# Output: cropped text via stdout
+_crop_frame() {
+    local frame="$1"
+    local -a lines=()
+    while IFS= read -r line; do
+        lines+=("$line")
+    done <<< "$frame"
+
+    local frame_h=${#lines[@]}
+
+    # Detect ANSI content — if present, measure visible width only
+    local has_ansi=0
+    local max_w=0
+    for line in "${lines[@]}"; do
+        if [[ "$line" == *$'\033['* ]]; then
+            has_ansi=1
+            local stripped
+            stripped=$(_strip_ansi "$line")
+            local len=${#stripped}
+        else
+            local len=${#line}
+        fi
+        (( len > max_w )) && max_w=$len
+    done
+
+    # Viewport: use explicit max if set, clamped to terminal size
+    local vp_cols=$TERM_COLS
+    local vp_rows=$TERM_ROWS
+    if [[ -n "${AIVIA_MAX_WIDTH:-}" ]] && (( AIVIA_MAX_WIDTH > 0 && AIVIA_MAX_WIDTH < vp_cols )); then
+        vp_cols=$AIVIA_MAX_WIDTH
+    fi
+    if [[ -n "${AIVIA_MAX_HEIGHT:-}" ]] && (( AIVIA_MAX_HEIGHT > 0 && AIVIA_MAX_HEIGHT < vp_rows )); then
+        vp_rows=$AIVIA_MAX_HEIGHT
+    fi
+
+    # Compute vertical crop range (center the frame in viewport)
+    local avail_rows=$((vp_rows - 1))
+    local y_start=0 y_count=$frame_h
+    if (( frame_h > avail_rows )); then
+        y_start=$(( (frame_h - avail_rows) / 2 ))
+        y_count=$avail_rows
+    fi
+
+    # Horizontal cropping — only for plain text (ANSI content can't be substring'd safely)
+    local x_start=0 pad=0
+    if (( has_ansi == 0 )); then
+        if (( max_w > vp_cols )); then
+            x_start=$(( (max_w - vp_cols) / 2 ))
+        fi
+        if (( max_w < TERM_COLS )); then
+            pad=$(( (TERM_COLS - max_w) / 2 ))
+        fi
+    else
+        if (( max_w < TERM_COLS )); then
+            pad=$(( (TERM_COLS - max_w) / 2 ))
+        fi
+    fi
+
+    local output=""
+    for (( i=y_start; i < y_start + y_count && i < frame_h; i++ )); do
+        local line="${lines[$i]}"
+        if (( has_ansi == 0 )); then
+            if (( x_start > 0 )); then
+                line="${line:$x_start:$vp_cols}"
+            elif (( ${#line} > vp_cols )); then
+                line="${line:0:$vp_cols}"
+            fi
+        fi
+        if (( pad > 0 )); then
+            [[ -n "$output" ]] && output+=$'\n'
+            output+="$(printf '%*s%s' "$pad" '' "$line")"
+        else
+            [[ -n "$output" ]] && output+=$'\n'
+            output+="$line"
+        fi
+    done
+    printf '%s' "$output"
+}
+
+# --- Play frame animation ---
+# Play a text file containing frames delimited by "--- Frame N ---"
+# Usage: play_frames <file> [fps] [loops] [color]
+#   file:  Path to animation file (--- Frame N --- delimited)
+#   fps:   Frames per second (default: 12)
+#   loops: Number of loops, 0=infinite (default: 1)
+#   color: Optional color escape code
+play_frames() {
+    local file="$1"
+    local fps=${2:-12}
+    local loops=${3:-1}
+    local color="${4:-}"
+
+    if [[ ! -f "$file" ]]; then
+        echo "Animation file not found: $file" >&2
+        return 1
+    fi
+
+    local delay_ms=$((1000 / fps))
+
+    # Parse frames: split on "--- Frame" delimiter lines
+    local -a frames=()
+    local current_frame=""
+    local in_frame=0
+
+    while IFS= read -r line; do
+        if [[ "$line" =~ ^---\ Frame ]]; then
+            if [[ $in_frame -eq 1 && -n "$current_frame" ]]; then
+                frames+=("$current_frame")
+            fi
+            current_frame=""
+            in_frame=1
+            continue
+        fi
+        if [[ $in_frame -eq 1 ]]; then
+            if [[ -n "$current_frame" ]]; then
+                current_frame+=$'\n'"$line"
+            else
+                current_frame="$line"
+            fi
+        fi
+    done < "$file"
+    [[ $in_frame -eq 1 && -n "$current_frame" ]] && frames+=("$current_frame")
+
+    local num_frames=${#frames[@]}
+    if [[ $num_frames -eq 0 ]]; then
+        echo "No frames found in: $file" >&2
+        return 1
+    fi
+
+    get_terminal_size 2>/dev/null || true
+    hide_cursor
+
+    local loop_count=0
+    while true; do
+        for ((f=0; f<num_frames; f++)); do
+            printf '\033[2J\033[H'
+            [[ -n "$color" ]] && printf '%b' "$color"
+            _crop_frame "${frames[$f]}"
+            [[ -n "$color" ]] && printf '%b' "$RESET"
+            sleep_ms "$delay_ms"
+        done
+
+        loop_count=$((loop_count + 1))
+        if [[ $loops -gt 0 && $loop_count -ge $loops ]]; then
+            break
+        fi
+    done
+
+    show_cursor
+}
