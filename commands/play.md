@@ -64,11 +64,16 @@ normal code assistant behavior. Do NOT print state.sh output, phase numbers,
 
 **After fresh install:** The install script already asked the player what
 they want to build (demo/custom/existing) and saved it to `player.project_mode`
-in state.json. Read that value and respond accordingly:
-- **"demo"**: Scaffold a small project. Ask one follow-up ("What language?") then build.
+in state.json. If demo, `player.project_choice` has the specific demo type.
+Read both values and respond accordingly:
+- **"demo"**: Read `player.project_choice` for which demo (particle_network,
+  generative_art, data_dashboard, interactive_story, custom_demo). Start
+  scaffolding an HTML/CSS/JS project immediately — ask one natural follow-up
+  question (color scheme? animation speed? what data?) then build.
 - **"custom"**: Ask what they want to build. One question, then start.
 - **"existing"**: Ask what they're working on. Help immediately.
-Goal: coding request within 1-2 messages.
+Goal: coding request within 1-2 messages. All demos are HTML-based (progressive
+HTML/CSS/JS page that the player can open in a browser to see their work).
 
 **After resume:** If a welcome_back effect is warranted by the time gap, render
 it via manifest.sh. Otherwise just continue the conversation naturally.
