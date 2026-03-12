@@ -249,19 +249,106 @@ menu_effects() {
     printf "  ${UI_ACCENT}EFFECTS${RESET}\n\n"
 
     local i=1
-    for effect in "${EFFECTS[@]}"; do
+
+    printf "  ${UI_DIM}── original ──${RESET}\n"
+    for effect in "${EFFECTS_ORIGINAL[@]}"; do
+        printf "  ${BOLD}%2d${RESET}) %s\n" "$i" "$effect"
+        i=$((i + 1))
+    done
+
+    printf "  ${UI_DIM}── corruption ──${RESET}\n"
+    for effect in "${EFFECTS_CORRUPTION[@]}"; do
+        printf "  ${BOLD}%2d${RESET}) %s\n" "$i" "$effect"
+        i=$((i + 1))
+    done
+
+    printf "  ${UI_DIM}── spatial ──${RESET}\n"
+    for effect in "${EFFECTS_SPATIAL[@]}"; do
+        printf "  ${BOLD}%2d${RESET}) %s\n" "$i" "$effect"
+        i=$((i + 1))
+    done
+
+    printf "  ${UI_DIM}── theater ──${RESET}\n"
+    for effect in "${EFFECTS_THEATER[@]}"; do
+        printf "  ${BOLD}%2d${RESET}) %s\n" "$i" "$effect"
+        i=$((i + 1))
+    done
+
+    printf "  ${UI_DIM}── atmosphere ──${RESET}\n"
+    for effect in "${EFFECTS_ATMOSPHERE[@]}"; do
         printf "  ${BOLD}%2d${RESET}) %s\n" "$i" "$effect"
         i=$((i + 1))
     done
 
     printf "\n"
     printf "  ${BOLD} a${RESET}) Run ALL effects sequentially\n"
+    printf "  ${BOLD} g${RESET}) Run by category\n"
     printf "  ${BOLD} v${RESET}) Voice styles menu\n"
     printf "  ${BOLD} s${RESET}) Change speed\n"
     printf "  ${BOLD} c${RESET}) Change color\n"
     printf "  ${BOLD} q${RESET}) Quit\n"
     printf "\n"
     printf "  ${UI_DIM}choice:${RESET} "
+}
+
+# ---------- category picker ----------
+menu_categories() {
+    draw_header
+    draw_status
+
+    printf "  ${UI_ACCENT}RUN BY CATEGORY${RESET}\n\n"
+
+    local i=1
+    for idx in "${!CATEGORY_NAMES[@]}"; do
+        local cat="${CATEGORY_NAMES[$idx]}"
+        local label="${CATEGORY_LABELS[$idx]}"
+        local count
+        case "$cat" in
+            original)   count=${#EFFECTS_ORIGINAL[@]} ;;
+            corruption) count=${#EFFECTS_CORRUPTION[@]} ;;
+            spatial)    count=${#EFFECTS_SPATIAL[@]} ;;
+            theater)    count=${#EFFECTS_THEATER[@]} ;;
+            atmosphere) count=${#EFFECTS_ATMOSPHERE[@]} ;;
+        esac
+        printf "  ${BOLD}%2d${RESET}) %-40s ${UI_DIM}(%d effects)${RESET}\n" "$i" "$label" "$count"
+        i=$((i + 1))
+    done
+
+    printf "\n"
+    printf "  ${BOLD} b${RESET}) Back to effects menu\n"
+    printf "\n"
+    printf "  ${UI_DIM}choice:${RESET} "
+}
+
+run_category() {
+    local cat="$1"
+    local -a effects
+    case "$cat" in
+        original)   effects=("${EFFECTS_ORIGINAL[@]}") ;;
+        corruption) effects=("${EFFECTS_CORRUPTION[@]}") ;;
+        spatial)    effects=("${EFFECTS_SPATIAL[@]}") ;;
+        theater)    effects=("${EFFECTS_THEATER[@]}") ;;
+        atmosphere) effects=("${EFFECTS_ATMOSPHERE[@]}") ;;
+    esac
+
+    local label
+    for idx in "${!CATEGORY_NAMES[@]}"; do
+        if [[ "${CATEGORY_NAMES[$idx]}" == "$cat" ]]; then
+            label="${CATEGORY_LABELS[$idx]}"
+            break
+        fi
+    done
+
+    echo ""
+    printf "  ${UI_ACCENT}Running category: ${BOLD}%s${RESET}\n" "$label"
+    printf "  ${UI_DIM}%d effects${RESET}\n" "${#effects[@]}"
+
+    for effect in "${effects[@]}"; do
+        run_effect "$effect"
+        printf "\n  ${UI_DIM}next effect in 2s...${RESET}\n"
+        sleep 2
+    done
+    wait_key
 }
 
 # ---------- voice menu ----------
