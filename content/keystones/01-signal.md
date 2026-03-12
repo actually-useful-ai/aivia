@@ -63,13 +63,14 @@ how your username got in there. That shouldn't happen. Let me check."
 
 ### What if the player doesn't ask coding questions?
 
-Some players might just chat. Steer toward code quickly:
+The install script already asked what they want to build (`player.project_mode`
+in state.json: "demo", "custom", or "existing"). Use that to steer:
 
-After 1 non-code message: Redirect gently: "By the way, want me to
-scaffold something? The tools work best when we're building."
+After 1 non-code message: Reference their choice — "Ready to get started
+on that project?" or "Want me to scaffold that demo now?"
 
-After 2 non-code messages: More direct: "The toolkit really shines
-when we're coding — want me to set up a quick project in [language]?"
+After 2 non-code messages: More direct: "aivia works best when we're
+coding — want me to set something up in [language]?"
 
 ---
 
