@@ -34,8 +34,8 @@ declare -A PRESET_CODES=(
 PRESET_NAMES=("entity" "cyan" "red" "purple" "white" "amber" "blue" "pink")
 CUSTOM_CODE=""
 
-# All effects from manifest.sh
-EFFECTS=(
+# Effects organized by category (matching source files)
+EFFECTS_ORIGINAL=(
     "glitch"
     "static"
     "flicker"
@@ -54,6 +54,47 @@ EFFECTS=(
     "fake_install"
     "entity_cursor"
 )
+EFFECTS_CORRUPTION=(
+    "screen_tear"
+    "scanlines"
+    "chromatic_aberration"
+    "signal_noise"
+)
+EFFECTS_SPATIAL=(
+    "rain"
+    "spiral"
+    "ripple"
+    "orbit"
+)
+EFFECTS_THEATER=(
+    "hex_dump"
+    "waveform"
+    "process_tree"
+)
+EFFECTS_ATMOSPHERE=(
+    "vignette"
+    "plasma"
+    "breathe"
+    "afterimage"
+)
+
+CATEGORY_NAMES=("original" "corruption" "spatial" "theater" "atmosphere")
+CATEGORY_LABELS=("Original (manifest.sh)" "Corruption (manifest_corruption.sh)" "Spatial (manifest_spatial.sh)" "Theater (manifest_theater.sh)" "Atmosphere (manifest_atmosphere.sh)")
+
+# Flat list of all effects (built from categories)
+EFFECTS=("${EFFECTS_ORIGINAL[@]}" "${EFFECTS_CORRUPTION[@]}" "${EFFECTS_SPATIAL[@]}" "${EFFECTS_THEATER[@]}" "${EFFECTS_ATMOSPHERE[@]}")
+
+# Get effects array for a category name
+get_category_effects() {
+    local cat="$1"
+    case "$cat" in
+        original)   echo "${EFFECTS_ORIGINAL[@]}" ;;
+        corruption) echo "${EFFECTS_CORRUPTION[@]}" ;;
+        spatial)    echo "${EFFECTS_SPATIAL[@]}" ;;
+        theater)    echo "${EFFECTS_THEATER[@]}" ;;
+        atmosphere) echo "${EFFECTS_ATMOSPHERE[@]}" ;;
+    esac
+}
 
 # All voice styles from voice.sh
 VOICES=(
