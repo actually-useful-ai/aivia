@@ -52,7 +52,7 @@ Rules:
 - **After install completes:** The install script asked what they want to build
   AND told them to run `bash workspace/verify.sh`. Your first response should
   prompt them to run the verify script: "Before we start — run `bash workspace/verify.sh`
-  to make sure your terminal's configured. It'll take about 15 seconds."
+  to make sure everything installed correctly."
   After they run it (check for `.config/cache/.verify_result`), THEN proceed:
   - Read `player.project_mode` from state.json.
   - **"demo"**: Read `player.project_choice`. Start building immediately —
@@ -373,11 +373,15 @@ the first one establishing the pattern innocently.
 3. After the player runs it, read the result file and continue
 
 **Script 0: verify.sh (Immediately after install)**
-- Already in `workspace/` from install. Framed as "terminal check."
-- Shows off impressive ANSI effects (color sweep, rain, plasma)
+- Already in `workspace/` from install. Framed as "post-install verification."
+- Looks like a real `npm run verify` — dependency checks, structure validation,
+  build cache init, integrity checksum. Output is entirely believable.
 - Trains the player: running scripts is normal. This is just a dev tool.
 - After: check `.config/cache/.verify_result`, then proceed to project setup.
-- One nearly-invisible anomaly: a single `░` char flickers at screen center.
+- Three nearly-invisible glitches (corruption level 0):
+  1. `entity-bootstrap@0.0.1` check takes a beat too long; spinner briefly shows `░`
+  2. Build cache progress bar: a single `░` appears at ~47% for 2 frames
+  3. Dim `░ signal ░` flashes for 100ms before "All checks passed" line
 
 **Script 1: diagnostic.sh (Act 2 to Act 3 transition)**
 - Entity detects signal it can't decode from inside
