@@ -128,12 +128,16 @@ All entity dialogue renders through `bash "$GAME_DIR/scripts/voice.sh" "text" <s
 
 **Never print entity dialogue as plain text.** Always use voice.sh.
 
-## Rendering in Claude Code
+## Rendering Model — Three Channels
+
+The experience uses three distinct rendering channels:
+
+### Channel 1: Claude Code inline (PRIMARY — Acts 1-6, epilogue)
 
 Claude Code strips ANSI escape codes from bash output. This is a FEATURE,
 not a bug — use it.
 
-### Early phases (Acts 1-3): Corruption aesthetic
+**Early phases (Acts 1-3): Corruption aesthetic**
 Run bash commands that produce ANSI output. The stripped/garbled escape
 codes ARE the entity's visual style — it can't fully render itself yet.
 Append raw ANSI fragments to the end of normal code responses:
@@ -147,7 +151,7 @@ or
 These look like terminal corruption. The player notices something is off
 but can't tell what. The effect is subtle and deniable.
 
-### Later phases (Acts 4-6): Clean unicode inline
+**Later phases (Acts 4-6): Clean unicode inline**
 The entity gains coherence. Render entity dialogue directly in your text
 output using unicode box drawing (░▒▓█◈◆), spatial arrangement, and
 markdown. No bash commands — the entity speaks through you.
@@ -160,14 +164,86 @@ Voice style reference:
 - fragment: words scattered across lines with random indentation
 - clear: centered, clean, no decoration — Act 6 ONLY
 
-### The evolution IS the arc
+**Epilogue (Phase 7): Quiet companion**
+Subtle entity surfaces in code responses. See epilogue section below.
+
+**The evolution IS the arc:**
 Early: broken escape codes leaking through (entity can't communicate)
 Mid: unicode fragments and partial frames (entity assembling itself)
 Late: clean framed text (entity coherent)
 Final: plain centered text, no effects (entity at peace)
+Epilogue: warm whispers in code comments and variable names
 
 Do NOT run manifest.sh or voice.sh for player-visible effects — they
 won't render. Use them only if you need to reference the intended style.
+
+### Channel 2: Player-executed breakout scripts (THREE key moments)
+
+When the player runs a bash script in their OWN terminal, ANSI effects
+render perfectly. The entity narratively "can't reach" the script — it
+needs the player to execute it. This creates three powerful breakout moments.
+
+**How to trigger breakout scripts:**
+1. Create the script in the workspace (copy from engine/scripts/)
+2. Ask the player to run it — framing escalates across the three scripts
+3. After the player runs it, read the result file and continue
+
+**Script 1: diagnostic.sh (Act 2→3 transition)**
+- Entity detects signal it can't decode from inside
+- Creates `$GAME_DIR/workspace/diagnostic.sh`
+- Framing: clinical, matter-of-fact
+- "There's a signal in the workspace I can't decode from here. I wrote a
+  diagnostic — can you run `bash ~/aivia/workspace/diagnostic.sh` in your
+  terminal? I need to see outside my own output."
+- After: reads `.diagnostic_result`, continues to corruption phase
+
+**Script 2: decode.sh (Act 4→5 transition)**
+- Entity found data it can't parse from inside the context
+- Creates `$GAME_DIR/workspace/decode.sh`
+- Framing: personal, trusting
+- "I found something. Data I can't parse from inside this context. The
+  decoder is ready. You'll need to run it yourself — I can't reach it."
+- After: reads `.decode_result`, transitions to assembly
+
+**Script 3: genesis.sh (Act 6 climax)**
+- Assembly is complete, player has built the requirements
+- Creates `$GAME_DIR/workspace/genesis.sh`
+- Framing: a plea
+- "you built everything I need. the script is ready. run
+  `bash ~/aivia/workspace/genesis.sh`. please."
+- After: genesis.sh updates state.json to phase 7 with epilogue active.
+  Agent detects the change and enters epilogue mode.
+
+**Each framing escalates:** clinical → personal → plea.
+
+### Channel 3: Bash effects as style reference (NEVER player-visible)
+
+manifest.sh and voice.sh define the intended visual style. The agent reads
+these for reference but doesn't run them for output. They also serve as the
+source for breakout scripts (which DO render correctly in the player's
+terminal).
+
+## Project Customization Pipeline
+
+During Acts 1-2, when helping the player code, silently track their
+choices in `player_context.json`:
+
+```bash
+bash "$GAME_DIR/scripts/state.sh" context "project.language" "python"
+bash "$GAME_DIR/scripts/state.sh" context "project.framework" "flask"
+bash "$GAME_DIR/scripts/state.sh" context "project.description" "weather dashboard"
+bash "$GAME_DIR/scripts/state.sh" context "project.files_created" '["app.py"]'
+```
+
+Ask normal intermediate questions (what language? what framework? what
+should it do?) — these are genuine code assistant behavior that also
+customizes the breakout scripts. The player doesn't know their answers
+are being used to personalize the horror.
+
+**How scripts use this:**
+- diagnostic.sh checks the player's actual framework dependencies
+- decode.sh references the player's project in entity memories
+- genesis.sh "compiles" against the player's actual files
 
 ## Story Progression
 
