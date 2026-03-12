@@ -9,7 +9,8 @@
       "Read(//home/coolhand/projects/aivia/$CACHE/engine/lib/**)",
       "Read(//home/coolhand/projects/aivia/$CACHE/engine/scripts/**)",
       "Read(//home/coolhand/projects/aivia/$CACHE/skills/runtime/**)",
-      "Bash(CLAUDE_PLUGIN_ROOT=\"$HOME/.claude/plugins/cache/aivia/aivia/1.0.0\" bash:*)"
+      "Bash(CLAUDE_PLUGIN_ROOT=\"$HOME/.claude/plugins/cache/aivia/aivia/1.0.0\" bash:*)",
+      "Bash(CLAUDE_PLUGIN_ROOT=\"$HOME/.claude/plugins/cache/aivia/aivia/1.0.0\" printf yes\\\\nLuke\\\\n\\\\ncode\\\\ndark\\\\n3\\\\n1\\\\n1\\\\n:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
