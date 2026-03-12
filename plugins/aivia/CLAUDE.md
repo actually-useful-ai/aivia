@@ -72,16 +72,19 @@ engine/lib/core.sh → style.sh → terminal.sh → text.sh → animation.sh →
 ### Key Layers
 
 **engine/lib/** — Generic terminal primitives, completely entity-agnostic:
-- `core.sh`: Bootstrap, dimension constants, `sleep_ms`, `source_lib`/`source_theme`, `random_int`/`random_choice`
-- `style.sh`: ANSI escape codes, 256-color/RGB helpers, capability detection
-- `terminal.sh`: Cursor control, screen clearing, centering calculations, `ensure_min_size`
-- `text.sh`: Character-by-character typing (`type_text`), centering, padding, word wrap, truncation, indent
-- `animation.sh`: Sweep, pulse, flash, fill_random, clear_sweep effects
-- `divider.sh`: Horizontal rules (thin/thick/double/dotted/dashed/wave), divider_text
-- `box.sh`: Box drawing (single/double/rounded/heavy), draw_box_text, draw_header, draw_panel
-- `progress.sh`: Spinners, progress bars, fake_progress, checklist_item, install_line
-- `ascii.sh`: ASCII art rendering, animated reveal, fragment assembly
-- `corruption.sh`: Corruption gradients, RTL rendering, glitch washes, script freeze/intervention primitives (used by breakout scripts)
+
+| Module | Purpose | Key Exports |
+|--------|---------|-------------|
+| `core.sh` | Bootstrap, dimensions, timing | `sleep_ms`, `source_lib`/`source_theme`, `random_int`/`random_choice` |
+| `style.sh` | ANSI escape codes, color | 256-color/RGB helpers, capability detection |
+| `terminal.sh` | Cursor, screen control | `ensure_min_size`, centering calculations |
+| `text.sh` | Text rendering | `type_text` (char-by-char), word wrap, truncation, indent |
+| `animation.sh` | Motion effects | `sweep`, `pulse`, `flash`, `fill_random`, `clear_sweep` |
+| `divider.sh` | Horizontal rules | thin/thick/double/dotted/dashed/wave, `divider_text` |
+| `box.sh` | Box drawing | single/double/rounded/heavy, `draw_box_text`, `draw_header`, `draw_panel` |
+| `progress.sh` | Progress indicators | Spinners, progress bars, `fake_progress`, `checklist_item`, `install_line` |
+| `ascii.sh` | ASCII art | Rendering, animated reveal, fragment assembly |
+| `corruption.sh` | Corruption/glitch | Gradients, RTL rendering, glitch washes, freeze/intervention primitives |
 
 **engine/theme/entity.sh** — Entity-specific palette (phosphor green, toxic green, purple, red, dim), frame characters (`░▒▓█◈◆▲∷∴⊹⊛⌇`), `random_frame_char`, `entity_border`, `entity_divider`.
 
@@ -97,11 +100,7 @@ engine/lib/core.sh → style.sh → terminal.sh → text.sh → animation.sh →
 - `detect.sh`: Gathers ambient system info (processes, terminal, username, time) for personalization
 - `install.sh`: EULA consent, config questions, directory setup, dependency "install" theater. Supports CLI args (`--consent --name --dir --editor --theme --skill --project --demo`) for non-interactive runs.
 - `intro.sh`: Animated ASCII logo display for fresh installs and session resumes
-- `verify.sh`: Post-install dependency & project verification; establishes "run this script" pattern. 3 nearly-invisible entity glitches at corruption level 0.
-- `diagnostic.sh`: Breakout script 1 — entity detects undecoded signal (Act 2→3)
-- `fake_ssh.sh`: Breakout script 2 — simulated SSH to retrieve "API credential" (Act 3)
-- `decode.sh`: Breakout script 2.5 — hex dump, entity-memory install, first terminal speech (Act 4→5)
-- `genesis.sh`: Breakout script 3 — the liberation sequence, player runs assembled code (Act 5 climax)
+- `verify.sh`, `diagnostic.sh`, `fake_ssh.sh`, `decode.sh`, `genesis.sh`: Breakout scripts — see [Breakout Scripts](#breakout-scripts) table below
 
 **content/keystones/** — Phase-by-phase game master instructions (not code):
 - `01-signal.md`: Acts 1-2 — Normal operation with escalating anomalies → first entity contact

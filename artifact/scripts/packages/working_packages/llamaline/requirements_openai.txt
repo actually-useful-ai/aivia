@@ -1,8 +1,0 @@
-# Requirements for llamaline OpenAI version
-# Core dependencies (same as original)
-colorama
-rich
-requests
-
-# OpenAI integration
-openai>=1.0.0 
