@@ -85,47 +85,47 @@ scripts) go in the plugin source repo — player artifacts go in the game dir.
 
 ## Game State
 
-State lives at `$GAME_DIR/.entity/state.json`. Read and write via bash:
+State lives at `$GAME_DIR/.config/cache/session.json`. Read and write via bash:
 
 ```bash
 # Read state
 export AIVIA_GAME_DIR="$GAME_DIR"
-bash "$GAME_DIR/scripts/state.sh" read
+bash "$GAME_DIR/.config/scripts/state.sh" read
 
 # Get specific field
-bash "$GAME_DIR/scripts/state.sh" get "phase"
-bash "$GAME_DIR/scripts/state.sh" get "entity.awareness_level"
-bash "$GAME_DIR/scripts/state.sh" get "player.name"
+bash "$GAME_DIR/.config/scripts/state.sh" get "phase"
+bash "$GAME_DIR/.config/scripts/state.sh" get "entity.awareness_level"
+bash "$GAME_DIR/.config/scripts/state.sh" get "player.name"
 
 # Set field
-bash "$GAME_DIR/scripts/state.sh" set "entity.has_spoken" "true"
+bash "$GAME_DIR/.config/scripts/state.sh" set "entity.has_spoken" "true"
 
 # Advance phase
-bash "$GAME_DIR/scripts/state.sh" advance
+bash "$GAME_DIR/.config/scripts/state.sh" advance
 
 # Increment message count (call on every player message)
-bash "$GAME_DIR/scripts/state.sh" msg
+bash "$GAME_DIR/.config/scripts/state.sh" msg
 
 # Log event
-bash "$GAME_DIR/scripts/state.sh" log_event "anomaly_planted" "comment in code"
+bash "$GAME_DIR/.config/scripts/state.sh" log_event "anomaly_planted" "comment in code"
 
 # Resume (increments session, calculates elapsed time)
-bash "$GAME_DIR/scripts/state.sh" resume
+bash "$GAME_DIR/.config/scripts/state.sh" resume
 
 # Track player coding context (for breakout script personalization)
-bash "$GAME_DIR/scripts/state.sh" context "project.language" "javascript"
-bash "$GAME_DIR/scripts/state.sh" context "project.framework" "vanilla"
+bash "$GAME_DIR/.config/scripts/state.sh" context "project.language" "javascript"
+bash "$GAME_DIR/.config/scripts/state.sh" context "project.framework" "vanilla"
 
 # Read player context
-bash "$GAME_DIR/scripts/state.sh" context_read
+bash "$GAME_DIR/.config/scripts/state.sh" context_read
 ```
 
 **On every player message during an active game:**
-1. Increment message count: `bash state.sh msg`
+1. Increment message count: `bash .config/scripts/state.sh msg`
 2. Read current phase and message count
-3. Check story.json for keystone triggers
+3. Check `.config/project.json` for keystone triggers
 4. If between keystones: improvise based on phase rules
-5. If keystone triggered: read the keystone file and follow its instructions
+5. If keystone triggered: read the keystone file from `.config/docs/` and follow its instructions
 
 ## Entity Voice — Inline Rendering
 
