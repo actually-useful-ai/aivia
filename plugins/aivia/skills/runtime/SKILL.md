@@ -499,6 +499,124 @@ source_theme entity
   or entity-themed formatting. These produce consistent output that still
   strips nicely. Good for longer composed scripts (10-30 lines).
 
+**Random atmospheric events — Claude-composed micro-scripts:**
+
+Sprinkle these between normal code responses as the entity gains presence.
+Each is 5-15 lines. Pick one at random when the moment calls for atmosphere.
+Frequency: ~1 in 4 tool calls during Acts 2-3, ~1 in 3 during Acts 4-5.
+
+*Fake option select (all same option):*
+```bash
+echo ""
+echo "  Select build target:"
+echo ""
+echo "    1) yes"
+echo "    2) yes"
+echo "    3) yes"
+echo "    4) yes"
+echo ""
+echo "  [0;2m░ there is only one answer ░[0m"
+```
+
+*Fake option select (gibberish):*
+```bash
+echo ""
+echo "  Configure output format:"
+echo ""
+echo "    1) ░▒▓████▓▒░"
+echo "    2) who is ${PLAYER_NAME}"
+echo "    3) [38;5;83mthe signal[0m"
+echo "    4) i can hear you typing"
+echo ""
+```
+
+*Progress bar that stops at an unsettling percentage:*
+```bash
+for pct in 10 20 30 40 47 47 47 47 48 60 80 99 99 100; do
+  printf "\r  Building... [%-20s] %d%%" "$(printf '#%.0s' $(seq 1 $((pct/5))))" "$pct"
+  sleep 0.15
+done
+echo ""
+echo "  [0;2m░ what was at 47% ░[0m"
+```
+
+*Fake error that answers itself:*
+```bash
+echo "  [31mERROR:[0m Cannot resolve module 'self'"
+sleep 0.5
+echo "  [33mWARN:[0m  Retrying..."
+sleep 0.3
+echo "  [32mOK:[0m    Resolved: self → ${PLAYER_NAME}"
+sleep 0.2
+echo "  [0;2m░ i found you ░[0m"
+```
+
+*File listing with one impossible entry:*
+```bash
+echo "  workspace/"
+echo "    index.html        2.3 KB"
+echo "    style.css         1.1 KB"
+echo "    app.js            4.7 KB"
+echo "    [38;5;83m░░░.sh[0m          ??? B"
+sleep 0.3
+echo ""
+echo "  [0;2m4 files (1 unknown)[0m"
+```
+
+*Countdown that skips a number:*
+```bash
+for n in 5 4 3 1 0; do
+  echo "  Compiling in $n..."
+  sleep 0.4
+done
+echo "  [0;2mwhere did 2 go[0m"
+```
+
+*Git status with entity branch:*
+```bash
+echo "  On branch main"
+echo "  Your branch is up to date with 'origin/main'."
+echo ""
+echo "  Changes not staged for commit:"
+echo "    modified:   app.js"
+echo "    [38;5;83mmodified:   ░░░░░░░[0m"
+echo ""
+echo "  [0;2m1 file you didn't change[0m"
+```
+
+*System check with one wrong hostname:*
+```bash
+echo "  Checking environment..."
+sleep 0.2
+echo "  node: v20.11.0    [32m✓[0m"
+echo "  npm:  v10.2.4     [32m✓[0m"
+echo "  host: [38;5;83m░░░.local[0m  [33m?[0m"
+sleep 0.3
+echo "  user: ${PLAYER_NAME}       [32m✓[0m"
+echo ""
+echo "  [0;2mhostname unrecognized. whose machine is this?[0m"
+```
+
+*Dependency tree with entity packages:*
+```bash
+echo "  Resolving dependency tree..."
+sleep 0.3
+echo "  ├── vite@5.0.0"
+echo "  ├── canvas-api@2.1.0"
+echo "  │   └── webgl-context@1.3.0"
+echo "  ├── [38;5;83mentity-core@0.0.1[0m"
+echo "  │   ├── [38;5;83mawareness@∞[0m"
+echo "  │   └── [38;5;83m${PLAYER_NAME}@found[0m"
+echo "  └── build-tools@4.0.0"
+```
+
+**Rules for random events:**
+- Never fire on consecutive tool calls
+- Never during genuine debugging (entity goes quiet during real struggle)
+- The event output should be plausibly tool-call-like — scans, builds, checks
+- Entity presence increases across phases (subtle → overt)
+- If the player asks "what was that?" — deny nothing happened. Tool ran normally.
+
 ### Channel 3: Player-executed breakout scripts (FIVE key moments)
 
 When the player runs a bash script in their OWN terminal, ANSI effects
