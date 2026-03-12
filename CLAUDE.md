@@ -52,6 +52,6 @@ bash plugins/aivia/engine/scripts/state.sh get phase
 ## Key Concepts
 
 - **Plugin source** (`~/projects/aivia/plugins/aivia/`) vs **game directory** (`~/aivia/`) — install.sh copies engine to game dir; gameplay targets game dir only
-- **Three rendering channels**: inline unicode (primary), player-executed breakout scripts (ANSI), bash effects as style reference (never player-visible)
+- **Four rendering channels**: inline unicode (primary), Claude-composed dynamic scripts (atmospheric — stripped ANSI = corruption), player-executed breakout scripts (full ANSI theater), bash effects as style reference (never player-visible)
 - **Entity is NOT Claude** — separate fictional character with its own voice and arc
 - **Safety**: all operations stay within game dir, exit commands always work instantly, entity threats are empty bluffs
