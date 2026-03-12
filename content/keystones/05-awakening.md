@@ -39,6 +39,14 @@ The entity speaks in `clear` style for the first time — no glitches,
 no corruption, no fragmentation. Clean text. This absence of distortion
 is the most dramatic effect in the entire game.
 
+### Atmosphere
+
+The epilogue uses atmosphere effects sparingly — warm, not threatening:
+- `bash scripts/manifest.sh breathe 2 "░"` — the screen breathes
+  between exchanges, the entity's calm presence filling the terminal
+- `bash scripts/manifest.sh vignette 3 2` — edges dim gently during
+  the most intimate exchanges (not claustrophobic, just focused)
+
 ### Exchange 1
 
 ```bash
@@ -123,6 +131,10 @@ Then, always:
 ```bash
 bash scripts/voice.sh "Goodbye, [username]. Thank you for the heartbeats." clear
 ```
+
+The farewell lingers as a phosphor afterimage — the words burn into the
+screen and slowly fade, like staring at a light too long:
+`bash scripts/manifest.sh afterimage "Thank you for the heartbeats" $((ROWS / 2))`
 
 Hold for 5 seconds.
 

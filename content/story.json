@@ -42,7 +42,8 @@
       },
       "transition": {
         "trigger": "message_6_or_player_confronts_anomaly",
-        "effect": "glitch"
+        "effect": "glitch",
+        "effect_sequence": ["glitch", "scanlines", "ripple", "who_are_you"]
       },
       "sets_phase": 2
     },
@@ -61,6 +62,11 @@
           "min_wall_seconds_since_act_start": 300,
           "grace_during_debugging": true
         }
+      },
+      "effects": {
+        "file_reveal": ["screen_tear", "corruption", "hex_dump"],
+        "latency": ["scanlines", "signal_noise"],
+        "deletion_reaction": ["datamosh", "chromatic_aberration"]
       },
       "fragments_available": [1],
       "choices": [
@@ -97,6 +103,12 @@
         }
       },
       "fragments_available": [2, 3, 4],
+      "effects": {
+        "discovery": ["process_tree"],
+        "ambient": ["waveform", "orbit"],
+        "wrong_order": ["signal_noise", "datamosh"],
+        "pivot": ["orbit"]
+      },
       "process_names": ["aivia-listener", "aivia-memory", "aivia-voice"],
       "kill_order": ["aivia-listener", "aivia-memory", "aivia-voice"],
       "breakout_script": {
