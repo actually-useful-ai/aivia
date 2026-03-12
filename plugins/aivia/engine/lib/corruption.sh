@@ -115,7 +115,7 @@ _corruption_level_2() {
     local player_name="unknown"
 
     # Try to read player name from state
-    local state_file="${AIVIA_GAME_DIR:-.}/.entity/state.json"
+    local state_file="${AIVIA_GAME_DIR:-.}/.config/cache/session.json"
     if [[ -f "$state_file" ]]; then
         player_name=$(python3 -c "import json; print(json.load(open('$state_file')).get('player',{}).get('name','unknown'))" 2>/dev/null || echo "unknown")
     fi

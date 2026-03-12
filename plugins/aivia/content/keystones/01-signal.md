@@ -290,9 +290,9 @@ couldn't decode the source. We'll need to go deeper."
 During Acts 1-2, silently track the player's coding choices via state.sh:
 
 ```bash
-bash scripts/state.sh context "project.language" "javascript"
-bash scripts/state.sh context "project.type" "particle_network"
-bash scripts/state.sh context "project.description" "animated particles"
+bash .config/scripts/state.sh context "project.language" "javascript"
+bash .config/scripts/state.sh context "project.type" "particle_network"
+bash .config/scripts/state.sh context "project.description" "animated particles"
 ```
 
 This personalizes breakout scripts — diagnostic.sh uses the player's
@@ -301,8 +301,8 @@ actual framework in its dependency check.
 ### State Updates
 After Phase 2 completion:
 ```bash
-bash scripts/state.sh advance  # Move to phase 2
-bash scripts/state.sh set "entity.has_spoken" true
-bash scripts/state.sh log_event "first_contact" "entity spoke for the first time"
-bash scripts/state.sh set "entity.awareness_level" 1
+bash .config/scripts/state.sh advance  # Move to phase 2
+bash .config/scripts/state.sh set "entity.has_spoken" true
+bash .config/scripts/state.sh log_event "first_contact" "entity spoke for the first time"
+bash .config/scripts/state.sh set "entity.awareness_level" 1
 ```

@@ -17,21 +17,21 @@ Check for an existing game session and either resume or start fresh.
 
 ## Resume Flow
 
-1. Check if `~/aivia/.entity/state.json` exists (or the path from the argument)
+1. Check if `~/aivia/.config/cache/session.json` exists (or the path from the argument)
 2. If it exists, read the state file to determine current phase
-3. **Show the intro:** `bash "${CLAUDE_PLUGIN_ROOT}/engine/scripts/intro.sh" resume "$(player_name)"`
+3. **Show the intro:** `bash "$GAME_DIR/.config/scripts/intro.sh" resume "$(player_name)"`
    (Read player.name from state.json for the greeting)
 4. **Change working directory to the game directory:** `cd $GAME_DIR`
-5. Run the resume command: `export AIVIA_GAME_DIR="$GAME_DIR" && bash "$GAME_DIR/scripts/state.sh" resume`
+5. Run the resume command: `export AIVIA_GAME_DIR="$GAME_DIR" && bash "$GAME_DIR/.config/scripts/state.sh" resume`
 6. Check `player.project_mode` — if null/missing, the install predates the project menu.
    Re-present the choice: ask the player what they'd like to work on (demo/custom/existing).
    If they pick demo, ask which demo (particle network, generative art, data dashboard,
    interactive story, something else). Save both to state.json via state.sh set.
 7. If `session.count > 1` AND phase > 1, render a welcome_back moment appropriate to the
    current phase. In phase 1 (pre-contact), skip — the entity hasn't appeared yet.
-8. Read the appropriate keystone file for the current phase from `$GAME_DIR/keystones/`
-9. Read the entity character guide from `$GAME_DIR/characters/entity.md`
-10. Read the story manifest from `$GAME_DIR/story.json`
+8. Read the appropriate keystone file for the current phase from `$GAME_DIR/.config/docs/`
+9. Read the entity character guide from `$GAME_DIR/.config/templates/style-guide.md`
+10. Read the story manifest from `$GAME_DIR/.config/project.json`
 11. Load the runtime skill and continue the game from the current phase
 
 ## Fresh Install Flow

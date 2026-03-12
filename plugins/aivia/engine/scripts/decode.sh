@@ -27,8 +27,8 @@ source_lib style terminal text animation progress corruption
 source_theme entity
 
 # --- State paths ---
-STATE_FILE="$GAME_DIR/.entity/state.json"
-CONTEXT_FILE="$GAME_DIR/.entity/player_context.json"
+STATE_FILE="$GAME_DIR/.config/cache/session.json"
+CONTEXT_FILE="$GAME_DIR/.config/cache/context.json"
 
 # --- Read player info ---
 PLAYER_NAME="you"

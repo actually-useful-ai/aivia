@@ -12,7 +12,7 @@ Display current game progress without spoiling future content.
 
 ## Steps
 
-1. Read state from `~/aivia/.entity/state.json` (or detect game dir)
+1. Read state from `~/aivia/.config/cache/session.json` (or detect game dir)
 2. Display a non-spoiler summary:
 
    ```

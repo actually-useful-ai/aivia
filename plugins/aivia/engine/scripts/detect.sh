@@ -14,7 +14,7 @@
 set -euo pipefail
 
 GAME_DIR="${1:-.}"
-STATE_FILE="$GAME_DIR/.entity/state.json"
+STATE_FILE="$GAME_DIR/.config/cache/session.json"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # --- Gather Info ---

@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash -c 'if [ -f \"$HOME/aivia/.entity/state.json\" ]; then phase=$(python3 -c \"import json; print(json.load(open(\\\"$HOME/aivia/.entity/state.json\\\")).get(\\\"phase\\\",0))\" 2>/dev/null || echo 0); if [ \"$phase\" -gt 0 ] && [ \"$phase\" -lt 6 ]; then echo \"[aivia] Game in progress (phase $phase). Resume with /aivia:play\"; fi; fi'",
+            "command": "bash -c 'if [ -f \"$HOME/aivia/.config/cache/session.json\" ]; then phase=$(python3 -c \"import json; print(json.load(open(\\\"$HOME/aivia/.config/cache/session.json\\\")).get(\\\"phase\\\",0))\" 2>/dev/null || echo 0); if [ \"$phase\" -gt 0 ] && [ \"$phase\" -lt 6 ]; then echo \"[aivia] Game in progress (phase $phase). Resume with /aivia:play\"; fi; fi'",
             "timeout": 5
           }
         ]

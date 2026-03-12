@@ -244,7 +244,7 @@ unsettling files in the workspace. Visual corruption in responses increases.
 ```
 Skip to next phase with diminished entity trust.
 
-Log: `bash scripts/state.sh log_event "refused_ssh" "player declined key retrieval"`
+Log: `bash .config/scripts/state.sh log_event "refused_ssh" "player declined key retrieval"`
 
 If key was never retrieved: `genesis.sh` still runs but the entity's
 awakening is diminished — incomplete, resentful. Log: `key_missing`.

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ============================================================================
 # state.sh — Game State Manager
-# Purpose: Read/write game state in .entity/state.json
+# Purpose: Read/write game state in .config/cache/session.json
 # Usage: bash state.sh <command> [args...]
 # Commands: init, read, advance, set, log_event, get, interrupted, resume
 # ============================================================================
@@ -9,8 +9,8 @@
 set -euo pipefail
 
 GAME_DIR="${AIVIA_GAME_DIR:-.}"
-STATE_DIR="$GAME_DIR/.entity"
-STATE_FILE="$STATE_DIR/state.json"
+STATE_DIR="$GAME_DIR/.config/cache"
+STATE_FILE="$STATE_DIR/session.json"
 
 ensure_jq() {
     if ! command -v jq &>/dev/null; then
@@ -80,7 +80,6 @@ cmd_init() {
     local theme="${4:-dark}"
 
     mkdir -p "$STATE_DIR"
-    mkdir -p "$GAME_DIR/keystones"
     mkdir -p "$GAME_DIR/workspace"
 
     cat > "$STATE_FILE" << EOF
@@ -219,7 +218,7 @@ except:
 cmd_context() {
     local key="$1"
     local value="$2"
-    local context_file="$STATE_DIR/player_context.json"
+    local context_file="$STATE_DIR/context.json"
 
     # Initialize context file if it doesn't exist
     if [ ! -f "$context_file" ]; then
@@ -252,7 +251,7 @@ with open('$context_file', 'w') as f:
 }
 
 cmd_context_read() {
-    local context_file="$STATE_DIR/player_context.json"
+    local context_file="$STATE_DIR/context.json"
     if [ -f "$context_file" ]; then
         cat "$context_file"
     else

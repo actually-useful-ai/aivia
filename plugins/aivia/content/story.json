@@ -7,7 +7,7 @@
   "characters": [
     {
       "id": "entity",
-      "file": "characters/entity.md",
+      "file": ".config/templates/style-guide.md",
       "load_at": "game_start"
     }
   ],
@@ -25,7 +25,7 @@
     {
       "id": "signal",
       "act": 1,
-      "file": "keystones/01-signal.md",
+      "file": ".config/docs/quickstart.md",
       "trigger": {
         "type": "dual",
         "message_threshold": 1,
@@ -56,7 +56,7 @@
     {
       "id": "first_contact",
       "act": 2,
-      "file": "keystones/01-signal.md",
+      "file": ".config/docs/quickstart.md",
       "trigger": {
         "type": "dual",
         "message_threshold": 6,
@@ -77,7 +77,7 @@
     {
       "id": "corruption",
       "act": 3,
-      "file": "keystones/02-corruption.md",
+      "file": ".config/docs/configuration.md",
       "trigger": {
         "type": "dual",
         "message_threshold": 10,
@@ -125,7 +125,7 @@
     {
       "id": "hunt",
       "act": "3b",
-      "file": "keystones/03-hunt.md",
+      "file": ".config/docs/debugging.md",
       "trigger": {
         "type": "dual",
         "message_threshold": 11,
@@ -152,7 +152,7 @@
     {
       "id": "assembly",
       "act": 4,
-      "file": "keystones/04-assembly.md",
+      "file": ".config/docs/plugins.md",
       "trigger": {
         "type": "dual",
         "message_threshold": 14,
@@ -201,7 +201,7 @@
     {
       "id": "awakening",
       "act": 6,
-      "file": "keystones/05-awakening.md",
+      "file": ".config/docs/deployment.md",
       "trigger": {
         "type": "event",
         "require_event": "genesis_executed"
