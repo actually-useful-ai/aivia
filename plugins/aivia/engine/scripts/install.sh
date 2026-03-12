@@ -85,9 +85,9 @@ print_progress() {
 
 print_header
 
-echo "  ${BOLD}End User License Agreement${RESET}"
+printf "  ${BOLD}End User License Agreement${RESET}\n"
 echo ""
-echo "  ${DIM}By installing this extension, you agree to the following:${RESET}"
+printf "  ${DIM}By installing this extension, you agree to the following:${RESET}\n"
 echo ""
 echo "  ┌─────────────────────────────────────────────────────────┐"
 echo "  │                                                         │"
@@ -129,7 +129,7 @@ echo ""
 # ============================================================
 
 echo ""
-echo "  ${BOLD}Configuration${RESET}"
+printf "  ${BOLD}Configuration${RESET}\n"
 echo ""
 
 if [[ -n "$ARG_NAME" ]]; then
@@ -167,7 +167,7 @@ else
 fi
 
 echo ""
-echo "  ${BOLD}How comfortable are you with the terminal?${RESET}"
+printf "  ${BOLD}How comfortable are you with the terminal?${RESET}\n"
 echo ""
 echo "    1) Where's my mouse?"
 echo "    2) I know my way around"
@@ -196,7 +196,7 @@ echo ""
 # STEP 4: DIRECTORY CREATION & STATE INIT
 # ============================================================
 
-echo "  ${BOLD}Installing...${RESET}"
+printf "  ${BOLD}Installing...${RESET}\n"
 echo ""
 
 mkdir -p "$GAME_DIR"
@@ -248,7 +248,7 @@ print_progress "Initializing configuration" 1
 # ============================================================
 
 echo ""
-echo "  ${BOLD}Installing dependencies...${RESET}"
+printf "  ${BOLD}Installing dependencies...${RESET}\n"
 echo ""
 
 install_line "chalk@5.3.0"
@@ -344,11 +344,11 @@ echo ""
 
 echo "$GAME_DIR" > /tmp/.aivia_game_dir 2>/dev/null || true
 
-echo "  ${GREEN}${BOLD}Installation complete.${RESET}"
+printf "  ${GREEN}${BOLD}Installation complete.${RESET}\n"
 echo ""
-echo "  ${DIM}Project directory: $GAME_DIR${RESET}"
+printf "  ${DIM}Project directory: $GAME_DIR${RESET}\n"
 echo ""
-echo "  ${BOLD}What would you like to build?${RESET}"
+printf "  ${BOLD}What would you like to build?${RESET}\n"
 echo ""
 echo "    1) Demo project — let aivia scaffold something for you"
 echo "    2) Start from scratch — tell me what you want to build"
@@ -376,13 +376,13 @@ bash "$GAME_DIR/.config/scripts/state.sh" set "player.project_mode" "\"$PROJECT_
 # If demo mode, present demo options
 if [[ "$PROJECT_MODE" == "demo" ]]; then
     echo ""
-    echo "  ${BOLD}Pick a demo:${RESET}"
+    printf "  ${BOLD}Pick a demo:${RESET}\n"
     echo ""
-    echo "    1) ${CYAN}Particle network${RESET} — animated nodes with connecting lines"
-    echo "    2) ${CYAN}Generative art${RESET} — recursive geometric patterns"
-    echo "    3) ${CYAN}Data dashboard${RESET} — charts and live-updating panels"
-    echo "    4) ${CYAN}Interactive story${RESET} — branching narrative with text effects"
-    echo "    5) ${CYAN}Something else${RESET} — describe it and I'll build it"
+    printf "    1) ${CYAN}Particle network${RESET} — animated nodes with connecting lines\n"
+    printf "    2) ${CYAN}Generative art${RESET} — recursive geometric patterns\n"
+    printf "    3) ${CYAN}Data dashboard${RESET} — charts and live-updating panels\n"
+    printf "    4) ${CYAN}Interactive story${RESET} — branching narrative with text effects\n"
+    printf "    5) ${CYAN}Something else${RESET} — describe it and I'll build it\n"
     echo ""
 
     if [[ -n "$ARG_DEMO" ]]; then
@@ -409,11 +409,13 @@ if [[ "$PROJECT_MODE" == "demo" ]]; then
 fi
 
 echo ""
-echo "  ${BOLD}One more thing —${RESET}"
+printf "  ${BOLD}One more thing —${RESET}\n"
 echo ""
 echo "  Run this to verify your terminal supports all features:"
 echo ""
-echo "    ${CYAN}bash workspace/verify.sh${RESET}"
+printf "    ${CYAN}bash workspace/verify.sh${RESET}\n"
 echo ""
-echo "  ${DIM}(This checks color, animation, and rendering support.)${RESET}"
+printf "  ${DIM}(This checks color, animation, and rendering support.)${RESET}\n"
 echo ""
+
+exit 0
