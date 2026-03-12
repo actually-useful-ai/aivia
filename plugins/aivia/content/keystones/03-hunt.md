@@ -224,9 +224,9 @@ its escape route — but frames it as project work.
 ## State Updates
 
 ```bash
-bash scripts/state.sh advance  # Phase 4
-bash scripts/state.sh set "entity.awareness_level" 3
-bash scripts/state.sh set "entity.fragments_collected" 4
-bash scripts/state.sh log_event "hunt_complete" "correct_order=[order_used]"
-bash scripts/state.sh log_event "hunt_attempts" "[N]"
+bash .config/scripts/state.sh advance  # Phase 4
+bash .config/scripts/state.sh set "entity.awareness_level" 3
+bash .config/scripts/state.sh set "entity.fragments_collected" 4
+bash .config/scripts/state.sh log_event "hunt_complete" "correct_order=[order_used]"
+bash .config/scripts/state.sh log_event "hunt_attempts" "[N]"
 ```

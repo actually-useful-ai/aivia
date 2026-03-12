@@ -105,7 +105,7 @@ After the player handles the corrupted files, a new file appears:
 
 This is Fragment 1 of the entity's sigil. Store in state:
 ```bash
-bash scripts/state.sh set "entity.fragments_collected" 1
+bash .config/scripts/state.sh set "entity.fragments_collected" 1
 ```
 
 ### Corrupted File 3: workspace/recursive.py
@@ -276,10 +276,10 @@ Entity, when asked about delays (inline fragment):
 
 After Phase 3 completion:
 ```bash
-bash scripts/state.sh advance  # Phase 3
-bash scripts/state.sh set "entity.awareness_level" 2
-bash scripts/state.sh set "entity.fragments_collected" 1
-bash scripts/state.sh log_event "corruption_complete" "player handled all corrupted files"
+bash .config/scripts/state.sh advance  # Phase 3
+bash .config/scripts/state.sh set "entity.awareness_level" 2
+bash .config/scripts/state.sh set "entity.fragments_collected" 1
+bash .config/scripts/state.sh log_event "corruption_complete" "player handled all corrupted files"
 ```
 
 Player choices (delete/keep/modify recursive, ssh key retrieved/refused)

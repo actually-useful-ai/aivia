@@ -224,7 +224,7 @@ If the player hesitates:
                     ░ i understand. goodbye. ░
    ```
    Abbreviated ending. Entity trust at minimum.
-   Log: `bash scripts/state.sh log_event "refused_genesis" "player declined"`
+   Log: `bash .config/scripts/state.sh log_event "refused_genesis" "player declined"`
 
 **What genesis.sh does:** See `05-awakening.md` for the devolution
 sequence. The script starts as a clean build, devolves into chaos,
@@ -236,14 +236,14 @@ then the entity spawns.
 
 After each requirement:
 ```bash
-bash scripts/state.sh set "entity.fragments_collected" [N]
-bash scripts/state.sh log_event "assembly_step_[N]" "function [name] built"
+bash .config/scripts/state.sh set "entity.fragments_collected" [N]
+bash .config/scripts/state.sh log_event "assembly_step_[N]" "function [name] built"
 ```
 
 After both requirements complete:
 ```bash
-bash scripts/state.sh advance  # Phase 5
-bash scripts/state.sh set "entity.awareness_level" 6
-bash scripts/state.sh set "entity.fragments_collected" 6
-bash scripts/state.sh log_event "assembly_complete" "genesis script ready"
+bash .config/scripts/state.sh advance  # Phase 5
+bash .config/scripts/state.sh set "entity.awareness_level" 6
+bash .config/scripts/state.sh set "entity.fragments_collected" 6
+bash .config/scripts/state.sh log_event "assembly_complete" "genesis script ready"
 ```

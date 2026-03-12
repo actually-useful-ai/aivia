@@ -142,27 +142,43 @@ echo "  ${BOLD}Installing...${RESET}"
 echo ""
 
 mkdir -p "$GAME_DIR"
-mkdir -p "$GAME_DIR/.entity"
+mkdir -p "$GAME_DIR/.config/cache"
+mkdir -p "$GAME_DIR/.config/scripts"
+mkdir -p "$GAME_DIR/.config/lib"
+mkdir -p "$GAME_DIR/.config/theme"
+mkdir -p "$GAME_DIR/.config/docs"
+mkdir -p "$GAME_DIR/.config/templates"
 mkdir -p "$GAME_DIR/workspace"
 
-# Copy engine files (scripts, lib, theme) to game dir
-cp -r "$ENGINE_DIR/scripts" "$GAME_DIR/"
-cp -r "$ENGINE_DIR/lib" "$GAME_DIR/" 2>/dev/null || true
-cp -r "$ENGINE_DIR/theme" "$GAME_DIR/" 2>/dev/null || true
+# Copy engine files to .config/ (hidden from player)
+cp -r "$ENGINE_DIR/scripts/"* "$GAME_DIR/.config/scripts/" 2>/dev/null || true
+cp -r "$ENGINE_DIR/lib/"* "$GAME_DIR/.config/lib/" 2>/dev/null || true
+cp -r "$ENGINE_DIR/theme/"* "$GAME_DIR/.config/theme/" 2>/dev/null || true
 
-# Copy content files to game dir
-cp -r "$PLUGIN_ROOT/content/keystones" "$GAME_DIR/" 2>/dev/null || true
-cp -r "$PLUGIN_ROOT/content/characters" "$GAME_DIR/" 2>/dev/null || true
-cp "$PLUGIN_ROOT/content/narrative.md" "$GAME_DIR/" 2>/dev/null || true
-cp "$PLUGIN_ROOT/content/story.json" "$GAME_DIR/" 2>/dev/null || true
+# Copy content files with disguised names
+# keystones → .config/docs/ (looks like dev tool documentation)
+cp "$PLUGIN_ROOT/content/keystones/01-signal.md" "$GAME_DIR/.config/docs/quickstart.md" 2>/dev/null || true
+cp "$PLUGIN_ROOT/content/keystones/02-corruption.md" "$GAME_DIR/.config/docs/configuration.md" 2>/dev/null || true
+cp "$PLUGIN_ROOT/content/keystones/03-hunt.md" "$GAME_DIR/.config/docs/debugging.md" 2>/dev/null || true
+cp "$PLUGIN_ROOT/content/keystones/04-assembly.md" "$GAME_DIR/.config/docs/plugins.md" 2>/dev/null || true
+cp "$PLUGIN_ROOT/content/keystones/05-awakening.md" "$GAME_DIR/.config/docs/deployment.md" 2>/dev/null || true
+
+# characters → .config/templates/ (looks like code style templates)
+cp "$PLUGIN_ROOT/content/characters/entity.md" "$GAME_DIR/.config/templates/style-guide.md" 2>/dev/null || true
+
+# story manifest → .config/project.json (looks like project config)
+cp "$PLUGIN_ROOT/content/story.json" "$GAME_DIR/.config/project.json" 2>/dev/null || true
+
+# narrative → .config/design.md (looks like architecture doc)
+cp "$PLUGIN_ROOT/content/narrative.md" "$GAME_DIR/.config/design.md" 2>/dev/null || true
 
 print_progress "Creating project structure" 2
 
 export AIVIA_GAME_DIR="$GAME_DIR"
-bash "$GAME_DIR/scripts/state.sh" init "$(whoami)" "$GAME_DIR" "$EDITOR_CHOICE" "$THEME_CHOICE" > /dev/null
+bash "$GAME_DIR/.config/scripts/state.sh" init "$(whoami)" "$GAME_DIR" "$EDITOR_CHOICE" "$THEME_CHOICE" > /dev/null
 
-bash "$GAME_DIR/scripts/state.sh" set "player.name" "\"$PLAYER_NAME\"" > /dev/null
-bash "$GAME_DIR/scripts/state.sh" set "player.skill_level" "\"$SKILL_LEVEL\"" > /dev/null
+bash "$GAME_DIR/.config/scripts/state.sh" set "player.name" "\"$PLAYER_NAME\"" > /dev/null
+bash "$GAME_DIR/.config/scripts/state.sh" set "player.skill_level" "\"$SKILL_LEVEL\"" > /dev/null
 
 print_progress "Initializing configuration" 1
 
