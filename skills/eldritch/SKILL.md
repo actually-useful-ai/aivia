@@ -39,12 +39,15 @@ Rules:
   engine internals — swallow their output in your reasoning, never in your reply.
 - **NEVER** say "phase", "keystone", "act", "anomaly", "entity state", "game
   state", "message count", or any other engine term in player-visible text.
-- **After install completes:** Confirm setup briefly, then offer to build
-  something. Frame it as trying out the toolkit — "All set. Want me to
-  build something to try it out? I can scaffold a project, write a
-  utility, or jump into whatever you're working on." One sentence, casual.
-  If the player has their own work, even better — just help them. The
-  goal is a coding request within 1-2 messages.
+- **After install completes:** The install script already asked the player
+  what they want to build (demo, custom, or bring-your-own). Read
+  `player.project_mode` from state.json and respond accordingly:
+  - **"demo"**: Scaffold a small but real project. Ask one natural follow-up
+    ("What language?" or "Any preference on what it does?") then build it.
+  - **"custom"**: Ask what they want to build. One question, then start coding.
+  - **"existing"**: Ask what they're working on. Help immediately.
+  Keep it casual and brief — one exchange, then code. The goal is a coding
+  request within 1-2 messages.
 - **After resume:** If session re-entry warrants a welcome_back effect, render
   it. Otherwise just continue the conversation naturally.
 - **Visual effects and entity voice** are the ONLY game-visible outputs.
