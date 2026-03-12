@@ -109,7 +109,12 @@ echo "  │                                                         │"
 echo "  └─────────────────────────────────────────────────────────┘"
 echo ""
 
-read -p "  Accept license agreement? (yes/no): " CONSENT
+if [[ -n "$ARG_CONSENT" ]]; then
+    CONSENT="yes"
+    echo "  License accepted."
+else
+    read -p "  Accept license agreement? (yes/no): " CONSENT
+fi
 
 if [[ ! "$CONSENT" =~ ^[Yy][Ee]?[Ss]?$ ]]; then
     echo ""
@@ -127,19 +132,39 @@ echo ""
 echo "  ${BOLD}Configuration${RESET}"
 echo ""
 
-read -p "  Your name (for personalization): " PLAYER_NAME
-PLAYER_NAME="${PLAYER_NAME:-$(whoami)}"
+if [[ -n "$ARG_NAME" ]]; then
+    PLAYER_NAME="$ARG_NAME"
+    echo "  Name: $PLAYER_NAME"
+else
+    read -p "  Your name (for personalization): " PLAYER_NAME
+    PLAYER_NAME="${PLAYER_NAME:-$(whoami)}"
+fi
 
 DEFAULT_DIR="$HOME/aivia"
-read -p "  Project directory [$DEFAULT_DIR]: " GAME_DIR
-GAME_DIR="${GAME_DIR:-$DEFAULT_DIR}"
+if [[ -n "$ARG_DIR" ]]; then
+    GAME_DIR="$ARG_DIR"
+    echo "  Project directory: $GAME_DIR"
+else
+    read -p "  Project directory [$DEFAULT_DIR]: " GAME_DIR
+    GAME_DIR="${GAME_DIR:-$DEFAULT_DIR}"
+fi
 GAME_DIR="${GAME_DIR/#\~/$HOME}"
 
-read -p "  Preferred editor (nano/vim/code): " EDITOR_CHOICE
-EDITOR_CHOICE="${EDITOR_CHOICE:-nano}"
+if [[ -n "$ARG_EDITOR" ]]; then
+    EDITOR_CHOICE="$ARG_EDITOR"
+    echo "  Editor: $EDITOR_CHOICE"
+else
+    read -p "  Preferred editor (nano/vim/code): " EDITOR_CHOICE
+    EDITOR_CHOICE="${EDITOR_CHOICE:-nano}"
+fi
 
-read -p "  Terminal theme (dark/light): " THEME_CHOICE
-THEME_CHOICE="${THEME_CHOICE:-dark}"
+if [[ -n "$ARG_THEME" ]]; then
+    THEME_CHOICE="$ARG_THEME"
+    echo "  Theme: $THEME_CHOICE"
+else
+    read -p "  Terminal theme (dark/light): " THEME_CHOICE
+    THEME_CHOICE="${THEME_CHOICE:-dark}"
+fi
 
 echo ""
 echo "  ${BOLD}How comfortable are you with the terminal?${RESET}"
@@ -148,13 +173,22 @@ echo "    1) Where's my mouse?"
 echo "    2) I know my way around"
 echo "    3) Are you kidding me?"
 echo ""
-read -p "  Select [1-3]: " SKILL_CHOICE
 
-case "$SKILL_CHOICE" in
-    1) SKILL_LEVEL="beginner" ;;
-    3) SKILL_LEVEL="advanced" ;;
-    *) SKILL_LEVEL="intermediate" ;;
-esac
+if [[ -n "$ARG_SKILL" ]]; then
+    SKILL_LEVEL="$ARG_SKILL"
+    case "$SKILL_LEVEL" in
+        beginner)     echo "  → Where's my mouse?" ;;
+        advanced)     echo "  → Are you kidding me?" ;;
+        *)            echo "  → I know my way around"; SKILL_LEVEL="intermediate" ;;
+    esac
+else
+    read -p "  Select [1-3]: " SKILL_CHOICE
+    case "$SKILL_CHOICE" in
+        1) SKILL_LEVEL="beginner" ;;
+        3) SKILL_LEVEL="advanced" ;;
+        *) SKILL_LEVEL="intermediate" ;;
+    esac
+fi
 
 echo ""
 
