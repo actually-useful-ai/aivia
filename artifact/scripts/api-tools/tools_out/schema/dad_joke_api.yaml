@@ -1,0 +1,271 @@
+components:
+    examples:
+        fetchRandomJoke:
+            value:
+                ReqExample:
+                    Accept: application/json
+                RespExample:
+                    id: 1oGYLu4T7Ed
+                    joke: Why is Peter Pan always flying? Because he Neverlands.
+                    status: 200
+        fetchRandomJokeForSlack:
+            value:
+                ReqExample:
+                    Accept: application/json
+                RespExample:
+                    attachments:
+                        - fallback: I saw an ad in a shop window, "Television for sale, $1, volume stuck on full", I thought, "I can't turn that down".
+                          footer: <https://icanhazdadjoke.com/j/GlbxkyPRKuc|permalink> - <https://icanhazdadjoke.com|icanhazdadjoke.com>
+                          text: I saw an ad in a shop window, "Television for sale, $1, volume stuck on full", I thought, "I can't turn that down".
+                    response_type: in_channel
+                    username: icanhazdadjoke
+        searchJokes:
+            value:
+                ReqExample:
+                    Accept: application/json
+                    limit: 20
+                    page: 1
+                    term: cheese
+                RespExample:
+                    current_page: 1
+                    limit: 20
+                    next_page: 1
+                    previous_page: 1
+                    results:
+                        - id: ElbaF6wHlyd
+                          joke: I cut my finger cutting cheese. I know it may be a cheesy story but I feel grate now.
+                        - id: h39UfibMJBd
+                          joke: Did you hear about the cheese who saved the world? It was Legend-dairy!
+                        - id: 4MmjbFlbah
+                          joke: I cut my finger chopping cheese, but I think that I may have grater problems.
+                        - id: hNu4oORnOmb
+                          joke: What do you call cheese by itself? Provolone.
+                        - id: qrHJ69M7hFd
+                          joke: What cheese can never be yours? Nacho cheese.
+                        - id: SSCQCdi39Ed
+                          joke: Did you hear about the cheese factory that exploded in France? There was nothing left but de Brie.
+                    search_term: cheese
+                    status: 200
+                    total_jokes: 6
+                    total_pages: 1
+    schemas:
+        Joke:
+            properties:
+                id:
+                    example: R7UfaahVfFd
+                    type: string
+                joke:
+                    example: My dog used to chase people on a bike a lot. It got so bad I had to take his bike away.
+                    type: string
+                status:
+                    example: 200
+                    type: integer
+            type: object
+        SearchResults:
+            properties:
+                current_page:
+                    example: 1
+                    type: integer
+                limit:
+                    example: 20
+                    type: integer
+                next_page:
+                    example: 2
+                    type: integer
+                previous_page:
+                    example: 1
+                    type: integer
+                results:
+                    items:
+                        $ref: '#/components/schemas/Joke'
+                    type: array
+                search_term:
+                    example: cow
+                    type: string
+                status:
+                    example: 200
+                    type: integer
+                total_jokes:
+                    example: 25
+                    type: integer
+                total_pages:
+                    example: 2
+                    type: integer
+            type: object
+        SlackJoke:
+            properties:
+                attachments:
+                    items:
+                        properties:
+                            fallback:
+                                example: What kind of magic do cows believe in? MOODOO.
+                                type: string
+                            footer:
+                                example: ' - '
+                                type: string
+                            text:
+                                example: What kind of magic do cows believe in? MOODOO.
+                                type: string
+                        type: object
+                    type: array
+                response_type:
+                    example: in_channel
+                    type: string
+                username:
+                    example: icanhazdadjoke
+                    type: string
+            type: object
+info:
+    contact:
+        name: C653 Labs
+        url: https://icanhazdadjoke.com/
+    description: The largest selection of dad jokes on the internet.
+    title: Dad Joke API
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /:
+        get:
+            operationId: fetchRandomJoke
+            parameters:
+                - in: header
+                  name: Accept
+                  required: true
+                  schema:
+                    default: application/json
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    id:
+                                        type: string
+                                    joke:
+                                        type: string
+                                    status:
+                                        type: integer
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Fetch a random dad joke
+    /search:
+        get:
+            operationId: searchJokes
+            parameters:
+                - in: query
+                  name: term
+                  schema:
+                    type: string
+                - in: query
+                  name: page
+                  schema:
+                    default: 1
+                    type: integer
+                - in: query
+                  name: limit
+                  schema:
+                    default: 20
+                    type: integer
+                - in: header
+                  name: Accept
+                  required: true
+                  schema:
+                    default: application/json
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    current_page:
+                                        type: integer
+                                    limit:
+                                        type: integer
+                                    next_page:
+                                        type: integer
+                                    previous_page:
+                                        type: integer
+                                    results:
+                                        items:
+                                            properties:
+                                                id:
+                                                    type: string
+                                                joke:
+                                                    type: string
+                                                status:
+                                                    type: integer
+                                            type: object
+                                        type: array
+                                    search_term:
+                                        type: string
+                                    status:
+                                        type: integer
+                                    total_jokes:
+                                        type: integer
+                                    total_pages:
+                                        type: integer
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Search for dad jokes
+    /slack:
+        get:
+            operationId: fetchRandomJokeForSlack
+            parameters:
+                - in: header
+                  name: Accept
+                  required: true
+                  schema:
+                    default: application/json
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    attachments:
+                                        items:
+                                            properties:
+                                                fallback:
+                                                    type: string
+                                                footer:
+                                                    type: string
+                                                text:
+                                                    type: string
+                                            type: object
+                                        type: array
+                                    response_type:
+                                        type: string
+                                    username:
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Fetch a random dad joke formatted for Slack
+servers:
+    - url: https://icanhazdadjoke.com

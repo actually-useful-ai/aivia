@@ -1,0 +1,101 @@
+components:
+    examples:
+        searchSemanticScholar:
+            value:
+                ReqExample:
+                    query: Speech-Language Pathology
+                RespExample:
+                    data:
+                        - paperId: e252550e5642815b45550c402fbc7db55bd2e363
+                        - paperId: 8674d41b99e0fbdc71d836274f926bada47ebac8
+                        - paperId: 669da00e29746b42f864c29daeacff8d4d38a397
+                        - paperId: 5bc158cc17c2a6fca374dcadbcd5e393b7d5a2e3
+                        - paperId: 34df49d015e2bdef4aadc6cc47a2464b34f39cff
+                        - paperId: 2f13097e21b6296cbee2de55abf0b1eef3c31a89
+                        - paperId: 1892f86c3c467f4ad6c134c444ea60b349fde289
+                        - paperId: 9240e7082bfbe81dbb40d8b5377f5fdfce16bc6d
+                        - paperId: de7dbf88e856c08ffa6ae26a6bf32d5b3e56eb32
+                        - paperId: edc405113b64cf0d243e301e818f353588b42eec
+                    next: 10
+                    offset: 0
+                    total: 200896
+info:
+    description: Accesses Semantic Scholar, which uses a vector space model to find papers based on a query, helpful for natural language searches
+    title: Semantic Scholar
+    version: v1
+openapi: 3.0.1
+paths:
+    /graph/v1/paper/search:
+        get:
+            operationId: searchSemanticScholar
+            parameters:
+                - description: Natural language query
+                  in: query
+                  name: query
+                  required: true
+                  schema:
+                    description: Natural language query
+                    type: string
+                - description: Max number of papers, default 10
+                  in: query
+                  name: limit
+                  schema:
+                    description: Max number of papers, default 10
+                    type: integer
+                - description: url,abstract,publicationTypes,tldr,openAccessPd
+                  in: query
+                  name: fields
+                  schema:
+                    description: url,abstract,publicationTypes,tldr,openAccessPd
+                    type: string
+                - description: filters by specific field
+                  in: query
+                  name: fieldsOfStudy
+                  schema:
+                    description: filters by specific field
+                    type: string
+                - description: Filters by date
+                  in: query
+                  name: publicationDateOrYear
+                  schema:
+                    description: Filters by date
+                    type: string
+                - description: By type, such as journalArticle, CaseReport; multiple can be comma separated
+                  in: query
+                  name: publicationTypes
+                  schema:
+                    description: By type, such as journalArticle, CaseReport; multiple can be comma separated
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    data:
+                                        items:
+                                            properties:
+                                                paperId:
+                                                    type: string
+                                                url:
+                                                    type: string
+                                            type: object
+                                        type: array
+                                    next:
+                                        type: number
+                                    offset:
+                                        type: number
+                                    total:
+                                        type: number
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: A GET-request based search operation for papers on Semantic Scholar, which uses a vector space model to find relevant papers based on a query (it can be very helpful for natural language searches).
+servers:
+    - url: https://api.semanticscholar.org

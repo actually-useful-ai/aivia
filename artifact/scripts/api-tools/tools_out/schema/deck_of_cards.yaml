@@ -1,0 +1,620 @@
+components:
+    examples:
+        addCardsToPane:
+            value:
+                ReqExample:
+                    cards:
+                        - "5"
+                    deckId: iixkc5yq2b3j
+                    pileName: test
+                RespExample:
+                    deck_id: iixkc5yq2b3j
+                    piles: {}
+                    remaining: 52
+                    success: true
+        createDeck:
+            value:
+                ReqExample:
+                    deck_count: 1
+                    jokers_enabled: false
+                RespExample:
+                    deck_id: iixkc5yq2b3j
+                    remaining: 52
+                    shuffled: false
+                    success: true
+        drawCards:
+            value:
+                ReqExample:
+                    count: 5
+                    deckId: iixkc5yq2b3j
+                RespExample:
+                    cards:
+                        - code: 5S
+                          image: https://deckofcardsapi.com/static/img/5S.png
+                          images:
+                            png: https://deckofcardsapi.com/static/img/5S.png
+                            svg: https://deckofcardsapi.com/static/img/5S.svg
+                          suit: SPADES
+                          value: "5"
+                        - code: AD
+                          image: https://deckofcardsapi.com/static/img/aceDiamonds.png
+                          images:
+                            png: https://deckofcardsapi.com/static/img/aceDiamonds.png
+                            svg: https://deckofcardsapi.com/static/img/aceDiamonds.svg
+                          suit: DIAMONDS
+                          value: ACE
+                        - code: JH
+                          image: https://deckofcardsapi.com/static/img/JH.png
+                          images:
+                            png: https://deckofcardsapi.com/static/img/JH.png
+                            svg: https://deckofcardsapi.com/static/img/JH.svg
+                          suit: HEARTS
+                          value: JACK
+                        - code: 6D
+                          image: https://deckofcardsapi.com/static/img/6D.png
+                          images:
+                            png: https://deckofcardsapi.com/static/img/6D.png
+                            svg: https://deckofcardsapi.com/static/img/6D.svg
+                          suit: DIAMONDS
+                          value: "6"
+                        - code: QD
+                          image: https://deckofcardsapi.com/static/img/QD.png
+                          images:
+                            png: https://deckofcardsapi.com/static/img/QD.png
+                            svg: https://deckofcardsapi.com/static/img/QD.svg
+                          suit: DIAMONDS
+                          value: QUEEN
+                    deck_id: iixkc5yq2b3j
+                    remaining: 42
+                    success: true
+        drawCardsFromPile:
+            value:
+                ReqExample:
+                    cards:
+                        - ACE
+                    count: 1
+                    deckId: iixkc5yq2b3j
+                    location: top
+                    pileName: test
+                RespExample:
+                    cards: []
+                    deck_id: iixkc5yq2b3j
+                    piles: {}
+                    success: true
+        listPileCards:
+            value:
+                ReqExample:
+                    deckId: iixkc5yq2b3j
+                    pileName: test
+                RespExample:
+                    deck_id: iixkc5yq2b3j
+                    piles: {}
+                    remaining: 42
+                    success: true
+        returnCardsToDeck:
+            value:
+                ReqExample:
+                    deckId: iixkc5yq2b3j
+                RespExample:
+                    deck_id: iixkc5yq2b3j
+                    remaining: 52
+                    success: true
+        shuffleDeck:
+            value:
+                ReqExample:
+                    deckId: iixkc5yq2b3j
+                    remaining: false
+                RespExample:
+                    deck_id: iixkc5yq2b3j
+                    remaining: 52
+                    shuffled: true
+                    success: true
+        shufflePile:
+            value:
+                ReqExample:
+                    deckId: iixkc5yq2b3j
+                    pileName: test
+                RespExample:
+                    deck_id: iixkc5yq2b3j
+                    piles: {}
+                    remaining: 42
+                    success: true
+    schemas:
+        Card:
+            properties:
+                code:
+                    type: string
+                image:
+                    type: string
+                images:
+                    properties:
+                        png:
+                            type: string
+                        svg:
+                            type: string
+                    type: object
+                suit:
+                    type: string
+                value:
+                    type: string
+            type: object
+        DeckResponse:
+            properties:
+                deck_id:
+                    type: string
+                piles:
+                    additionalProperties:
+                        $ref: '#/components/schemas/PileInfo'
+                    type: object
+                remaining:
+                    type: integer
+                shuffled:
+                    type: boolean
+                success:
+                    type: boolean
+            type: object
+        DrawResponse:
+            properties:
+                cards:
+                    items:
+                        $ref: '#/components/schemas/Card'
+                    type: array
+                deck_id:
+                    type: string
+                piles:
+                    additionalProperties:
+                        $ref: '#/components/schemas/PileInfo'
+                    type: object
+                remaining:
+                    type: integer
+                success:
+                    type: boolean
+            type: object
+        PileInfo:
+            properties:
+                cards:
+                    items:
+                        $ref: '#/components/schemas/Card'
+                    type: array
+                remaining:
+                    type: integer
+            type: object
+        PileResponse:
+            properties:
+                deck_id:
+                    type: string
+                piles:
+                    additionalProperties:
+                        $ref: '#/components/schemas/PileInfo'
+                    type: object
+                remaining:
+                    type: integer
+                success:
+                    type: boolean
+            type: object
+info:
+    description: An API for a virtual deck of cards
+    title: Deck of Cards API
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /deck/{deckId}/draw:
+        get:
+            operationId: drawCards
+            parameters:
+                - description: Unique identifier for the deck of cards.
+                  in: path
+                  name: deckId
+                  required: true
+                  schema:
+                    type: string
+                - description: Specify the number of cards to draw from the deck. The value should be an integer.
+                  in: query
+                  name: count
+                  schema:
+                    default: 1
+                    type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    cards:
+                                        description: An array of cards drawn from a deck.
+                                        items:
+                                            description: Array item
+                                            properties:
+                                                code:
+                                                    description: Code representing the drawn card.
+                                                    type: string
+                                                image:
+                                                    description: Image URL of the drawn card
+                                                    type: string
+                                                images:
+                                                    description: Object containing images of the drawn cards
+                                                    properties:
+                                                        png:
+                                                            description: Parameter to specify the format of the drawn cards. The value should be a string indicating the format of the card images, such as "png".
+                                                            type: string
+                                                        svg:
+                                                            description: String representation of the SVG image of the drawn card.
+                                                            type: string
+                                                    type: object
+                                                suit:
+                                                    description: 'Specify the suit of the card drawn from the deck. The suit can be one of the following: "spades", "hearts", "diamonds", "clubs".'
+                                                    type: string
+                                                value:
+                                                    description: The value of the drawn card.
+                                                    type: string
+                                            type: object
+                                        type: array
+                                    deck_id:
+                                        description: Unique identifier for the deck of cards
+                                        type: string
+                                    remaining:
+                                        description: Number of cards remaining in the deck
+                                        type: number
+                                    success:
+                                        description: Indicate whether drawing a card was successful or not.
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Draw cards from a deck
+    /deck/{deckId}/pile/{pileName}/add:
+        post:
+            operationId: addCardsToPane
+            parameters:
+                - in: path
+                  name: deckId
+                  required: true
+                  schema:
+                    type: string
+                - in: path
+                  name: pileName
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: cards
+                  schema:
+                    items:
+                        type: string
+                    type: array
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    deck_id:
+                                        type: string
+                                    piles:
+                                        type: object
+                                    remaining:
+                                        type: integer
+                                    shuffled:
+                                        type: boolean
+                                    success:
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Add cards to a pile
+    /deck/{deckId}/pile/{pileName}/draw/{location}:
+        get:
+            operationId: drawCardsFromPile
+            parameters:
+                - in: path
+                  name: deckId
+                  required: true
+                  schema:
+                    type: string
+                - in: path
+                  name: pileName
+                  required: true
+                  schema:
+                    type: string
+                - in: path
+                  name: location
+                  required: true
+                  schema:
+                    default: top
+                    type: string
+                - in: query
+                  name: cards
+                  schema:
+                    items:
+                        type: string
+                    type: array
+                - in: query
+                  name: count
+                  schema:
+                    default: 1
+                    type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    cards:
+                                        items:
+                                            properties:
+                                                code:
+                                                    type: string
+                                                image:
+                                                    type: string
+                                                images:
+                                                    properties:
+                                                        png:
+                                                            type: string
+                                                        svg:
+                                                            type: string
+                                                    type: object
+                                                suit:
+                                                    type: string
+                                                value:
+                                                    type: string
+                                            type: object
+                                        type: array
+                                    deck_id:
+                                        type: string
+                                    piles:
+                                        type: object
+                                    remaining:
+                                        type: integer
+                                    success:
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Draw cards from a pile
+    /deck/{deckId}/pile/{pileName}/list:
+        get:
+            operationId: listPileCards
+            parameters:
+                - in: path
+                  name: deckId
+                  required: true
+                  schema:
+                    type: string
+                - in: path
+                  name: pileName
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    deck_id:
+                                        type: string
+                                    piles:
+                                        type: object
+                                    remaining:
+                                        type: integer
+                                    success:
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: List the cards in a pile
+    /deck/{deckId}/pile/{pileName}/shuffle:
+        get:
+            operationId: shufflePile
+            parameters:
+                - description: Name of the pile to shuffle
+                  in: path
+                  name: pileName
+                  required: true
+                  schema:
+                    type: string
+                - description: Unique identifier of the deck to shuffle
+                  in: path
+                  name: deckId
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    deck_id:
+                                        description: Unique identifier for the shuffled deck
+                                        type: string
+                                    piles:
+                                        description: Object containing the shuffled cards in piles
+                                        type: object
+                                    remaining:
+                                        description: Number of cards remaining in the pile
+                                        type: integer
+                                    shuffled:
+                                        description: Specify whether the cards should be shuffled. Set to true to shuffle the cards, or false to keep them in the same order. The default value is false.
+                                        type: boolean
+                                    success:
+                                        description: Indicates whether the card shuffling was successful.
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Shuffle the cards in a pile
+    /deck/{deckId}/return:
+        post:
+            operationId: returnCardsToDeck
+            parameters:
+                - description: The ID of the deck to which the cards should be returned.
+                  in: path
+                  name: deckId
+                  required: true
+                  schema:
+                    type: string
+                - description: Array of cards to be returned to the deck.
+                  in: query
+                  name: cards
+                  schema:
+                    items:
+                        description: Array item
+                        type: string
+                    type: array
+                - description: Name of the pile to return cards to.
+                  in: query
+                  name: pileName
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    deck_id:
+                                        description: Unique identifier of the deck to return the cards to.
+                                        type: string
+                                    piles:
+                                        description: Return the piles of cards to the deck. The piles should be represented as an object.
+                                        type: object
+                                    remaining:
+                                        description: The number of cards remaining in the deck.
+                                        type: integer
+                                    shuffled:
+                                        description: Specify whether the deck should be shuffled before returning the cards. Set to true to shuffle the deck, or false to keep the order of the cards. Default is false.
+                                        type: boolean
+                                    success:
+                                        description: Indicates whether the operation of returning cards to the deck was successful.
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Return cards to the deck
+    /deck/{deckId}/shuffle:
+        get:
+            operationId: shuffleDeck
+            parameters:
+                - in: path
+                  name: deckId
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: remaining
+                  schema:
+                    default: false
+                    type: boolean
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    deck_id:
+                                        type: string
+                                    piles:
+                                        type: object
+                                    remaining:
+                                        type: integer
+                                    shuffled:
+                                        type: boolean
+                                    success:
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Shuffle the cards in a deck
+    /deck/new:
+        get:
+            operationId: createDeck
+            parameters:
+                - in: query
+                  name: deck_count
+                  schema:
+                    default: 1
+                    type: integer
+                - in: query
+                  name: jokers_enabled
+                  schema:
+                    default: false
+                    type: boolean
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    deck_id:
+                                        type: string
+                                    piles:
+                                        type: object
+                                    remaining:
+                                        type: integer
+                                    shuffled:
+                                        type: boolean
+                                    success:
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Create a new deck
+servers:
+    - url: https://deckofcardsapi.com/api

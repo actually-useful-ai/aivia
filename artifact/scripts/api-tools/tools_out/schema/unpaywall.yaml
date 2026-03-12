@@ -1,0 +1,2070 @@
+components:
+    examples:
+        getDoiInfo:
+            value:
+                ReqExample:
+                    doi: https://doi.org/10.1001/archneurpsyc.1932.02230160224019
+                    email: luke@lukesteuber.com
+                RespExample:
+                    best_oa_location: null
+                    data_standard: 2
+                    doi: 10.1001/archneurpsyc.1932.02230160224019
+                    doi_url: https://doi.org/10.1001/archneurpsyc.1932.02230160224019
+                    first_oa_location: null
+                    genre: journal-article
+                    has_repository_copy: false
+                    is_oa: false
+                    is_paratext: false
+                    journal_is_in_doaj: false
+                    journal_is_oa: false
+                    journal_issn_l: 0096-6754
+                    journal_issns: 0096-6754
+                    journal_name: Archives of Neurology And Psychiatry
+                    oa_locations: []
+                    oa_locations_embargoed: []
+                    oa_status: closed
+                    published_date: "1932-04-01"
+                    publisher: American Medical Association (AMA)
+                    title: Speech Pathology.
+                    updated: 2021-01-19T12:11:35.317700
+                    year: 1932
+                    z_authors: null
+        searchArticles:
+            value:
+                ReqExample:
+                    email: luke@lukesteuber.com
+                    query: speech pathology
+                RespExample:
+                    elapsed_seconds: 0.419
+                    results:
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1001/archneurpsyc.1932.02230160224019
+                            doi_url: https://doi.org/10.1001/archneurpsyc.1932.02230160224019
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0096-6754
+                            journal_issns: 0096-6754
+                            journal_name: Archives of Neurology And Psychiatry
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1932-04-01"
+                            publisher: American Medical Association (AMA)
+                            title: Speech Pathology.
+                            updated: 2021-01-19T12:11:35.317700
+                            year: 1932
+                            z_authors: null
+                          score: 0.09102392
+                          snippet: <b>Speech</b> <b>Pathology</b>.
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1001/archotol.1967.00760040351030
+                            doi_url: https://doi.org/10.1001/archotol.1967.00760040351030
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0886-4470
+                            journal_issns: 0886-4470
+                            journal_name: Archives of Otolaryngology - Head and Neck Surgery
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1967-03-01"
+                            publisher: American Medical Association (AMA)
+                            title: Speech Pathology.
+                            updated: 2021-01-13T02:30:32.920188
+                            year: 1967
+                            z_authors:
+                                - family: CLEMIS
+                                  given: J. D.
+                                  sequence: first
+                          score: 0.09102392
+                          snippet: <b>Speech</b> <b>Pathology</b>.
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.2307/1414312
+                            doi_url: https://doi.org/10.2307/1414312
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0002-9556
+                            journal_issns: 0002-9556
+                            journal_name: The American Journal of Psychology
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1933-04-01"
+                            publisher: University of Illinois Press
+                            title: Speech Pathology
+                            updated: 2022-12-13T12:26:00.000170
+                            year: 1933
+                            z_authors:
+                                - family: Selling
+                                  given: Lowell S.
+                                  sequence: first
+                                - family: Travis
+                                  given: Lee Edward
+                                  sequence: additional
+                          score: 0.09102392
+                          snippet: <b>Speech</b> <b>Pathology</b>
+                        - response:
+                            best_oa_location:
+                                endpoint_id: null
+                                evidence: open (via page says license)
+                                host_type: publisher
+                                is_best: true
+                                license: cc-by
+                                oa_date: "2020-02-02"
+                                pmh_id: null
+                                repository_institution: null
+                                updated: 2021-08-11T17:07:02.478477
+                                url: https://www.qeios.com/read/L39WUI/pdf
+                                url_for_landing_page: https://doi.org/10.32388/l39wui
+                                url_for_pdf: https://www.qeios.com/read/L39WUI/pdf
+                                version: publishedVersion
+                            data_standard: 2
+                            doi: 10.32388/l39wui
+                            doi_url: https://doi.org/10.32388/l39wui
+                            first_oa_location:
+                                endpoint_id: null
+                                evidence: open (via page says license)
+                                host_type: publisher
+                                is_best: true
+                                license: cc-by
+                                oa_date: "2020-02-02"
+                                pmh_id: null
+                                repository_institution: null
+                                updated: 2021-08-11T17:07:02.478477
+                                url: https://www.qeios.com/read/L39WUI/pdf
+                                url_for_landing_page: https://doi.org/10.32388/l39wui
+                                url_for_pdf: https://www.qeios.com/read/L39WUI/pdf
+                                version: publishedVersion
+                            genre: reference-entry
+                            has_repository_copy: false
+                            is_oa: true
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: null
+                            journal_issns: null
+                            journal_name: Definitions
+                            oa_locations:
+                                - endpoint_id: null
+                                  evidence: open (via page says license)
+                                  host_type: publisher
+                                  is_best: true
+                                  license: cc-by
+                                  oa_date: "2020-02-02"
+                                  pmh_id: null
+                                  repository_institution: null
+                                  updated: 2021-08-11T17:07:02.478477
+                                  url: https://www.qeios.com/read/L39WUI/pdf
+                                  url_for_landing_page: https://doi.org/10.32388/l39wui
+                                  url_for_pdf: https://www.qeios.com/read/L39WUI/pdf
+                                  version: publishedVersion
+                            oa_locations_embargoed: []
+                            oa_status: hybrid
+                            published_date: "2020-02-02"
+                            publisher: Qeios
+                            title: Speech Pathology
+                            updated: 2021-01-15T21:50:59.407606
+                            year: 2020
+                            z_authors:
+                                - name: National Cancer Institute
+                                  sequence: first
+                          score: 0.09102392
+                          snippet: <b>Speech</b> <b>Pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.5694/j.1326-5377.1978.tb112572.x
+                            doi_url: https://doi.org/10.5694/j.1326-5377.1978.tb112572.x
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0025-729X
+                            journal_issns: 0025-729X,1326-5377
+                            journal_name: Medical Journal of Australia
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1978-05-01"
+                            publisher: AMPCo
+                            title: SPEECH PATHOLOGY
+                            updated: 2021-01-16T18:38:09.145541
+                            year: 1978
+                            z_authors:
+                                - affiliation:
+                                    - name: School of Communication Disorders of Cumberland College of Health SciencesSydney
+                                  family: Rosenthal
+                                  given: Joan
+                                  sequence: first
+                          score: 0.09102392
+                          snippet: <b>SPEECH</b> <b>PATHOLOGY</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1037/h0063954
+                            doi_url: https://doi.org/10.1037/h0063954
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0033-2909
+                            journal_issns: 1939-1455,0033-2909
+                            journal_name: Psychological Bulletin
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1933-12-01"
+                            publisher: American Psychological Association (APA)
+                            title: Review of Speech Pathology.
+                            updated: 2022-09-04T16:42:10.175503
+                            year: 1933
+                            z_authors:
+                                - family: Fletcher
+                                  given: John M.
+                                  sequence: first
+                          score: 0.072134756
+                          snippet: Review of <b>Speech</b> <b>Pathology</b>.
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1044/jshd.2502.135
+                            doi_url: https://doi.org/10.1044/jshd.2502.135
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0022-4677
+                            journal_issns: 0022-4677,2163-6184
+                            journal_name: Journal of Speech and Hearing Disorders
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1960-05-01"
+                            publisher: American Speech Language Hearing Association
+                            title: Radiography in Speech Pathology
+                            updated: 2021-01-17T02:53:54.321672
+                            year: 1960
+                            z_authors:
+                                - family: Fletcher
+                                  given: Samuel G.
+                                  sequence: first
+                                - family: Shelton
+                                  given: Ralph L.
+                                  sequence: additional
+                                  suffix: Jr.
+                                - family: Smith
+                                  given: Carlisle C.
+                                  sequence: additional
+                                - family: Bosma
+                                  given: James F.
+                                  sequence: additional
+                          score: 0.072134756
+                          snippet: Radiography in <b>Speech</b> <b>Pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1044/jshd.3403.231
+                            doi_url: https://doi.org/10.1044/jshd.3403.231
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0022-4677
+                            journal_issns: 0022-4677,2163-6184
+                            journal_name: Journal of Speech and Hearing Disorders
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1969-08-01"
+                            publisher: American Speech Language Hearing Association
+                            title: Causality in Speech Pathology
+                            updated: 2021-01-17T22:42:26.440069
+                            year: 1969
+                            z_authors:
+                                - family: Perkins
+                                  given: William H.
+                                  sequence: first
+                                - affiliation:
+                                    - name: University of Southern California, Los Angeles
+                                  family: Curlee
+                                  given: Richard F.
+                                  sequence: additional
+                          score: 0.072134756
+                          snippet: Causality in <b>Speech</b> <b>Pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1044/sasd7.4.20
+                            doi_url: https://doi.org/10.1044/sasd7.4.20
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 1940-7556
+                            journal_issns: 1940-7556,1940-7564
+                            journal_name: Perspectives on Swallowing and Swallowing Disorders (Dysphagia)
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1998-12-01"
+                            publisher: American Speech Language Hearing Association
+                            title: Medical Speech Pathology
+                            updated: 2021-04-01T21:46:36.733708
+                            year: 1998
+                            z_authors:
+                                - family: McKaig
+                                  given: T. Neil
+                                  sequence: first
+                                - family: Miller
+                                  given: Robert M.
+                                  sequence: additional
+                                - family: Groher
+                                  given: Michael E.
+                                  sequence: additional
+                          score: 0.072134756
+                          snippet: Medical <b>Speech</b> <b>Pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1080/00335636709382818
+                            doi_url: https://doi.org/10.1080/00335636709382818
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0033-5630
+                            journal_issns: 0033-5630,1479-5779
+                            journal_name: Quarterly Journal of Speech
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1967-02-01"
+                            publisher: Informa UK Limited
+                            title: A Baedeker of speech pathology
+                            updated: 2021-01-13T10:15:54.030693
+                            year: 1967
+                            z_authors:
+                                - family: Bloomer
+                                  given: H. Harlan
+                                  sequence: first
+                                - family: Rupp
+                                  given: Ralph
+                                  sequence: additional
+                                - family: Scharf
+                                  given: Don
+                                  sequence: additional
+                                - family: Wiley
+                                  given: John
+                                  sequence: additional
+                          score: 0.072134756
+                          snippet: A Baedeker of <b>speech</b> <b>pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1177/001440294200900105
+                            doi_url: https://doi.org/10.1177/001440294200900105
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0887-5405
+                            journal_issns: 0887-5405
+                            journal_name: Journal of Exceptional Children
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1942-10-01"
+                            publisher: SAGE Publications
+                            title: Speech Pathology and Audiometry
+                            updated: 2021-01-16T04:20:21.665512
+                            year: 1942
+                            z_authors:
+                                - affiliation:
+                                    - name: Professor of Speech Pathology University of Wisconsin
+                                  family: West
+                                  given: Robert
+                                  sequence: first
+                          score: 0.072134756
+                          snippet: <b>Speech</b> <b>Pathology</b> and Audiometry
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.4324/9781003053118-1
+                            doi_url: https://doi.org/10.4324/9781003053118-1
+                            first_oa_location: null
+                            genre: book-chapter
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: null
+                            journal_issns: null
+                            journal_name: Human Measurement Techniques in Speech and Language Pathology
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "2020-12-29"
+                            publisher: Routledge
+                            title: Measuring in speech pathology
+                            updated: 2021-01-17T14:36:48.513348
+                            year: 2020
+                            z_authors:
+                                - family: Rietveld
+                                  given: Toni
+                                  sequence: first
+                          score: 0.072134756
+                          snippet: Measuring in <b>speech</b> <b>pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.5694/j.1326-5377.1977.tb99067.x
+                            doi_url: https://doi.org/10.5694/j.1326-5377.1977.tb99067.x
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0025-729X
+                            journal_issns: 0025-729X,1326-5377
+                            journal_name: Medical Journal of Australia
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1977-07-01"
+                            publisher: AMPCo
+                            title: SPEECH PATHOLOGY SERVICES
+                            updated: 2021-07-07T22:48:36.412719
+                            year: 1977
+                            z_authors: null
+                          score: 0.072134756
+                          snippet: <b>SPEECH</b> <b>PATHOLOGY</b> SERVICES
+                        - response:
+                            best_oa_location:
+                                endpoint_id: null
+                                evidence: oa journal (via doaj)
+                                host_type: publisher
+                                is_best: true
+                                license: cc-by
+                                oa_date: "2019-12-27"
+                                pmh_id: null
+                                repository_institution: null
+                                updated: 2024-06-09T11:30:18.007334
+                                url: https://eejpl.vnu.edu.ua/index.php/eejpl/article/download/17/12
+                                url_for_landing_page: https://doi.org/10.29038/eejpl.2019.6.2.pas
+                                url_for_pdf: https://eejpl.vnu.edu.ua/index.php/eejpl/article/download/17/12
+                                version: publishedVersion
+                            data_standard: 2
+                            doi: 10.29038/eejpl.2019.6.2.pas
+                            doi_url: https://doi.org/10.29038/eejpl.2019.6.2.pas
+                            first_oa_location:
+                                endpoint_id: null
+                                evidence: oa journal (via doaj)
+                                host_type: publisher
+                                is_best: true
+                                license: cc-by
+                                oa_date: "2019-12-27"
+                                pmh_id: null
+                                repository_institution: null
+                                updated: 2024-06-09T11:30:18.007334
+                                url: https://eejpl.vnu.edu.ua/index.php/eejpl/article/download/17/12
+                                url_for_landing_page: https://doi.org/10.29038/eejpl.2019.6.2.pas
+                                url_for_pdf: https://eejpl.vnu.edu.ua/index.php/eejpl/article/download/17/12
+                                version: publishedVersion
+                            genre: journal-article
+                            has_repository_copy: true
+                            is_oa: true
+                            is_paratext: false
+                            journal_is_in_doaj: true
+                            journal_is_oa: true
+                            journal_issn_l: 2312-3265
+                            journal_issns: 2313-2116,2312-3265
+                            journal_name: East European Journal of Psycholinguistics
+                            oa_locations:
+                                - endpoint_id: null
+                                  evidence: oa journal (via doaj)
+                                  host_type: publisher
+                                  is_best: true
+                                  license: cc-by
+                                  oa_date: "2019-12-27"
+                                  pmh_id: null
+                                  repository_institution: null
+                                  updated: 2024-06-09T11:30:18.007334
+                                  url: https://eejpl.vnu.edu.ua/index.php/eejpl/article/download/17/12
+                                  url_for_landing_page: https://doi.org/10.29038/eejpl.2019.6.2.pas
+                                  url_for_pdf: https://eejpl.vnu.edu.ua/index.php/eejpl/article/download/17/12
+                                  version: publishedVersion
+                                - endpoint_id: kmlgamtfmx4w6tf78ykl
+                                  evidence: oa repository (via OAI-PMH title and first author match)
+                                  host_type: repository
+                                  is_best: false
+                                  license: cc-by
+                                  oa_date: null
+                                  pmh_id: oai:zenodo.org:3637746
+                                  repository_institution: CERN European Organization for Nuclear Research - Zenodo
+                                  updated: 2024-01-20T16:59:12.198278
+                                  url: https://zenodo.org/records/3637746/files/EEJPL_6_2_2019_Pastryk_et_al.pdf
+                                  url_for_landing_page: https://zenodo.org/record/3637746
+                                  url_for_pdf: https://zenodo.org/records/3637746/files/EEJPL_6_2_2019_Pastryk_et_al.pdf
+                                  version: publishedVersion
+                                - endpoint_id: 7ecca3d484a3d661505
+                                  evidence: oa repository (via OAI-PMH title and first author match)
+                                  host_type: repository
+                                  is_best: false
+                                  license: cc-by
+                                  oa_date: "2020-11-05"
+                                  pmh_id: oai:eprints.zu.edu.ua:31719
+                                  repository_institution: Zhytomyr Ivan Franko State University - Zhytomyr State University Library
+                                  updated: 2024-02-23T22:56:00.400260
+                                  url: http://eprints.zu.edu.ua/31719/1/EEJPL_6_2_2019_Pastryk_et_al.pdf
+                                  url_for_landing_page: http://eprints.zu.edu.ua/31719/1/EEJPL_6_2_2019_Pastryk_et_al.pdf
+                                  url_for_pdf: http://eprints.zu.edu.ua/31719/1/EEJPL_6_2_2019_Pastryk_et_al.pdf
+                                  version: acceptedVersion
+                            oa_locations_embargoed: []
+                            oa_status: gold
+                            published_date: "2019-12-27"
+                            publisher: Lesya Ukrainka Volyn National University
+                            title: Conscious Control in Speech Pathology and Speech Rehabilitation Following Stroke
+                            updated: 2024-06-09T11:30:18.932463
+                            year: 2019
+                            z_authors:
+                                - family: Pastryk
+                                  given: Tetyana
+                                  sequence: first
+                                - family: Kotys
+                                  given: Olena
+                                  sequence: additional
+                                - family: Dyachuk
+                                  given: Nataliia
+                                  sequence: additional
+                                - family: Milinchuk
+                                  given: Volodymyr
+                                  sequence: additional
+                          score: 0.06826794
+                          snippet: Conscious Control in <b>Speech</b> <b>Pathology</b> and <b>Speech</b> Rehabilitation Following Stroke
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1159/000275015
+                            doi_url: https://doi.org/10.1159/000275015
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0301-1569
+                            journal_issns: 0301-1569,1423-0275
+                            journal_name: ORL
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1971-01-01"
+                            publisher: S. Karger AG
+                            title: Introduction to the Present State of Medical Speech Pathology and Speech Therapy in Holland
+                            updated: 2023-11-02T02:45:50.791366
+                            year: 1971
+                            z_authors: null
+                          score: 0.065144174
+                          snippet: Introduction to the Present State of Medical <b>Speech</b> <b>Pathology</b> and <b>Speech</b> Therapy in Holland
+                        - response:
+                            best_oa_location:
+                                endpoint_id: cbce344fb2ed43a40c2
+                                evidence: oa repository (via OAI-PMH doi match)
+                                host_type: repository
+                                is_best: true
+                                license: mit
+                                oa_date: "2023-05-04"
+                                pmh_id: oai:repository.ubn.ru.nl:2066/228265
+                                repository_institution: Radboud University - Radboud Repository
+                                updated: 2024-05-28T23:24:46.318009
+                                url: https://repository.ubn.ru.nl//bitstream/handle/2066/228265/228265pub.pdf
+                                url_for_landing_page: https://repository.ubn.ru.nl//bitstream/handle/2066/228265/228265pub.pdf
+                                url_for_pdf: https://repository.ubn.ru.nl//bitstream/handle/2066/228265/228265pub.pdf
+                                version: publishedVersion
+                            data_standard: 2
+                            doi: 10.21437/interspeech.2020-2693
+                            doi_url: https://doi.org/10.21437/interspeech.2020-2693
+                            first_oa_location:
+                                endpoint_id: kmlgamtfmx4w6tf78ykl
+                                evidence: oa repository (via OAI-PMH doi match)
+                                host_type: repository
+                                is_best: false
+                                license: cc-by
+                                oa_date: "2021-05-31"
+                                pmh_id: oai:zenodo.org:4883081
+                                repository_institution: CERN European Organization for Nuclear Research - Zenodo
+                                updated: 2024-02-19T14:36:35.464454
+                                url: https://zenodo.org/records/4883081/files/Wed-3-3-7.pdf
+                                url_for_landing_page: https://zenodo.org/record/4883081
+                                url_for_pdf: https://zenodo.org/records/4883081/files/Wed-3-3-7.pdf
+                                version: publishedVersion
+                            genre: proceedings-article
+                            has_repository_copy: true
+                            is_oa: true
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: null
+                            journal_issns: null
+                            journal_name: Interspeech 2020
+                            oa_locations:
+                                - endpoint_id: cbce344fb2ed43a40c2
+                                  evidence: oa repository (via OAI-PMH doi match)
+                                  host_type: repository
+                                  is_best: true
+                                  license: mit
+                                  oa_date: "2023-05-04"
+                                  pmh_id: oai:repository.ubn.ru.nl:2066/228265
+                                  repository_institution: Radboud University - Radboud Repository
+                                  updated: 2024-05-28T23:24:46.318009
+                                  url: https://repository.ubn.ru.nl//bitstream/handle/2066/228265/228265pub.pdf
+                                  url_for_landing_page: https://repository.ubn.ru.nl//bitstream/handle/2066/228265/228265pub.pdf
+                                  url_for_pdf: https://repository.ubn.ru.nl//bitstream/handle/2066/228265/228265pub.pdf
+                                  version: publishedVersion
+                                - endpoint_id: cbce344fb2ed43a40c2
+                                  evidence: oa repository (via OAI-PMH doi match)
+                                  host_type: repository
+                                  is_best: false
+                                  license: other-oa
+                                  oa_date: "2023-05-04"
+                                  pmh_id: oai:repository.ubn.ru.nl:2066/228265
+                                  repository_institution: Radboud University - Radboud Repository
+                                  updated: 2024-05-28T23:15:32.936445
+                                  url: https://repository.ubn.ru.nl/bitstream/handle/2066/228265/1/228265pub.pdf
+                                  url_for_landing_page: https://hdl.handle.net/2066/228265
+                                  url_for_pdf: https://repository.ubn.ru.nl/bitstream/handle/2066/228265/1/228265pub.pdf
+                                  version: publishedVersion
+                                - endpoint_id: kmlgamtfmx4w6tf78ykl
+                                  evidence: oa repository (via OAI-PMH doi match)
+                                  host_type: repository
+                                  is_best: false
+                                  license: cc-by
+                                  oa_date: "2021-05-31"
+                                  pmh_id: oai:zenodo.org:4883081
+                                  repository_institution: CERN European Organization for Nuclear Research - Zenodo
+                                  updated: 2024-02-19T14:36:35.464454
+                                  url: https://zenodo.org/records/4883081/files/Wed-3-3-7.pdf
+                                  url_for_landing_page: https://zenodo.org/record/4883081
+                                  url_for_pdf: https://zenodo.org/records/4883081/files/Wed-3-3-7.pdf
+                                  version: publishedVersion
+                            oa_locations_embargoed: []
+                            oa_status: green
+                            published_date: "2020-10-25"
+                            publisher: ISCA
+                            title: Towards a Comprehensive Assessment of Speech Intelligibility for Pathological Speech
+                            updated: 2024-07-01T04:37:37.765178
+                            year: 2020
+                            z_authors:
+                                - family: Xue
+                                  given: W.
+                                  sequence: first
+                                - family: Ramos
+                                  given: V. Mendoza
+                                  sequence: additional
+                                - family: Harmsen
+                                  given: W.
+                                  sequence: additional
+                                - family: Cucchiarini
+                                  given: Catia
+                                  sequence: additional
+                                - family: Hout
+                                  given: R.W.N.M. van
+                                  sequence: additional
+                                - family: Strik
+                                  given: Helmer
+                                  sequence: additional
+                          score: 0.06411978
+                          snippet: Towards a Comprehensive Assessment of <b>Speech</b> Intelligibility for <b>Pathological</b> <b>Speech</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1001/jama.1963.03700250125034
+                            doi_url: https://doi.org/10.1001/jama.1963.03700250125034
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0098-7484
+                            journal_issns: 0098-7484
+                            journal_name: 'JAMA: The Journal of the American Medical Association'
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1963-06-22"
+                            publisher: American Medical Association (AMA)
+                            title: Diagnostic methods in speech pathology.
+                            updated: 2021-01-15T23:27:20.395780
+                            year: 1963
+                            z_authors:
+                                - family: Gaines
+                                  given: Frances P.
+                                  sequence: first
+                          score: 0.062133495
+                          snippet: Diagnostic methods in <b>speech</b> <b>pathology</b>.
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1001/jama.1980.03300420051036
+                            doi_url: https://doi.org/10.1001/jama.1980.03300420051036
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0098-7484
+                            journal_issns: 0098-7484
+                            journal_name: 'JAMA: The Journal of the American Medical Association'
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1980-04-25"
+                            publisher: American Medical Association (AMA)
+                            title: Diagnostic Handbook of Speech Pathology
+                            updated: 2021-01-17T22:07:56.356578
+                            year: 1980
+                            z_authors:
+                                - family: Laber
+                                  given: Susan S.
+                                  sequence: first
+                          score: 0.062133495
+                          snippet: Diagnostic Handbook of <b>Speech</b> <b>Pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1037/008659
+                            doi_url: https://doi.org/10.1037/008659
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0010-7549
+                            journal_issns: 0010-7549
+                            journal_name: 'Contemporary Psychology: A Journal of Reviews'
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1968-05-01"
+                            publisher: Portico
+                            title: A Cluttered Approach to Speech Pathology
+                            updated: 2021-03-31T11:18:23.746114
+                            year: 1968
+                            z_authors:
+                                - family: WYATT
+                                  given: GERTRUD L.
+                                  sequence: first
+                          score: 0.062133495
+                          snippet: A Cluttered Approach to <b>Speech</b> <b>Pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1037/h0071674
+                            doi_url: https://doi.org/10.1037/h0071674
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0033-2909
+                            journal_issns: 1939-1455,0033-2909
+                            journal_name: Psychological Bulletin
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1929-05-01"
+                            publisher: American Psychological Association (APA)
+                            title: Recent research in speech pathology.
+                            updated: 2022-09-07T06:11:51.332396
+                            year: 1929
+                            z_authors:
+                                - family: Travis
+                                  given: L. E.
+                                  sequence: first
+                          score: 0.062133495
+                          snippet: Recent research in <b>speech</b> <b>pathology</b>.
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1044/jshd.1001.47
+                            doi_url: https://doi.org/10.1044/jshd.1001.47
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0885-9426
+                            journal_issns: 0885-9426
+                            journal_name: Journal of Speech Disorders
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1945-03-01"
+                            publisher: American Speech Language Hearing Association
+                            title: Description of the Profession of Speech Pathology
+                            updated: 2021-01-13T10:47:54.146292
+                            year: 1945
+                            z_authors: null
+                          score: 0.062133495
+                          snippet: Description of the Profession of <b>Speech</b> <b>Pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1080/10510976809362903
+                            doi_url: https://doi.org/10.1080/10510976809362903
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0008-9575
+                            journal_issns: 0008-9575
+                            journal_name: Central States Speech Journal
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1968-03-01"
+                            publisher: Informa UK Limited
+                            title: Interviewing in speech pathology and audiology
+                            updated: 2021-01-16T02:34:48.793151
+                            year: 1968
+                            z_authors:
+                                - family: Emerick
+                                  given: Lon
+                                  sequence: first
+                          score: 0.062133495
+                          snippet: Interviewing in <b>speech</b> <b>pathology</b> and audiology
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1093/ptj/43.7.551
+                            doi_url: https://doi.org/10.1093/ptj/43.7.551
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0031-9023
+                            journal_issns: 0031-9023,1538-6724
+                            journal_name: Physical Therapy
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1963-07-01"
+                            publisher: Oxford University Press (OUP)
+                            title: Diagnostic Methods in Speech Pathology
+                            updated: 2021-01-15T10:51:58.202708
+                            year: 1963
+                            z_authors:
+                                - family: Harrington
+                                  given: Donald A.
+                                  sequence: first
+                          score: 0.062133495
+                          snippet: Diagnostic Methods in <b>Speech</b> <b>Pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1121/1.4831182
+                            doi_url: https://doi.org/10.1121/1.4831182
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0001-4966
+                            journal_issns: 0001-4966,1520-8524
+                            journal_name: The Journal of the Acoustical Society of America
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "2013-11-01"
+                            publisher: Acoustical Society of America (ASA)
+                            title: Feature divergence of pathological speech
+                            updated: 2023-08-27T08:16:40.224977
+                            year: 2013
+                            z_authors:
+                                - affiliation:
+                                    - name: School of ECEE, SenSIP Ctr., Arizona State Univ., 2323 E Apache Blvd., Apt. 2120, Tempe, AZ 85281, ssandova@gmail.com
+                                  family: Sandoval
+                                  given: Steven
+                                  sequence: first
+                                - affiliation:
+                                    - name: Speech and Hearing Sci., Arizona State Univ., Tempe, AZ
+                                  family: Utianski
+                                  given: Rene
+                                  sequence: additional
+                                - affiliation:
+                                    - name: Speech and Hearing Sci., Arizona State Univ., Tempe, AZ
+                                  family: Berisha
+                                  given: Visar
+                                  sequence: additional
+                                - affiliation:
+                                    - name: Speech and Hearing Sci., Arizona State Univ., Tempe, AZ
+                                  family: Liss
+                                  given: Julie
+                                  sequence: additional
+                                - affiliation:
+                                    - name: School of ECEE, SenSIP Ctr., Arizona State Univ., Tempe, AZ
+                                  family: Spanias
+                                  given: Andreas
+                                  sequence: additional
+                          score: 0.062133495
+                          snippet: Feature divergence of <b>pathological</b> <b>speech</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1177/001440296302900803
+                            doi_url: https://doi.org/10.1177/001440296302900803
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0014-4029
+                            journal_issns: 0014-4029,2163-5560
+                            journal_name: Exceptional Children
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1963-04-01"
+                            publisher: SAGE Publications
+                            title: Recent Research in Speech Pathology
+                            updated: 2021-01-13T10:17:39.752115
+                            year: 1963
+                            z_authors:
+                                - affiliation:
+                                    - name: Program for Exceptional Children, University of Georgia, Athens.
+                                  family: Ainsworth
+                                  given: Stanley
+                                  sequence: first
+                          score: 0.062133495
+                          snippet: Recent Research in <b>Speech</b> <b>Pathology</b>
+                        - response:
+                            best_oa_location:
+                                endpoint_id: null
+                                evidence: open (via free pdf)
+                                host_type: publisher
+                                is_best: true
+                                license: null
+                                oa_date: null
+                                pmh_id: null
+                                repository_institution: null
+                                updated: 2019-07-20T02:54:23.960163
+                                url: https://journals.sagepub.com/doi/pdf/10.1177/003591576806100633
+                                url_for_landing_page: https://doi.org/10.1177/003591576806100633
+                                url_for_pdf: https://journals.sagepub.com/doi/pdf/10.1177/003591576806100633
+                                version: publishedVersion
+                            data_standard: 2
+                            doi: 10.1177/003591576806100633
+                            doi_url: https://doi.org/10.1177/003591576806100633
+                            first_oa_location:
+                                endpoint_id: null
+                                evidence: open (via free pdf)
+                                host_type: publisher
+                                is_best: true
+                                license: null
+                                oa_date: null
+                                pmh_id: null
+                                repository_institution: null
+                                updated: 2019-07-20T02:54:23.960163
+                                url: https://journals.sagepub.com/doi/pdf/10.1177/003591576806100633
+                                url_for_landing_page: https://doi.org/10.1177/003591576806100633
+                                url_for_pdf: https://journals.sagepub.com/doi/pdf/10.1177/003591576806100633
+                                version: publishedVersion
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: true
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0035-9157
+                            journal_issns: 0035-9157
+                            journal_name: Proceedings of the Royal Society of Medicine
+                            oa_locations:
+                                - endpoint_id: null
+                                  evidence: open (via free pdf)
+                                  host_type: publisher
+                                  is_best: true
+                                  license: null
+                                  oa_date: null
+                                  pmh_id: null
+                                  repository_institution: null
+                                  updated: 2019-07-20T02:54:23.960163
+                                  url: https://journals.sagepub.com/doi/pdf/10.1177/003591576806100633
+                                  url_for_landing_page: https://doi.org/10.1177/003591576806100633
+                                  url_for_pdf: https://journals.sagepub.com/doi/pdf/10.1177/003591576806100633
+                                  version: publishedVersion
+                            oa_locations_embargoed: []
+                            oa_status: bronze
+                            published_date: "1968-06-01"
+                            publisher: SAGE Publications
+                            title: Dental Problems in Speech Pathology
+                            updated: 2023-05-29T17:26:00.225192
+                            year: 1968
+                            z_authors:
+                                - affiliation:
+                                    - name: Dental Department for Children, Guy's Hospital, London
+                                  family: Fawcus
+                                  given: Robert
+                                  sequence: first
+                          score: 0.062133495
+                          snippet: Dental Problems in <b>Speech</b> <b>Pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.25807/22224378_2022_5_164
+                            doi_url: https://doi.org/10.25807/22224378_2022_5_164
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 2222-4378
+                            journal_issns: 2222-4378
+                            journal_name: Научное мнение
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "2022-01-01"
+                            publisher: Book House
+                            title: SOCIALISATION OF CHILDREN WITH SPEECH PATHOLOGY
+                            updated: 2022-06-09T21:01:25.163708
+                            year: 2022
+                            z_authors:
+                                - affiliation:
+                                    - name: Kazan (Volga region) Federal University
+                                  family: Akhmetzyanova
+                                  given: Anna I.
+                                  sequence: first
+                                - affiliation:
+                                    - name: Kazan (Volga region) Federal University
+                                  family: Artemyeva
+                                  given: Tatiana V.
+                                  sequence: additional
+                                - affiliation:
+                                    - name: Kazan (Volga region) Federal University
+                                  family: Korobina
+                                  given: Julia O.
+                                  sequence: additional
+                          score: 0.062133495
+                          snippet: SOCIALISATION OF CHILDREN WITH <b>SPEECH</b> <b>PATHOLOGY</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.3109/asl2.1976.4.issue-1.07
+                            doi_url: https://doi.org/10.3109/asl2.1976.4.issue-1.07
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0310-6853
+                            journal_issns: 0310-6853
+                            journal_name: Australian Journal of Human Communication Disorders
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1976-06-01"
+                            publisher: Informa UK Limited
+                            title: Speech Pathology and the Education of the Deaf
+                            updated: 2021-01-14T05:24:06.449054
+                            year: 1976
+                            z_authors:
+                                - family: Mcgrath
+                                  given: Brother Gerald
+                                  sequence: first
+                          score: 0.062133495
+                          snippet: <b>Speech</b> <b>Pathology</b> and the Education of the Deaf
+                        - response:
+                            best_oa_location:
+                                endpoint_id: null
+                                evidence: open (via free pdf)
+                                host_type: publisher
+                                is_best: true
+                                license: null
+                                oa_date: null
+                                pmh_id: null
+                                repository_institution: null
+                                updated: 2019-01-31T05:01:57.240264
+                                url: https://www.jstage.jst.go.jp/article/jjlp1960/39/2/39_2_221/_pdf
+                                url_for_landing_page: https://doi.org/10.5112/jjlp.39.221
+                                url_for_pdf: https://www.jstage.jst.go.jp/article/jjlp1960/39/2/39_2_221/_pdf
+                                version: publishedVersion
+                            data_standard: 2
+                            doi: 10.5112/jjlp.39.221
+                            doi_url: https://doi.org/10.5112/jjlp.39.221
+                            first_oa_location:
+                                endpoint_id: null
+                                evidence: open (via free pdf)
+                                host_type: publisher
+                                is_best: true
+                                license: null
+                                oa_date: null
+                                pmh_id: null
+                                repository_institution: null
+                                updated: 2019-01-31T05:01:57.240264
+                                url: https://www.jstage.jst.go.jp/article/jjlp1960/39/2/39_2_221/_pdf
+                                url_for_landing_page: https://doi.org/10.5112/jjlp.39.221
+                                url_for_pdf: https://www.jstage.jst.go.jp/article/jjlp1960/39/2/39_2_221/_pdf
+                                version: publishedVersion
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: true
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0030-2813
+                            journal_issns: 0030-2813,1884-3646
+                            journal_name: The Japan Journal of Logopedics and Phoniatrics
+                            oa_locations:
+                                - endpoint_id: null
+                                  evidence: open (via free pdf)
+                                  host_type: publisher
+                                  is_best: true
+                                  license: null
+                                  oa_date: null
+                                  pmh_id: null
+                                  repository_institution: null
+                                  updated: 2019-01-31T05:01:57.240264
+                                  url: https://www.jstage.jst.go.jp/article/jjlp1960/39/2/39_2_221/_pdf
+                                  url_for_landing_page: https://doi.org/10.5112/jjlp.39.221
+                                  url_for_pdf: https://www.jstage.jst.go.jp/article/jjlp1960/39/2/39_2_221/_pdf
+                                  version: publishedVersion
+                            oa_locations_embargoed: []
+                            oa_status: bronze
+                            published_date: "1998-01-01"
+                            publisher: The Japan Society of Logopedics and Phoniatrics
+                            title: The Relationship Between Otolaryngology and Speech Pathology.
+                            updated: 2021-04-25T18:26:11.861116
+                            year: 1998
+                            z_authors:
+                                - family: Miller
+                                  given: Susan
+                                  sequence: first
+                          score: 0.062133495
+                          snippet: The Relationship Between Otolaryngology and <b>Speech</b> <b>Pathology</b>.
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1080/1476967031000091006
+                            doi_url: https://doi.org/10.1080/1476967031000091006
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 1476-9670
+                            journal_issns: 1476-9670,1476-9689
+                            journal_name: Journal of Multilingual Communication Disorders
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "2003-01-01"
+                            publisher: Informa UK Limited
+                            title: 'Speech errors in normal and pathological speech: evidence from Japanese'
+                            updated: 2021-01-13T04:27:36.751786
+                            year: 2003
+                            z_authors:
+                                - family: Miyakoda
+                                  given: Haruko
+                                  sequence: first
+                          score: 0.0577078
+                          snippet: '<b>Speech</b> errors in normal and <b>pathological</b> <b>speech</b>: evidence from Japanese'
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1001/archneur.1968.00480020124018
+                            doi_url: https://doi.org/10.1001/archneur.1968.00480020124018
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0003-9942
+                            journal_issns: 0003-9942
+                            journal_name: Archives of Neurology
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1968-08-01"
+                            publisher: American Medical Association (AMA)
+                            title: 'Speech Pathology Diagnosis: Theory and Practice.'
+                            updated: 2021-01-19T13:06:15.430688
+                            year: 1968
+                            z_authors:
+                                - family: CHARLTON
+                                  given: M. H.
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: '<b>Speech</b> <b>Pathology</b> Diagnosis: Theory and Practice.'
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1001/archotol.1972.00770090266030
+                            doi_url: https://doi.org/10.1001/archotol.1972.00770090266030
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0886-4470
+                            journal_issns: 0886-4470
+                            journal_name: Archives of Otolaryngology - Head and Neck Surgery
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1972-08-01"
+                            publisher: American Medical Association (AMA)
+                            title: 'Speech Pathology: An Applied Behavioral Science'
+                            updated: 2021-01-13T03:37:36.832728
+                            year: 1972
+                            z_authors:
+                                - family: CANTER
+                                  given: G. J.
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: '<b>Speech</b> <b>Pathology</b>: An Applied Behavioral Science'
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1001/archotol.1980.00790320071023
+                            doi_url: https://doi.org/10.1001/archotol.1980.00790320071023
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0886-4470
+                            journal_issns: 0886-4470
+                            journal_name: Archives of Otolaryngology - Head and Neck Surgery
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1980-08-01"
+                            publisher: American Medical Association (AMA)
+                            title: Evaluating Research in Speech Pathology and Audiology
+                            updated: 2021-01-14T14:14:39.620176
+                            year: 1980
+                            z_authors:
+                                - family: SHIPP
+                                  given: T.
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: Evaluating Research in <b>Speech</b> <b>Pathology</b> and Audiology
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1001/jama.1971.03190110074034
+                            doi_url: https://doi.org/10.1001/jama.1971.03190110074034
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0098-7484
+                            journal_issns: 0098-7484
+                            journal_name: 'JAMA: The Journal of the American Medical Association'
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1971-09-13"
+                            publisher: American Medical Association (AMA)
+                            title: 'Speech Pathology: An Applied Behavioral Science'
+                            updated: 2021-01-16T06:50:27.517520
+                            year: 1971
+                            z_authors:
+                                - family: Gerstman
+                                  given: Hubert L.
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: '<b>Speech</b> <b>Pathology</b>: An Applied Behavioral Science'
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1007/978-3-319-69002-5_14
+                            doi_url: https://doi.org/10.1007/978-3-319-69002-5_14
+                            first_oa_location: null
+                            genre: book-chapter
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 2191-8112
+                            journal_issns: 2191-8112,2191-8120
+                            journal_name: Application of Wavelets in Speech Processing
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "2017-11-30"
+                            publisher: Springer International Publishing
+                            title: Clinical Diagnosis and Assessment of Speech Pathology
+                            updated: 2021-01-16T06:24:44.322595
+                            year: 2017
+                            z_authors:
+                                - family: Farouk
+                                  given: Mohamed Hesham
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: Clinical Diagnosis and Assessment of <b>Speech</b> <b>Pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1007/bf03219235
+                            doi_url: https://doi.org/10.1007/bf03219235
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0311-6999
+                            journal_issns: 0311-6999,2210-5328
+                            journal_name: The Australian Educational Researcher
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1985-06-01"
+                            publisher: Springer Science and Business Media LLC
+                            title: Student teacher perceptions of speech pathology
+                            updated: 2021-01-16T01:36:06.152438
+                            year: 1985
+                            z_authors:
+                                - family: Millett
+                                  given: A. F.
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: Student teacher perceptions of <b>speech</b> <b>pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1016/0021-9924(68)90013-0
+                            doi_url: https://doi.org/10.1016/0021-9924(68)90013-0
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0021-9924
+                            journal_issns: 0021-9924
+                            journal_name: Journal of Communication Disorders
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1968-10-01"
+                            publisher: Elsevier BV
+                            title: Speech pathology — an international study of the science
+                            updated: 2021-01-17T07:11:33.688564
+                            year: 1968
+                            z_authors:
+                                - family: Brodnitz
+                                  given: Friedrich S.
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: <b>Speech</b> <b>pathology</b> — an international study of the science
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1016/b978-0-12-608603-4.50015-9
+                            doi_url: https://doi.org/10.1016/b978-0-12-608603-4.50015-9
+                            first_oa_location: null
+                            genre: book-chapter
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0193-3434
+                            journal_issns: 0193-3434
+                            journal_name: Speech and Language
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1980-01-01"
+                            publisher: Elsevier
+                            title: 'Biofeedback: Theory and Application to Speech Pathology'
+                            updated: 2021-01-15T23:31:03.628948
+                            year: 1980
+                            z_authors:
+                                - family: DAVIS
+                                  given: SYLVIA M.
+                                  sequence: first
+                                - family: DRICHTA
+                                  given: CARL E.
+                                  sequence: additional
+                          score: 0.055811062
+                          snippet: 'Biofeedback: Theory and Application to <b>Speech</b> <b>Pathology</b>'
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1037/h0057879
+                            doi_url: https://doi.org/10.1037/h0057879
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0033-2909
+                            journal_issns: 1939-1455,0033-2909
+                            journal_name: Psychological Bulletin
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1945-12-01"
+                            publisher: American Psychological Association (APA)
+                            title: A speech pathology program for Naval hospitals.
+                            updated: 2022-09-03T12:06:47.908304
+                            year: 1945
+                            z_authors:
+                                - family: Stevenson
+                                  given: I.
+                                  sequence: first
+                                - family: Mikalson
+                                  given: A. E.
+                                  sequence: additional
+                          score: 0.055811062
+                          snippet: A <b>speech</b> <b>pathology</b> program for Naval hospitals.
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1044/jshd.2802.208a
+                            doi_url: https://doi.org/10.1044/jshd.2802.208a
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0022-4677
+                            journal_issns: 0022-4677,2163-6184
+                            journal_name: Journal of Speech and Hearing Disorders
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1963-05-01"
+                            publisher: American Speech Language Hearing Association
+                            title: Learning Theory—A Basic of Speech Pathology
+                            updated: 2021-01-18T18:18:12.550556
+                            year: 1963
+                            z_authors:
+                                - affiliation:
+                                    - name: Bureau of Child Research, University of Kansas Medical Center
+                                  family: Winitz
+                                  given: Harris
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: Learning Theory—A Basic of <b>Speech</b> <b>Pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1044/jshd.3203.215
+                            doi_url: https://doi.org/10.1044/jshd.3203.215
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0022-4677
+                            journal_issns: 0022-4677,2163-6184
+                            journal_name: Journal of Speech and Hearing Disorders
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1967-08-01"
+                            publisher: American Speech Language Hearing Association
+                            title: Speech Pathology and the Experimental Analysis of Behavior
+                            updated: 2021-01-18T23:00:56.734705
+                            year: 1967
+                            z_authors:
+                                - family: Brookshire
+                                  given: Robert H.
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: <b>Speech</b> <b>Pathology</b> and the Experimental Analysis of Behavior
+                        - response:
+                            best_oa_location:
+                                endpoint_id: null
+                                evidence: oa journal (via doaj)
+                                host_type: publisher
+                                is_best: true
+                                license: cc-by
+                                oa_date: "2014-09-04"
+                                pmh_id: null
+                                repository_institution: null
+                                updated: 2024-07-13T19:02:16.703172
+                                url: https://doi.org/10.1055/s-0034-1389061
+                                url_for_landing_page: https://doi.org/10.1055/s-0034-1389061
+                                url_for_pdf: null
+                                version: publishedVersion
+                            data_standard: 2
+                            doi: 10.1055/s-0034-1389061
+                            doi_url: https://doi.org/10.1055/s-0034-1389061
+                            first_oa_location:
+                                endpoint_id: null
+                                evidence: oa journal (via doaj)
+                                host_type: publisher
+                                is_best: true
+                                license: cc-by
+                                oa_date: "2014-09-04"
+                                pmh_id: null
+                                repository_institution: null
+                                updated: 2024-07-13T19:02:16.703172
+                                url: https://doi.org/10.1055/s-0034-1389061
+                                url_for_landing_page: https://doi.org/10.1055/s-0034-1389061
+                                url_for_pdf: null
+                                version: publishedVersion
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: true
+                            is_paratext: false
+                            journal_is_in_doaj: true
+                            journal_is_oa: true
+                            journal_issn_l: 1809-4864
+                            journal_issns: 1809-9777,1809-4864
+                            journal_name: International Archives of Otorhinolaryngology
+                            oa_locations:
+                                - endpoint_id: null
+                                  evidence: oa journal (via doaj)
+                                  host_type: publisher
+                                  is_best: true
+                                  license: cc-by
+                                  oa_date: "2014-09-04"
+                                  pmh_id: null
+                                  repository_institution: null
+                                  updated: 2024-07-13T19:02:16.703172
+                                  url: https://doi.org/10.1055/s-0034-1389061
+                                  url_for_landing_page: https://doi.org/10.1055/s-0034-1389061
+                                  url_for_pdf: null
+                                  version: publishedVersion
+                            oa_locations_embargoed: []
+                            oa_status: gold
+                            published_date: "2014-09-04"
+                            publisher: Georg Thieme Verlag KG
+                            title: Audiological Behavior of Speech Pathology Students
+                            updated: 2024-03-23T18:12:58.408461
+                            year: 2014
+                            z_authors:
+                                - family: Pelissari
+                                  given: Isadora
+                                  sequence: first
+                                - family: Castro
+                                  given: Amanda
+                                  sequence: additional
+                                - family: Wegner
+                                  given: Diéllen
+                                  sequence: additional
+                                - family: Folgearini
+                                  given: Jordana
+                                  sequence: additional
+                                - family: Garcia
+                                  given: Michele
+                                  sequence: additional
+                                - family: Filha
+                                  given: Valdete
+                                  sequence: additional
+                          score: 0.055811062
+                          snippet: Audiological Behavior of <b>Speech</b> <b>Pathology</b> Students
+                        - response:
+                            best_oa_location:
+                                endpoint_id: 04a60347e9c3c695a54
+                                evidence: oa repository (via OAI-PMH title and first author match)
+                                host_type: repository
+                                is_best: true
+                                license: other-oa
+                                oa_date: null
+                                pmh_id: oai:u-pad.unimc.it:11393/36543
+                                repository_institution: null
+                                updated: 2024-03-25T17:29:26.129046
+                                url: https://u-pad.unimc.it/bitstream/11393/36543/1/Examining_36543.pdf
+                                url_for_landing_page: https://hdl.handle.net/11393/36543
+                                url_for_pdf: https://u-pad.unimc.it/bitstream/11393/36543/1/Examining_36543.pdf
+                                version: publishedVersion
+                            data_standard: 2
+                            doi: 10.1075/intp.7.2.07mer
+                            doi_url: https://doi.org/10.1075/intp.7.2.07mer
+                            first_oa_location:
+                                endpoint_id: 04a60347e9c3c695a54
+                                evidence: oa repository (via OAI-PMH title and first author match)
+                                host_type: repository
+                                is_best: true
+                                license: other-oa
+                                oa_date: null
+                                pmh_id: oai:u-pad.unimc.it:11393/36543
+                                repository_institution: null
+                                updated: 2024-03-25T17:29:26.129046
+                                url: https://u-pad.unimc.it/bitstream/11393/36543/1/Examining_36543.pdf
+                                url_for_landing_page: https://hdl.handle.net/11393/36543
+                                url_for_pdf: https://u-pad.unimc.it/bitstream/11393/36543/1/Examining_36543.pdf
+                                version: publishedVersion
+                            genre: journal-article
+                            has_repository_copy: true
+                            is_oa: true
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 1384-6647
+                            journal_issns: 1384-6647,1569-982X
+                            journal_name: Interpreting / International Journal of Research and Practice in Interpreting
+                            oa_locations:
+                                - endpoint_id: 04a60347e9c3c695a54
+                                  evidence: oa repository (via OAI-PMH title and first author match)
+                                  host_type: repository
+                                  is_best: true
+                                  license: other-oa
+                                  oa_date: null
+                                  pmh_id: oai:u-pad.unimc.it:11393/36543
+                                  repository_institution: null
+                                  updated: 2024-03-25T17:29:26.129046
+                                  url: https://u-pad.unimc.it/bitstream/11393/36543/1/Examining_36543.pdf
+                                  url_for_landing_page: https://hdl.handle.net/11393/36543
+                                  url_for_pdf: https://u-pad.unimc.it/bitstream/11393/36543/1/Examining_36543.pdf
+                                  version: publishedVersion
+                            oa_locations_embargoed: []
+                            oa_status: green
+                            published_date: "2005-11-09"
+                            publisher: John Benjamins Publishing Company
+                            title: Examining the “voice of interpreting” in speech pathology
+                            updated: 2024-06-13T05:02:02.418605
+                            year: 2005
+                            z_authors:
+                                - affiliation:
+                                    - name: University of Macerata and University of Trieste
+                                  family: Merlini
+                                  given: Raffaela
+                                  sequence: first
+                                - affiliation:
+                                    - name: ISMETT, Palermo
+                                  family: Favaron
+                                  given: Roberta
+                                  sequence: additional
+                          score: 0.055811062
+                          snippet: Examining the “voice of interpreting” in <b>speech</b> <b>pathology</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1075/sspcl
+                            doi_url: https://doi.org/10.1075/sspcl
+                            first_oa_location: null
+                            genre: book-series
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0927-1813
+                            journal_issns: 0927-1813
+                            journal_name: null
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: null
+                            publisher: John Benjamins Publishing Company
+                            title: Studies in Speech Pathology and Clinical Linguistics
+                            updated: 2021-01-17T12:10:41.452944
+                            year: null
+                            z_authors: null
+                          score: 0.055811062
+                          snippet: Studies in <b>Speech</b> <b>Pathology</b> and Clinical Linguistics
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1086/216002
+                            doi_url: https://doi.org/10.1086/216002
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0002-9602
+                            journal_issns: 0002-9602,1537-5390
+                            journal_name: American Journal of Sociology
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1932-07-01"
+                            publisher: University of Chicago Press
+                            title: <i>Speech Pathology.</i>Lee Edward Travis
+                            updated: 2023-09-15T12:16:46.543139
+                            year: 1932
+                            z_authors:
+                                - family: Fletcher
+                                  given: John M.
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: ' <b>Speech</b> <b>Pathology</b>. Lee Edward Travis'
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1093/milmed/142.8.651
+                            doi_url: https://doi.org/10.1093/milmed/142.8.651
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0026-4075
+                            journal_issns: 0026-4075,1930-613X
+                            journal_name: Military Medicine
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1977-08-01"
+                            publisher: Oxford University Press (OUP)
+                            title: Speech Pathology and Audiology in Medical Settings
+                            updated: 2021-01-15T10:51:54.845331
+                            year: 1977
+                            z_authors:
+                                - family: Sedge
+                                  given: Roy K.
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: <b>Speech</b> <b>Pathology</b> and Audiology in Medical Settings
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.1177/000348948909801105
+                            doi_url: https://doi.org/10.1177/000348948909801105
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0003-4894
+                            journal_issns: 0003-4894,1943-572X
+                            journal_name: Annals of Otology, Rhinology &amp; Laryngology
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1989-11-01"
+                            publisher: SAGE Publications
+                            title: Speech Pathology in Giant Cell Arteritis
+                            updated: 2023-10-04T16:24:55.272228
+                            year: 1989
+                            z_authors:
+                                - affiliation:
+                                    - name: Newark, Delaware
+                                  family: Nelson
+                                  given: Dewey A.
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: <b>Speech</b> <b>Pathology</b> in Giant Cell Arteritis
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.26170/po18-09-17
+                            doi_url: https://doi.org/10.26170/po18-09-17
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 2079-8717
+                            journal_issns: 2079-8717
+                            journal_name: Pedagogical Education in Russia
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "2018-01-01"
+                            publisher: Pedagogical Education in Russia, Ural State Pedagogical University Publisher
+                            title: RESILIENCE OF TEENAGERS WITH SEVERE SPEECH PATHOLOGY
+                            updated: 2021-02-17T01:08:56.037246
+                            year: 2018
+                            z_authors:
+                                - affiliation:
+                                    - name: Ural Federal University named after the first President of Russia B.N. Yeltsin
+                                  family: Tokarskaya
+                                  given: Liudmila Valerievna
+                                  sequence: first
+                                - affiliation:
+                                    - name: Ural State Pedagogical University
+                                  family: Tenkacheva
+                                  given: Tatiana Rashitovna
+                                  sequence: additional
+                                - affiliation:
+                                    - name: Ural Federal University named after the first President of Russia B.N. Yeltsin
+                                  family: Grigorieva
+                                  given: Daria Igorevna
+                                  sequence: additional
+                          score: 0.055811062
+                          snippet: RESILIENCE OF TEENAGERS WITH SEVERE <b>SPEECH</b> <b>PATHOLOGY</b>
+                        - response:
+                            best_oa_location: null
+                            data_standard: 2
+                            doi: 10.3109/13682826909011475
+                            doi_url: https://doi.org/10.3109/13682826909011475
+                            first_oa_location: null
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: false
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 1368-2822
+                            journal_issns: 1368-2822,1460-6984
+                            journal_name: International Journal of Language &amp; Communication Disorders
+                            oa_locations: []
+                            oa_locations_embargoed: []
+                            oa_status: closed
+                            published_date: "1969-04-01"
+                            publisher: Wiley
+                            title: SPEECH PATHOLOGY AND AUDIOLOGY IN THE UNITED STATES
+                            updated: 2023-11-23T23:37:53.635297
+                            year: 1969
+                            z_authors:
+                                - family: Lawrence
+                                  given: Clifton F.
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: <b>SPEECH</b> <b>PATHOLOGY</b> AND AUDIOLOGY IN THE UNITED STATES
+                        - response:
+                            best_oa_location:
+                                endpoint_id: null
+                                evidence: open (via free pdf)
+                                host_type: publisher
+                                is_best: true
+                                license: null
+                                oa_date: null
+                                pmh_id: null
+                                repository_institution: null
+                                updated: 2022-09-21T15:09:24.867477
+                                url: https://www.jstage.jst.go.jp/article/jjlp1960/21/2/21_2_126/_pdf
+                                url_for_landing_page: https://doi.org/10.5112/jjlp.21.126
+                                url_for_pdf: https://www.jstage.jst.go.jp/article/jjlp1960/21/2/21_2_126/_pdf
+                                version: publishedVersion
+                            data_standard: 2
+                            doi: 10.5112/jjlp.21.126
+                            doi_url: https://doi.org/10.5112/jjlp.21.126
+                            first_oa_location:
+                                endpoint_id: null
+                                evidence: open (via free pdf)
+                                host_type: publisher
+                                is_best: true
+                                license: null
+                                oa_date: null
+                                pmh_id: null
+                                repository_institution: null
+                                updated: 2022-09-21T15:09:24.867477
+                                url: https://www.jstage.jst.go.jp/article/jjlp1960/21/2/21_2_126/_pdf
+                                url_for_landing_page: https://doi.org/10.5112/jjlp.21.126
+                                url_for_pdf: https://www.jstage.jst.go.jp/article/jjlp1960/21/2/21_2_126/_pdf
+                                version: publishedVersion
+                            genre: journal-article
+                            has_repository_copy: false
+                            is_oa: true
+                            is_paratext: false
+                            journal_is_in_doaj: false
+                            journal_is_oa: false
+                            journal_issn_l: 0030-2813
+                            journal_issns: 0030-2813,1884-3646
+                            journal_name: The Japan Journal of Logopedics and Phoniatrics
+                            oa_locations:
+                                - endpoint_id: null
+                                  evidence: open (via free pdf)
+                                  host_type: publisher
+                                  is_best: true
+                                  license: null
+                                  oa_date: null
+                                  pmh_id: null
+                                  repository_institution: null
+                                  updated: 2022-09-21T15:09:24.867477
+                                  url: https://www.jstage.jst.go.jp/article/jjlp1960/21/2/21_2_126/_pdf
+                                  url_for_landing_page: https://doi.org/10.5112/jjlp.21.126
+                                  url_for_pdf: https://www.jstage.jst.go.jp/article/jjlp1960/21/2/21_2_126/_pdf
+                                  version: publishedVersion
+                            oa_locations_embargoed: []
+                            oa_status: bronze
+                            published_date: "1980-01-01"
+                            publisher: The Japan Society of Logopedics and Phoniatrics
+                            title: 'Speech Pathology and Medicine : Their Roles and Interactions'
+                            updated: 2021-01-16T07:19:20.572037
+                            year: 1980
+                            z_authors:
+                                - family: Darley
+                                  given: Frederic L.
+                                  sequence: first
+                          score: 0.055811062
+                          snippet: '<b>Speech</b> <b>Pathology</b> and Medicine : Their Roles and Interactions'
+    schemas:
+        DoiObject:
+            properties:
+                doi:
+                    type: string
+                is_oa:
+                    type: boolean
+                journal:
+                    type: string
+                title:
+                    type: string
+            required:
+                - doi
+                - title
+                - is_oa
+                - journal
+            type: object
+info:
+    description: Provides programmatic access to the Unpaywall database, offering Open Access status and bibliographic information for DOI-assigned resources.
+    title: Unpaywall API
+    version: 2.0.0
+openapi: 3.0.0
+paths:
+    /{doi}:
+        get:
+            operationId: getDoiInfo
+            parameters:
+                - description: A valid DOI.
+                  in: path
+                  name: doi
+                  required: true
+                  schema:
+                    type: string
+                - description: lucas.steuber@gmail.com
+                  in: query
+                  name: email
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content: {}
+            responses:
+                "1":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/DoiObject'
+                    description: DOI Object containing bibliographic information.
+            summary: Gets OA status and bibliographic info for a given DOI-assigned resource.
+    /search:
+        get:
+            operationId: searchArticles
+            parameters:
+                - description: The text to search for.
+                  in: query
+                  name: query
+                  required: true
+                  schema:
+                    type: string
+                - description: Whether the returned records should be Open Access or not.
+                  in: query
+                  name: is_oa
+                  schema:
+                    type: boolean
+                - description: Which page of results should be returned.
+                  in: query
+                  name: page
+                  schema:
+                    type: integer
+                - description: Your email address for request authentication.
+                  in: query
+                  name: email
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content: {}
+            responses:
+                "1":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: '#/components/schemas/DoiObject'
+                                type: array
+                    description: An array of search results, each containing a DOI Object.
+            summary: Provides search results for articles based on query.
+servers:
+    - description: Current version of the Unpaywall API
+      url: https://api.unpaywall.org/v2

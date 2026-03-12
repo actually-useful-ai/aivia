@@ -1,0 +1,166 @@
+components:
+    examples:
+        validateEmail:
+            value:
+                ReqExample:
+                    email: me@me.com
+                RespExample:
+                    disposable: false
+                    dns: true
+                    domain: me.com
+                    format: true
+        validateMultipleEmails:
+            value:
+                ReqExample:
+                    emails: luke@lukesteuber.com
+                RespExample:
+                    disposable: 0
+                    invalid_dns: 0
+                    invalid_format: 0
+                    session: 60d3ed8460f298f79643b30a0d0a4251
+                    total: 1
+                    unique: 1
+                    valid: 1
+    schemas:
+        EmailValidationResult:
+            description: new param
+            properties:
+                disposable:
+                    description: new param
+                    type: boolean
+                dns:
+                    description: new param
+                    type: boolean
+                domain:
+                    description: new param
+                    type: string
+                format:
+                    description: new param
+                    type: boolean
+            type: object
+        MultipleEmailValidationResult:
+            description: new param
+            properties:
+                disposable:
+                    description: new param
+                    type: integer
+                invalid_dns:
+                    description: new param
+                    type: integer
+                invalid_format:
+                    description: new param
+                    type: integer
+                session:
+                    description: new param
+                    type: string
+                total:
+                    description: new param
+                    type: integer
+                unique:
+                    description: new param
+                    type: integer
+                valid:
+                    description: new param
+                    type: integer
+            type: object
+        ValidEmailAddresses:
+            description: new param
+            items:
+                type: string
+            type: array
+info:
+    description: Check if an email address is disposable, temporary, has invalid MX records, or is mistyped, inactive, or non-existent.
+    title: Email Validation DISIFY
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /email/{email}:
+        get:
+            operationId: validateEmail
+            parameters:
+                - description: email to validate
+                  in: path
+                  name: email
+                  required: true
+                  schema:
+                    default: me@me.com
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    disposable:
+                                        description: Specify if the result is disposable or not.
+                                        type: boolean
+                                    dns:
+                                        description: Specify whether to enable DNS resolution.
+                                        type: boolean
+                                    domain:
+                                        description: Domain of the new API.
+                                        type: string
+                                    format:
+                                        description: Specify the format of the response. Set it to true for a formatted response, or false for a raw response.
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: new api
+    /email/{emails}/mass:
+        get:
+            operationId: validateMultipleEmails
+            parameters:
+                - description: List of email addresses to validate. Provide multiple email addresses separated by commas.
+                  in: path
+                  name: emails
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    disposable:
+                                        description: Specify if disposable email addresses should be considered valid or not. Enter 0 to exclude disposable emails, 1 to include them. Default is 0.
+                                        type: number
+                                    invalid_dns:
+                                        description: Number of email addresses with invalid DNS records.
+                                        type: number
+                                    invalid_format:
+                                        description: Number of email addresses with invalid format.
+                                        type: number
+                                    session:
+                                        description: Session ID for tracking the validation process.
+                                        type: string
+                                    total:
+                                        description: Total number of email addresses processed.
+                                        type: number
+                                    unique:
+                                        description: Number of unique email addresses in the input list.
+                                        type: number
+                                    valid:
+                                        description: Number of valid email addresses in the input list.
+                                        type: number
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: This tool allows you to validate multiple email addresses at once. Simply input a list of email addresses and it will check if they are valid or not. This is useful for tasks such as verifying email lists or ensuring the accuracy of user-submitted emails.
+servers:
+    - url: https://www.disify.com/api

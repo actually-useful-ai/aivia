@@ -1,0 +1,808 @@
+components:
+    examples:
+        searchArticles:
+            value:
+                ReqExample:
+                    api-key: vAU4TbbPTWlvQEzuvnbR6aAsoOqfe6Yc
+                    q: steuber
+                RespExample:
+                    copyright: Copyright (c) 2024 The New York Times Company. All Rights Reserved.
+                    response:
+                        docs:
+                            - _id: nyt://article/bc571c37-62ba-5f84-85c6-9fd5c49dd4a6
+                              abstract: Lyndsay Ann Steuber, the daughter of Marilyn Doerr Steuber and David W. Steuber of Laguna Beach, Calif., was married Tuesday to Philip Douglas Norman, a son of Jacqueline Batten Norman and Stephen Peckham Norman of Rye, N.Y.
+                              byline:
+                                organization: null
+                                original: null
+                                person: []
+                              document_type: article
+                              headline:
+                                content_kicker: null
+                                kicker: null
+                                main: Lyndsay Steuber, Philip Norman
+                                name: null
+                                print_headline: Lyndsay Steuber, Philip Norman
+                                seo: null
+                                sub: null
+                              keywords:
+                                - major: "N"
+                                  name: subject
+                                  rank: 1
+                                  value: Weddings and Engagements
+                              lead_paragraph: 'Lyndsay Ann Steuber, the daughter of Marilyn Doerr Steuber and David W. Steuber of Laguna Beach, Calif., was married Tuesday to Philip Douglas Norman, a son of Jacqueline Batten Norman and Stephen Peckham Norman of Rye, N.Y. Blanca Martinez of the Office of the City Clerk officiated at the Manhattan Marriage Bureau. '
+                              multimedia: []
+                              news_desk: Society
+                              print_page: "16"
+                              print_section: ST
+                              pub_date: 2010-02-20T20:37:03+0000
+                              section_name: Fashion & Style
+                              snippet: Lyndsay Ann Steuber, the daughter of Marilyn Doerr Steuber and David W. Steuber of Laguna Beach, Calif., was married Tuesday to Philip Douglas Norman, a son of Jacqueline Batten Norman and Stephen Peckham Norman of Rye, N.Y.
+                              source: The New York Times
+                              subsection_name: Weddings
+                              type_of_material: News
+                              uri: nyt://article/bc571c37-62ba-5f84-85c6-9fd5c49dd4a6
+                              web_url: https://www.nytimes.com/2010/02/21/fashion/weddings/21STEUBER.html
+                              word_count: 243
+                            - _id: nyt://article/10b63a62-49e4-5d28-973f-ebe341a5710d
+                              abstract: ""
+                              byline:
+                                organization: null
+                                original: Special to The New York Times
+                                person:
+                                    - firstname: null
+                                      lastname: null
+                                      middlename: null
+                                      organization: ""
+                                      qualifier: null
+                                      rank: 1
+                                      role: reported
+                                      title: null
+                              document_type: article
+                              headline:
+                                content_kicker: null
+                                kicker: "1"
+                                main: Steuber Named at Amherst
+                                name: null
+                                print_headline: Steuber Named at Amherst
+                                seo: null
+                                sub: null
+                              keywords: []
+                              lead_paragraph: ""
+                              multimedia: []
+                              news_desk: None
+                              print_page: "30"
+                              print_section: sports
+                              pub_date: 1954-11-24T05:00:00+0000
+                              section_name: Archives
+                              snippet: ""
+                              source: The New York Times
+                              type_of_material: Archives
+                              uri: nyt://article/10b63a62-49e4-5d28-973f-ebe341a5710d
+                              web_url: https://www.nytimes.com/1954/11/24/archives/steuber-named-at-amherst.html
+                              word_count: 0
+                            - _id: nyt://article/a4f122cc-44b5-56a4-80b6-c4e1e448251c
+                              abstract: ""
+                              byline:
+                                organization: null
+                                original: null
+                                person: []
+                              document_type: article
+                              headline:
+                                content_kicker: null
+                                kicker: "1"
+                                main: Steuber Signed by Bears
+                                name: null
+                                print_headline: Steuber Signed by Bears
+                                seo: null
+                                sub: null
+                              keywords: []
+                              lead_paragraph: ""
+                              multimedia: []
+                              news_desk: None
+                              print_page: "23"
+                              print_section: SPORTS
+                              pub_date: 1943-07-07T05:00:00+0000
+                              section_name: Archives
+                              snippet: ""
+                              source: The New York Times
+                              type_of_material: Archives
+                              uri: nyt://article/a4f122cc-44b5-56a4-80b6-c4e1e448251c
+                              web_url: https://www.nytimes.com/1943/07/07/archives/steuber-signed-by-bears.html
+                              word_count: 0
+                            - _id: nyt://article/5af06d57-fe1c-56dd-82a8-00e8e05d1efa
+                              abstract: ""
+                              byline:
+                                organization: null
+                                original: null
+                                person: []
+                              document_type: article
+                              headline:
+                                content_kicker: null
+                                kicker: "1"
+                                main: Steuber Ordered to Marquette
+                                name: null
+                                print_headline: Steuber Ordered to Marquette
+                                seo: null
+                                sub: null
+                              keywords: []
+                              lead_paragraph: ""
+                              multimedia: []
+                              news_desk: None
+                              print_page: "18"
+                              print_section: SPORTS
+                              pub_date: 1943-12-24T05:00:00+0000
+                              section_name: Archives
+                              snippet: ""
+                              source: The New York Times
+                              type_of_material: Archives
+                              uri: nyt://article/5af06d57-fe1c-56dd-82a8-00e8e05d1efa
+                              web_url: https://www.nytimes.com/1943/12/24/archives/steuber-ordered-to-marquette.html
+                              word_count: 0
+                            - _id: nyt://article/3197b007-f330-50ec-b453-e986176877d1
+                              abstract: ""
+                              byline:
+                                organization: The Associated Press
+                                original: By the Associated Press
+                                person: []
+                              document_type: article
+                              headline:
+                                content_kicker: null
+                                kicker: "1"
+                                main: Steuber's 4 Touchdowns Mark Missouri Triumph
+                                name: null
+                                print_headline: Steuber's 4 Touchdowns Mark Missouri Triumph
+                                seo: null
+                                sub: null
+                              keywords: []
+                              lead_paragraph: ""
+                              multimedia: []
+                              news_desk: None
+                              print_page: "3"
+                              print_section: SPORTSS
+                              pub_date: 1942-10-18T05:00:00+0000
+                              section_name: Archives
+                              snippet: ""
+                              source: The New York Times
+                              type_of_material: Archives
+                              uri: nyt://article/3197b007-f330-50ec-b453-e986176877d1
+                              web_url: https://www.nytimes.com/1942/10/18/archives/steubers-4-touchdowns-mark-missouri-triumph.html
+                              word_count: 0
+                            - _id: nyt://article/5bc8841c-0579-54e6-9d48-6ea8825358fe
+                              abstract: ""
+                              byline:
+                                organization: null
+                                original: null
+                                person: []
+                              document_type: article
+                              headline:
+                                content_kicker: null
+                                kicker: "1"
+                                main: Steuber on All-Star Eleven
+                                name: null
+                                print_headline: Steuber on All-Star Eleven
+                                seo: null
+                                sub: null
+                              keywords: []
+                              lead_paragraph: ""
+                              multimedia: []
+                              news_desk: None
+                              print_page: "2"
+                              print_section: FINANCIAL
+                              pub_date: 1943-06-27T05:00:00+0000
+                              section_name: Archives
+                              snippet: ""
+                              source: The New York Times
+                              type_of_material: Archives
+                              uri: nyt://article/5bc8841c-0579-54e6-9d48-6ea8825358fe
+                              web_url: https://www.nytimes.com/1943/06/27/archives/steuber-on-allstar-eleven.html
+                              word_count: 0
+                            - _id: nyt://article/fb489356-1d3a-5c78-927a-95b7a4d111a7
+                              abstract: ""
+                              byline:
+                                organization: The Associated Press
+                                original: By the Associated Press
+                                person: []
+                              document_type: article
+                              headline:
+                                content_kicker: null
+                                kicker: "1"
+                                main: Steuber Gets 20 Points As Missouri Wins, 45-6
+                                name: null
+                                print_headline: Steuber Gets 20 Points As Missouri Wins, 45-6
+                                seo: null
+                                sub: null
+                              keywords: []
+                              lead_paragraph: ""
+                              multimedia: []
+                              news_desk: None
+                              print_page: "3"
+                              print_section: SPORTSS
+                              pub_date: 1942-10-25T05:00:00+0000
+                              section_name: Archives
+                              snippet: ""
+                              source: The New York Times
+                              type_of_material: Archives
+                              uri: nyt://article/fb489356-1d3a-5c78-927a-95b7a4d111a7
+                              web_url: https://www.nytimes.com/1942/10/25/archives/steuber-gets-20-points-as-missouri-wins-456.html
+                              word_count: 0
+                            - _id: nyt://article/d8ae18a1-2a45-51eb-8385-351e10c59ec7
+                              abstract: 'Frank Maznicki of the Iowa Seahawks and Bob Steuber of DePauw are tied for first place at 52 points in the race for scoring honors in the 1943 college football season, The Associated Press reports.  '
+                              byline:
+                                organization: null
+                                original: null
+                                person: []
+                              document_type: article
+                              headline:
+                                content_kicker: null
+                                kicker: "1"
+                                main: TWO TIED FOR LEAD IN COLLEGE SCORING; Iowa Seahawks' Maznicki and Steuber of DePauw at Top
+                                name: null
+                                print_headline: TWO TIED FOR LEAD IN COLLEGE SCORING; Iowa Seahawks' Maznicki and Steuber of DePauw at Top
+                                seo: null
+                                sub: null
+                              keywords: []
+                              lead_paragraph: ""
+                              multimedia: []
+                              news_desk: None
+                              print_page: "32"
+                              print_section: sports
+                              pub_date: 1943-10-12T05:00:00+0000
+                              section_name: Archives
+                              snippet: ""
+                              source: The New York Times
+                              type_of_material: Archives
+                              uri: nyt://article/d8ae18a1-2a45-51eb-8385-351e10c59ec7
+                              web_url: https://www.nytimes.com/1943/10/12/archives/two-tied-for-lead-in-college-scoring-iowa-seahawks-maznicki-and.html
+                              word_count: 0
+                            - _id: nyt://article/23fd76b7-98f9-5ba4-976c-748e0b78c099
+                              abstract: ""
+                              byline:
+                                organization: null
+                                original: null
+                                person: []
+                              document_type: article
+                              headline:
+                                content_kicker: null
+                                kicker: "1"
+                                main: 'DEPAUW''S STEUBER FIRST; Keeps Football Scoring Lead on 129-Point Total '
+                                name: null
+                                print_headline: 'DEPAUW''S STEUBER FIRST; Keeps Football Scoring Lead on 129-Point Total '
+                                seo: null
+                                sub: null
+                              keywords: []
+                              lead_paragraph: ""
+                              multimedia: []
+                              news_desk: None
+                              print_page: "31"
+                              print_section: sports
+                              pub_date: 1943-11-16T05:00:00+0000
+                              section_name: Archives
+                              snippet: ""
+                              source: The New York Times
+                              type_of_material: Archives
+                              uri: nyt://article/23fd76b7-98f9-5ba4-976c-748e0b78c099
+                              web_url: https://www.nytimes.com/1943/11/16/archives/depauws-steuber-first-keeps-football-scoring-lead-on-129point-total.html
+                              word_count: 0
+                            - _id: nyt://article/f242b38e-7bc8-55f9-9e69-ca31359b90b3
+                              abstract: 'Although both Bob Steuber of Missouri and Gene Fekete of Ohio State increased their scoring totals in last week''s games neither threatened the leadership of Eddie McGovern of Rose Poly, whose team completed its schedule two weeks ago.  '
+                              byline:
+                                organization: null
+                                original: null
+                                person: []
+                              document_type: article
+                              headline:
+                                content_kicker: null
+                                kicker: "1"
+                                main: 'STEUBER INCREASED TOTAL; Retained 3d Place in Football Scoring -- Fekete Gained '
+                                name: null
+                                print_headline: 'STEUBER INCREASED TOTAL; Retained 3d Place in Football Scoring -- Fekete Gained '
+                                seo: null
+                                sub: null
+                              keywords: []
+                              lead_paragraph: ""
+                              multimedia: []
+                              news_desk: None
+                              print_page: "30"
+                              print_section: SPORTS
+                              pub_date: 1942-12-01T05:00:00+0000
+                              section_name: Archives
+                              snippet: ""
+                              source: The New York Times
+                              type_of_material: Archives
+                              uri: nyt://article/f242b38e-7bc8-55f9-9e69-ca31359b90b3
+                              web_url: https://www.nytimes.com/1942/12/01/archives/steuber-increased-total-retained-3d-place-in-football-scoring.html
+                              word_count: 0
+                        meta:
+                            hits: 306
+                            offset: 0
+                            time: 67
+                    status: OK
+    schemas:
+        Article:
+            description: new param
+            properties:
+                _id:
+                    description: new param
+                    type: string
+                byline:
+                    $ref: '#/components/schemas/Byline'
+                document_type:
+                    description: Document type (article, multimedia).
+                    type: string
+                headline:
+                    $ref: '#/components/schemas/Headline'
+                keywords:
+                    description: new param
+                    items:
+                        $ref: '#/components/schemas/Keyword'
+                    type: array
+                multimedia:
+                    description: new param
+                    items:
+                        $ref: '#/components/schemas/Multimedia'
+                    type: array
+                news_desk:
+                    description: Desk in the newsroom that worked on the story (Foreign, Metro, Sports, ...).
+                    type: string
+                print_page:
+                    description: Page in print (e.g. 1).
+                    type: integer
+                print_section:
+                    description: Section in print (e.g. A).
+                    type: string
+                pub_date:
+                    description: Publication date.
+                    type: string
+                section_name:
+                    description: Section that the article appeared in (New York, Sports, World, ...).
+                    type: string
+                snippet:
+                    description: new param
+                    type: string
+                source:
+                    description: new param
+                    type: string
+                type_of_material:
+                    description: Type of asset (Correction, News, Op-Ed, Review, Video, ...).
+                    type: string
+                uri:
+                    description: Uniquely identifies an asset.
+                    type: string
+                web_url:
+                    description: Article URL.
+                    type: string
+                word_count:
+                    description: Number of words in the article.
+                    type: integer
+            type: object
+        Byline:
+            description: new param
+            properties:
+                organization:
+                    description: new param
+                    type: string
+                original:
+                    description: new param
+                    type: string
+                person:
+                    description: new param
+                    items:
+                        $ref: '#/components/schemas/Person'
+                    type: array
+            type: object
+        Headline:
+            description: new param
+            properties:
+                content_kicker:
+                    description: new param
+                    type: string
+                kicker:
+                    description: new param
+                    type: string
+                main:
+                    description: new param
+                    type: string
+                name:
+                    description: new param
+                    type: string
+                print_headline:
+                    description: new param
+                    type: string
+                seo:
+                    description: new param
+                    type: string
+                sub:
+                    description: new param
+                    type: string
+            type: object
+        Keyword:
+            description: new param
+            properties:
+                major:
+                    description: new param
+                    type: string
+                name:
+                    description: new param
+                    type: string
+                rank:
+                    description: new param
+                    type: integer
+                value:
+                    description: new param
+                    type: string
+            type: object
+        Multimedia:
+            description: new param
+            properties:
+                caption:
+                    description: new param
+                    type: string
+                credit:
+                    description: new param
+                    type: string
+                crop_name:
+                    description: new param
+                    type: string
+                height:
+                    description: new param
+                    type: integer
+                legacy:
+                    description: new param
+                    properties:
+                        xlarge:
+                            description: new param
+                            type: string
+                        xlargeheight:
+                            description: new param
+                            type: integer
+                        xlargewidth:
+                            description: new param
+                            type: integer
+                    type: object
+                rank:
+                    description: new param
+                    type: integer
+                subtype:
+                    description: new param
+                    type: string
+                type:
+                    description: new param
+                    type: string
+                url:
+                    description: new param
+                    type: string
+                width:
+                    description: new param
+                    type: integer
+            type: object
+        Person:
+            description: new param
+            properties:
+                firstname:
+                    description: new param
+                    type: string
+                lastname:
+                    description: new param
+                    type: string
+                middlename:
+                    description: new param
+                    type: string
+                organization:
+                    description: new param
+                    type: string
+                qualifier:
+                    description: new param
+                    type: string
+                rank:
+                    description: new param
+                    type: integer
+                role:
+                    description: new param
+                    type: string
+                title:
+                    description: new param
+                    type: string
+            type: object
+info:
+    description: Use the Article Search API to look up articles by keyword. You can refine your search using filters and facets.
+    title: NYT Article Search
+    version: 2.0.0
+openapi: 3.1.0
+paths:
+    /articlesearch.json:
+        get:
+            operationId: searchArticles
+            parameters:
+                - description: Date to start the search for NYT articles, in the format yyyyMMdd.
+                  in: query
+                  name: begin_date
+                  schema:
+                    type: string
+                - description: Specify whether to include facet counts in the search results. Set it to true to show facet counts, and false to hide facet counts. The default value is false.
+                  in: query
+                  name: facet
+                  schema:
+                    type: boolean
+                - description: Array of facet fields to apply to the search query.
+                  in: query
+                  name: facet_fields
+                  schema:
+                    items:
+                        description: Array item
+                        type: string
+                    type: array
+                - description: Filter query to narrow down the search results based on specific criteria.
+                  in: query
+                  name: fq
+                  schema:
+                    type: string
+                - description: Unique identifier to authenticate your access to the NYT API.
+                  in: query
+                  name: api-key
+                  required: true
+                  schema:
+                    default: vAU4TbbPTWlvQEzuvnbR6aAsoOqfe6Yc
+                    type: string
+                    x-global-disable: true
+                - description: End date to filter the search results. Please provide the date in the format yyyy-mm-dd.
+                  in: query
+                  name: end_date
+                  schema:
+                    type: string
+                - description: Specify whether to use filters when calculating facet counts. Set to true to use filters, false otherwise. Default is false.
+                  in: query
+                  name: facet_filter
+                  schema:
+                    type: boolean
+                - description: Specify the fields to be included in the search results. The field list should be provided as a string.
+                  in: query
+                  name: fl
+                  schema:
+                    type: string
+                - description: Page number to retrieve search results. The value should be an integer starting from 0.
+                  in: query
+                  name: page
+                  schema:
+                    type: integer
+                - description: Keywords, filters, and facets to search for New York Times articles. Specify the query in a string format.
+                  in: query
+                  name: q
+                  schema:
+                    type: string
+                - description: Sort order of the search results. Possible values include "newest", "oldest", "relevance", and "mostpopular". The default sort order is "newest".
+                  in: query
+                  name: sort
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    copyright:
+                                        description: The copyright status of the NYT article. Possible values include "All Rights Reserved" and "Public Domain". The default value is "All Rights Reserved".
+                                        type: string
+                                    response:
+                                        description: The response object containing the search results of NYT articles by keywords, filters, and facets.
+                                        properties:
+                                            docs:
+                                                description: Return an array of NYT article documents that match the search criteria.
+                                                items:
+                                                    description: Array item
+                                                    properties:
+                                                        _id:
+                                                            description: ID of the New York Times article.
+                                                            type: string
+                                                        abstract:
+                                                            description: Summary or brief description of the article. This parameter expects a string value. The abstract provides a concise overview of the article's content.
+                                                            type: string
+                                                        byline:
+                                                            description: Retrieve information about the author of the article, including their name, affiliation, and biography. The parameter is an object containing the author's details.
+                                                            properties:
+                                                                organization:
+                                                                    description: Specify the organization to filter the search results.
+                                                                    type: string
+                                                                original:
+                                                                    description: Return the original content of the article as a string.
+                                                                    type: string
+                                                                person:
+                                                                    description: Array of person names associated with the articles. This parameter represents the names of the individuals mentioned in the articles.
+                                                                    items:
+                                                                        description: Array item
+                                                                        properties:
+                                                                            firstname:
+                                                                                description: First name of the author of the article. Please provide the first name of the author as a string. Default value is empty.
+                                                                                type: string
+                                                                            lastname:
+                                                                                description: Last name of the author of the article. Use this parameter to filter the search results by articles written by a specific author. Please specify the last name of the author.
+                                                                                type: string
+                                                                            middlename:
+                                                                                description: Middle name of the author
+                                                                                type: string
+                                                                            organization:
+                                                                                description: Specify the organization to search for New York Times articles. Please provide the name of the organization as a string. The default value is an empty string.
+                                                                                type: string
+                                                                            qualifier:
+                                                                                description: Specify a search qualifier to refine the search for NYT articles.
+                                                                                type: string
+                                                                            rank:
+                                                                                description: Rank of the articles based on relevance, represented as a number. The higher the rank, the more relevant the articles are. The default value is not specified.
+                                                                                type: number
+                                                                            role:
+                                                                                description: Specify the role of the person associated with the articles. The role should be provided as a string.
+                                                                                type: string
+                                                                            title:
+                                                                                description: Title of the NYT article.
+                                                                                type: string
+                                                                        type: object
+                                                                    type: array
+                                                            type: object
+                                                        document_type:
+                                                            description: Type of documents to retrieve from the search results. Possible options include "article", "blogpost", "image", and more. The default document type is "article".
+                                                            type: string
+                                                        headline:
+                                                            description: Retrieve the headline of the NYT article matching the search criteria. The headline is returned as an object. The object contains properties such as title and main, which provide more details about the headline.
+                                                            properties:
+                                                                content_kicker:
+                                                                    description: The content kicker is a string parameter that represents the content category or theme of the NYT article. It provides additional context or highlights specific aspects of the article content. For example, the content kicker could be "Opinion", "Sports", or "Technology". Please specify the desired c
+                                                                    type: string
+                                                                kicker:
+                                                                    description: The short phrase or sentence that summarizes the main point of the article. Used to filter articles.
+                                                                    type: string
+                                                                main:
+                                                                    description: Main content of the NYT article. The content provides the key information and details of the article.
+                                                                    type: string
+                                                                name:
+                                                                    description: Specify the name of the article or keyword to search for in the NYT articles.
+                                                                    type: string
+                                                                print_headline:
+                                                                    description: Headline of the article to be printed. The headline should be in string format.
+                                                                    type: string
+                                                                seo:
+                                                                    description: The SEO (Search Engine Optimization) title of the article. This parameter represents the title of the article as optimized for search engines. It provides a concise and informative summary of the content of the article, aimed at improving the visibility and ranking of the article in search engine re
+                                                                    type: string
+                                                                sub:
+                                                                    description: The desired subsection of the articles to retrieve. Possible values include "arts", "business", "politics", etc. Default value is "all".
+                                                                    type: string
+                                                            type: object
+                                                        keywords:
+                                                            description: Array of keywords to search for in the New York Times (NYT) articles. Provide a list of keywords to search for specific topics or themes in the articles. The keywords can be strings representing the keywords you want to search for in the articles.
+                                                            items:
+                                                                description: Array item
+                                                                properties:
+                                                                    major:
+                                                                        description: Filter the articles by major topics. Specify the major topic as a string. The major topic refers to the main subject or category of the articles.
+                                                                        type: string
+                                                                    name:
+                                                                        description: Name of the article to search for in the New York Times articles database.
+                                                                        type: string
+                                                                    rank:
+                                                                        description: Specify the ranking of the search results. A higher rank indicates that the articles are more relevant. The rank should be specified as a number. If not specified, the default value is unknown.
+                                                                        type: number
+                                                                    value:
+                                                                        description: Search for articles in the New York Times (NYT) database by providing specific keywords, filters, or facets. The value parameter is used to specify the search criteria, such as the keywords to search for, the filters to apply, or the facets to consider.
+                                                                        type: string
+                                                                type: object
+                                                            type: array
+                                                        lead_paragraph:
+                                                            description: The lead paragraph provides a summary or introduction to the main content of the article. It is a string that contains the lead paragraph of the article.
+                                                            type: string
+                                                        multimedia:
+                                                            description: Return an array of multimedia objects associated with the articles. The multimedia objects may include images, videos, or other media content.
+                                                            items:
+                                                                description: Array item
+                                                                properties:
+                                                                    caption:
+                                                                        description: Caption of the article, providing a brief description or title of the content.
+                                                                        type: string
+                                                                    credit:
+                                                                        description: The name of the person or organization credited with the article. Specify the credit in string format.
+                                                                        type: string
+                                                                    crop_name:
+                                                                        description: Filter the search results by the name of the crop. Provide the exact name of the crop.
+                                                                        type: string
+                                                                    height:
+                                                                        description: Height of the articles in pixels. Specify the desired height of the articles. The value should be a number. The default height is 0 pixels.
+                                                                        type: number
+                                                                    legacy:
+                                                                        description: Legacy parameters for searching NYT articles. These parameters are used to customize and filter the search results based on specific criteria.
+                                                                        properties:
+                                                                            xlarge:
+                                                                                description: Specify the size of the image retrieved from the article. Options include "thumb", "standard", "large", "xlarge", and "xxlarge". The default size is "standard".
+                                                                                type: string
+                                                                            xlargeheight:
+                                                                                description: The height of the image in pixels. Please specify the height of the image as a number. The default value is not provided.
+                                                                                type: number
+                                                                            xlargewidth:
+                                                                                description: The width of the image to be displayed in pixels. Specify the width of the image in pixels. The range of values for xlargewidth is not provided.
+                                                                                type: number
+                                                                        type: object
+                                                                    rank:
+                                                                        description: Ranking method for search results. The rank parameter determines the order in which the search results are displayed. It should be a number, with a higher number indicating a higher rank. The default rank is 1.
+                                                                        type: number
+                                                                    subType:
+                                                                        description: "Specify the sub-type of articles to retrieve from the New York Times. The sub-type should be provided as a string. \nPossible values for sub-type include \"article\", \"blogpost\", \"brief\", \"slideshow\", \"video\", \"interactive\", etc."
+                                                                        type: string
+                                                                    subtype:
+                                                                        description: Specify the subtype of articles to search for. The subtype refers to a specific category or classification of articles. Please provide more details about the available subtypes and their meanings. The default value is null.
+                                                                        type: string
+                                                                    type:
+                                                                        description: Type of articles to retrieve from the search results. Please specify the available types, such as "news", "opinion", "review", or "feature".
+                                                                        type: string
+                                                                    url:
+                                                                        description: URL of the NYT article that matches the search criteria.
+                                                                        type: string
+                                                                    width:
+                                                                        description: The width of the article image in pixels. Specify the desired width of the image. The range of values is not provided. The default value is not provided.
+                                                                        type: number
+                                                                type: object
+                                                            type: array
+                                                        news_desk:
+                                                            description: Filter articles by specific news desks. Use this parameter to specify the news desk(s) you want to filter the articles. Possible values for the news_desk parameter include "Arts", "Business", "Sports", and more. The default value is not specified.
+                                                            type: string
+                                                        print_page:
+                                                            description: Specify the print page number of the article. It should be provided as a string, e.g. "1".
+                                                            type: string
+                                                        print_section:
+                                                            description: The section of the newspaper in which the articles are printed. Specify the desired section using a string. The valid sections include "Arts", "Business", "Opinion", "Sports", and more.
+                                                            type: string
+                                                        pub_date:
+                                                            description: Publication date of the articles to search for, in the format yyyy-mm-dd. The default value is the current date.
+                                                            type: string
+                                                        section_name:
+                                                            description: The section name of the NYT articles to search for. Please provide the specific section name(s) you are interested in.
+                                                            type: string
+                                                        snippet:
+                                                            description: A short snippet of the article content, providing a brief summary or excerpt of the article. The snippet is returned as a string.
+                                                            type: string
+                                                        source:
+                                                            description: Specify the source of the articles. This parameter should be a string indicating the source of the articles, such as a news agency or publication. The default value is empty.
+                                                            type: string
+                                                        subsection_name:
+                                                            description: Name of the subsection of the article to filter the search results. Specify the name of the desired subsection.
+                                                            type: string
+                                                        type_of_material:
+                                                            description: Type of material for the articles, such as "News", "Opinion", "Review", etc. Specify the type of material to filter the articles. The default type of material is "News".
+                                                            type: string
+                                                        uri:
+                                                            description: URI of the article in the New York Times database, in string format.
+                                                            type: string
+                                                        web_url:
+                                                            description: URL of the web page where the article is published on the New York Times website.
+                                                            type: string
+                                                        word_count:
+                                                            description: Number of words in the article. It should be a positive integer value representing the word count. The default value is not specified.
+                                                            type: number
+                                                    type: object
+                                                type: array
+                                            meta:
+                                                description: Metadata associated with the search results. The metadata includes information such as the total number of results, pagination details, and other relevant search information.
+                                                properties:
+                                                    hits:
+                                                        description: The total number of articles that match the search criteria based on the provided keywords, filters, and facets.
+                                                        type: number
+                                                    offset:
+                                                        description: Starting position of the search results, specified as a number. The default value is 0.
+                                                        type: number
+                                                    time:
+                                                        description: Specify the time range of the articles to search, in Unix timestamp format. The default value is the current time.
+                                                        type: number
+                                                type: object
+                                        type: object
+                                    status:
+                                        description: Status of the article, indicating whether it is published or archived. The default value is "published".
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Search for NYT articles by keywords, filters, and facets.
+servers:
+    - url: https://api.nytimes.com/svc/search/v2

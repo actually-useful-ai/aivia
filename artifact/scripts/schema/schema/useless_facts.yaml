@@ -1,0 +1,139 @@
+components:
+    examples:
+        getRandomFact:
+            value:
+                ReqExample:
+                    language: en
+                RespExample:
+                    id: 0a3172ba7bcfb57e8588f933e028f93d
+                    language: en
+                    permalink: https://uselessfacts.jsph.pl/api/v2/facts/0a3172ba7bcfb57e8588f933e028f93d
+                    source: djtech.net
+                    source_url: http://www.djtech.net/humor/useless_facts.htm
+                    text: The scene where Indiana Jones shoots the swordsman in Raider’s of the Lost Ark was Harrison Ford's idea so that he could take a bathroom break.
+        getTodaysFact:
+            value:
+                ReqExample:
+                    language: en
+                RespExample:
+                    id: c5b97f26c6591183d479c4bc6c6dcfde
+                    language: en
+                    permalink: https://uselessfacts.jsph.pl/api/v2/facts/c5b97f26c6591183d479c4bc6c6dcfde
+                    source: djtech.net
+                    source_url: http://www.djtech.net/humor/useless_facts.htm
+                    text: The 57 on Heinz ketchup bottles represents the number of varieties of pickles the company once had.
+    schemas:
+        Fact:
+            description: new param
+            properties:
+                id:
+                    description: new param
+                    type: string
+                language:
+                    description: new param
+                    type: string
+                source:
+                    description: new param
+                    type: string
+                text:
+                    description: new param
+                    type: string
+            type: object
+info:
+    description: Random and daily useless facts.
+    title: Useless Facts
+    version: 2.0.0
+openapi: 3.1.0
+paths:
+    /api/v2/facts/random:
+        get:
+            operationId: getRandomFact
+            parameters:
+                - description: Specify the language for the random fact to be retrieved. The language should be provided as a string.
+                  in: query
+                  name: language
+                  schema:
+                    default: en
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    id:
+                                        description: Unique identifier for the random fact.
+                                        type: string
+                                    language:
+                                        description: Specify the language for the random fact to be retrieved.
+                                        type: string
+                                    permalink:
+                                        description: Retrieve a random fact from the Useless Facts API. The permalink is a string that represents a unique identifier for the fact.
+                                        type: string
+                                    source:
+                                        description: Specify the source of the random fact.
+                                        type: string
+                                    source_url:
+                                        description: URL to the source of the random fact.
+                                        type: string
+                                    text:
+                                        description: Retrieve a random fact from the Useless Facts API. The fact will be returned as a string.
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Retrieve a random fact from the Useless Facts API.
+    /api/v2/facts/today:
+        get:
+            operationId: getTodaysFact
+            parameters:
+                - description: Specify the language for the interesting fact to be retrieved. Use the ISO 639-1 language code. Default is "en".
+                  in: query
+                  name: language
+                  schema:
+                    default: en
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    id:
+                                        description: ID of the random interesting fact.
+                                        type: string
+                                    language:
+                                        description: Specify the language of the interesting fact to retrieve. Use a valid language code (e.g., "en" for English, "es" for Spanish). If not specified, the default language is English.
+                                        type: string
+                                    permalink:
+                                        description: The permalink to the random interesting fact for today.
+                                        type: string
+                                    source:
+                                        description: Specify the source of the interesting fact.
+                                        type: string
+                                    source_url:
+                                        description: URL of the source where the interesting fact is from.
+                                        type: string
+                                    text:
+                                        description: Retrieve a random interesting fact for today. The fact will be returned as a string.
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Retrieve a random interesting fact from the UselessFacts API for today.
+servers:
+    - url: https://uselessfacts.jsph.pl

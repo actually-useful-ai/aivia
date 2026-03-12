@@ -1,0 +1,273 @@
+/**
+ * AI Loading and Streaming Indicators
+ * 
+ * Usage: Copy this code to your stylesheet
+ * 
+ * Required HTML structures:
+ * 
+ * For loading dots:
+ * <div class="loading-container">
+ *   <div class="loading-gif">
+ *     <div class="loading-dot"></div>
+ *     <div class="loading-dot"></div>
+ *     <div class="loading-dot"></div>
+ *   </div>
+ * </div>
+ * 
+ * For streaming indicator:
+ * <div class="streaming-indicator">
+ *   <div class="streaming-spinner"></div>
+ *   <span>Generating response...</span>
+ * </div>
+ * 
+ * For thinking indicator:
+ * <div class="thinking-container">
+ *   <div class="thinking-header">
+ *     <div class="thinking-title">
+ *       <div class="thinking-icon">🧠</div>
+ *       <span>Thinking...</span>
+ *     </div>
+ *   </div>
+ *   <div>Thinking content here...</div>
+ * </div>
+ */
+
+/* Theme variables */
+:root {
+  --primary-bg: #ffffff;
+  --secondary-bg: #f5f5f5;
+  --primary-text: #333333;
+  --secondary-text: #666666;
+  --accent-color: #0288d1;
+  --border-color: #dde1e4;
+}
+
+/* Dark theme overrides */
+html[data-theme="dark"] {
+  --primary-bg: #121212;
+  --secondary-bg: #1e1e1e;
+  --primary-text: #e2e8f0;
+  --secondary-text: #a0aec0;
+  --accent-color: #4299e1;
+  --border-color: #2d3748;
+}
+
+/* Loading container */
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  margin: 8px 0;
+}
+
+/* Loading dots animation */
+.loading-gif {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.loading-dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 3px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  animation: dot-bounce 1.4s infinite ease-in-out both;
+}
+
+.loading-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes dot-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* Thinking indicator */
+.thinking-container {
+  background: var(--secondary-bg);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+.thinking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.thinking-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--secondary-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.thinking-icon {
+  color: var(--accent-color);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Streaming cursor */
+.stream-content {
+  position: relative;
+}
+
+.stream-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: var(--accent-color);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Streaming indicator */
+.streaming-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  background-color: var(--secondary-bg);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--secondary-text);
+  margin: 10px 0;
+  max-width: fit-content;
+  border: 1px solid var(--border-color);
+}
+
+.streaming-spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  border-top-color: transparent;
+  margin-right: 8px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loading state for message elements */
+.message.loading {
+  position: relative;
+}
+
+.message.loading:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, 
+      var(--accent-color) 0%, 
+      transparent 50%, 
+      var(--accent-color) 100%);
+  background-size: 200% 100%;
+  animation: loading-line 1.5s infinite;
+}
+
+@keyframes loading-line {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+/* Global loading overlay */
+.global-loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .thinking-container {
+    padding: 0.75rem;
+  }
+  
+  .thinking-title {
+    font-size: 0.8rem;
+  }
+  
+  .loading-dot {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .streaming-indicator {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+}
+
+/* Accessibility: respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .loading-dot,
+  .thinking-icon,
+  .stream-cursor,
+  .streaming-spinner,
+  .message.loading:after {
+    animation: none;
+  }
+  
+  .streaming-spinner {
+    opacity: 0.5;
+  }
+} 

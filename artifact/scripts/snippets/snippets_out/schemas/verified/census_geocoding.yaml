@@ -1,0 +1,142 @@
+openapi: 3.1.0
+info:
+  title: US Census Geocoding
+  description: A US Government resource that converts addresses or geographic coordinates (latitude/longitude) into standardized geographic identifiers. These identifiers can include census tracts, block groups, blocks, or other administrative areas.
+  version: 1.0.0
+  contact:
+    email: geo.geocoding.services@census.gov
+    url: https://www.census.gov/about/policies/privacy.html
+servers:
+  - url: https://geocoding.geo.census.gov/geocoder
+paths:
+  /locations/address:
+    get:
+      summary: Geocode an address
+      description: Returns geocoded information for a given address.
+      operationId: LocationsAddress_get
+      parameters:
+        - name: street
+          in: query
+          description: The street address to geocode.
+          required: true
+          schema:
+            type: string
+        - name: city
+          in: query
+          description: The city of the address to geocode.
+          required: true
+          schema:
+            type: string
+        - name: state
+          in: query
+          description: The state of the address to geocode.
+          required: true
+          schema:
+            type: string
+        - name: zip
+          in: query
+          description: The ZIP code of the address to geocode.
+          schema:
+            type: string
+        - name: benchmark
+          in: query
+          description: The benchmark to use for geocoding.
+          required: true
+          schema:
+            type: string
+        - name: format
+          in: query
+          description: The format of the output.
+          required: true
+          schema:
+            type: string
+            default: json
+            x-global-disable: true
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeocodingResult'
+            application/xml:
+              schema:
+                type: object
+        "400":
+          description: Bad request
+        "404":
+          description: Not found
+        "500":
+          description: Internal server error
+components:
+  schemas:
+    Address:
+      type: object
+      properties:
+        city:
+          type: string
+          description: City of the address.
+        state:
+          type: string
+          description: State of the address.
+        street:
+          type: string
+          description: Street name of the address.
+        zip:
+          type: string
+          description: ZIP code of the address.
+    Benchmark:
+      type: object
+      properties:
+        benchmarkDescription:
+          type: string
+          description: Description of the benchmark used for geocoding.
+        benchmarkName:
+          type: string
+          description: Name of the benchmark used for geocoding.
+        id:
+          type: string
+          description: Unique identifier for the benchmark.
+        isDefault:
+          type: boolean
+          description: Whether this is the default benchmark.
+    GeocodingResult:
+      type: object
+      properties:
+        addressMatches:
+          type: array
+          description: Array of matched addresses.
+          items:
+            type: string
+        input:
+          type: object
+          description: Input address data for geocoding.
+          properties:
+            address:
+              $ref: '#/components/schemas/Address'
+            benchmark:
+              $ref: '#/components/schemas/Benchmark'
+  examples:
+    LocationsAddress_get:
+      value:
+        ReqExample:
+          benchmark: Public_AR_Current
+          city: Santa Barbara
+          format: json
+          state: California
+          street: "309"
+          zip: "93103"
+        RespExample:
+          result:
+            addressMatches: []
+            input:
+              address:
+                city: Santa Barbara
+                state: California
+                street: "309"
+                zip: "93103"
+              benchmark:
+                benchmarkDescription: Current Benchmark
+                benchmarkName: Public_AR_Current
+                id: "2020"
+                isDefault: true 

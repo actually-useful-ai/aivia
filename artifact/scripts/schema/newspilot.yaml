@@ -1,0 +1,299 @@
+components:
+    examples:
+        getNews:
+            value:
+                ReqExample:
+                    country: us
+                    language: en_us
+                RespExample:
+                    results:
+                        - entry_id: 55d74516240715en_us
+                          likes: 2
+                          pubdate: "2024-07-15 19:59:12"
+                          publisher: Fox News
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/457e27e16ec67271c94eee6e5950284c?height=50&quality=hq&width=50
+                          summary: The FBI is investigating Crooks' attack as an assassination attempt and potential domestic terrorismRNC begins following Trump assassination attempt at Pennsylvania rallyFox News' CB Cotton reports the latest on the investigation into Trump's assassination attempt. The 'Outnumbered' panel discussed the latest on the attack as the RNC begins in Milwaukee, Wisconsin.
+                          title: FBI has gained access to Thomas Matthew Crooks' phone in Trump assassination attempt
+                          url: https://www.foxnews.com/politics/fbi-has-gained-access-thomas-matthew-crooks-phone-trump-assassination-attempt.amp
+                        - entry_id: 368570d240715en_us
+                          likes: 0
+                          pubdate: "2024-07-15 22:25:52"
+                          publisher: Associated Press
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/4655603194dd4124aa167e25308c00d1?height=50&quality=hq&width=50
+                          summary: DETROIT (AP) — Pro Football Hall of Famer Calvin Johnson was chosen for induction into the “Pride of the Lions,” an honor that will put his name on permanent display at Ford Field.Mike Disner, chief operating officer of the Detroit Lions, surprised Johnson with the team’s plans on Monday during his foundation’s golf outing.
+                          title: Hall of Famer Calvin Johnson set to receive ‘Pride of the Lions’ honor at Ford Field
+                          url: https://apnews.com/article/detroit-lions-calvin-johnson-bfac92a50116e725fed6224a43ac5533
+                        - entry_id: 17cdd0cd240715en_us
+                          likes: 0
+                          pubdate: "2024-07-15 22:15:42"
+                          publisher: CNBC Business
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/eafefdf115a94b319ebc87957e425f90?height=50&width=50
+                          summary: GM's target of being capable of producing 1 million all-electric vehicles in North America by the end of 2025 is heavily in doubt.The production capacity goal was one of the last standing EV targets GM hadn't lowered or withdrawn amid slower-than-expected demand for EVs.More details about the automaker's EV plans could come when GM reports second-quarter results on July 23.
+                          title: GM's 2025 EV production capacity target in doubt after Barra comments
+                          url: https://www.cnbc.com/amp/2024/07/15/gms-2025-ev-production-capacity-target-in-doubt-after-barra-comments.html
+                        - entry_id: 7d5649c2240715en_us
+                          likes: 0
+                          pubdate: "2024-07-15 18:20:14"
+                          publisher: NBC Bay Area
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/946d102c1a124ad5b5c4b34386e50379?height=50&width=50
+                          summary: The Open Championship still ranks fourth among the majors in prize money despite the increase.The stakes for the 152nd Open Championship are higher than ever.This year's winner will collect $3.1 million as part of a record purse, the R&A announced Monday.
+                          title: Open Championship prize money includes record purse, $3.1M payout for winner
+                          url: https://www.nbcbayarea.com/news/sports/golf/open-championship-prize-money-record-purse-winner-payout/3593240/?amp=1
+                        - entry_id: 6aa6e86c240714en_us
+                          likes: 60
+                          pubdate: "2024-07-14 16:09:08"
+                          publisher: FeedNews
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/3315ec74bd884b5a8b106aa7e11d4136?height=50&quality=hq&width=50
+                          summary: Millions of seniors depend on monthly Social Security benefits for their livelihood.While financial experts often caution against relying solely on Social Security as the primary source of income during retirement, the reality is that many retirees would face significant challenges in meeting their basic needs without it.
+                          title: Social Security Delivers Brutal News to Millions of Americans
+                          url: https://news-us.feednews.com/news/detail/b9e23fe16b9944371e8808bdeddb6342?client=news
+        getSearchNews:
+            value:
+                ReqExample:
+                    country: us
+                    language: en_us
+                    topic: speech therapy
+                RespExample:
+                    results:
+                        - entry_id: 5f5b5fbb240715en_us
+                          likes: 0
+                          pubdate: "2024-07-15 04:43:11"
+                          publisher: Tech Times
+                          publisher_icon: https://1111210941.rsc.cdn77.org/static/common/_v1.0.0/favicon-32x32.png?height=50&width=50
+                          summary: Being able to speak, comprehend others, write, and communicate are abilities that many of us take for granted. Unfortunately, for many who suffer from disorders like apraxia, these skills can be a real challenge—but not an insurmountable one. Treatments for speech-related issues have seen great improvement in recent times, and technologies like artificial intelligence (AI) are being integrated to improve treatment exponentially.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/6a96e12484506c269dd9e1b0ee009669?category=US_Health&height=336&quality=hq&width=450
+                          title: 'Tapping into Technology: AI to Assist in Speech Therapy'
+                          url: https://www.techtimes.com/amp/articles/306660/20240715/tapping-into-technology-ai-to-assist-in-speech-therapy.htm
+                        - entry_id: 6d205bc1240710en_us
+                          likes: 0
+                          pubdate: "2024-07-09 23:30:00"
+                          publisher: Taylorville Daily News
+                          publisher_icon: https://taylorvilledailynews.com/images/favicon/favicon-32x32.png?height=50&width=50
+                          summary: Speech language pathology is offered at Pana Community Hospital, helping citizens of all ages correct and strengthen their vocal and communicative skills. Speech pathologists can be found in a medical setting, at schools, and even at in-home settings. Lauren Mahan started as the Speech Language Pathologist at Pana Community Hospital In June of 2023 after spending seven years as a speech pathologist in schools.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/147da54227f4be6ec7a74d09fd8d5432?category=US_Health&height=336&quality=hq&width=450
+                          title: Speech Language Pathology Therapy at Pana Community Hospital
+                          url: https://taylorvilledailynews.com/local-news/750901
+                        - entry_id: 68199c91240615en_us
+                          likes: 0
+                          pubdate: "2024-06-15 09:46:43"
+                          publisher: Knowridge Science Report
+                          publisher_icon: https://knowridge.com/favicon.ico?height=50&width=50
+                          summary: Experiencing a stroke can be a life-altering event, particularly if it affects one’s ability to speak and communicate effectively.Speech therapy emerges as a beacon of hope for many stroke victims, helping them regain their ability to talk and understand language. This therapy is not just about improving speech—it’s about reclaiming the quality of life.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/7a789749b8e78d168c50c10fb58e2817?category=US_Health&height=336&quality=hq&width=450
+                          title: The vital role of speech therapy after a stroke
+                          url: https://knowridge.com/2024/06/the-vital-role-of-speech-therapy-after-a-stroke/
+                        - entry_id: 5604d87b240711en_us
+                          likes: 0
+                          pubdate: "2024-07-11 17:30:00"
+                          publisher: Medical News
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/243870330bad215bed3001d53ee549de?height=50&width=50
+                          summary: An intensive voice treatment developed in the USA and known as the Lee Silverman voice treatment (LSVT LOUD) is more effective than conventional NHS speech and language therapy or no therapy for people with Parkinson's disease, finds a trial published in The BMJ today.The researchers say the results emphasize the need to optimize the use of speech and language therapy resources for people with Parkinson's disease.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/6ffdaa531bb9a561479577cc79865800?category=US_Health&cl=us_en&height=336&quality=hq&width=450
+                          title: LSVT LOUD outperforms NHS speech and language therapy for people with Parkinson's disease
+                          url: http://www.news-medical.net/news/20240711/LSVT-LOUD-outperforms-NHS-speech-and-language-therapy-for-people-with-Parkinsons-disease.aspx
+                        - entry_id: 373bc780240710en_us
+                          likes: 0
+                          pubdate: "2024-07-10 22:30:00"
+                          publisher: Mail Online
+                          publisher_icon: https://www.dailymail.co.uk/favicon.ico?height=50&v=2&width=50
+                          summary: A type of speech therapy developed for Parkinson’s disease works better than standard NHS treatment, which is ineffective, a UK-wide trial has found.The research, involving 40 NHS speech and language therapy centres, discovered that people given a course of Lee Silverman voice treatment saw improvements when compared to NHS speech and language therapy or no treatment at all.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/b40fb79a6580f6664b957d2c8fe35903?category=US_Health&height=336&quality=hq&width=450
+                          title: Speech therapy for Parkinson´s `better than standard NHS treatment´
+                          url: https://www.dailymail.co.uk/wires/pa/article-13621765/Speech-therapy-Parkinson-s-better-standard-NHS-treatment.html?ns_mchannel=rss&ns_campaign=1490&ito=1490
+    schemas:
+        NewsItem:
+            description: A single news item.
+            properties:
+                entry_id:
+                    default: The News Id.
+                    type: string
+                likes:
+                    default: The number of people who like this news.
+                    type: string
+                pubdate:
+                    description: The News Published Time.
+                    type: string
+                publisher:
+                    description: The News Publisher Name.
+                    type: string
+                publisher_icon:
+                    description: The News Publisher Icon.
+                    type: string
+                summary:
+                    description: The News Summary.
+                    type: string
+                thumbnail:
+                    description: The News Thumbnail Url.
+                    type: string
+                title:
+                    description: The News Title.
+                    type: string
+                url:
+                    description: The News URL.
+                    type: string
+            type: object
+        NewsResponse:
+            properties:
+                results:
+                    description: Result of news list.
+                    items:
+                        $ref: '#/components/schemas/NewsItem'
+                    type: array
+            required:
+                - results
+            type: object
+info:
+    description: The NewsPilot delivers real-time news updates, popular news, and news categorized by topics.
+    title: NewsPilot
+    version: v1
+openapi: 3.1.0
+paths:
+    /openapi/gpt/news:
+        get:
+            operationId: getNews
+            parameters:
+                - description: The country code of the desired news, using lowercase abbreviations. For example, 'de' for Germany.
+                  in: query
+                  name: country
+                  required: true
+                  schema:
+                    default: us
+                    type: string
+                - description: The language code for the desired news. If not provided, the default language of the specified country will be used.
+                  in: query
+                  name: language
+                  required: true
+                  schema:
+                    default: en_us
+                    type: string
+                - description: If the user mentions related keyword in any languages, use the corresponding category.
+                  in: query
+                  name: category
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    results:
+                                        description: Return a list of news articles as the result.
+                                        items:
+                                            description: Array item
+                                            properties:
+                                                entry_id:
+                                                    description: Unique identifier for the news entry.
+                                                    type: string
+                                                likes:
+                                                    description: Likes of the news article(s) that the user requested.
+                                                    type: integer
+                                                pubdate:
+                                                    description: The published date and time of the news. The format should be in yyyy-mm-dd hh:mm:ss.
+                                                    type: string
+                                                publisher:
+                                                    description: The name of the news publisher.
+                                                    type: string
+                                                publisher_icon:
+                                                    description: The icon of the news publisher.
+                                                    type: string
+                                                summary:
+                                                    description: Summary of the news article.
+                                                    type: string
+                                                thumbnail:
+                                                    description: Url of the thumbnail image associated with the news article.
+                                                    type: string
+                                                title:
+                                                    description: Title of the news article.
+                                                    type: string
+                                                url:
+                                                    description: The URL of the news article.
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: This endpoint allows users to request real-time news updates or news categorized by topics.
+    /openapi/gpt/search:
+        get:
+            operationId: getSearchNews
+            parameters:
+                - description: The country code of the desired news, using lowercase abbreviations. For example, 'de' for Germany.
+                  in: query
+                  name: country
+                  required: true
+                  schema:
+                    type: string
+                - description: The language code for the desired news. If not provided, the default language of the specified country will be used.
+                  in: query
+                  name: language
+                  required: true
+                  schema:
+                    type: string
+                - description: The main topic that users want to search for news, such as Trump, star, game, movie, etc.
+                  in: query
+                  name: topic
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    results:
+                                        description: Return a list of the latest news articles on the given topic from around the world.
+                                        items:
+                                            description: Array item
+                                            properties:
+                                                entry_id:
+                                                    description: ID of the news entry.
+                                                    type: string
+                                                likes:
+                                                    description: Number of likes received by the news article.
+                                                    type: number
+                                                pubdate:
+                                                    description: Date and time of the publication of the news. Please provide it in the format yyyy-mm-dd hh:mm:ss.
+                                                    type: string
+                                                publisher:
+                                                    description: Specify the publisher of the news.
+                                                    type: string
+                                                publisher_icon:
+                                                    description: Icon of the publisher.
+                                                    type: string
+                                                summary:
+                                                    description: Provide a summary of the news content related to the given topic.
+                                                    type: string
+                                                thumbnail_url:
+                                                    description: URL of the thumbnail image associated with the news article.
+                                                    type: string
+                                                title:
+                                                    description: The title of the news article.
+                                                    type: string
+                                                url:
+                                                    description: URL of the news article.
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: This endpoint allows users to provide any topic-related description content at will, and returns the latest news on related topics around the world in a timely manner.
+servers:
+    - url: https://newsplugin.feednews.com

@@ -1,0 +1,434 @@
+components:
+    examples:
+        getCategories:
+            value:
+                ReqExample: {}
+                RespExample:
+                    categories:
+                        - Any
+                        - Misc
+                        - Programming
+                        - Dark
+                        - Pun
+                        - Spooky
+                        - Christmas
+                    categoryAliases:
+                        - alias: Miscellaneous
+                          resolved: Misc
+                        - alias: Coding
+                          resolved: Programming
+                        - alias: Development
+                          resolved: Programming
+                        - alias: Halloween
+                          resolved: Spooky
+                    error: false
+                    timestamp: 1723755586060
+        getInfo:
+            value:
+                ReqExample: {}
+                RespExample:
+                    error: false
+                    formats:
+                        - json
+                        - xml
+                        - yaml
+                        - txt
+                    info: 'If you want to stay up to date on the status and future updates of JokeAPI or need some help, consider joining my Discord server: https://dc.sv443.net/'
+                    jokeLanguages: 6
+                    jokes:
+                        categories:
+                            - Any
+                            - Misc
+                            - Programming
+                            - Dark
+                            - Pun
+                            - Spooky
+                            - Christmas
+                        flags:
+                            - nsfw
+                            - religious
+                            - political
+                            - racist
+                            - sexist
+                            - explicit
+                        idRange:
+                            cs:
+                                - 0
+                                - 3
+                            de:
+                                - 0
+                                - 35
+                            en:
+                                - 0
+                                - 318
+                            es:
+                                - 0
+                                - 6
+                            fr:
+                                - 0
+                                - 999
+                            pt:
+                                - 0
+                                - 1
+                        safeJokes:
+                            - count: 2
+                              lang: cs
+                            - count: 30
+                              lang: de
+                            - count: 6
+                              lang: es
+                            - count: 1
+                              lang: pt
+                            - count: 182
+                              lang: en
+                            - count: 999
+                              lang: fr
+                        submissionURL: https://v2.jokeapi.dev#submit
+                        totalCount: 1368
+                        types:
+                            - single
+                            - twopart
+                    systemLanguages: 5
+                    timestamp: 1723755433357
+                    version: 2.3.2
+        getJoke:
+            value:
+                ReqExample:
+                    category: Programming
+                RespExample:
+                    category: Programming
+                    error: false
+                    flags:
+                        explicit: false
+                        nsfw: false
+                        political: false
+                        racist: false
+                        religious: false
+                        sexist: false
+                    id: 27
+                    joke: Java is like Alzheimer's, it starts off slow, but eventually, your memory is gone.
+                    lang: en
+                    safe: false
+                    type: single
+        getLangCode:
+            value:
+                ReqExample:
+                    language: en
+                RespExample:
+                    code: en
+                    error: false
+    schemas:
+        ErrorResponse:
+            description: new param
+            properties:
+                error:
+                    description: new param
+                    type: boolean
+                message:
+                    description: new param
+                    type: string
+            type: object
+info:
+    contact:
+        email: contact@sv443.net
+        name: Sv443
+        url: https://sv443.net
+    description: Serving jokes from various categories with filtering options; enormous database available, probably the best one of its type.
+    termsOfService: https://sv443.net/privacypolicy/en
+    title: JokeAPI
+    version: v2.3.2
+openapi: 3.1.0
+paths:
+    /categories:
+        get:
+            operationId: getCategories
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    categories:
+                                        description: Return the list of categories.
+                                        items:
+                                            description: Array item
+                                            type: string
+                                        type: array
+                                    categoryAliases:
+                                        description: List of aliases for different categories.
+                                        items:
+                                            description: Array item
+                                            properties:
+                                                alias:
+                                                    description: The alias for the new API.
+                                                    type: string
+                                                resolved:
+                                                    description: The outcome of the API request. It will be a string indicating whether the request was resolved or not.
+                                                    type: string
+                                            type: object
+                                        type: array
+                                    error:
+                                        description: Boolean value indicating if an error occurred.
+                                        type: boolean
+                                    timestamp:
+                                        description: Timestamp of the API response.
+                                        type: number
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: |
+                new api - get categories from JokeAPI is a REST API that serves uniformly and well formatted jokes.
+    /info:
+        get:
+            operationId: getInfo
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    error:
+                                        description: Specify if there is an error occurred. True if there is an error, False otherwise.
+                                        type: boolean
+                                    formats:
+                                        description: Return the supported formats in an array.
+                                        items:
+                                            description: Array item
+                                            type: string
+                                        type: array
+                                    info:
+                                        description: Information obtained from the API call.
+                                        type: string
+                                    jokeLanguages:
+                                        description: Number to specify the languages for jokes.
+                                        type: number
+                                    jokes:
+                                        description: Return jokes in an object format.
+                                        properties:
+                                            categories:
+                                                description: Return a list of categories.
+                                                items:
+                                                    description: Array item
+                                                    type: string
+                                                type: array
+                                            flags:
+                                                description: Array of flags.
+                                                items:
+                                                    description: Array item
+                                                    type: string
+                                                type: array
+                                            idRange:
+                                                description: 'Specify the range of IDs to be returned. The value should be an object with two properties: "min" and "max". Default is an empty object.'
+                                                properties:
+                                                    cs:
+                                                        description: Return customer support information as an array.
+                                                        items:
+                                                            description: Array item
+                                                            type: number
+                                                        type: array
+                                                    de:
+                                                        description: Return the list of elements.
+                                                        items:
+                                                            description: Array item
+                                                            type: number
+                                                        type: array
+                                                    en:
+                                                        description: Return the data in English language. The data is returned in an array format.
+                                                        items:
+                                                            description: Array item
+                                                            type: number
+                                                        type: array
+                                                    es:
+                                                        description: Retrieve data from Elasticsearch. The response will be an array of documents.
+                                                        items:
+                                                            description: Array item
+                                                            type: number
+                                                        type: array
+                                                    fr:
+                                                        description: Return the list of available language codes.
+                                                        items:
+                                                            description: Array item
+                                                            type: number
+                                                        type: array
+                                                    pt:
+                                                        description: Return the data points in an array.
+                                                        items:
+                                                            description: Array item
+                                                            type: number
+                                                        type: array
+                                                type: object
+                                            safeJokes:
+                                                description: Return an array of safe jokes.
+                                                items:
+                                                    description: Array item
+                                                    properties:
+                                                        count:
+                                                            description: Number of items returned in the response
+                                                            type: number
+                                                        lang:
+                                                            description: Language for the response data.
+                                                            type: string
+                                                    type: object
+                                                type: array
+                                            submissionURL:
+                                                description: URL for submitting data.
+                                                type: string
+                                            totalCount:
+                                                description: Total number of records returned by the API.
+                                                type: number
+                                            types:
+                                                description: Return a list of types available in the API.
+                                                items:
+                                                    description: Array item
+                                                    type: string
+                                                type: array
+                                        type: object
+                                    systemLanguages:
+                                        description: Number of system languages supported by the API.
+                                        type: number
+                                    timestamp:
+                                        description: Timestamp of the response in milliseconds.
+                                        type: number
+                                    version:
+                                        description: Version of the API.
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Retrieve information from JokeAPI, a REST API that provides well-formatted jokes in a consistent manner.
+    /joke/{category}:
+        get:
+            operationId: getJoke
+            parameters:
+                - description: new param
+                  in: path
+                  name: category
+                  required: true
+                  schema:
+                    default: Programming
+                    type: string
+                - description: new param
+                  in: query
+                  name: blacklistFlags
+                  schema:
+                    type: string
+                - description: new param
+                  in: query
+                  name: lang
+                  schema:
+                    type: string
+                - description: new param
+                  in: query
+                  name: amount
+                  schema:
+                    type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    category:
+                                        description: Category of the API, in string type.
+                                        type: string
+                                    error:
+                                        description: Specify if there is an error in the API response.
+                                        type: boolean
+                                    flags:
+                                        description: Specify the flags for the API response.
+                                        properties:
+                                            explicit:
+                                                description: Specify if the content should be explicit or not.
+                                                type: boolean
+                                            nsfw:
+                                                description: Specify if the content is safe for work (SFW) or not. True for NSFW content, False for SFW content. Default is False.
+                                                type: boolean
+                                            political:
+                                                description: Whether to include political news in the response.
+                                                type: boolean
+                                            racist:
+                                                description: Specify whether the response contains racist content. Set to true if the content is racist, false otherwise. Default is false.
+                                                type: boolean
+                                            religious:
+                                                description: Specify whether the response should include religious information.
+                                                type: boolean
+                                            sexist:
+                                                description: Specify whether the response should include information about sexism. Set to true to include sexism information, and false otherwise. The default value is false.
+                                                type: boolean
+                                        type: object
+                                    id:
+                                        description: ID of the response, in numeric format.
+                                        type: number
+                                    joke:
+                                        description: Retrieve a random joke from the API. The joke will be returned as a string.
+                                        type: string
+                                    lang:
+                                        description: Language of the response.
+                                        type: string
+                                    safe:
+                                        description: Indicate whether the API response is safe or not, where true means safe and false means unsafe.
+                                        type: boolean
+                                    type:
+                                        description: Type of the response data.
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: This tool allows you to retrieve jokes from various categories such as programming, misc, dark, pun, spooky, or Christmas. You can use the JokeAPI, which is a REST API, to fetch jokes that are uniformly and well formatted.
+    /langcode/{language}:
+        get:
+            operationId: getLangCode
+            parameters:
+                - description: new param
+                  in: path
+                  name: language
+                  required: true
+                  schema:
+                    default: en
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    code:
+                                        description: String code indicating the status of the API response.
+                                        type: string
+                                    error:
+                                        description: Specify if an error occurred during the API call, true if there is an error, false otherwise. Default is false.
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Retrieve the language code for the JokeAPI REST API, which provides jokes in a consistent and well-structured format.
+servers:
+    - url: https://v2.jokeapi.dev

@@ -1,0 +1,238 @@
+components:
+    examples:
+        getNews:
+            value:
+                ReqExample:
+                    country: us
+                    language: en_us
+                RespExample:
+                    results:
+                        - entry_id: 53a7eab7240715en_us
+                          likes: 0
+                          pubdate: "2024-07-15 15:05:34"
+                          publisher: Associated Press
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/4655603194dd4124aa167e25308c00d1?height=50&quality=hq&width=50
+                          summary: CAPE CANAVERAL, Fla. (AP) — Scientists have confirmed a cave on the moon, not far from where Neil Armstrong and Buzz Aldrin landed 55 years ago, and suspect there are hundreds more that could house future astronauts.An Italian-led team reported Monday that there’s evidence for a sizable cave accessible from the deepest known pit on the moon.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/a15190c64ceec317e0a3a254c1bb2034?category=US_Science_Hightech&height=336&quality=hq&width=450
+                          title: Scientists have confirmed a cave on the moon that could be used to shelter future explorers
+                          url: https://apnews.com/article/moon-caves-nasa-astronauts-2dc57751f41a6e24f377c2259e8668ba
+                        - entry_id: 2912dbe4240715en_us
+                          likes: 1
+                          pubdate: "2024-07-15 03:09:03"
+                          publisher: Fox News
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/457e27e16ec67271c94eee6e5950284c?height=50&quality=hq&width=50
+                          summary: Argentina subbed Messi off in the 66th minutesFox News Flash top sports headlines for July 14Fox News Flash top sports headlines are here. Check out what's clicking on Foxnews.com.Lionel Messi left the Copa América final between Argentina and Colombia on Sunday night with an apparent ankle injury.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/74487ccf6dc28a861eec18635810fb17?category=US_News_Sports.Soccer&height=336&quality=hq&width=450
+                          title: Lionel Messi in tears as he leaves Copa América final with injury
+                          url: https://www.foxnews.com/sports/lionel-messi-tears-he-leaves-copa-america-final-injury.amp
+                        - entry_id: 1f9b5a59240715en_us
+                          likes: 1
+                          pubdate: "2024-07-15 18:12:31"
+                          publisher: CNN
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/d3c2f3dce5f4dd85da5e9ae1b220599a?height=50&quality=hq&width=50
+                          summary: It’s a great time to pick up a portable speaker. The revamped Beats Pill is a superb sound blaster with terrific multiplatform integration. Other newcomers like the Sonos Roam 2 and UE Everboom also deliver elite performance in conveniently-sized packages. However, there are some fantastic low-priced alternatives that nearly match the battery life, durability and sonic prowess of these premium releases.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/bbe314c4476a08419afa658d5b36d006?category=US_Digital_Technology&height=336&quality=hq&width=450
+                          title: 'Under $50 Scores: This $40 speaker does something pricier models can’t'
+                          url: http://www.cnn.com/cnn-underscored/reviews/treblab-hd-mini?utm_source=operamini&utm_medium=feednews&utm_campaign=operamini_feednews
+                        - entry_id: 4a2a454b240715en_us
+                          likes: 0
+                          pubdate: "2024-07-15 19:08:00"
+                          publisher: NBC News
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/6824620c3d167bd168eafded3bfaed54?height=50&quality=hq&width=50
+                          summary: Former President Donald Trump has chosen Sen. JD Vance, R-Ohio, as his vice presidential running mate, taking a once-strident critic and elevating him as the leading heir to his political legacy.Vance, who will turn 40 in August, offers a youthful contrast to Trump, 78, and President Joe Biden, 81.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/cf5b65ed17ce36ae36b2a559d6d61b9a?category=US_News_Politics&height=336&quality=hq&width=450
+                          title: The Chosen VP
+                          url: https://www.nbcnews.com/news/amp/rcna157485
+                        - entry_id: 5caf4abc240715en_us
+                          likes: 1
+                          pubdate: "2024-07-15 17:40:38"
+                          publisher: UPI
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/fb6778bc8b1bb27b27d47aeb2b8c7f8f?height=50&quality=hq&width=50
+                          summary: A Kenyan man was arrested Monday and confessed to killing at least 42 women including his own wife over two years.Collins Jumaisi Khalusha, 33, had allegedly murdered his latest victim up to four days prior to his arrest Monday on a murder spree that could date back as far as 2022, according to officials.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/2369961c4f16621d0ca6c505ea783f43?category=US_News_Society&height=336&quality=hq&width=450
+                          title: Kenyan man arrested, admits to killing 42 women including his wife
+                          url: https://www.upi.com/amp/Top_News/World-News/2024/07/15/kenya-Collins-Khalusha-Nairobi-woman-killer-Mohamed-Amin/6271721058738/
+        getSearchNews:
+            value:
+                ReqExample:
+                    country: us
+                    language: en_us
+                RespExample:
+                    results:
+                        - entry_id: 53a7eab7240715en_us
+                          likes: 0
+                          pubdate: "2024-07-15 15:05:34"
+                          publisher: Associated Press
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/4655603194dd4124aa167e25308c00d1?height=50&quality=hq&width=50
+                          summary: CAPE CANAVERAL, Fla. (AP) — Scientists have confirmed a cave on the moon, not far from where Neil Armstrong and Buzz Aldrin landed 55 years ago, and suspect there are hundreds more that could house future astronauts.An Italian-led team reported Monday that there’s evidence for a sizable cave accessible from the deepest known pit on the moon.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/a15190c64ceec317e0a3a254c1bb2034?category=US_Science_Hightech&height=336&quality=hq&width=450
+                          title: Scientists have confirmed a cave on the moon that could be used to shelter future explorers
+                          url: https://apnews.com/article/moon-caves-nasa-astronauts-2dc57751f41a6e24f377c2259e8668ba
+                        - entry_id: 6e122373240715en_us
+                          likes: 2
+                          pubdate: "2024-07-15 15:16:36"
+                          publisher: Fox News
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/457e27e16ec67271c94eee6e5950284c?height=50&quality=hq&width=50
+                          summary: Thomas Matthew Crooks fired several shots at Trump from roof of nearby buildingConcerns with rally safety preparedness following Trump assassination attemptRep. Wesley Hunt, R-Texas, on Secret Service planning to brief lawmakers on the security failures at the Trump rally in Pennsylvania.Local law enforcement had responsibility for the building where Thomas Matthew Crooks fired several shots at former President Trump on Saturday, Fox News has learned.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/3c1a9af9fe4bb4b14166427fcec20ee4?category=US_News_Politics&height=336&quality=hq&width=450
+                          title: 'Building Trump shooter used to fire shots at president was responsibility of local police: source'
+                          url: https://www.foxnews.com/politics/building-trump-shooter-used-fire-shots-president-responsibility-local-police-source.amp
+                        - entry_id: 3c2b5da3240715en_us
+                          likes: 0
+                          pubdate: "2024-07-15 17:59:05"
+                          publisher: Aljazeera
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/f2152003b8d36783f7c9ec25f5b5af09?height=50&width=50
+                          summary: The motives of shooting suspect Thomas Matthew Crooks remain unknown amid FBI investigation of Trump rally shooting.Official investigations into the shooting of former US President Donald Trump at a campaign rally in Pennsylvania’s Butler County on Saturday are under way.A bullet fired by a sniper from a nearby rooftop grazed Trump’s right ear as he began addressing a crowd of supporters.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/5f9e1088bc002d8c0a5247041d6875b0?category=US_News_Society&height=336&quality=hq&width=450
+                          title: How is the attempted assassination of Donald Trump being investigated?
+                          url: https://www.aljazeera.com/amp/news/2024/7/15/how-is-the-attempted-assassination-of-donald-trump-being-investigated
+                        - entry_id: 1f9b5a59240715en_us
+                          likes: 1
+                          pubdate: "2024-07-15 18:12:31"
+                          publisher: CNN
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/d3c2f3dce5f4dd85da5e9ae1b220599a?height=50&quality=hq&width=50
+                          summary: It’s a great time to pick up a portable speaker. The revamped Beats Pill is a superb sound blaster with terrific multiplatform integration. Other newcomers like the Sonos Roam 2 and UE Everboom also deliver elite performance in conveniently-sized packages. However, there are some fantastic low-priced alternatives that nearly match the battery life, durability and sonic prowess of these premium releases.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/bbe314c4476a08419afa658d5b36d006?category=US_Digital_Technology&height=336&quality=hq&width=450
+                          title: 'Under $50 Scores: This $40 speaker does something pricier models can’t'
+                          url: http://www.cnn.com/cnn-underscored/reviews/treblab-hd-mini?utm_source=operamini&utm_medium=feednews&utm_campaign=operamini_feednews
+                        - entry_id: 5caf4abc240715en_us
+                          likes: 1
+                          pubdate: "2024-07-15 17:40:38"
+                          publisher: UPI
+                          publisher_icon: https://res.6chcdn.feednews.com/assets/v2/fb6778bc8b1bb27b27d47aeb2b8c7f8f?height=50&quality=hq&width=50
+                          summary: A Kenyan man was arrested Monday and confessed to killing at least 42 women including his own wife over two years.Collins Jumaisi Khalusha, 33, had allegedly murdered his latest victim up to four days prior to his arrest Monday on a murder spree that could date back as far as 2022, according to officials.
+                          thumbnail_url: https://res.6chcdn.feednews.com/assets/v2/2369961c4f16621d0ca6c505ea783f43?category=US_News_Society&height=336&quality=hq&width=450
+                          title: Kenyan man arrested, admits to killing 42 women including his wife
+                          url: https://www.upi.com/amp/Top_News/World-News/2024/07/15/kenya-Collins-Khalusha-Nairobi-woman-killer-Mohamed-Amin/6271721058738/
+info:
+    description: "Keymate AI News gives assistants the ability to search and browse the latest news articles and updates using Google's Programmatic Search capabilities. It enables users to stay informed on breaking stories, trending topics, and developments in specific areas of interest. The plugin can fetch recent news on any subject, providing summaries and key details to keep users up-to-date efficiently in a personalized way.\n\nCheck out the rest of my work on Coze! Much more can be found at assisted.space/tree. \n\nluke steuber _ one impossible thing at a time\ntelegram @lukeslp _"
+    title: Keymate News AI
+    version: v1
+openapi: 3.0.1
+paths:
+    /openapi/gpt/news:
+        get:
+            operationId: getNews
+            parameters:
+                - description: The country code of the desired news, using lowercase abbreviations. For example, 'de' for Germany.
+                  in: query
+                  name: country
+                  required: true
+                  schema:
+                    default: us
+                    type: string
+                - description: The language code for the desired news. If not provided, the default language of the specified country will be used.
+                  in: query
+                  name: language
+                  required: true
+                  schema:
+                    default: en_us
+                    type: string
+                - description: If the user mentions related keyword in any languages, use the corresponding category ('politics', 'sports', 'entertainment', 'technology', 'fashion', 'health') as a category parameter. If the user does not mention any specific keyword, the default value for the category parameter is an empty string
+                  in: query
+                  name: category
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    results:
+                                        items:
+                                            properties:
+                                                entry_id:
+                                                    type: string
+                                                likes:
+                                                    type: number
+                                                pubdate:
+                                                    type: string
+                                                publisher:
+                                                    type: string
+                                                publisher_icon:
+                                                    type: string
+                                                summary:
+                                                    type: string
+                                                thumbnail_url:
+                                                    type: string
+                                                title:
+                                                    type: string
+                                                url:
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: This endpoint allows users to request real-time news updates or news categorized by topics such as politics, sports, entertainment, technology, business, fashion, and health. Each news item includes a link and publication date. The news is updated in real time.
+    /openapi/gpt/search:
+        get:
+            operationId: getSearchNews
+            parameters:
+                - description: The country code of the desired news, using lowercase abbreviations. For example, 'de' for Germany.
+                  in: query
+                  name: country
+                  required: true
+                  schema:
+                    default: us
+                    type: string
+                - description: The language code for the desired news. If not provided, the default language of the specified country will be used.
+                  in: query
+                  name: language
+                  required: true
+                  schema:
+                    default: en_us
+                    type: string
+                - description: The main topic that users want to search for news, such as Trump, star, game, movie, etc.
+                  in: query
+                  name: topic
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    results:
+                                        items:
+                                            properties:
+                                                entry_id:
+                                                    type: string
+                                                likes:
+                                                    type: number
+                                                pubdate:
+                                                    type: string
+                                                publisher:
+                                                    type: string
+                                                publisher_icon:
+                                                    type: string
+                                                summary:
+                                                    type: string
+                                                thumbnail_url:
+                                                    type: string
+                                                title:
+                                                    type: string
+                                                url:
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: According to the user's national language information and related description information provided, get news about the topic described by the user. This endpoint allows users to provide any topic-related description content at will, and returns the latest news on related topics around the world in a timely manner.
+servers:
+    - url: https://newsplugin.feednews.com

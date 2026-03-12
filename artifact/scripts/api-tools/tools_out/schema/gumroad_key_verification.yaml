@@ -1,0 +1,241 @@
+components:
+    examples:
+        verifyLicense:
+            value:
+                ReqExample:
+                    Content-Type: Application/JSON
+                    increment_uses_count: "true"
+                    license_key: BEA0454F-918A4F76-B68EFA71-6187C39D
+                    product_id: oz3Zfddt_sezByjb-Bd1KQ==
+                RespExample:
+                    purchase:
+                        can_contact: true
+                        card:
+                            bin: null
+                            expiry_month: null
+                            expiry_year: null
+                            type: null
+                            visual: null
+                        created_at: "2024-08-15T22:58:00Z"
+                        currency: usd
+                        custom_fields: []
+                        discover_fee_charged: false
+                        dispute_won: false
+                        disputed: false
+                        email: luke@lukesteuber.com
+                        gumroad_fee: 0
+                        id: r7X1dheJ2MTB8DPfNMHfuA==
+                        ip_country: United States
+                        is_gift_receiver_purchase: false
+                        is_multiseat_license: true
+                        license_key: BEA0454F-918A4F76-B68EFA71-6187C39D
+                        order_number: 842855759
+                        permalink: key
+                        price: 0
+                        product_id: oz3Zfddt_sezByjb-Bd1KQ==
+                        product_name: impossible api key
+                        product_permalink: https://coolhand.gumroad.com/l/key
+                        purchaser_id: "6461203698946"
+                        quantity: 1
+                        recurrence: monthly
+                        referrer: direct
+                        refunded: false
+                        sale_id: r7X1dheJ2MTB8DPfNMHfuA==
+                        sale_timestamp: "2024-08-15T22:58:00Z"
+                        seller_id: JpwtAZHXjdhhK4_FHwT4hA==
+                        short_product_id: dsxpk
+                        subscription_cancelled_at: null
+                        subscription_ended_at: null
+                        subscription_failed_at: null
+                        subscription_id: Vv__A6nj7j5Ku4SK9_PDmA==
+                        test: true
+                        variants: ""
+                    success: true
+                    uses: 2
+info:
+    description: Authenticates license keys purchased from Gumroad.
+    title: Gumroad License Verification
+    version: v1
+openapi: 3.0.0
+paths:
+    /v2/licenses/verify:
+        post:
+            operationId: verifyLicense
+            parameters:
+                - description: Content type accepted
+                  in: header
+                  name: Content-Type
+                  required: true
+                  schema:
+                    default: Application/JSON
+                    type: string
+                    x-global-disable: true
+                - description: Whether to track key use
+                  in: query
+                  name: increment_uses_count
+                  required: true
+                  schema:
+                    default: "true"
+                    type: string
+                    x-global-disable: true
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            properties:
+                                license_key:
+                                    default: BEA0454F-918A4F76-B68EFA71-6187C39D
+                                    description: License key to be verified. Provide the user's license key as a string.
+                                    type: string
+                                product_id:
+                                    default: oz3Zfddt_sezByjb-Bd1KQ==
+                                    description: The identifier of the Gumroad product for which the license validity is being verified.
+                                    type: string
+                                    x-global-disable: true
+                            required:
+                                - product_id
+                                - license_key
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    purchase:
+                                        description: Object containing the details of the license purchase.
+                                        properties:
+                                            can_contact:
+                                                description: Indicates whether the license holder can be contacted.
+                                                type: boolean
+                                            card:
+                                                description: Verify the validity of a license by sending a POST request to the specified endpoint. The response contains information about the license in the form of an object.
+                                                properties:
+                                                    bin:
+                                                        type: string
+                                                    expiry_month:
+                                                        type: string
+                                                    expiry_year:
+                                                        type: string
+                                                    type:
+                                                        type: string
+                                                    visual:
+                                                        type: string
+                                                type: object
+                                            created_at:
+                                                description: Date and time when the license was created, in format yyyy-mm-dd hh:mm:ss.
+                                                type: string
+                                            currency:
+                                                description: Currency of the license to be verified.
+                                                type: string
+                                            custom_fields:
+                                                description: Array of custom fields to include in the response.
+                                                items:
+                                                    description: Array item
+                                                    type: string
+                                                type: array
+                                            discover_fee_charged:
+                                                description: Indicate whether a fee is charged for the license discovery process.
+                                                type: boolean
+                                            dispute_won:
+                                                description: Indicate whether the license dispute was won or not.
+                                                type: boolean
+                                            disputed:
+                                                description: Indicates whether the license is disputed or not.
+                                                type: boolean
+                                            email:
+                                                description: Email address of the user to verify the license.
+                                                type: string
+                                            gumroad_fee:
+                                                description: Fee charged by Gumroad for processing the license verification.
+                                                type: number
+                                            id:
+                                                description: The unique identifier of the license to be verified.
+                                                type: string
+                                            ip_country:
+                                                description: Country of the IP address used for the license verification.
+                                                type: string
+                                            is_gift_receiver_purchase:
+                                                description: Check if the license is purchased as a gift by the receiver.
+                                                type: boolean
+                                            is_multiseat_license:
+                                                description: Specify whether the license allows multiple seats or not.
+                                                type: boolean
+                                            license_key:
+                                                description: License key to be verified.
+                                                type: string
+                                            order_number:
+                                                description: Order number associated with the license.
+                                                type: number
+                                            permalink:
+                                                description: The permalink of the license to be verified, in string format.
+                                                type: string
+                                            price:
+                                                description: Price of the license, in decimal format.
+                                                type: number
+                                            product_id:
+                                                description: Product ID of the license to be verified.
+                                                type: string
+                                            product_name:
+                                                description: Name of the product associated with the license.
+                                                type: string
+                                            product_permalink:
+                                                description: The permalink of the product to be verified.
+                                                type: string
+                                            purchaser_id:
+                                                description: Purchaser ID to verify the validity of a license.
+                                                type: string
+                                            quantity:
+                                                description: Specify the number of licenses to verify. Default is 1.
+                                                type: number
+                                            recurrence:
+                                                description: Specify the recurrence pattern for the license verification. Accepts values such as "daily", "weekly", "monthly", etc. Default is "daily".
+                                                type: string
+                                            referrer:
+                                                description: The referrer parameter is a string that specifies the source URL of the request.
+                                                type: string
+                                            refunded:
+                                                description: Specify if the license has been refunded.
+                                                type: boolean
+                                            sale_id:
+                                                description: Unique identifier for the sale transaction.
+                                                type: string
+                                            sale_timestamp:
+                                                description: Timestamp of the sale in format "yyyy-mm-dd hh:mm:ss".
+                                                type: string
+                                            seller_id:
+                                                description: The ID of the seller whose license validity is being verified.
+                                                type: string
+                                            short_product_id:
+                                                description: Short product ID for the license being verified.
+                                                type: string
+                                            subscription_cancelled_at:
+                                                type: string
+                                            subscription_ended_at:
+                                                type: string
+                                            subscription_failed_at:
+                                                type: string
+                                            subscription_id:
+                                                description: The ID of the subscription to verify the license for.
+                                                type: string
+                                            test:
+                                                description: Specify whether the license is valid or not. False indicates invalid license, True indicates valid license.
+                                                type: boolean
+                                            variants:
+                                                description: The variants of the license to verify. Can be a comma-separated string or an array of strings.
+                                                type: string
+                                        type: object
+                                    success:
+                                        description: Indicates whether the license verification was successful or not.
+                                        type: boolean
+                                    uses:
+                                        description: Specify the number of times the license has been used.
+                                        type: number
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Verify the validity of a license by sending a POST request to the specified endpoint.
+servers:
+    - url: https://api.gumroad.com

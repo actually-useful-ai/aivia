@@ -1,0 +1,828 @@
+components:
+    examples:
+        getCocktailById:
+            value:
+                ReqExample:
+                    i: "11410"
+                RespExample:
+                    drinks:
+                        - idDrink: "11410"
+                          strDrink: Gin Fizz
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/drtihp1606768397.jpg
+                          strIngredient1: Gin
+                          strIngredient2: Lemon
+                          strIngredient3: Powdered sugar
+                          strIngredient4: Carbonated water
+                          strIngredient5: null
+                          strIngredient6: null
+                          strIngredient7: null
+                          strIngredient8: null
+                          strIngredient9: null
+                          strIngredient10: null
+                          strIngredient11: null
+                          strIngredient12: null
+                          strIngredient13: null
+                          strIngredient14: null
+                          strIngredient15: null
+                          strInstructions: Shake all ingredients with ice cubes, except soda water. Pour into glass. Top with soda water.
+        getIngredientById:
+            value:
+                ReqExample:
+                    iid: "1"
+                RespExample:
+                    ingredients:
+                        - idIngredient: "1"
+                          strABV: "40"
+                          strAlcohol: "Yes"
+                          strDescription: "Vodka is a distilled beverage composed primarily of water and ethanol, sometimes with traces of impurities and flavorings. Traditionally, vodka is made by the distillation of fermented cereal grains or potatoes, though some modern brands use other substances, such as fruits or sugar.\r\n\r\nSince the 1890s, the standard Polish, Russian, Belarusian, Ukrainian, Estonian, Latvian, Lithuanian and Czech vodkas are 40% alcohol by volume ABV (80 US proof), a percentage that is widely misattributed to Dmitri Mendeleev. The European Union has established a minimum of 37.5% ABV for any \"European vodka\" to be named as such. Products sold as \"vodka\" in the United States must have a minimum alcohol content of 40%. Even with these loose restrictions, most vodka sold contains 40% ABV. For homemade vodkas and distilled beverages referred to as \"moonshine\", see moonshine by country.\r\n\r\nVodka is traditionally drunk neat (not mixed with any water, ice, or other mixer), though it is often served chilled in the vodka belt countries (Belarus, Estonia, Finland, Iceland, Latvia, Lithuania, Norway, Poland, Russia, Sweden, Ukraine). It is also commonly used in cocktails and mixed drinks, such as the vodka martini, Cosmopolitan, vodka tonic, Screwdriver, Greyhound, Black or White Russian, Moscow Mule, and Bloody Mary.\r\n\r\nScholars debate the beginnings of vodka. It is a contentious issue because very little historical material is available. For many centuries, beverages differed significantly compared to the vodka of today, as the spirit at that time had a different flavor, color and smell, and was originally used as medicine. It contained little alcohol, an estimated maximum of about 14%, as only this amount can be attained by natural fermentation. The still, allowing for distillation (\"burning of wine\"), increased purity, and increased alcohol content, was invented in the 8th century.\r\n\r\nA common property of the vodkas produced in the United States and Europe is the extensive use of filtration prior to any additional processing including the addition of flavorants. Filtering is sometimes done in the still during distillation, as well as afterwards, where the distilled vodka is filtered through activated charcoal and other media to absorb trace amounts of substances that alter or impart off-flavors to the vodka. However, this is not the case in the traditional vodka-producing nations, so many distillers from these countries prefer to use very accurate distillation but minimal filtering, thus preserving the unique flavors and characteristics of their products.\r\n\r\nThe master distiller is in charge of distilling the vodka and directing its filtration, which includes the removal of the \"fore-shots\", \"heads\" and \"tails\". These components of the distillate contain flavor compounds such as ethyl acetate and ethyl lactate (heads) as well as the fusel oils (tails) that impact the usually desired clean taste of vodka. Through numerous rounds of distillation, or the use of a fractioning still, the taste is modified and clarity is increased. In contrast, distillery process for liquors such as whiskey, rum, and baijiu allow portions of the \"heads\" and \"tails\" to remain, giving them their unique flavors.\r\n\r\nRepeated distillation of vodka will make its ethanol level much higher than is acceptable to most end users, whether legislation determines strength limits or not. Depending on the distillation method and the technique of the stillmaster, the final filtered and distilled vodka may have as much as 95–96% ethanol. As such, most vodka is diluted with water prior to bottling.\r\n\r\nPolish distilleries make a very pure (96%, 192 proof, formerly also 98%) rectified spirit (Polish language: spirytus rektyfikowany). Technically a form of vodka, it is sold in liquor stores rather than pharmacies. Similarly, the German market often carries German, Hungarian, Polish, and Ukrainian-made varieties of vodka of 90 to 95% ABV. A Bulgarian vodka, Balkan 176°, has an 88% alcohol content. Everclear, an American brand, is also sold at 95% ABV."
+                          strIngredient: Vodka
+                          strType: Vodka
+        getRandomCocktail:
+            value:
+                ReqExample: {}
+                RespExample:
+                    drinks:
+                        - idDrink: "15409"
+                          strDrink: Danbooka
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/vurrxr1441246074.jpg
+                          strIngredient1: Coffee
+                          strIngredient2: Everclear
+                          strIngredient3: null
+                          strIngredient4: null
+                          strIngredient5: null
+                          strIngredient6: null
+                          strIngredient7: null
+                          strIngredient8: null
+                          strIngredient9: null
+                          strIngredient10: null
+                          strIngredient11: null
+                          strIngredient12: null
+                          strIngredient13: null
+                          strIngredient14: null
+                          strIngredient15: null
+                          strInstructions: pour it in and mix it.
+        searchCocktailsByName:
+            value:
+                ReqExample:
+                    s: gin
+                RespExample:
+                    drinks:
+                        - idDrink: "11410"
+                          strDrink: Gin Fizz
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/drtihp1606768397.jpg
+                        - idDrink: "11417"
+                          strDrink: Gin Sour
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/noxp7e1606769224.jpg
+                        - idDrink: "11936"
+                          strDrink: Pink Gin
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/qyr51e1504888618.jpg
+                        - idDrink: "11408"
+                          strDrink: Gin Daisy
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/z6e22f1582581155.jpg
+                        - idDrink: "11415"
+                          strDrink: Gin Sling
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/8cl9sm1582581761.jpg
+                        - idDrink: "11416"
+                          strDrink: Gin Smash
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/iprva61606768774.jpg
+                        - idDrink: "11420"
+                          strDrink: Gin Toddy
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/jxstwf1582582101.jpg
+                        - idDrink: "178365"
+                          strDrink: Gin Tonic
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/qcgz0t1643821443.jpg
+                        - idDrink: "178366"
+                          strDrink: Gin Lemon
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/6gdohq1681212476.jpg
+                        - idDrink: "11407"
+                          strDrink: Gin Cooler
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/678xt11582481163.jpg
+                        - idDrink: "11418"
+                          strDrink: Gin Squirt
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/xrbhz61504883702.jpg
+                        - idDrink: "17230"
+                          strDrink: Gin Rickey
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/s00d6f1504883945.jpg
+                        - idDrink: "11419"
+                          strDrink: Gin Swizzle
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/sybce31504884026.jpg
+                        - idDrink: "178342"
+                          strDrink: Gin and Soda
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/nzlyc81605905755.jpg
+                        - idDrink: "11403"
+                          strDrink: Gin And Tonic
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/k0508k1668422436.jpg
+                        - idDrink: "12057"
+                          strDrink: Royal Gin Fizz
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/pe1x1c1504735672.jpg
+                        - idDrink: "178367"
+                          strDrink: Ramos Gin Fizz
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/967t911643844053.jpg
+                        - idDrink: "178314"
+                          strDrink: Gin Basil Smash
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/jqh2141572807327.jpg
+                        - idDrink: "12224"
+                          strDrink: Sloe Gin Cocktail
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/d7mo481504889531.jpg
+                        - idDrink: "12718"
+                          strDrink: Pineapple Gingerale Smoothie
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/eg9i1d1487603469.jpg
+        searchIngredientsByName:
+            value:
+                ReqExample:
+                    i: gin
+                RespExample:
+                    drinks:
+                        - idDrink: "15300"
+                          strDrink: 3-Mile Long Island Iced Tea
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/rrtssw1472668972.jpg
+                        - idDrink: "13940"
+                          strDrink: 69 Special
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/vqyxqx1472669095.jpg
+                        - idDrink: "17222"
+                          strDrink: A1
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg
+                        - idDrink: "17834"
+                          strDrink: Abbey Cocktail
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/mr30ob1582479875.jpg
+                        - idDrink: "17223"
+                          strDrink: Abbey Martini
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/2mcozt1504817403.jpg
+                        - idDrink: "17225"
+                          strDrink: Ace
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/l3cd7f1504818306.jpg
+                        - idDrink: "17226"
+                          strDrink: Adam & Eve
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/vfeumw1504819077.jpg
+                        - idDrink: "17228"
+                          strDrink: Addison
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/yzva7x1504820300.jpg
+                        - idDrink: "11013"
+                          strDrink: Alaska Cocktail
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/wsyryt1483387720.jpg
+                        - idDrink: "11014"
+                          strDrink: Alexander
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/0clus51606772388.jpg
+                        - idDrink: "11022"
+                          strDrink: Allies Cocktail
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/qvprvp1483388104.jpg
+                        - idDrink: "11034"
+                          strDrink: Angel Face
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/vaukir1606772580.jpg
+                        - idDrink: "11052"
+                          strDrink: Archbishop
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/4g6xds1582579703.jpg
+                        - idDrink: "17066"
+                          strDrink: Army special
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/55muhh1493068062.jpg
+                        - idDrink: "11054"
+                          strDrink: Arthur Tompkins
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/7onfhz1493067921.jpg
+                        - idDrink: "11055"
+                          strDrink: Artillery
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/g1vnbe1493067747.jpg
+                        - idDrink: "13938"
+                          strDrink: AT&T
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/rhhwmp1493067619.jpg
+                        - idDrink: "17180"
+                          strDrink: Aviation
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/trbplb1606855233.jpg
+                        - idDrink: "11084"
+                          strDrink: Bermuda Highball
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/qrvtww1441206528.jpg
+                        - idDrink: "17254"
+                          strDrink: Bijou
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/rysb3r1513706985.jpg
+                        - idDrink: "11120"
+                          strDrink: Bluebird
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/5jhyd01582579843.jpg
+                        - idDrink: "17242"
+                          strDrink: Bombay Cassis
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/h1e0e51510136907.jpg
+                        - idDrink: "11124"
+                          strDrink: Boomerang
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/3m6yz81504389551.jpg
+                        - idDrink: "11149"
+                          strDrink: Boxcar
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/pwgtpa1504366376.jpg
+                        - idDrink: "17210"
+                          strDrink: Bramble
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/twtbh51630406392.jpg
+                        - idDrink: "17185"
+                          strDrink: Casino
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/1mvjxg1504348579.jpg
+                        - idDrink: "11224"
+                          strDrink: Casino Royale
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/3qpv121504366699.jpg
+                        - idDrink: "17174"
+                          strDrink: Cherry Electric Lemonade
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/tquyyt1451299548.jpg
+                        - idDrink: "17186"
+                          strDrink: Clover Club
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/t0aja61504348715.jpg
+                        - idDrink: "17250"
+                          strDrink: Corpse Reviver
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/gifgao1513704334.jpg
+                        - idDrink: "17187"
+                          strDrink: Derby
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/52weey1606772672.jpg
+                        - idDrink: "11320"
+                          strDrink: Dragonfly
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/uc63bh1582483589.jpg
+                        - idDrink: "11005"
+                          strDrink: Dry Martini
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/6ck9yi1589574317.jpg
+                        - idDrink: "11326"
+                          strDrink: Dubonnet Cocktail
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/pfz3hz1582483111.jpg
+                        - idDrink: "11338"
+                          strDrink: English Highball
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/dhvr7d1504519752.jpg
+                        - idDrink: "11339"
+                          strDrink: English Rose Cocktail
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/yxwrpp1441208697.jpg
+                        - idDrink: "11368"
+                          strDrink: Flying Dutchman
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/mwko4q1582482903.jpg
+                        - idDrink: "17197"
+                          strDrink: French 75
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/hrxfbl1606773109.jpg
+                        - idDrink: "17248"
+                          strDrink: French Negroni
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/x8lhp41513703167.jpg
+                        - idDrink: "178340"
+                          strDrink: Garibaldi Negroni
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/kb4bjg1604179771.jpg
+                        - idDrink: "11396"
+                          strDrink: Gentleman's Club
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/k2r7wv1582481454.jpg
+                        - idDrink: "17255"
+                          strDrink: Gimlet
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/3xgldt1513707271.jpg
+                        - idDrink: "178342"
+                          strDrink: Gin and Soda
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/nzlyc81605905755.jpg
+                        - idDrink: "11403"
+                          strDrink: Gin And Tonic
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/k0508k1668422436.jpg
+                        - idDrink: "178314"
+                          strDrink: Gin Basil Smash
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/jqh2141572807327.jpg
+                        - idDrink: "11407"
+                          strDrink: Gin Cooler
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/678xt11582481163.jpg
+                        - idDrink: "11408"
+                          strDrink: Gin Daisy
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/z6e22f1582581155.jpg
+                        - idDrink: "11410"
+                          strDrink: Gin Fizz
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/drtihp1606768397.jpg
+                        - idDrink: "178366"
+                          strDrink: Gin Lemon
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/6gdohq1681212476.jpg
+                        - idDrink: "17230"
+                          strDrink: Gin Rickey
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/s00d6f1504883945.jpg
+                        - idDrink: "11415"
+                          strDrink: Gin Sling
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/8cl9sm1582581761.jpg
+                        - idDrink: "11416"
+                          strDrink: Gin Smash
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/iprva61606768774.jpg
+                        - idDrink: "11417"
+                          strDrink: Gin Sour
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/noxp7e1606769224.jpg
+                        - idDrink: "11418"
+                          strDrink: Gin Squirt
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/xrbhz61504883702.jpg
+                        - idDrink: "11419"
+                          strDrink: Gin Swizzle
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/sybce31504884026.jpg
+                        - idDrink: "11420"
+                          strDrink: Gin Toddy
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/jxstwf1582582101.jpg
+                        - idDrink: "178365"
+                          strDrink: Gin Tonic
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/qcgz0t1643821443.jpg
+                        - idDrink: "11433"
+                          strDrink: Grass Skirt
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/qyvprp1473891585.jpg
+                        - idDrink: "11472"
+                          strDrink: Hawaiian Cocktail
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/ujoh9x1504882987.jpg
+                        - idDrink: "12706"
+                          strDrink: Imperial Cocktail
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/bcsj2e1487603625.jpg
+                        - idDrink: "11566"
+                          strDrink: Jewel Of The Nile
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/hx4nrb1504884947.jpg
+                        - idDrink: "16178"
+                          strDrink: Jitterbug
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/wwqvrq1441245318.jpg
+                        - idDrink: "11634"
+                          strDrink: Lady Love Fizz
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/20d63k1504885263.jpg
+                        - idDrink: "11662"
+                          strDrink: London Town
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/rpsrqv1468923507.jpg
+                        - idDrink: "11664"
+                          strDrink: Lone Tree Cocktail
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/tsxpty1468923417.jpg
+                        - idDrink: "11666"
+                          strDrink: Lone Tree Cooler
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/wsyqry1479298485.jpg
+                        - idDrink: "11002"
+                          strDrink: Long Island Tea
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg
+                        - idDrink: "17256"
+                          strDrink: Martinez 2
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/fs6kiq1513708455.jpg
+                        - idDrink: "11720"
+                          strDrink: Martinez Cocktail
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/wwxwvr1439906452.jpg
+                        - idDrink: "11728"
+                          strDrink: Martini
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/71t8581504353095.jpg
+                        - idDrink: "17189"
+                          strDrink: Monkey Gland
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/94psp81504350690.jpg
+                        - idDrink: "178355"
+                          strDrink: Mountain Bramble
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/stwiva1619704025.jpg
+                        - idDrink: "178315"
+                          strDrink: Munich Mule
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/rj55pl1582476101.jpg
+                        - idDrink: "13192"
+                          strDrink: National Aquarium
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/dlw0om1503565021.jpg
+                        - idDrink: "11003"
+                          strDrink: Negroni
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/qgdu971561574065.jpg
+                        - idDrink: "11870"
+                          strDrink: Orange Oasis
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/su1olx1582473812.jpg
+                        - idDrink: "178341"
+                          strDrink: Orange Rosemary Collins
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/mokcas1604179977.jpg
+                        - idDrink: "17190"
+                          strDrink: Paradise
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/ejozd71504351060.jpg
+                        - idDrink: "17249"
+                          strDrink: Pegu Club
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/jfkemm1513703902.jpg
+                        - idDrink: "11936"
+                          strDrink: Pink Gin
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/qyr51e1504888618.jpg
+                        - idDrink: "11938"
+                          strDrink: Pink Lady
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/5ia6j21504887829.jpg
+                        - idDrink: "178354"
+                          strDrink: Pink Moon
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/lnjoc81619696191.jpg
+                        - idDrink: "11959"
+                          strDrink: Poppy Cocktail
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/cslw1w1504389915.jpg
+                        - idDrink: "11991"
+                          strDrink: Queen Elizabeth
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/vpqspv1478963339.jpg
+                        - idDrink: "178367"
+                          strDrink: Ramos Gin Fizz
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/967t911643844053.jpg
+                        - idDrink: "17208"
+                          strDrink: Rose
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/8kxbvq1504371462.jpg
+                        - idDrink: "17245"
+                          strDrink: Rosemary Blue
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/qwc5f91512406543.jpg
+                        - idDrink: "12055"
+                          strDrink: Royal Fizz
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/wrh44j1504390609.jpg
+                        - idDrink: "12057"
+                          strDrink: Royal Gin Fizz
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/pe1x1c1504735672.jpg
+                        - idDrink: "17114"
+                          strDrink: Ruby Tuesday
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/qsyqqq1441553437.jpg
+                        - idDrink: "17233"
+                          strDrink: Salted Toffee Martini
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/3s6mlr1509551211.jpg
+                        - idDrink: "12107"
+                          strDrink: Salty Dog
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/4vfge01504890216.jpg
+                        - idDrink: "12214"
+                          strDrink: Singapore Sling
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/7dozeg1582578095.jpg
+                        - idDrink: "12760"
+                          strDrink: Surf City Lifesaver
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/2rzfer1487602699.jpg
+                        - idDrink: "17824"
+                          strDrink: The Laverstoke
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/6xfj5t1517748412.jpg
+                        - idDrink: "178330"
+                          strDrink: The Philosopher
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/sp8hkp1596017787.jpg
+                        - idDrink: "178339"
+                          strDrink: The Strange Weaver
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/opxjzh1604179528.jpg
+                        - idDrink: "12402"
+                          strDrink: Tom Collins
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/7cll921606854636.jpg
+                        - idDrink: "12418"
+                          strDrink: Turf Cocktail
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/utypqq1441554367.jpg
+                        - idDrink: "12420"
+                          strDrink: Tuxedo Cocktail
+                          strDrinkThumb: https://www.thecocktaildb.com/images/media/drink/4u0nbl1504352551.jpg
+    schemas:
+        CocktailDetails:
+            properties:
+                idDrink:
+                    type: string
+                strDrink:
+                    type: string
+                strDrinkThumb:
+                    type: string
+                strIngredient1:
+                    type: string
+                strIngredient2:
+                    type: string
+                strIngredient3:
+                    type: string
+                strIngredient4:
+                    type: string
+                strIngredient5:
+                    type: string
+                strIngredient6:
+                    type: string
+                strIngredient7:
+                    type: string
+                strIngredient8:
+                    type: string
+                strIngredient9:
+                    type: string
+                strIngredient10:
+                    type: string
+                strIngredient11:
+                    type: string
+                strIngredient12:
+                    type: string
+                strIngredient13:
+                    type: string
+                strIngredient14:
+                    type: string
+                strIngredient15:
+                    type: string
+                strInstructions:
+                    type: string
+            type: object
+        CocktailDetailsResponse:
+            properties:
+                drinks:
+                    items:
+                        $ref: '#/components/schemas/CocktailDetails'
+                    type: array
+            type: object
+        CocktailSelectionResponse:
+            properties:
+                drinks:
+                    items:
+                        $ref: '#/components/schemas/CocktailSummary'
+                    type: array
+            type: object
+        CocktailSummary:
+            properties:
+                idDrink:
+                    type: string
+                strDrink:
+                    type: string
+                strDrinkThumb:
+                    type: string
+            type: object
+        IngredientDetails:
+            properties:
+                idIngredient:
+                    type: string
+                strABV:
+                    type: string
+                strAlcohol:
+                    type: string
+                strDescription:
+                    type: string
+                strIngredient:
+                    type: string
+                strType:
+                    type: string
+            type: object
+        IngredientDetailsResponse:
+            properties:
+                ingredients:
+                    items:
+                        $ref: '#/components/schemas/IngredientDetails'
+                    type: array
+            type: object
+        IngredientSearchResponse:
+            properties:
+                ingredients:
+                    items:
+                        $ref: '#/components/schemas/IngredientSummary'
+                    type: array
+            type: object
+        IngredientSummary:
+            properties:
+                idIngredient:
+                    type: string
+                strABV:
+                    type: string
+                strAlcohol:
+                    type: string
+                strDescription:
+                    type: string
+                strIngredient:
+                    type: string
+                strType:
+                    type: string
+            type: object
+        SearchResponse:
+            properties:
+                drinks:
+                    items:
+                        $ref: '#/components/schemas/CocktailSummary'
+                    type: array
+            type: object
+info:
+    contact:
+        name: Support
+        url: https://www.thecocktaildb.com/contact
+    description: |-
+        The Cocktail Database API Plugin provides access to a comprehensive collection of cocktail recipes, ideal for both professional mixologists and home bartenders. This plugin offers:
+
+        Recipe Database: Access a wide variety of cocktail recipes, from classic drinks like Margaritas and Martinis to contemporary concoctions.
+        Ingredient Information: Detailed ingredient lists, including measurements and optional garnishes, help you gather everything you need for the perfect drink.
+        Preparation Instructions: Step-by-step instructions guide you through the process of mixing, shaking, and serving cocktails
+    title: Cocktail Database API
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /filter.php:
+        get:
+            operationId: searchIngredientsByName
+            parameters:
+                - description: Search for ingredients by their name.
+                  in: query
+                  name: i
+                  required: true
+                  schema:
+                    default: gin
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    drinks:
+                                        description: Return a list of drinks that include the specified ingredient names.
+                                        items:
+                                            description: Array item
+                                            properties:
+                                                idDrink:
+                                                    description: Unique identifier of the drink.
+                                                    type: string
+                                                strDrink:
+                                                    description: Name of the drink to search for ingredients.
+                                                    type: string
+                                                strDrinkThumb:
+                                                    description: URL to the thumbnail image of the ingredient.
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Search for ingredients by name
+    /lookup.php/cocktail:
+        get:
+            operationId: getCocktailById
+            parameters:
+                - description: ID of the cocktail to retrieve detailed information.
+                  in: query
+                  name: i
+                  required: true
+                  schema:
+                    default: "11410"
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    drinks:
+                                        items:
+                                            properties:
+                                                idDrink:
+                                                    type: string
+                                                strDrink:
+                                                    type: string
+                                                strDrinkThumb:
+                                                    type: string
+                                                strIngredient1:
+                                                    type: string
+                                                strIngredient2:
+                                                    type: string
+                                                strIngredient3:
+                                                    type: string
+                                                strIngredient4:
+                                                    type: string
+                                                strIngredient5:
+                                                    type: string
+                                                strIngredient6:
+                                                    type: string
+                                                strIngredient7:
+                                                    type: string
+                                                strIngredient8:
+                                                    type: string
+                                                strIngredient9:
+                                                    type: string
+                                                strIngredient10:
+                                                    type: string
+                                                strIngredient11:
+                                                    type: string
+                                                strIngredient12:
+                                                    type: string
+                                                strIngredient13:
+                                                    type: string
+                                                strIngredient14:
+                                                    type: string
+                                                strIngredient15:
+                                                    type: string
+                                                strInstructions:
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: This tool allows you to search for detailed information about a cocktail by its ID. Input the ID of the cocktail to retrieve its complete details, including the ingredients, measurements, instructions, and other relevant information.
+    /lookup.php/ingredient:
+        get:
+            operationId: getIngredientById
+            parameters:
+                - description: Enter the ID of the ingredient you want to look up, in string format.
+                  in: query
+                  name: iid
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    ingredients:
+                                        items:
+                                            properties:
+                                                idIngredient:
+                                                    type: string
+                                                strABV:
+                                                    type: string
+                                                strAlcohol:
+                                                    type: string
+                                                strDescription:
+                                                    type: string
+                                                strIngredient:
+                                                    type: string
+                                                strType:
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: This tool allows you to search for ingredient information by providing the ID of the ingredient. Enter the ID of the ingredient you want to look up.
+    /random.php:
+        get:
+            operationId: getRandomCocktail
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    drinks:
+                                        items:
+                                            properties:
+                                                idDrink:
+                                                    type: string
+                                                strDrink:
+                                                    type: string
+                                                strDrinkThumb:
+                                                    type: string
+                                                strIngredient1:
+                                                    type: string
+                                                strIngredient2:
+                                                    type: string
+                                                strIngredient3:
+                                                    type: string
+                                                strIngredient4:
+                                                    type: string
+                                                strIngredient5:
+                                                    type: string
+                                                strIngredient6:
+                                                    type: string
+                                                strIngredient7:
+                                                    type: string
+                                                strIngredient8:
+                                                    type: string
+                                                strIngredient9:
+                                                    type: string
+                                                strIngredient10:
+                                                    type: string
+                                                strIngredient11:
+                                                    type: string
+                                                strIngredient12:
+                                                    type: string
+                                                strIngredient13:
+                                                    type: string
+                                                strIngredient14:
+                                                    type: string
+                                                strIngredient15:
+                                                    type: string
+                                                strInstructions:
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Lookup a random cocktail
+    /search.php:
+        get:
+            operationId: searchCocktailsByName
+            parameters:
+                - description: Search for cocktails by name.
+                  in: query
+                  name: s
+                  required: true
+                  schema:
+                    default: gin
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    drinks:
+                                        items:
+                                            properties:
+                                                idDrink:
+                                                    type: string
+                                                strDrink:
+                                                    type: string
+                                                strDrinkThumb:
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Search for cocktails by name
+servers:
+    - url: https://www.thecocktaildb.com/api/json/v1/1

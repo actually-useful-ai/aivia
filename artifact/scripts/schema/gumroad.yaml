@@ -1,0 +1,1320 @@
+components:
+    examples:
+        disableProduct:
+            value:
+                ReqExample:
+                    access_token: vtw9Ud_ye8OmnEx8BcVgvO7C-U9zo2adLeX8Q1tar8g
+                    id: sdsjis
+                RespExample:
+                    product:
+                        id: 1d6gx-RTOWoKVsFQqE6KkA==
+                        name: Recurring Donation
+                    success: true
+        enableProduct:
+            value:
+                ReqExample:
+                    access_token: vtw9Ud_ye8OmnEx8BcVgvO7C-U9zo2adLeX8Q1tar8g
+                    id: sdsjis
+                RespExample:
+                    product:
+                        id: 1d6gx-RTOWoKVsFQqE6KkA==
+                        name: Recurring Donation
+                    success: true
+        getProductById:
+            value:
+                ReqExample:
+                    access_token: vtw9Ud_ye8OmnEx8BcVgvO7C-U9zo2adLeX8Q1tar8g
+                    id: sdsjis
+                RespExample:
+                    product:
+                        currency: usd
+                        description: '<h2><strong>one impossible thing*</strong></h2><p><strong>*at a time</strong> is a clinical content, assistive technology, and artificial intelligence skunkworks with the mission of tackling the hardest questions in accessibility, communication, and mental health. <strong>I hope you''ll join me.</strong></p><p><br></p><a href="https://patreon.com/lukeslp" class="tiptap__button button primary" target="_blank" rel="noopener noreferrer nofollow">Quick Link to Patreon!</a><p><br></p><p><strong>My name is Luke Steuber</strong> and I''m a linguist, speech pathologist, and engineer. I started working on complex problems as a systemic functional linguist in 2006, and have <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.newswire.com/news/new-app-for-language-disorders-is-first-special-education-tool-to-be-8795116">carried that work forward</a> across <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.adlersvoice.org/en-team">nonprofits</a>, <a target="_blank" rel="noopener noreferrer nofollow" href="https://leader.pubs.asha.org/do/10.1044/leader.LML.25062020.26/abs/">clinical practice</a>, <a target="_blank" rel="noopener noreferrer nofollow" href="https://autismspectrumnews.org/blurred-lines-in-support-of-a-broader-interdisciplinary-model/">advocacy</a>, <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.newswire.com/news/new-app-for-language-disorders-is-first-special-education-tool-to-be-8795116">app development</a>, <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.talkingwithtech.org/episodes/asha-2019-part-3">bleeding edge industry</a>, and <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.cognixion.com/blog/2020/1/29/dta8xtm1u4sdrxxt07bjkk8qn4fiaj">brand new frontiers</a>. I''ve led teams that took on the <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pacificu.edu/about/media/speech-language-pathology-alumnus-lucas-steuber-14-helps-covid-19-patients-communicate">most difficult challenges</a> for the <a target="_blank" rel="noopener noreferrer nofollow" href="https://us.tobiidynavox.com/pages/td-i-series">hardest possible use case</a> - most recently as <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.prnewswire.com/news-releases/cognixion-receives-fda-breakthrough-device-designation-for-its-brain-computer-interface-with-augmented-reality-for-assistive-communication-301815743.html">principal clinical scientist on the first FDA approved breakthrough brain-computer interface</a>.</p><p><strong>Things are slowing down, and we haven''t done enough.</strong></p><p>I started <strong>one impossible thing</strong> as a commitment to keep tackling the hardest questions I can and making sure the answers reach the people who need them. The name is a reminder to myself to take them one at a time, and the people are the reminder to get each one done.</p><figure><img src="https://public-files.gumroad.com/mzuwi9vio3fiiskuz3xthfa3cmwd"><p class="figcaption">The logo for Dreamwalker, one of the components of the overall AI model trained by Luke at impossible</p></figure><p><strong>We''re on the cusp of a potential leap forward</strong> in the way that people interact with their environment and themselves and we have to seize the opportunity. Things don''t move quickly enough in accessibility, and there are things that can be done to raise visibility and accelerate innovation that I''m able to take on quickly alone. I want to answer the impossible questions, and build the impossible things, that make things easier for everyone and possible for others.</p><p>I''m building tools for mental health, visualizing complex interconnected data, driving visibility for accessibility, and advancing the integration of biology and technology. My goal is to reduce the latency between <em>intention</em> and <em>outcome</em> using a blend of computer engineering, applied linguistics, and clinical experience. The ringed logo of impossible represents three horizons: the things we need (first horizon), the things we''re about to need (second horizon), and the things we don''t know we need yet (third horizon).</p><h3><strong>Want to go on a hike?</strong></h3><figure><img src="https://public-files.gumroad.com/vqijdgwbohbvah6n67rg76u393hp"><p class="figcaption"></p></figure><h3><strong>I need your support and your feedback</strong>.</h3><p>If a hundred people chip in a few bucks a month to support this project, I can work on it full time. I''d love to have your help - but absolutely welcome you if you can''t spare it. There''s plenty there for free, like what you''re seeing right now. A few big things are tackled,<strong> </strong>like a <a target="_blank" rel="noopener noreferrer nofollow" href="https://airtable.com/appg2S9BLb1kIrqBI/shrE6abu2XWt5IQoV">global model of assistive technology needs</a> more accurate than any that exist. There''s a lot more, so stick around; I have a track record that seems to say you won''t be disappointed. <a target="_blank" rel="noopener noreferrer nofollow" href="https://patreon.com/lukeslp">Join me, or support me, or both!</a></p><p>Let''s change the world together - <strong>one impossible thing at a time.</strong></p><p><br></p><a href="https://patreon.com/lukeslp" class="tiptap__button button primary" target="_blank" rel="noopener noreferrer nofollow">Get Chatbots and More at Patreon</a><h3>- <a target="_blank" rel="noopener noreferrer nofollow" href="https://lukesteuber.com/">luke</a></h3><figure><img src="https://public-files.gumroad.com/0f5tdztzkyp38kx84fplp0y8gdal"><p class="figcaption"></p></figure><h4><em>ps donate below, but subscribe on patreon too! There''s a free one with useful updates - and access to all the cool bots at higher tiers</em></h4>'
+                        id: 1d6gx-RTOWoKVsFQqE6KkA==
+                        name: Recurring Donation
+                        price: 0
+                        published: true
+                        thumbnail_url: https://public-files.gumroad.com/rpb4ynkx3u6pzcdyvo5dmj9w180q
+                        url: null
+                    success: true
+        getSaleById:
+            value:
+                ReqExample:
+                    access_token: vtw9Ud_ye8OmnEx8BcVgvO7C-U9zo2adLeX8Q1tar8g
+                    id: "488372815"
+                RespExample:
+                    success: false
+        getSales:
+            value:
+                ReqExample:
+                    access_token: vtw9Ud_ye8OmnEx8BcVgvO7C-U9zo2adLeX8Q1tar8g
+                RespExample:
+                    next_page_key: 20240806104152-129480783
+                    next_page_url: /v2/sales?page_key=20240806104152-129480783
+                    sales:
+                        - affiliate:
+                            amount: $0
+                            email: zinahporty3254@gmail.com
+                          amount_refundable_in_currency: "0"
+                          average_rating: 5
+                          can_contact: true
+                          card:
+                            bin: null
+                            expiry_month: null
+                            expiry_year: null
+                            type: null
+                            visual: null
+                          chargedback: false
+                          country: Malaysia
+                          country_iso2: MY
+                          created_at: "2024-08-14T02:20:33Z"
+                          currency_symbol: $
+                          custom_fields: {}
+                          daystamp: 13 Aug 2024  7:20 PM
+                          discover_fee_charged: false
+                          dispute_won: false
+                          disputed: false
+                          email: ianthamty@gmail.com
+                          formatted_display_price: $0
+                          formatted_total_price: $0
+                          full_name: iansleepy
+                          gumroad_fee: 0
+                          has_custom_fields: false
+                          has_variants: false
+                          id: AyPAzkY0X-RKk0ConuCWkA==
+                          is_additional_contribution: false
+                          is_bundle_product_purchase: false
+                          is_bundle_purchase: false
+                          is_following: false
+                          is_gift_receiver_purchase: false
+                          is_gift_sender_purchase: false
+                          is_more_like_this_recommended: false
+                          is_product_physical: false
+                          is_recurring_billing: false
+                          is_upgrade_purchase: false
+                          order_id: 488372815
+                          paid: false
+                          partially_refunded: false
+                          paypal_refund_expired: false
+                          price: 0
+                          product_has_variants: false
+                          product_id: l7FYLrb1dNT-30dOrKK8gA==
+                          product_name: Contributions of the American Indian
+                          product_permalink: wqgaoo
+                          product_rating: null
+                          purchase_email: ianthamty@gmail.com
+                          purchaser_id: "8445426748791"
+                          quantity: 1
+                          referrer: https://gumroad.com/
+                          reviews_count: 2
+                          seller_id: JpwtAZHXjdhhK4_FHwT4hA==
+                          state: "14"
+                          timestamp: 2 days ago
+                          variants_and_quantity: ""
+                          zip_code: "50450"
+                        - amount_refundable_in_currency: "0"
+                          average_rating: 5
+                          can_contact: true
+                          card:
+                            bin: null
+                            expiry_month: null
+                            expiry_year: null
+                            type: null
+                            visual: null
+                          chargedback: false
+                          country: Egypt
+                          country_iso2: EG
+                          created_at: "2024-08-09T17:25:26Z"
+                          currency_symbol: $
+                          custom_fields: {}
+                          daystamp: ' 9 Aug 2024 10:25 AM'
+                          discover_fee_charged: false
+                          dispute_won: false
+                          disputed: false
+                          email: nooonie@icloud.com
+                          formatted_display_price: $0
+                          formatted_total_price: $0
+                          gumroad_fee: 0
+                          has_custom_fields: false
+                          has_variants: false
+                          id: 1pDdS7TvnpFqyWAmKJ5Cqw==
+                          is_additional_contribution: false
+                          is_bundle_product_purchase: false
+                          is_bundle_purchase: false
+                          is_following: false
+                          is_gift_receiver_purchase: false
+                          is_gift_sender_purchase: false
+                          is_more_like_this_recommended: false
+                          is_product_physical: false
+                          is_recurring_billing: false
+                          is_upgrade_purchase: false
+                          order_id: 315934287
+                          paid: false
+                          partially_refunded: false
+                          paypal_refund_expired: false
+                          price: 0
+                          product_has_variants: false
+                          product_id: ltI1CaiWTx-ur9nuikNsNg==
+                          product_name: Icy and Rocky Worlds
+                          product_permalink: csccfh
+                          product_rating: null
+                          purchase_email: nooonie@icloud.com
+                          purchaser_id: "8315660388011"
+                          quantity: 1
+                          referrer: https://gumroad.com/
+                          reviews_count: 2
+                          seller_id: JpwtAZHXjdhhK4_FHwT4hA==
+                          state: ALX
+                          timestamp: 6 days ago
+                          variants_and_quantity: ""
+                        - amount_refundable_in_currency: "0"
+                          average_rating: 5
+                          can_contact: true
+                          card:
+                            bin: null
+                            expiry_month: null
+                            expiry_year: null
+                            type: null
+                            visual: null
+                          chargedback: false
+                          country: Egypt
+                          country_iso2: EG
+                          created_at: "2024-08-09T16:17:04Z"
+                          currency_symbol: $
+                          custom_fields: {}
+                          daystamp: ' 9 Aug 2024  9:17 AM'
+                          discover_fee_charged: false
+                          dispute_won: false
+                          disputed: false
+                          email: nooonie@icloud.com
+                          formatted_display_price: $0
+                          formatted_total_price: $0
+                          gumroad_fee: 0
+                          has_custom_fields: false
+                          has_variants: false
+                          id: T19ErLIOKsfE4zJrLFGfvg==
+                          is_additional_contribution: false
+                          is_bundle_product_purchase: false
+                          is_bundle_purchase: false
+                          is_following: false
+                          is_gift_receiver_purchase: false
+                          is_gift_sender_purchase: false
+                          is_more_like_this_recommended: false
+                          is_product_physical: false
+                          is_recurring_billing: false
+                          is_upgrade_purchase: false
+                          order_id: 41240143
+                          paid: false
+                          partially_refunded: false
+                          paypal_refund_expired: false
+                          price: 0
+                          product_has_variants: false
+                          product_id: ZpeoIzfeQcwkdMZxDpqzig==
+                          product_name: Seattle, Isle of Pleasure
+                          product_permalink: azcjn
+                          product_rating: null
+                          purchase_email: nooonie@icloud.com
+                          purchaser_id: "8315660388011"
+                          quantity: 1
+                          referrer: https://gumroad.com/
+                          reviews_count: 1
+                          seller_id: JpwtAZHXjdhhK4_FHwT4hA==
+                          state: ALX
+                          timestamp: 6 days ago
+                          variants_and_quantity: ""
+                        - amount_refundable_in_currency: "0"
+                          average_rating: 5
+                          can_contact: true
+                          card:
+                            bin: null
+                            expiry_month: null
+                            expiry_year: null
+                            type: null
+                            visual: null
+                          chargedback: false
+                          country: Egypt
+                          country_iso2: EG
+                          created_at: "2024-08-09T16:16:59Z"
+                          currency_symbol: $
+                          custom_fields: {}
+                          daystamp: ' 9 Aug 2024  9:16 AM'
+                          discover_fee_charged: false
+                          dispute_won: false
+                          disputed: false
+                          email: nooonie@icloud.com
+                          formatted_display_price: $0
+                          formatted_total_price: $0
+                          gumroad_fee: 0
+                          has_custom_fields: false
+                          has_variants: false
+                          id: 5fo2OJq_gV2N9sXC6O75-g==
+                          is_additional_contribution: false
+                          is_bundle_product_purchase: false
+                          is_bundle_purchase: false
+                          is_following: false
+                          is_gift_receiver_purchase: false
+                          is_gift_sender_purchase: false
+                          is_more_like_this_recommended: false
+                          is_product_physical: false
+                          is_recurring_billing: false
+                          is_upgrade_purchase: false
+                          order_id: 427116111
+                          paid: false
+                          partially_refunded: false
+                          paypal_refund_expired: false
+                          price: 0
+                          product_has_variants: false
+                          product_id: ltI1CaiWTx-ur9nuikNsNg==
+                          product_name: Icy and Rocky Worlds
+                          product_permalink: csccfh
+                          product_rating: null
+                          purchase_email: nooonie@icloud.com
+                          purchaser_id: "8315660388011"
+                          quantity: 1
+                          referrer: https://gumroad.com/
+                          reviews_count: 2
+                          seller_id: JpwtAZHXjdhhK4_FHwT4hA==
+                          state: ALX
+                          timestamp: 6 days ago
+                          variants_and_quantity: ""
+                        - amount_refundable_in_currency: "0"
+                          average_rating: 5
+                          can_contact: true
+                          card:
+                            bin: null
+                            expiry_month: null
+                            expiry_year: null
+                            type: null
+                            visual: null
+                          chargedback: false
+                          country: Colombia
+                          country_iso2: CO
+                          created_at: "2024-08-09T03:32:27Z"
+                          currency_symbol: $
+                          custom_fields: {}
+                          daystamp: ' 8 Aug 2024  8:32 PM'
+                          discover_fee_charged: false
+                          dispute_won: false
+                          disputed: false
+                          email: majomorillopena@gmail.com
+                          formatted_display_price: $0
+                          formatted_total_price: $0
+                          gumroad_fee: 0
+                          has_custom_fields: false
+                          has_variants: false
+                          id: r_SaCbot0AndvwDmFWU-mA==
+                          is_additional_contribution: false
+                          is_bundle_product_purchase: false
+                          is_bundle_purchase: false
+                          is_following: false
+                          is_gift_receiver_purchase: false
+                          is_gift_sender_purchase: false
+                          is_more_like_this_recommended: false
+                          is_product_physical: false
+                          is_recurring_billing: false
+                          is_upgrade_purchase: false
+                          order_id: 876373583
+                          paid: false
+                          partially_refunded: false
+                          paypal_refund_expired: false
+                          price: 0
+                          product_has_variants: false
+                          product_id: NsP_qKl5ZOl1lF05NcFGOA==
+                          product_name: Human Body Subway Map Anatomy
+                          product_permalink: wwecxt
+                          product_rating: null
+                          purchase_email: majomorillopena@gmail.com
+                          purchaser_id: "6888260621116"
+                          quantity: 1
+                          referrer: https://gumroad.com/
+                          reviews_count: 1
+                          seller_id: JpwtAZHXjdhhK4_FHwT4hA==
+                          state: DC
+                          timestamp: 7 days ago
+                          variants_and_quantity: ""
+                          zip_code: "110221"
+                        - amount_refundable_in_currency: "0"
+                          average_rating: 5
+                          can_contact: true
+                          card:
+                            bin: null
+                            expiry_month: null
+                            expiry_year: null
+                            type: null
+                            visual: null
+                          chargedback: false
+                          country: Colombia
+                          country_iso2: CO
+                          created_at: "2024-08-09T03:32:27Z"
+                          currency_symbol: $
+                          custom_fields: {}
+                          daystamp: ' 8 Aug 2024  8:32 PM'
+                          discover_fee_charged: false
+                          dispute_won: false
+                          disputed: false
+                          email: majomorillopena@gmail.com
+                          formatted_display_price: $0
+                          formatted_total_price: $0
+                          gumroad_fee: 0
+                          has_custom_fields: false
+                          has_variants: false
+                          id: OpgMGfkrYeRHHhfhHM81IA==
+                          is_additional_contribution: false
+                          is_bundle_product_purchase: false
+                          is_bundle_purchase: false
+                          is_following: false
+                          is_gift_receiver_purchase: false
+                          is_gift_sender_purchase: false
+                          is_more_like_this_recommended: false
+                          is_product_physical: false
+                          is_recurring_billing: false
+                          is_upgrade_purchase: false
+                          order_id: 171730511
+                          paid: false
+                          partially_refunded: false
+                          paypal_refund_expired: false
+                          price: 0
+                          product_has_variants: false
+                          product_id: jA310ryo1POobJ1JK3Cf1A==
+                          product_name: 'Infographic: Drug Toxicities and Side Effects by Organ'
+                          product_permalink: vrjoe
+                          product_rating: null
+                          purchase_email: majomorillopena@gmail.com
+                          purchaser_id: "6888260621116"
+                          quantity: 1
+                          referrer: direct
+                          reviews_count: 1
+                          seller_id: JpwtAZHXjdhhK4_FHwT4hA==
+                          state: DC
+                          timestamp: 7 days ago
+                          variants_and_quantity: ""
+                          zip_code: "110221"
+                        - amount_refundable_in_currency: "0"
+                          average_rating: 5
+                          can_contact: true
+                          card:
+                            bin: null
+                            expiry_month: null
+                            expiry_year: null
+                            type: null
+                            visual: null
+                          chargedback: false
+                          country: Colombia
+                          country_iso2: CO
+                          created_at: "2024-08-09T03:32:27Z"
+                          currency_symbol: $
+                          custom_fields: {}
+                          daystamp: ' 8 Aug 2024  8:32 PM'
+                          discover_fee_charged: false
+                          dispute_won: false
+                          disputed: false
+                          email: majomorillopena@gmail.com
+                          formatted_display_price: $0
+                          formatted_total_price: $0
+                          gumroad_fee: 0
+                          has_custom_fields: false
+                          has_variants: false
+                          id: P46YHzGasQVgpduu-WOZWQ==
+                          is_additional_contribution: false
+                          is_bundle_product_purchase: false
+                          is_bundle_purchase: false
+                          is_following: false
+                          is_gift_receiver_purchase: false
+                          is_gift_sender_purchase: false
+                          is_more_like_this_recommended: false
+                          is_product_physical: false
+                          is_recurring_billing: false
+                          is_upgrade_purchase: false
+                          order_id: 708601423
+                          paid: false
+                          partially_refunded: false
+                          paypal_refund_expired: false
+                          price: 0
+                          product_has_variants: false
+                          product_id: Gtg-3ZqTg8HevwY3DFIuKg==
+                          product_name: Electrocardiography Basics
+                          product_permalink: uehwiq
+                          product_rating: null
+                          purchase_email: majomorillopena@gmail.com
+                          purchaser_id: "6888260621116"
+                          quantity: 1
+                          referrer: direct
+                          reviews_count: 2
+                          seller_id: JpwtAZHXjdhhK4_FHwT4hA==
+                          state: DC
+                          timestamp: 7 days ago
+                          variants_and_quantity: ""
+                          zip_code: "110221"
+                        - amount_refundable_in_currency: "8"
+                          average_rating: 0
+                          can_contact: true
+                          card:
+                            bin: null
+                            expiry_month: null
+                            expiry_year: null
+                            type: visa
+                            visual: '**** **** **** 1316'
+                          chargedback: false
+                          country: United States
+                          country_iso2: US
+                          created_at: "2024-08-06T19:43:21Z"
+                          currency_symbol: $
+                          custom_fields: {}
+                          daystamp: ' 6 Aug 2024 12:43 PM'
+                          discover_fee_charged: false
+                          dispute_won: false
+                          disputed: false
+                          email: armenmarie@sbcglobal.net
+                          formatted_display_price: $8 a month
+                          formatted_total_price: $8 a month
+                          full_name: armen m gulian
+                          gumroad_fee: 133
+                          has_custom_fields: false
+                          has_variants: true
+                          id: adhaKjTRaj7CHLdOyYb4nA==
+                          is_additional_contribution: false
+                          is_bundle_product_purchase: false
+                          is_bundle_purchase: false
+                          is_following: false
+                          is_gift_receiver_purchase: false
+                          is_gift_sender_purchase: false
+                          is_more_like_this_recommended: false
+                          is_product_physical: false
+                          is_recurring_billing: true
+                          is_upgrade_purchase: false
+                          order_id: 920623183
+                          paid: true
+                          partially_refunded: false
+                          paypal_refund_expired: false
+                          price: 800
+                          product_has_variants: true
+                          product_id: 1d6gx-RTOWoKVsFQqE6KkA==
+                          product_name: Recurring Donation
+                          product_permalink: sdsjis
+                          product_rating: null
+                          purchase_email: armenmarie@sbcglobal.net
+                          quantity: 1
+                          referrer: https://coolhand.gumroad.com/?_gl=1*1gvp7zi*_ga*NjU0NDI2OTUuMTcwNTU0OTQyMw..*_ga_6LJN6D94N6*MTcxMjA5MjgwNC42OC4xLjE3MTIwOTI4MTYuMC4wLjA.
+                          reviews_count: 0
+                          seller_id: JpwtAZHXjdhhK4_FHwT4hA==
+                          state: MI
+                          timestamp: 9 days ago
+                          variants_and_quantity: (Whatever donation works for you)
+                          zip_code: "48230"
+                        - amount_refundable_in_currency: "0"
+                          average_rating: 5
+                          can_contact: true
+                          card:
+                            bin: null
+                            expiry_month: null
+                            expiry_year: null
+                            type: null
+                            visual: null
+                          chargedback: false
+                          country: Indonesia
+                          country_iso2: ID
+                          created_at: "2024-08-06T18:39:13Z"
+                          currency_symbol: $
+                          custom_fields: {}
+                          daystamp: ' 6 Aug 2024 11:39 AM'
+                          discover_fee_charged: false
+                          dispute_won: false
+                          disputed: false
+                          email: devianitaangela14@gmail.com
+                          formatted_display_price: $0
+                          formatted_total_price: $0
+                          full_name: Angela Devianita
+                          gumroad_fee: 0
+                          has_custom_fields: false
+                          has_variants: false
+                          id: hzjfpjK-xOTs2QmJdYugLg==
+                          is_additional_contribution: false
+                          is_bundle_product_purchase: false
+                          is_bundle_purchase: false
+                          is_following: false
+                          is_gift_receiver_purchase: false
+                          is_gift_sender_purchase: false
+                          is_more_like_this_recommended: false
+                          is_product_physical: false
+                          is_recurring_billing: false
+                          is_upgrade_purchase: false
+                          order_id: 101619791
+                          paid: false
+                          partially_refunded: false
+                          paypal_refund_expired: false
+                          price: 0
+                          product_has_variants: false
+                          product_id: 0rgxKcZJraKts778Pa18Dg==
+                          product_name: The Evolution of Middle-Earth
+                          product_permalink: aexdr
+                          product_rating: null
+                          purchase_email: devianitaangela14@gmail.com
+                          purchaser_id: "8391315962616"
+                          quantity: 1
+                          referrer: https://gumroad.com/
+                          reviews_count: 1
+                          seller_id: JpwtAZHXjdhhK4_FHwT4hA==
+                          state: JK
+                          timestamp: 9 days ago
+                          variants_and_quantity: ""
+                        - amount_refundable_in_currency: "0"
+                          average_rating: 5
+                          can_contact: true
+                          card:
+                            bin: null
+                            expiry_month: null
+                            expiry_year: null
+                            type: null
+                            visual: null
+                          chargedback: false
+                          country: France
+                          country_iso2: FR
+                          created_at: "2024-08-06T10:41:52Z"
+                          currency_symbol: $
+                          custom_fields: {}
+                          daystamp: ' 6 Aug 2024  3:41 AM'
+                          discover_fee_charged: false
+                          dispute_won: false
+                          disputed: false
+                          email: goodworkhacks@3h33.fr
+                          formatted_display_price: $0
+                          formatted_total_price: $0
+                          gumroad_fee: 0
+                          has_custom_fields: false
+                          has_variants: false
+                          id: Qsr96GAYpifv-1vzrs_cnQ==
+                          is_additional_contribution: false
+                          is_bundle_product_purchase: false
+                          is_bundle_purchase: false
+                          is_following: false
+                          is_gift_receiver_purchase: false
+                          is_gift_sender_purchase: false
+                          is_more_like_this_recommended: false
+                          is_product_physical: false
+                          is_recurring_billing: false
+                          is_upgrade_purchase: false
+                          order_id: 129480783
+                          paid: false
+                          partially_refunded: false
+                          paypal_refund_expired: false
+                          price: 0
+                          product_has_variants: false
+                          product_id: r5IO_dinzCO3rKtPb3zJRA==
+                          product_name: 'Human Evolution: From Protocells to People'
+                          product_permalink: jelhe
+                          product_rating: null
+                          purchase_email: goodworkhacks@3h33.fr
+                          purchaser_id: "8326956609175"
+                          quantity: 1
+                          referrer: https://gumroad.com/
+                          reviews_count: 1
+                          seller_id: JpwtAZHXjdhhK4_FHwT4hA==
+                          state: "92"
+                          timestamp: 10 days ago
+                          variants_and_quantity: ""
+                          zip_code: "92100"
+                    success: true
+        getUser:
+            value:
+                ReqExample:
+                    access_token: vtw9Ud_ye8OmnEx8BcVgvO7C-U9zo2adLeX8Q1tar8g
+                RespExample:
+                    success: true
+                    user:
+                        bio: actually useful ai for accessibility
+                        email: luke@lukesteuber.com
+                        id: "6461203698946"
+                        name: luke
+                        twitter_handle: lukeslp
+                        url: https://coolhand.gumroad.com
+    schemas:
+        CustomField:
+            description: Represents a custom field associated with a product or sale
+            properties:
+                id:
+                    description: Unique identifier for the custom field
+                    type: string
+                name:
+                    description: Name of the custom field
+                    type: string
+                value:
+                    description: Value associated with the custom field
+                    type: string
+            type: object
+        OfferCode:
+            description: Represents an offer code that can be applied to a purchase
+            properties:
+                amount:
+                    description: The discount amount
+                    type: number
+                code:
+                    description: The code that customers can use to redeem the offer
+                    type: string
+                discount_type:
+                    description: Type of discount (e.g., percentage, fixed amount)
+                    type: string
+                expires_at:
+                    description: The expiration date of the offer code
+                    format: date-time
+                    type: string
+                id:
+                    description: Unique identifier for the offer code
+                    type: string
+            type: object
+        OfferCodeInput:
+            description: Input data required to create or update an offer code
+            properties:
+                amount:
+                    description: The discount amount
+                    type: number
+                code:
+                    description: The code that customers can use to redeem the offer
+                    type: string
+                discount_type:
+                    description: Type of discount (e.g., percentage, fixed amount)
+                    type: string
+                expires_at:
+                    description: The expiration date of the offer code
+                    type: string
+            type: object
+        Product:
+            description: Represents a product in the Gumroad API
+            properties:
+                created_at:
+                    description: Timestamp when the product was created
+                    format: date-time
+                    type: string
+                description:
+                    description: Detailed description of the product
+                    type: string
+                id:
+                    description: Unique identifier for the product
+                    type: string
+                name:
+                    description: Name of the product
+                    type: string
+                price:
+                    description: Price of the product in USD
+                    type: number
+                updated_at:
+                    description: Timestamp when the product was last updated
+                    format: date-time
+                    type: string
+            required:
+                - id
+                - name
+                - price
+            type: object
+        ProductInput:
+            description: Input data for creating or updating a product
+            properties:
+                description:
+                    description: Detailed description of the product
+                    type: string
+                name:
+                    description: Name of the product
+                    type: string
+                price:
+                    description: Price of the product in USD
+                    type: number
+            required:
+                - name
+                - price
+            type: object
+        Sale:
+            description: Represents a sale in the Gumroad API
+            properties:
+                amount:
+                    description: Total amount of the sale
+                    type: number
+                created_at:
+                    description: Timestamp when the sale was made
+                    format: date-time
+                    type: string
+                id:
+                    description: Unique identifier for the sale
+                    type: string
+                product_id:
+                    description: Identifier of the product involved in the sale
+                    type: string
+                user_id:
+                    description: Identifier of the user who made the purchase
+                    type: string
+            type: object
+        Subscription:
+            description: Represents a subscription in the Gumroad API
+            properties:
+                created_at:
+                    description: Timestamp when the subscription was created
+                    format: date-time
+                    type: string
+                id:
+                    description: Unique identifier for the subscription
+                    type: string
+                product_id:
+                    description: Identifier of the product associated with the subscription
+                    type: string
+                status:
+                    description: Current status of the subscription (e.g., active, canceled)
+                    type: string
+                user_id:
+                    description: Identifier of the user subscribed to the product
+                    type: string
+            type: object
+        User:
+            description: Represents a user in the Gumroad API
+            properties:
+                created_at:
+                    description: Timestamp when the user account was created
+                    format: date-time
+                    type: string
+                email:
+                    description: Email address of the user
+                    type: string
+                id:
+                    description: Unique identifier for the user
+                    type: string
+                name:
+                    description: Name of the user
+                    type: string
+            type: object
+        Variant:
+            description: Represents a variant of a product in the Gumroad API
+            properties:
+                id:
+                    description: Unique identifier for the variant
+                    type: string
+                name:
+                    description: Name of the variant
+                    type: string
+                price:
+                    description: Price of the variant in USD
+                    type: number
+                product_id:
+                    description: Identifier of the product that this variant belongs to
+                    type: string
+                sku:
+                    description: Stock Keeping Unit for the variant
+                    type: string
+            type: object
+        VariantInput:
+            description: Input data for creating or updating a variant
+            properties:
+                name:
+                    description: Name of the variant
+                    type: string
+                price:
+                    description: Price of the variant in USD
+                    type: number
+                product_id:
+                    description: Identifier of the product that this variant belongs to
+                    type: string
+                sku:
+                    description: Stock Keeping Unit for the variant
+                    type: string
+            required:
+                - name
+                - price
+                - product_id
+            type: object
+info:
+    description: Gumroad API - EXCEPT getProducts / listDescriptions (timeout) and deleteProduct (scary)
+    title: GumroadAPI
+    version: v2
+openapi: 3.1.0
+paths:
+    /licenses/verify:
+        post:
+            operationId: verifyLicense
+            parameters:
+                - description: The unique ID of the product.
+                  in: query
+                  name: product_id
+                  required: true
+                  schema:
+                    type: string
+                - description: The license key provided by your customer.
+                  in: query
+                  name: license_key
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    purchase:
+                                        description: new param
+                                        properties:
+                                            currency:
+                                                description: new param
+                                                type: string
+                                            email:
+                                                description: new param
+                                                type: string
+                                            price:
+                                                description: new param
+                                                type: integer
+                                            product_id:
+                                                description: new param
+                                                type: string
+                                            product_name:
+                                                description: new param
+                                                type: string
+                                            seller_id:
+                                                description: new param
+                                                type: string
+                                        type: object
+                                    success:
+                                        description: new param
+                                        type: boolean
+                                    uses:
+                                        description: new param
+                                        type: integer
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: new api
+    /products/{id}:
+        get:
+            operationId: getProductById
+            parameters:
+                - description: The ID of the product.
+                  in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - description: OAuth access token.
+                  in: query
+                  name: access_token
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    product:
+                                        description: new param
+                                        properties:
+                                            currency:
+                                                description: new param
+                                                type: string
+                                            description:
+                                                description: new param
+                                                type: string
+                                            id:
+                                                description: new param
+                                                type: string
+                                            name:
+                                                description: new param
+                                                type: string
+                                            price:
+                                                description: new param
+                                                type: integer
+                                            published:
+                                                description: new param
+                                                type: boolean
+                                            thumbnail_url:
+                                                description: new param
+                                                type: string
+                                            url:
+                                                description: new param
+                                                type: string
+                                        type: object
+                                    success:
+                                        description: new param
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: new api
+    /products/{id}/disable:
+        put:
+            operationId: disableProduct
+            parameters:
+                - description: The ID of the product.
+                  in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - description: OAuth access token.
+                  in: query
+                  name: access_token
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    product:
+                                        description: new param
+                                        properties:
+                                            id:
+                                                description: new param
+                                                type: string
+                                            name:
+                                                description: new param
+                                                type: string
+                                        type: object
+                                    success:
+                                        description: new param
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: new api
+    /products/{id}/enable:
+        put:
+            operationId: enableProduct
+            parameters:
+                - description: The ID of the product.
+                  in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - description: OAuth access token.
+                  in: query
+                  name: access_token
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    product:
+                                        description: new param
+                                        properties:
+                                            id:
+                                                description: new param
+                                                type: string
+                                            name:
+                                                description: new param
+                                                type: string
+                                        type: object
+                                    success:
+                                        description: new param
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: new api
+    /sales:
+        get:
+            operationId: getSales
+            parameters:
+                - description: OAuth access token.
+                  in: query
+                  name: access_token
+                  required: true
+                  schema:
+                    default: vtw9Ud_ye8OmnEx8BcVgvO7C-U9zo2adLeX8Q1tar8g
+                    type: string
+                - description: Only return sales after this date.
+                  in: query
+                  name: after
+                  schema:
+                    type: string
+                - description: Only return sales before this date.
+                  in: query
+                  name: before
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    next_page_key:
+                                        type: string
+                                    next_page_url:
+                                        type: string
+                                    sales:
+                                        items:
+                                            properties:
+                                                affiliate:
+                                                    properties:
+                                                        amount:
+                                                            type: string
+                                                        email:
+                                                            type: string
+                                                    type: object
+                                                amount_refundable_in_currency:
+                                                    type: string
+                                                average_rating:
+                                                    type: number
+                                                can_contact:
+                                                    type: boolean
+                                                card:
+                                                    properties:
+                                                        bin:
+                                                            type: string
+                                                        expiry_month:
+                                                            type: string
+                                                        expiry_year:
+                                                            type: string
+                                                        type:
+                                                            type: string
+                                                        visual:
+                                                            type: string
+                                                    type: object
+                                                chargedback:
+                                                    type: boolean
+                                                country:
+                                                    type: string
+                                                country_iso2:
+                                                    type: string
+                                                created_at:
+                                                    type: string
+                                                currency_symbol:
+                                                    type: string
+                                                custom_fields:
+                                                    type: object
+                                                daystamp:
+                                                    type: string
+                                                discover_fee_charged:
+                                                    type: boolean
+                                                dispute_won:
+                                                    type: boolean
+                                                disputed:
+                                                    type: boolean
+                                                email:
+                                                    type: string
+                                                formatted_display_price:
+                                                    type: string
+                                                formatted_total_price:
+                                                    type: string
+                                                full_name:
+                                                    type: string
+                                                gumroad_fee:
+                                                    type: number
+                                                has_custom_fields:
+                                                    type: boolean
+                                                has_variants:
+                                                    type: boolean
+                                                id:
+                                                    type: string
+                                                is_additional_contribution:
+                                                    type: boolean
+                                                is_bundle_product_purchase:
+                                                    type: boolean
+                                                is_bundle_purchase:
+                                                    type: boolean
+                                                is_following:
+                                                    type: boolean
+                                                is_gift_receiver_purchase:
+                                                    type: boolean
+                                                is_gift_sender_purchase:
+                                                    type: boolean
+                                                is_more_like_this_recommended:
+                                                    type: boolean
+                                                is_product_physical:
+                                                    type: boolean
+                                                is_recurring_billing:
+                                                    type: boolean
+                                                is_upgrade_purchase:
+                                                    type: boolean
+                                                order_id:
+                                                    type: number
+                                                paid:
+                                                    type: boolean
+                                                partially_refunded:
+                                                    type: boolean
+                                                paypal_refund_expired:
+                                                    type: boolean
+                                                price:
+                                                    type: number
+                                                product_has_variants:
+                                                    type: boolean
+                                                product_id:
+                                                    type: string
+                                                product_name:
+                                                    type: string
+                                                product_permalink:
+                                                    type: string
+                                                product_rating:
+                                                    type: string
+                                                purchase_email:
+                                                    type: string
+                                                purchaser_id:
+                                                    type: string
+                                                quantity:
+                                                    type: number
+                                                referrer:
+                                                    type: string
+                                                reviews_count:
+                                                    type: number
+                                                seller_id:
+                                                    type: string
+                                                state:
+                                                    type: string
+                                                timestamp:
+                                                    type: string
+                                                variants_and_quantity:
+                                                    type: string
+                                                zip_code:
+                                                    type: string
+                                            type: object
+                                        type: array
+                                    success:
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: new api
+    /sales/{id}:
+        get:
+            operationId: getSaleById
+            parameters:
+                - description: The ID of the sale.
+                  in: path
+                  name: id
+                  required: true
+                  schema:
+                    default: sdsjis
+                    type: string
+                - description: OAuth access token.
+                  in: query
+                  name: access_token
+                  required: true
+                  schema:
+                    default: "488372815"
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    sale:
+                                        description: new param
+                                        properties:
+                                            email:
+                                                description: new param
+                                                type: string
+                                            id:
+                                                description: new param
+                                                type: string
+                                            price:
+                                                description: new param
+                                                type: integer
+                                            product_name:
+                                                description: new param
+                                                type: string
+                                        type: object
+                                    success:
+                                        description: new param
+                                        type: boolean
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: new api
+    /user:
+        get:
+            operationId: getUser
+            parameters:
+                - description: OAuth access token.
+                  in: query
+                  name: access_token
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    success:
+                                        description: new param
+                                        type: boolean
+                                    user:
+                                        description: new param
+                                        properties:
+                                            bio:
+                                                description: new param
+                                                type: string
+                                            email:
+                                                description: new param
+                                                type: string
+                                            id:
+                                                description: new param
+                                                type: string
+                                            name:
+                                                description: new param
+                                                type: string
+                                            twitter_handle:
+                                                description: new param
+                                                type: string
+                                            url:
+                                                description: new param
+                                                type: string
+                                        type: object
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: new api
+servers:
+    - url: https://api.gumroad.com/v2

@@ -1,0 +1,1104 @@
+components:
+    examples:
+        _get:
+            value:
+                ReqExample: {}
+                RespExample:
+                    message: The Cat API
+                    version: 1.3.9
+        getApiInfo:
+            value:
+                ReqExample: {}
+                RespExample:
+                    message: The Cat API
+                    version: 1.3.9
+        getBreeds:
+            value:
+                ReqExample: {}
+                RespExample:
+                    - alt_names: ""
+                      description: The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.
+                      id: abys
+                      life_span: 14 - 15
+                      name: Abyssinian
+                      origin: Egypt
+                      temperament: Active, Energetic, Independent, Intelligent, Gentle
+                      weight:
+                        imperial: 7  -  10
+                        metric: 3 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Abyssinian_(cat)
+                    - alt_names: ""
+                      description: Native to the Greek islands known as the Cyclades in the Aegean Sea, these are natural cats, meaning they developed without humans getting involved in their breeding. As a breed, Aegean Cats are rare, although they are numerous on their home islands. They are generally friendly toward people and can be excellent cats for families with children.
+                      id: aege
+                      life_span: 9 - 12
+                      name: Aegean
+                      origin: Greece
+                      temperament: Affectionate, Social, Intelligent, Playful, Active
+                      weight:
+                        imperial: 7 - 10
+                        metric: 3 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Aegean_cat
+                    - alt_names: ""
+                      description: American Bobtails are loving and incredibly intelligent cats possessing a distinctive wild appearance. They are extremely interactive cats that bond with their human family with great devotion.
+                      id: abob
+                      life_span: 11 - 15
+                      name: American Bobtail
+                      origin: United States
+                      temperament: Intelligent, Interactive, Lively, Playful, Sensitive
+                      weight:
+                        imperial: 7 - 16
+                        metric: 3 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/American_Bobtail
+                    - alt_names: ""
+                      description: Distinguished by truly unique ears that curl back in a graceful arc, offering an alert, perky, happily surprised expression, they cause people to break out into a big smile when viewing their first Curl. Curls are very people-oriented, faithful, affectionate soulmates, adjusting remarkably fast to other pets, children, and new situations.
+                      id: acur
+                      life_span: 12 - 16
+                      name: American Curl
+                      origin: United States
+                      temperament: Affectionate, Curious, Intelligent, Interactive, Lively, Playful, Social
+                      weight:
+                        imperial: 5 - 10
+                        metric: 2 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/American_Curl
+                    - alt_names: Domestic Shorthair
+                      description: The American Shorthair is known for its longevity, robust health, good looks, sweet personality, and amiability with children, dogs, and other pets.
+                      id: asho
+                      life_span: 15 - 17
+                      name: American Shorthair
+                      origin: United States
+                      temperament: Active, Curious, Easy Going, Playful, Calm
+                      weight:
+                        imperial: 8 - 15
+                        metric: 4 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/American_Shorthair
+                    - alt_names: ""
+                      description: The American Wirehair tends to be a calm and tolerant cat who takes life as it comes. His favorite hobby is bird-watching from a sunny windowsill, and his hunting ability will stand you in good stead if insects enter the house.
+                      id: awir
+                      life_span: 14 - 18
+                      name: American Wirehair
+                      origin: United States
+                      temperament: Affectionate, Curious, Gentle, Intelligent, Interactive, Lively, Loyal, Playful, Sensible, Social
+                      weight:
+                        imperial: 8 - 15
+                        metric: 4 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/American_Wirehair
+                    - alt_names: Alley cat
+                      description: Arabian Mau cats are social and energetic. Due to their energy levels, these cats do best in homes where their owners will be able to provide them with plenty of playtime, attention and interaction from their owners. These kitties are friendly, intelligent, and adaptable, and will even get along well with other pets and children.
+                      id: amau
+                      life_span: 12 - 14
+                      name: Arabian Mau
+                      origin: United Arab Emirates
+                      temperament: Affectionate, Agile, Curious, Independent, Playful, Loyal
+                      weight:
+                        imperial: 8 - 16
+                        metric: 4 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Arabian_Mau
+                    - alt_names: Spotted Mist
+                      description: The Australian Mist thrives on human companionship. Tolerant of even the youngest of children, these friendly felines enjoy playing games and being part of the hustle and bustle of a busy household. They make entertaining companions for people of all ages, and are happy to remain indoors between dusk and dawn or to be wholly indoor pets.
+                      id: amis
+                      life_span: 12 - 16
+                      name: Australian Mist
+                      origin: Australia
+                      temperament: Lively, Social, Fun-loving, Relaxed, Affectionate
+                      weight:
+                        imperial: 7 - 15
+                        metric: 3 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Australian_Mist
+                    - alt_names: Long-haired Siamese
+                      description: 'Balinese are curious, outgoing, intelligent cats with excellent communication skills. They are known for their chatty personalities and are always eager to tell you their views on life, love, and what you’ve served them for dinner. '
+                      id: bali
+                      life_span: 10 - 15
+                      name: Balinese
+                      origin: United States
+                      temperament: Affectionate, Intelligent, Playful
+                      weight:
+                        imperial: 4 - 10
+                        metric: 2 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Balinese_(cat)
+                    - alt_names: ""
+                      description: The Bambino is a breed of cat that was created as a cross between the Sphynx and the Munchkin breeds. The Bambino cat has short legs, large upright ears, and is usually hairless. They love to be handled and cuddled up on the laps of their family members.
+                      id: bamb
+                      life_span: 12 - 14
+                      name: Bambino
+                      origin: United States
+                      temperament: Affectionate, Lively, Friendly, Intelligent
+                      weight:
+                        imperial: 4 - 9
+                        metric: 2 - 4
+                      wikipedia_url: https://en.wikipedia.org/wiki/Bambino_cat
+                    - description: Bengals are a lot of fun to live with, but they're definitely not the cat for everyone, or for first-time cat owners. Extremely intelligent, curious and active, they demand a lot of interaction and woe betide the owner who doesn't provide it.
+                      id: beng
+                      life_span: 12 - 15
+                      name: Bengal
+                      origin: United States
+                      temperament: Alert, Agile, Energetic, Demanding, Intelligent
+                      weight:
+                        imperial: 6 - 12
+                        metric: 3 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Bengal_(cat)
+                    - alt_names: Sacred Birman, Sacred Cat Of Burma
+                      description: The Birman is a docile, quiet cat who loves people and will follow them from room to room. Expect the Birman to want to be involved in what you’re doing. He communicates in a soft voice, mainly to remind you that perhaps it’s time for dinner or maybe for a nice cuddle on the sofa. He enjoys being held and will relax in your arms like a furry baby.
+                      id: birm
+                      life_span: 14 - 15
+                      name: Birman
+                      origin: France
+                      temperament: Affectionate, Active, Gentle, Social
+                      weight:
+                        imperial: 6 - 15
+                        metric: 3 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Birman
+                    - alt_names: Small black Panther
+                      description: The the golden eyes and the shiny black coa of the Bopmbay is absolutely striking. Likely to bond most with one family member, the Bombay will follow you from room to room and will almost always have something to say about what you are doing, loving attention and to be carried around, often on his caregiver's shoulder.
+                      id: bomb
+                      life_span: 12 - 16
+                      name: Bombay
+                      origin: United States
+                      temperament: Affectionate, Dependent, Gentle, Intelligent, Playful
+                      weight:
+                        imperial: 6 - 11
+                        metric: 3 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Bombay_(cat)
+                    - alt_names: ""
+                      description: The British Longhair is a very laid-back relaxed cat, often perceived to be very independent although they will enjoy the company of an equally relaxed and likeminded cat. They are an affectionate breed, but very much on their own terms and tend to prefer to choose to come and sit with their owners rather than being picked up.
+                      id: bslo
+                      life_span: 12 - 14
+                      name: British Longhair
+                      origin: United Kingdom
+                      temperament: Affectionate, Easy Going, Independent, Intelligent, Loyal, Social
+                      weight:
+                        imperial: 8 - 18
+                        metric: 4 - 8
+                      wikipedia_url: https://en.wikipedia.org/wiki/British_Longhair
+                    - alt_names: Highlander, Highland Straight, Britannica
+                      description: The British Shorthair is a very pleasant cat to have as a companion, ans is easy going and placid. The British is a fiercely loyal, loving cat and will attach herself to every one of her family members. While loving to play, she doesn't need hourly attention. If she is in the mood to play, she will find someone and bring a toy to that person. The British also plays well by herself, and thus is a good companion for single people.
+                      id: bsho
+                      life_span: 12 - 17
+                      name: British Shorthair
+                      origin: United Kingdom
+                      temperament: Affectionate, Easy Going, Gentle, Loyal, Patient, calm
+                      weight:
+                        imperial: 12 - 20
+                        metric: 5 - 9
+                      wikipedia_url: https://en.wikipedia.org/wiki/British_Shorthair
+                    - alt_names: ""
+                      description: Burmese love being with people, playing with them, and keeping them entertained. They crave close physical contact and abhor an empty lap. They will follow their humans from room to room, and sleep in bed with them, preferably under the covers, cuddled as close as possible. At play, they will turn around to see if their human is watching and being entertained by their crazy antics.
+                      id: bure
+                      life_span: 15 - 16
+                      name: Burmese
+                      origin: Burma
+                      temperament: Curious, Intelligent, Gentle, Social, Interactive, Playful, Lively
+                      weight:
+                        imperial: 6 - 12
+                        metric: 3 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Burmese_(cat)
+                    - alt_names: ""
+                      description: The Burmilla is a fairly placid cat. She tends to be an easy cat to get along with, requiring minimal care. The Burmilla is affectionate and sweet and makes a good companion, the Burmilla is an ideal companion to while away a lonely evening. Loyal, devoted, and affectionate, this cat will stay by its owner, always keeping them company.
+                      id: buri
+                      life_span: 10 - 15
+                      name: Burmilla
+                      origin: United Kingdom
+                      temperament: Easy Going, Friendly, Intelligent, Lively, Playful, Social
+                      weight:
+                        imperial: 6 - 13
+                        metric: 3 - 6
+                      wikipedia_url: https://en.wikipedia.org/wiki/Burmilla
+                    - alt_names: Spangle
+                      description: Perhaps the only thing about the California spangled cat that isn’t wild-like is its personality. Known to be affectionate, gentle and sociable, this breed enjoys spending a great deal of time with its owners. They are very playful, often choosing to perch in high locations and show off their acrobatic skills.
+                      id: cspa
+                      life_span: 10 - 14
+                      name: California Spangled
+                      origin: United States
+                      temperament: Affectionate, Curious, Intelligent, Loyal, Social
+                      weight:
+                        imperial: 10 - 15
+                        metric: 5 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/California_Spangled
+                    - alt_names: Chantilly, Foreign Longhair
+                      description: The Chantilly is a devoted companion and prefers company to being left alone. While the Chantilly is not demanding, she will "chirp" and "talk" as if having a conversation. This breed is affectionate, with a sweet temperament. It can stay still for extended periods, happily lounging in the lap of its loved one. This quality makes the Tiffany an ideal traveling companion, and an ideal house companion for senior citizens and the physically handicapped.
+                      id: ctif
+                      life_span: 14 - 16
+                      name: Chantilly-Tiffany
+                      origin: United States
+                      temperament: Affectionate, Demanding, Interactive, Loyal
+                      weight:
+                        imperial: 7 - 12
+                        metric: 3 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Chantilly-Tiffany
+                    - alt_names: ""
+                      description: The Chartreux is generally silent but communicative. Short play sessions, mixed with naps and meals are their perfect day. Whilst appreciating any attention you give them, they are not demanding, content instead to follow you around devotedly, sleep on your bed and snuggle with you if you’re not feeling well.
+                      id: char
+                      life_span: 12 - 15
+                      name: Chartreux
+                      origin: France
+                      temperament: Affectionate, Loyal, Intelligent, Social, Lively, Playful
+                      weight:
+                        imperial: 6 - 15
+                        metric: 3 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Chartreux
+                    - alt_names: Nile Cat
+                      description: For those owners who desire a feline capable of evoking the great outdoors, the strikingly beautiful Chausie retains a bit of the wild in its appearance but has the house manners of our friendly, familiar moggies. Very playful, this cat needs a large amount of space to be able to fully embrace its hunting instincts.
+                      id: chau
+                      life_span: 12 - 14
+                      name: Chausie
+                      origin: Egypt
+                      temperament: Affectionate, Intelligent, Playful, Social
+                      weight:
+                        imperial: 7 - 15
+                        metric: 3 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Chausie
+                    - alt_names:  
+                      description: The Cheetoh has a super affectionate nature and real love for their human companions; they are intelligent with the ability to learn quickly. You can expect that a Cheetoh will be a fun-loving kitty who enjoys playing, running, and jumping through every room in your house.
+                      id: chee
+                      life_span: 12 - 14
+                      name: Cheetoh
+                      origin: United States
+                      temperament: Affectionate, Gentle, Intelligent, Social
+                      weight:
+                        imperial: 8 - 15
+                        metric: 4 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Bengal_cat#Cheetoh
+                    - alt_names: ""
+                      description: Colorpoint Shorthairs are an affectionate breed, devoted and loyal to their people. Sensitive to their owner’s moods, Colorpoints are more than happy to sit at your side or on your lap and purr words of encouragement on a bad day. They will constantly seek out your lap whenever it is open and in the moments when your lap is preoccupied they will stretch out in sunny spots on the ground.
+                      id: csho
+                      life_span: 12 - 16
+                      name: Colorpoint Shorthair
+                      origin: United States
+                      temperament: Affectionate, Intelligent, Playful, Social
+                      weight:
+                        imperial: 4 - 10
+                        metric: 2 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Colorpoint_Shorthair
+                    - alt_names: ""
+                      description: 'This is a confident cat who loves people and will follow them around, waiting for any opportunity to sit in a lap or give a kiss. He enjoys being handled, making it easy to take him to the veterinarian or train him for therapy work. The Cornish Rex stay in kitten mode most of their lives and well into their senior years. '
+                      id: crex
+                      life_span: 11 - 14
+                      name: Cornish Rex
+                      origin: United Kingdom
+                      temperament: Affectionate, Intelligent, Active, Curious, Playful
+                      weight:
+                        imperial: 5 - 9
+                        metric: 2 - 4
+                      wikipedia_url: https://en.wikipedia.org/wiki/Cornish_Rex
+                    - alt_names: Spangle
+                      description: The Cymric is a placid, sweet cat. They do not get too upset about anything that happens in their world. They are loving companions and adore people. They are smart and dexterous, capable of using his paws to get into cabinets or to open doors.
+                      id: cymr
+                      life_span: 8 - 14
+                      name: Cymric
+                      origin: Canada
+                      temperament: Gentle, Loyal, Intelligent, Playful
+                      weight:
+                        imperial: 8 - 13
+                        metric: 4 - 6
+                      wikipedia_url: https://en.wikipedia.org/wiki/Cymric_(cat)
+                    - alt_names: Cypriot cat
+                      description: 'Loving, loyal, social and inquisitive, the Cyprus cat forms strong ties with their families and love nothing more than to be involved in everything that goes on in their surroundings. They are not overly active by nature which makes them the perfect companion for people who would like to share their homes with a laid-back relaxed feline companion. '
+                      id: cypr
+                      life_span: 12 - 15
+                      name: Cyprus
+                      origin: Cyprus
+                      temperament: Affectionate, Social
+                      weight:
+                        imperial: 8 - 16
+                        metric: 4 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Cyprus_cat
+                    - alt_names: Pixie cat, Alien cat, Poodle cat
+                      description: The favourite perch of the Devon Rex is right at head level, on the shoulder of her favorite person. She takes a lively interest in everything that is going on and refuses to be left out of any activity. Count on her to stay as close to you as possible, occasionally communicating his opinions in a quiet voice. She loves people and welcomes the attentions of friends and family alike.
+                      id: drex
+                      life_span: 10 - 15
+                      name: Devon Rex
+                      origin: United Kingdom
+                      temperament: Highly interactive, Mischievous, Loyal, Social, Playful
+                      weight:
+                        imperial: 5 - 10
+                        metric: 2 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Devon_Rex
+                    - description: Donskoy are affectionate, intelligent, and easy-going. They demand lots of attention and interaction. The Donskoy also gets along well with other pets. It is now thought the same gene that causes degrees of hairlessness in the Donskoy also causes alterations in cat personality, making them calmer the less hair they have.
+                      id: dons
+                      life_span: 12 - 15
+                      name: Donskoy
+                      origin: Russia
+                      temperament: Playful, affectionate, loyal, social
+                      weight:
+                        imperial: 10 - 12
+                        metric: 5 - 6
+                      wikipedia_url: https://en.wikipedia.org/wiki/Donskoy_(cat)
+                    - alt_names: Chinese Lia Hua, Lí hua māo (貍花貓), Li Hua
+                      description: The Dragon Li is loyal, but not particularly affectionate. They are known to be very intelligent, and their natural breed status means that they're very active. She is is gentle with people, and has a reputation as a talented hunter of rats and other vermin.
+                      id: lihu
+                      life_span: 12 - 15
+                      name: Dragon Li
+                      origin: China
+                      temperament: Intelligent, Friendly, Gentle, Loving, Loyal
+                      weight:
+                        imperial: 9 - 12
+                        metric: 4 - 6
+                      wikipedia_url: https://en.wikipedia.org/wiki/Dragon_Li
+                    - alt_names: Pharaoh Cat
+                      description: The Egyptian Mau is gentle and reserved. She loves her people and desires attention and affection from them but is wary of others. Early, continuing socialization is essential with this sensitive and sometimes shy cat, especially if you plan to show or travel with her. Otherwise, she can be easily startled by unexpected noises or events.
+                      id: emau
+                      life_span: 18 - 20
+                      name: Egyptian Mau
+                      origin: Egypt
+                      temperament: Agile, Dependent, Gentle, Intelligent, Lively, Loyal, Playful
+                      weight:
+                        imperial: 6 - 14
+                        metric: 3 - 6
+                      wikipedia_url: https://en.wikipedia.org/wiki/Egyptian_Mau
+                    - alt_names: ""
+                      description: 'The European Burmese is a very affectionate, intelligent, and loyal cat. They thrive on companionship and will want to be with you, participating in everything you do. While they might pick a favorite family member, chances are that they will interact with everyone in the home, as well as any visitors that come to call. They are inquisitive and playful, even as adults. '
+                      id: ebur
+                      life_span: 10 - 15
+                      name: European Burmese
+                      origin: Burma
+                      temperament: Sweet, Affectionate, Loyal
+                      weight:
+                        imperial: 7 - 14
+                        metric: 3 - 6
+                    - alt_names: Exotic
+                      description: The Exotic Shorthair is a gentle friendly cat that has the same personality as the Persian. They love having fun, don’t mind the company of other cats and dogs, also love to curl up for a sleep in a safe place. Exotics love their own people, but around strangers they are cautious at first. Given time, they usually warm up to visitors.
+                      id: esho
+                      life_span: 12 - 15
+                      name: Exotic Shorthair
+                      origin: United States
+                      temperament: Affectionate, Sweet, Loyal, Quiet, Peaceful
+                      weight:
+                        imperial: 7 - 14
+                        metric: 3 - 6
+                      wikipedia_url: https://en.wikipedia.org/wiki/Exotic_Shorthair
+                    - alt_names: Havana, HB
+                      description: The Havana Brown is human oriented, playful, and curious. She has a strong desire to spend time with her people and involve herself in everything they do. Being naturally inquisitive, the Havana Brown reaches out with a paw to touch and feel when investigating curiosities in its environment. They are truly sensitive by nature and frequently gently touch their human companions as if they are extending a paw of friendship.
+                      id: hbro
+                      life_span: 10 - 15
+                      name: Havana Brown
+                      origin: United Kingdom
+                      temperament: Affectionate, Curious, Demanding, Friendly, Intelligent, Playful
+                      weight:
+                        imperial: 6 - 10
+                        metric: 3 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Havana_Brown
+                    - alt_names: Himalayan Persian, Colourpoint Persian, Longhaired Colourpoint, Himmy
+                      description: Calm and devoted, Himalayans make excellent companions, though they prefer a quieter home. They are playful in a sedate kind of way and enjoy having an assortment of toys. The Himalayan will stretch out next to you, sleep in your bed and even sit on your lap when she is in the mood.
+                      id: hima
+                      life_span: 9 - 15
+                      name: Himalayan
+                      origin: United States
+                      temperament: Dependent, Gentle, Intelligent, Quiet, Social
+                      weight:
+                        imperial: 7 - 14
+                        metric: 3 - 6
+                      wikipedia_url: https://en.wikipedia.org/wiki/Himalayan_(cat)
+                    - alt_names: Japanese Truncated Cat
+                      description: The Japanese Bobtail is an active, sweet, loving and highly intelligent breed. They love to be with people and play seemingly endlessly. They learn their name and respond to it. They bring toys to people and play fetch with a favorite toy for hours. Bobtails are social and are at their best when in the company of people. They take over the house and are not intimidated. If a dog is in the house, Bobtails assume Bobtails are in charge.
+                      id: jbob
+                      life_span: 14 - 16
+                      name: Japanese Bobtail
+                      origin: Japan
+                      temperament: Active, Agile, Clever, Easy Going, Intelligent, Lively, Loyal, Playful, Social
+                      weight:
+                        imperial: 5 - 10
+                        metric: 2 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Japanese_Bobtail
+                    - alt_names:  
+                      description: Javanese are endlessly interested, intelligent and active. They tend to enjoy jumping to great heights, playing with fishing pole-type or other interactive toys and just generally investigating their surroundings. He will attempt to copy things you do, such as opening doors or drawers.
+                      id: java
+                      life_span: 10 - 12
+                      name: Javanese
+                      origin: United States
+                      temperament: Active, Devoted, Intelligent, Playful
+                      weight:
+                        imperial: 5 - 10
+                        metric: 2 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Javanese_cat
+                    - alt_names: Diamond Eye cat
+                      description: The Khao Manee is highly intelligent, with an extrovert and inquisitive nature, however they are also very calm and relaxed, making them an idea lap cat.
+                      id: khao
+                      life_span: 10 - 12
+                      name: Khao Manee
+                      origin: Thailand
+                      temperament: Calm, Relaxed, Talkative, Playful, Warm
+                      weight:
+                        imperial: 8 - 12
+                        metric: 4 - 6
+                      wikipedia_url: https://en.wikipedia.org/wiki/Khao_Manee
+                    - description: The Korat is a natural breed, and one of the oldest stable cat breeds. They are highly intelligent and confident cats that can be fearless, although they are startled by loud sounds and sudden movements. Korats form strong bonds with their people and like to cuddle and stay nearby.
+                      id: kora
+                      life_span: 10 - 15
+                      name: Korat
+                      origin: Thailand
+                      temperament: Active, Loyal, highly intelligent, Expressive, Trainable
+                      weight:
+                        imperial: 7 - 11
+                        metric: 3 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Korat
+                    - description: The character of the Kurilian Bobtail is independent, highly intelligent, clever, inquisitive, sociable, playful, trainable, absent of aggression and very gentle. They are devoted to their humans and when allowed are either on the lap of or sleeping in bed with their owners.
+                      id: kuri
+                      life_span: 15 - 20
+                      name: Kurilian
+                      origin: Russia
+                      temperament: Independent, highly intelligent, clever, inquisitive, sociable, playful, trainable
+                      weight:
+                        imperial: 8 - 15
+                        metric: 4 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Kurilian_Bobtail
+                    - alt_names: Si-Sawat
+                      description: LaPerms are gentle and affectionate but also very active. Unlike many active breeds, the LaPerm is also quite content to be a lap cat. The LaPerm will often follow your lead; that is, if they are busy playing and you decide to sit and relax, simply pick up your LaPerm and sit down with it, and it will stay in your lap, devouring the attention you give it.
+                      id: lape
+                      life_span: 10 - 15
+                      name: LaPerm
+                      origin: Thailand
+                      temperament: Affectionate, Friendly, Gentle, Intelligent, Playful, Quiet
+                      weight:
+                        imperial: 6 - 10
+                        metric: 3 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/LaPerm
+                    - alt_names: Coon Cat, Maine Cat, Maine Shag, Snowshoe Cat, American Longhair, The Gentle Giants
+                      description: They are known for their size and luxurious long coat Maine Coons are considered a gentle giant. The good-natured and affable Maine Coon adapts well to many lifestyles and personalities. She likes being with people and has the habit of following them around, but isn’t needy. Most Maine Coons love water and they can be quite good swimmers.
+                      id: mcoo
+                      life_span: 12 - 15
+                      name: Maine Coon
+                      origin: United States
+                      temperament: Adaptable, Intelligent, Loving, Gentle, Independent
+                      weight:
+                        imperial: 12 - 18
+                        metric: 5 - 8
+                      wikipedia_url: https://en.wikipedia.org/wiki/Maine_Coon
+                    - alt_names: Asian
+                      description: Malayans love to explore and even enjoy traveling by way of a cat carrier. They are quite a talkative and rather loud cat with an apparent strong will. These cats will make sure that you give it the attention it seeks and always seem to want to be held and hugged. They will constantly interact with people, even strangers. They love to play and cuddle.
+                      id: mala
+                      life_span: 12 - 18
+                      name: Malayan
+                      origin: United Kingdom
+                      temperament: Affectionate, Interactive, Playful, Social
+                      weight:
+                        imperial: 6 - 13
+                        metric: 3 - 6
+                      wikipedia_url: https://en.wikipedia.org/wiki/Asian_cat
+                    - alt_names: Manks, Stubbin, Rumpy
+                      description: The Manx is a placid, sweet cat that is gentle and playful. She never seems to get too upset about anything. She is a loving companion and adores being with people.
+                      id: manx
+                      life_span: 12 - 14
+                      name: Manx
+                      origin: Isle of Man
+                      temperament: Easy Going, Intelligent, Loyal, Playful, Social
+                      weight:
+                        imperial: 7 - 13
+                        metric: 3 - 6
+                      wikipedia_url: https://en.wikipedia.org/wiki/Manx_(cat)
+                    - alt_names: ""
+                      description: The Munchkin is an outgoing cat who enjoys being handled. She has lots of energy and is faster and more agile than she looks. The shortness of their legs does not seem to interfere with their running and leaping abilities.
+                      id: munc
+                      life_span: 10 - 15
+                      name: Munchkin
+                      origin: United States
+                      temperament: Agile, Easy Going, Intelligent, Playful
+                      weight:
+                        imperial: 5 - 9
+                        metric: 2 - 4
+                      wikipedia_url: https://en.wikipedia.org/wiki/Munchkin_(cat)
+                    - alt_names: Longhaired Russian Blue
+                      description: The Nebelung may have a reserved nature, but she loves to play (being especially fond of retrieving) and enjoys jumping or climbing to high places where she can study people and situations at her leisure before making up her mind about whether she wants to get involved.
+                      id: nebe
+                      life_span: 11 - 16
+                      name: Nebelung
+                      origin: United States
+                      temperament: Gentle, Quiet, Shy, Playful
+                      weight:
+                        imperial: 7 - 11
+                        metric: 3 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Nebelung
+                    - alt_names: Skogkatt / Skaukatt, Norsk Skogkatt / Norsk Skaukatt, Weegie
+                      description: The Norwegian Forest Cat is a sweet, loving cat. She appreciates praise and loves to interact with her parent. She makes a loving companion and bonds with her parents once she accepts them for her own. She is still a hunter at heart. She loves to chase toys as if they are real. She is territorial and patrols several times each day to make certain that all is fine.
+                      id: norw
+                      life_span: 12 - 16
+                      name: Norwegian Forest Cat
+                      origin: Norway
+                      temperament: Sweet, Active, Intelligent, Social, Playful, Lively, Curious
+                      weight:
+                        imperial: 8 - 16
+                        metric: 4 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Norwegian_Forest_Cat
+                    - alt_names: ""
+                      description: 'Loyal and devoted to their owners, the Ocicat is intelligent, confident, outgoing, and seems to have many dog traits. They can be trained to fetch toys, walk on a lead, taught to ''speak'', come when called, and follow other commands. '
+                      id: ocic
+                      life_span: 12 - 14
+                      name: Ocicat
+                      origin: United States
+                      temperament: Active, Agile, Curious, Demanding, Friendly, Gentle, Lively, Playful, Social
+                      weight:
+                        imperial: 7 - 15
+                        metric: 3 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Ocicat
+                    - alt_names: Foreign Type
+                      description: Orientals are passionate about the people in their lives. They become extremely attached to their humans, so be prepared for a lifetime commitment. When you are not available to entertain her, an Oriental will divert herself by jumping on top of the refrigerator, opening drawers, seeking out new hideaways.
+                      id: orie
+                      life_span: 12 - 14
+                      name: Oriental
+                      origin: United States
+                      temperament: Energetic, Affectionate, Intelligent, Social, Playful, Curious
+                      weight:
+                        imperial: 5 - 10
+                        metric: 2 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Oriental_Shorthair
+                    - alt_names: Longhair, Persian Longhair, Shiraz, Shirazi
+                      description: Persians are sweet, gentle cats that can be playful or quiet and laid-back. Great with families and children, they absolutely love to lounge around the house. While they don’t mind a full house or active kids, they’ll usually hide when they need some alone time.
+                      id: pers
+                      life_span: 14 - 15
+                      name: Persian
+                      origin: Iran (Persia)
+                      temperament: Affectionate, loyal, Sedate, Quiet
+                      weight:
+                        imperial: 9 - 14
+                        metric: 4 - 6
+                      wikipedia_url: https://en.wikipedia.org/wiki/Persian_(cat)
+                    - alt_names: ""
+                      description: Companionable and affectionate, the Pixie-bob wants to be an integral part of the family. The Pixie-Bob’s ability to bond with their humans along with their patient personas make them excellent companions for children.
+                      id: pixi
+                      life_span: 13 - 16
+                      name: Pixie-bob
+                      origin: United States
+                      temperament: Affectionate, Social, Intelligent, Loyal
+                      weight:
+                        imperial: 8 - 17
+                        metric: 4 - 8
+                      wikipedia_url: https://en.wikipedia.org/wiki/Pixiebob
+                    - alt_names: ""
+                      description: The Ragamuffin is calm, even tempered and gets along well with all family members. Changes in routine generally do not upset her. She is an ideal companion for those in apartments, and with children due to her patient nature.
+                      id: raga
+                      life_span: 12 - 16
+                      name: Ragamuffin
+                      origin: United States
+                      temperament: Affectionate, Friendly, Gentle, Calm
+                      weight:
+                        imperial: 8 - 20
+                        metric: 4 - 9
+                      wikipedia_url: https://en.wikipedia.org/wiki/Ragamuffin_cat
+                    - alt_names: Rag doll
+                      description: Ragdolls love their people, greeting them at the door, following them around the house, and leaping into a lap or snuggling in bed whenever given the chance. They are the epitome of a lap cat, enjoy being carried and collapsing into the arms of anyone who holds them.
+                      id: ragd
+                      life_span: 12 - 17
+                      name: Ragdoll
+                      origin: United States
+                      temperament: Affectionate, Friendly, Gentle, Quiet, Easygoing
+                      weight:
+                        imperial: 12 - 20
+                        metric: 5 - 9
+                      wikipedia_url: https://en.wikipedia.org/wiki/Ragdoll
+                    - alt_names: Archangel Blue, Archangel Cat
+                      description: Russian Blues are very loving and reserved. They do not like noisy households but they do like to play and can be quite active when outdoors. They bond very closely with their owner and are known to be compatible with other pets.
+                      id: rblu
+                      life_span: 10 - 16
+                      name: Russian Blue
+                      origin: Russia
+                      temperament: Active, Dependent, Easy Going, Gentle, Intelligent, Loyal, Playful, Quiet
+                      weight:
+                        imperial: 5 - 11
+                        metric: 2 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Russian_Blue
+                    - alt_names: ""
+                      description: Savannah is the feline version of a dog. Actively seeking social interaction, they are given to pouting if left out. Remaining kitten-like through life. Profoundly loyal to immediate family members whilst questioning the presence of strangers. Making excellent companions that are loyal, intelligent and eager to be involved.
+                      id: sava
+                      life_span: 17 - 20
+                      name: Savannah
+                      origin: United States
+                      temperament: Curious, Social, Intelligent, Loyal, Outgoing, Adventurous, Affectionate
+                      weight:
+                        imperial: 8 - 25
+                        metric: 4 - 11
+                      wikipedia_url: https://en.wikipedia.org/wiki/Savannah_cat
+                    - alt_names: Scot Fold
+                      description: The Scottish Fold is a sweet, charming breed. She is an easy cat to live with and to care for. She is affectionate and is comfortable with all members of her family. Her tail should be handled gently. Folds are known for sleeping on their backs, and for sitting with their legs stretched out and their paws on their belly. This is called the "Buddha Position".
+                      id: sfol
+                      life_span: 11 - 14
+                      name: Scottish Fold
+                      origin: United Kingdom
+                      temperament: Affectionate, Intelligent, Loyal, Playful, Social, Sweet, Loving
+                      weight:
+                        imperial: 5 - 11
+                        metric: 2 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Scottish_Fold
+                    - alt_names: Shepherd Cat
+                      description: 'The Selkirk Rex is an incredibly patient, loving, and tolerant breed. The Selkirk also has a silly side and is sometimes described as clownish. She loves being a lap cat and will be happy to chat with you in a quiet voice if you talk to her. '
+                      id: srex
+                      life_span: 14 - 15
+                      name: Selkirk Rex
+                      origin: United States
+                      temperament: Active, Affectionate, Dependent, Gentle, Patient, Playful, Quiet, Social
+                      weight:
+                        imperial: 6 - 16
+                        metric: 3 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Selkirk_Rex
+                    - alt_names: Siam, Thai Cat
+                      description: While Siamese cats are extremely fond of their people, they will follow you around and supervise your every move, being talkative and opinionated. They are a demanding and social cat, that do not like being left alone for long periods.
+                      id: siam
+                      life_span: 12 - 15
+                      name: Siamese
+                      origin: Thailand
+                      temperament: Active, Agile, Clever, Sociable, Loving, Energetic
+                      weight:
+                        imperial: 8 - 15
+                        metric: 4 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Siamese_(cat)
+                    - alt_names: Moscow Semi-longhair, HairSiberian Forest Cat
+                      description: 'The Siberians dog like temperament and affection makes the ideal lap cat and will live quite happily indoors. Very agile and powerful, the Siberian cat can easily leap and reach high places, including the tops of refrigerators and even doors. '
+                      id: sibe
+                      life_span: 12 - 15
+                      name: Siberian
+                      origin: Russia
+                      temperament: Curious, Intelligent, Loyal, Sweet, Agile, Playful, Affectionate
+                      weight:
+                        imperial: 8 - 16
+                        metric: 4 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Siberian_(cat)
+                    - alt_names: Drain Cat, Kucinta, Pura
+                      description: The Singapura is usually cautious when it comes to meeting new people, but loves attention from his family so much that she sometimes has the reputation of being a pest. This is a highly active, curious and affectionate cat. She may be small, but she knows she’s in charge
+                      id: sing
+                      life_span: 12 - 15
+                      name: Singapura
+                      origin: Singapore
+                      temperament: Affectionate, Curious, Easy Going, Intelligent, Interactive, Lively, Loyal
+                      weight:
+                        imperial: 5 - 8
+                        metric: 2 - 4
+                      wikipedia_url: https://en.wikipedia.org/wiki/Singapura_(cat)
+                    - alt_names: ""
+                      description: The Snowshoe is a vibrant, energetic, affectionate and intelligent cat. They love being around people which makes them ideal for families, and becomes unhappy when left alone for long periods of time. Usually attaching themselves to one person, they do whatever they can to get your attention.
+                      id: snow
+                      life_span: 14 - 19
+                      name: Snowshoe
+                      origin: United States
+                      temperament: Affectionate, Social, Intelligent, Sweet-tempered
+                      weight:
+                        imperial: 7 - 12
+                        metric: 3 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Snowshoe_(cat)
+                    - alt_names: Fox Cat, Long-Haired Abyssinian
+                      description: The Somali lives life to the fullest. He climbs higher, jumps farther, plays harder. Nothing escapes the notice of this highly intelligent and inquisitive cat. Somalis love the company of humans and other animals.
+                      id: soma
+                      life_span: 12 - 16
+                      name: Somali
+                      origin: Somalia
+                      temperament: Mischievous, Tenacious, Intelligent, Affectionate, Gentle, Interactive, Loyal
+                      weight:
+                        imperial: 6 - 12
+                        metric: 3 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Somali_(cat)
+                    - alt_names: Canadian Hairless, Canadian Sphynx
+                      description: The Sphynx is an intelligent, inquisitive, extremely friendly people-oriented breed. Sphynx commonly greet their owners  at the front door, with obvious excitement and happiness. She has an unexpected sense of humor that is often at odds with her dour expression.
+                      id: sphy
+                      life_span: 12 - 14
+                      name: Sphynx
+                      origin: Canada
+                      temperament: Loyal, Inquisitive, Friendly, Quiet, Gentle
+                      weight:
+                        imperial: 6 - 12
+                        metric: 3 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Sphynx_(cat)
+                    - alt_names: Tonk
+                      description: Intelligent and generous with their affection, a Tonkinese will supervise all activities with curiosity. Loving, social, active, playful, yet content to be a lap cat
+                      id: tonk
+                      life_span: 14 - 16
+                      name: Tonkinese
+                      origin: Canada
+                      temperament: Curious, Intelligent, Social, Lively, Outgoing, Playful, Affectionate
+                      weight:
+                        imperial: 6 - 12
+                        metric: 3 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Tonkinese_(cat)
+                    - alt_names: ""
+                      description: The Toyger has a sweet, calm personality and is generally friendly. He's outgoing enough to walk on a leash, energetic enough to play fetch and other interactive games, and confident enough to get along with other cats and friendly dogs.
+                      id: toyg
+                      life_span: 12 - 15
+                      name: Toyger
+                      origin: United States
+                      temperament: Playful, Social, Intelligent
+                      weight:
+                        imperial: 7 - 15
+                        metric: 3 - 7
+                      wikipedia_url: https://en.wikipedia.org/wiki/Toyger
+                    - alt_names: Ankara
+                      description: This is a smart and intelligent cat which bonds well with humans. With its affectionate and playful personality the Angora is a top choice for families. The Angora gets along great with other pets in the home, but it will make clear who is in charge, and who the house belongs to
+                      id: tang
+                      life_span: 15 - 18
+                      name: Turkish Angora
+                      origin: Turkey
+                      temperament: Affectionate, Agile, Clever, Gentle, Intelligent, Playful, Social
+                      weight:
+                        imperial: 5 - 10
+                        metric: 2 - 5
+                      wikipedia_url: https://en.wikipedia.org/wiki/Turkish_Angora
+                    - alt_names: Turkish Cat, Swimming cat
+                      description: 'While the Turkish Van loves to jump and climb, play with toys, retrieve and play chase, she is is big and ungainly; this is one cat who doesn’t always land on his feet. While not much of a lap cat, the Van will be happy to cuddle next to you and sleep in your bed. '
+                      id: tvan
+                      life_span: 12 - 17
+                      name: Turkish Van
+                      origin: Turkey
+                      temperament: Agile, Intelligent, Loyal, Playful, Energetic
+                      weight:
+                        imperial: 7 - 20
+                        metric: 3 - 9
+                      wikipedia_url: https://en.wikipedia.org/wiki/Turkish_Van
+                    - alt_names: York
+                      description: 'York Chocolate cats are known to be true lap cats with a sweet temperament. They love to be cuddled and petted. Their curious nature makes them follow you all the time and participate in almost everything you do, even if it''s related to water: unlike many other cats, York Chocolates love it.'
+                      id: ycho
+                      life_span: 13 - 15
+                      name: York Chocolate
+                      origin: United States
+                      temperament: Playful, Social, Intelligent, Curious, Friendly
+                      weight:
+                        imperial: 12 - 18
+                        metric: 5 - 8
+                      wikipedia_url: https://en.wikipedia.org/wiki/York_Chocolate
+        getCategories:
+            value:
+                ReqExample: {}
+                RespExample:
+                    - id: 5
+                      name: boxes
+                    - id: 15
+                      name: clothes
+                    - id: 1
+                      name: hats
+                    - id: 14
+                      name: sinks
+                    - id: 2
+                      name: space
+                    - id: 4
+                      name: sunglasses
+                    - id: 7
+                      name: ties
+        getImageById:
+            value:
+                ReqExample:
+                    image_id: e1m
+                RespExample:
+                    height: 1024
+                    id: e1m
+                    url: https://cdn2.thecatapi.com/images/e1m.jpg
+                    width: 768
+        searchCatImages:
+            value:
+                ReqExample: {}
+                RespExample:
+                    - height: 1024
+                      id: e1m
+                      url: https://cdn2.thecatapi.com/images/e1m.jpg
+                      width: 768
+    responses:
+        BadRequest:
+            content:
+                application/json:
+                    schema:
+                        $ref: '#/components/schemas/ErrorResponse'
+            description: Bad request
+        InternalServerError:
+            content:
+                application/json:
+                    schema:
+                        $ref: '#/components/schemas/ErrorResponse'
+            description: Internal server error
+        NotFound:
+            content:
+                application/json:
+                    schema:
+                        $ref: '#/components/schemas/ErrorResponse'
+            description: Resource not found
+    schemas:
+        ApiInfo:
+            properties:
+                message:
+                    type: string
+                version:
+                    type: string
+            type: object
+        Breed:
+            properties:
+                alt_names:
+                    type: string
+                description:
+                    type: string
+                id:
+                    type: string
+                life_span:
+                    type: string
+                name:
+                    type: string
+                origin:
+                    type: string
+                temperament:
+                    type: string
+                weight:
+                    properties:
+                        imperial:
+                            type: string
+                        metric:
+                            type: string
+                    type: object
+                wikipedia_url:
+                    type: string
+            type: object
+        CatImage:
+            properties:
+                breeds:
+                    items:
+                        type: object
+                    type: array
+                height:
+                    type: integer
+                id:
+                    type: string
+                url:
+                    type: string
+                width:
+                    type: integer
+            type: object
+        Category:
+            properties:
+                id:
+                    type: integer
+                name:
+                    type: string
+            type: object
+        ErrorResponse:
+            properties:
+                error:
+                    example: Internal Server Error
+                    type: string
+                message:
+                    example: An unexpected error occurred.
+                    type: string
+            type: object
+info:
+    description: The Cat API provides various endpoints related to cat data.
+    title: The Cat API
+    version: 1.3.9
+openapi: 3.1.0
+paths:
+    /:
+        get:
+            operationId: getApiInfo
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    message:
+                                        type: string
+                                    version:
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Returns basic information about The Cat API.
+    /breeds:
+        get:
+            operationId: getBreeds
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                description: Root item
+                                items:
+                                    description: Array item
+                                    properties:
+                                        alt_names:
+                                            description: Alternative names of the cat breed
+                                            type: string
+                                        description:
+                                            description: A brief description of the cat breed.
+                                            type: string
+                                        id:
+                                            description: Unique identifier for each cat breed
+                                            type: string
+                                        life_span:
+                                            description: The average lifespan of a cat breed
+                                            type: string
+                                        name:
+                                            description: Name of the cat breed
+                                            type: string
+                                        origin:
+                                            description: Specify the origin of the cat breed.
+                                            type: string
+                                        temperament:
+                                            description: The temperament of the cat breed.
+                                            type: string
+                                        weight:
+                                            description: Weight of the cat breed, including the minimum and maximum weight in kilograms.
+                                            properties:
+                                                imperial:
+                                                    description: Unit of measurement for weight and height, either "lbs" or "inches"
+                                                    type: string
+                                                metric:
+                                                    description: 'Specify the metric to retrieve the cat breeds. The metric can be one of the following: "weight", "height", "size". Default metric is "weight".'
+                                                    type: string
+                                            type: object
+                                        wikipedia_url:
+                                            description: URL of the Wikipedia page for the cat breed
+                                            type: string
+                                    type: object
+                                type: array
+                    description: new desc
+                default:
+                    description: ""
+            summary: Retrieve all cat breeds
+    /categories:
+        get:
+            operationId: getCategories
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    properties:
+                                        id:
+                                            type: integer
+                                        name:
+                                            type: string
+                                    type: object
+                                type: array
+                    description: new desc
+                default:
+                    description: ""
+            summary: Retrieve all categories
+    /images/{image_id}:
+        get:
+            operationId: getImageById
+            parameters:
+                - description: The ID of the image to retrieve
+                  in: path
+                  name: image_id
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    breeds:
+                                        items:
+                                            type: object
+                                        type: array
+                                    height:
+                                        type: integer
+                                    id:
+                                        type: string
+                                    url:
+                                        type: string
+                                    width:
+                                        type: integer
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Retrieve a specific image by ID
+    /images/search:
+        get:
+            operationId: searchCatImages
+            parameters:
+                - description: Comma-delimited string of integers, matching the IDs of the Categories to filter the search
+                  in: query
+                  name: category_ids
+                  schema:
+                    type: string
+                - description: The size of the image to return
+                  in: query
+                  name: size
+                  schema:
+                    type: string
+                - description: Comma-delimited string of image types to return (gif, jpg, png)
+                  in: query
+                  name: mime_types
+                  schema:
+                    type: string
+                - description: Response format (json or src)
+                  in: query
+                  name: format
+                  schema:
+                    type: string
+                - description: Integer - number of results to return
+                  in: query
+                  name: limit
+                  schema:
+                    type: integer
+                - description: The order to return results in
+                  in: query
+                  name: order
+                  schema:
+                    type: string
+                - description: Integer - used for paginating through all the results
+                  in: query
+                  name: page
+                  schema:
+                    type: integer
+                - description: Comma-delimited string of integers, matching the IDs of the Breeds to filter the search
+                  in: query
+                  name: breed_ids
+                  schema:
+                    type: string
+                - description: API Key for extended access
+                  in: header
+                  name: x-api-key
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    properties:
+                                        breeds:
+                                            items:
+                                                type: object
+                                            type: array
+                                        height:
+                                            type: integer
+                                        id:
+                                            type: string
+                                        url:
+                                            type: string
+                                        width:
+                                            type: integer
+                                    type: object
+                                type: array
+                    description: new desc
+                default:
+                    description: ""
+            summary: Search for cat images
+servers:
+    - url: https://api.thecatapi.com/v1

@@ -1,0 +1,106 @@
+components:
+    examples:
+        getSnapshot:
+            value:
+                ReqExample:
+                    url: https://aaclive.com
+                RespExample:
+                    archived_snapshots:
+                        closest:
+                            available: true
+                            status: "200"
+                            timestamp: "20240812020257"
+                            url: http://web.archive.org/web/20240812020257/https://aaclive.com/
+                    url: https://aaclive.com
+    schemas:
+        SnapshotResponse:
+            description: new param
+            properties:
+                archived_snapshots:
+                    description: new param
+                    properties:
+                        closest:
+                            description: new param
+                            properties:
+                                available:
+                                    description: Availability of the snapshot
+                                    type: boolean
+                                timestamp:
+                                    description: Timestamp of the closest snapshot
+                                    format: date-time
+                                    type: string
+                                url:
+                                    description: URL of the closest snapshot
+                                    type: string
+                            type: object
+                    type: object
+            type: object
+info:
+    description: Retrieves website snapshots from the Wayback Machine.
+    title: The Wayback Machine
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /wayback/available:
+        get:
+            operationId: getSnapshot
+            parameters:
+                - description: URL of the website to retrieve the snapshot for
+                  in: query
+                  name: url
+                  required: true
+                  schema:
+                    default: https://aaclive.com
+                    type: string
+                - description: Timestamp in the format YYYYMMDDhhmmss to retrieve snapshots at a certain time
+                  in: query
+                  name: timestamp
+                  schema:
+                    type: string
+                - description: Optional callback to produce a JSONP response
+                  in: query
+                  name: callback
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    archived_snapshots:
+                                        description: This parameter represents the archived snapshots of the webpage.
+                                        properties:
+                                            closest:
+                                                description: Specify whether to retrieve the closest archived image or not. Default is false.
+                                                properties:
+                                                    available:
+                                                        description: Specify whether the archived images are available for the given URL.
+                                                        type: boolean
+                                                    status:
+                                                        description: Status of the retrieval process. Possible values are "success", "pending", "failed".
+                                                        type: string
+                                                    timestamp:
+                                                        description: The timestamp of the archived image you want to retrieve, in the format "YYYY-MM-DD HH:MM:SS".
+                                                        type: string
+                                                    url:
+                                                        description: URL of the webpage to access and download the archived images.
+                                                        type: string
+                                                type: object
+                                        type: object
+                                    url:
+                                        description: URL of the webpage to access and download the archived images.
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: This tool allows you to retrieve images from a given URL using the Wayback Machine. Enter the URL of the webpage to access and download the archived images.
+servers:
+    - url: https://archive.org

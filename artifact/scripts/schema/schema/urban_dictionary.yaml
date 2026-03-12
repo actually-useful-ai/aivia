@@ -1,0 +1,202 @@
+components:
+    examples:
+        GET_define_Z4SMzh:
+            value:
+                ReqExample:
+                    term: fuck
+                    x-rapidapi-host: mashape-community-urban-dictionary.p.rapidapi.com
+                    x-rapidapi-key: ea3e364b9fmsh2c8edee27714d21p162bd8jsnfca2373a7bb3
+                RespExample:
+                    list:
+                        - author: Sassy Sasha
+                          current_vote: ""
+                          defid: 12562289
+                          definition: The only fucking [word that] can be put [everyfuckingwhere] and still fucking make fucking [sense].
+                          example: '[Fuckers].'
+                          permalink: http://fuck.urbanup.com/12562289
+                          thumbs_down: 1621
+                          thumbs_up: 28054
+                          word: fuck
+                          written_on: "2018-02-15T00:35:06.625Z"
+                        - author: mongo421
+                          current_vote: ""
+                          defid: 9269737
+                          definition: '[A word] [Gordan Ramsay] uses [a lot].'
+                          example: My mouths [fucked], its fucked!
+                          permalink: http://fuck.urbanup.com/9269737
+                          thumbs_down: 339
+                          thumbs_up: 5418
+                          word: fuck
+                          written_on: "2016-02-19T05:23:18.583Z"
+                        - author: explodoboy
+                          current_vote: ""
+                          defid: 11746533
+                          definition: The word that is said immediately after the [WiFi] [stops] [working].
+                          example: '"[FUCK]! THE [WIFI] STOPPED [WORKING]!"'
+                          permalink: http://fuck.urbanup.com/11746533
+                          thumbs_down: 658
+                          thumbs_up: 9736
+                          word: fuck
+                          written_on: "2017-06-29T23:12:49.479Z"
+                        - author: danlester
+                          current_vote: ""
+                          defid: 9856136
+                          definition: "Yes, fuck.\r\n1; The [insertion] of a [male's] genitals into another humans' genitals or anus. Also known as having sex with someone.\r\n2; Used for [exaggeration] by placing the word before another they would like to further express.\r\n3; A person who is far from intelligent."
+                          example: "1; I've fucked a [tortoise] in my past life.\r\n2; Ducks can't fucking sneeze you dumbass! ..They can't right?\r\n3; You're one huge moronic fuck to have had to search [what fuck] means on the Urban Dictionary [as am] I for taking the time to define it to the horny shits who actually search these things up, like you, my dear friend."
+                          permalink: http://fuck.urbanup.com/9856136
+                          thumbs_down: 120
+                          thumbs_up: 1210
+                          word: fuck
+                          written_on: "2016-06-10T01:48:10.942Z"
+                        - author: buffalo JMR
+                          current_vote: ""
+                          defid: 6739418
+                          definition: fuck can have many definitions like love or [lust], or a [hate word], or can even be used to mean [frustration].....
+                          example: |-
+                            "[sara] [i wanna fuck you] so hard"!!!
+
+                            "fuck you jim"!!!
+
+                            "[man this] test is so fucking hard"!!!
+                          permalink: http://fuck.urbanup.com/6739418
+                          thumbs_down: 76
+                          thumbs_up: 710
+                          word: fuck
+                          written_on: "2012-09-03T20:38:00.652Z"
+                        - author: mxmtoon </3
+                          current_vote: ""
+                          defid: 16830772
+                          definition: FUCK IS [THE BEST WORD EVER] IT CAN BE USED IN ANY SITUATION AND [FITS] IN IN EVERY FUCKING WORD TO EVER FUCKING EXIST I [LOBE] THIS WORD!
+                          example: I [fucking love] this movie ( fuck this ( [FUCK OFF KAREN] NO ONE CARES THAT YOUR WIG GOT [SNATCHED] GET A BETTER ONE
+                          permalink: http://fuck.urbanup.com/16830772
+                          thumbs_down: 25
+                          thumbs_up: 252
+                          word: fuck
+                          written_on: "2021-12-11T12:37:05.395Z"
+                        - author: olly olly oxenfree
+                          current_vote: ""
+                          defid: 3580091
+                          definition: The best [word in] the world. Can be used in any [situation]. can [be good] or bad.
+                          example: "[You wanna go] fuck.\r\nFuck off!\r\nStop [fucking around].\r\nI [fucking love] this song!!"
+                          permalink: http://fuck.urbanup.com/3580091
+                          thumbs_down: 202
+                          thumbs_up: 1154
+                          word: fuck
+                          written_on: "2008-12-28T22:06:01.000Z"
+                        - author: Lick101
+                          current_vote: ""
+                          defid: 9305327
+                          definition: Means to have sex, but can be used in other fucking [ways], like an adjective or a [proper noun]. Basically for [fucking everything].
+                          example: "1: [Let's fuck] in the car.\r\n2: ([game over]) [FUUUUUUUUUUUCK]!\r\n3: Fucking teachers giving out fucking grades.\r\n4: You dumb fuck.\r\n5: HOLY FUCK!!!"
+                          permalink: http://fuck.urbanup.com/9305327
+                          thumbs_down: 13
+                          thumbs_up: 98
+                          word: fuck
+                          written_on: "2016-02-25T11:08:30.257Z"
+                        - author: yo fucker
+                          current_vote: ""
+                          defid: 13082236
+                          definition: '[sex]'
+                          example: hey [lets fuck] [tonite]! it'll be [fun]!
+                          permalink: http://fuck.urbanup.com/13082236
+                          thumbs_down: 4
+                          thumbs_up: 45
+                          word: fuck
+                          written_on: "2018-07-21T11:45:26.870Z"
+                        - author: BurningButterz
+                          current_vote: ""
+                          defid: 13175344
+                          definition: '[the word] said when your [phone] is [on 1]%'
+                          example: '"hey dude wanna play [PUBG mobile]?" "sure just lemme check [my phone] [perce]..." "ahh dude?" "FUCK!"'
+                          permalink: http://fuck.urbanup.com/13175344
+                          thumbs_down: 5
+                          thumbs_up: 48
+                          word: fuck
+                          written_on: "2018-09-05T09:07:11.407Z"
+info:
+    description: Gets definitions from Urban Dictionary
+    title: Urban Dictionary
+    version: v1
+openapi: 3.0.0
+paths:
+    /define:
+        get:
+            operationId: GET_define_Z4SMzh
+            parameters:
+                - description: Specify the term or concept you want to retrieve the definition for, in string format.
+                  in: query
+                  name: term
+                  schema:
+                    type: string
+                - description: API key for accessing the RapidAPI service.
+                  in: header
+                  name: x-rapidapi-key
+                  required: true
+                  schema:
+                    default: ea3e364b9fmsh2c8edee27714d21p162bd8jsnfca2373a7bb3
+                    type: string
+                    x-global-disable: true
+                - description: The host of the RapidAPI service to be used for retrieving the definition.
+                  in: header
+                  name: x-rapidapi-host
+                  required: true
+                  schema:
+                    default: mashape-community-urban-dictionary.p.rapidapi.com
+                    type: string
+                    x-global-disable: true
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    list:
+                                        description: List of definitions for the given term or concept.
+                                        items:
+                                            description: Array item
+                                            properties:
+                                                author:
+                                                    description: Author of the definition or concept.
+                                                    type: string
+                                                current_vote:
+                                                    description: The current vote for the term or concept.
+                                                    type: string
+                                                defid:
+                                                    description: Unique identifier for the definition of the term or concept.
+                                                    type: number
+                                                definition:
+                                                    description: Definition of the term or concept.
+                                                    type: string
+                                                example:
+                                                    description: Example of the term or concept.
+                                                    type: string
+                                                permalink:
+                                                    description: The permalink is the URL that provides a direct link to the definition of the term or concept.
+                                                    type: string
+                                                thumbs_down:
+                                                    description: Number of thumbs down received for the term or concept definition.
+                                                    type: number
+                                                thumbs_up:
+                                                    description: Number of thumbs up received for the term or concept.
+                                                    type: number
+                                                word:
+                                                    description: The term or concept to retrieve the definition for, in string format.
+                                                    type: string
+                                                written_on:
+                                                    description: Date when the definition was written.
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Retrieve the definition of a term or concept.
+servers:
+    - url: https://mashape-community-urban-dictionary.p.rapidapi.com

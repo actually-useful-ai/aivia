@@ -1,0 +1,174 @@
+/**
+ * AI Thought Bubble Component
+ * 
+ * Usage: Copy this code to your stylesheet
+ * Required HTML structure:
+ * <div id="thoughts-container">
+ *   <div class="thought-bubble">Content here</div>
+ * </div>
+ */
+
+/* Default light theme variables */
+:root {
+  --thought-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(240, 242, 245, 0.85));
+  --thought-border: rgba(0, 0, 0, 0.1);
+  --thought-shadow: rgba(0, 0, 0, 0.06);
+  --primary-text: #333333;
+}
+
+/* Dark theme variables */
+html[data-theme="dark"] {
+  --thought-bg: linear-gradient(145deg, rgba(40, 40, 40, 0.95), rgba(30, 30, 30, 0.85));
+  --thought-border: rgba(255, 255, 255, 0.1);
+  --thought-shadow: rgba(0, 0, 0, 0.2);
+  --primary-text: #e2e8f0;
+}
+
+/* Thoughts container */
+#thoughts-container {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 300px;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1000;
+  padding: 10px;
+  
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color, #0288d1) var(--secondary-bg, #f5f5f5);
+}
+
+/* Webkit scrollbar styles */
+#thoughts-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#thoughts-container::-webkit-scrollbar-track {
+  background: var(--secondary-bg, #f5f5f5);
+  border-radius: 8px;
+}
+
+#thoughts-container::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color, #0288d1);
+  border-radius: 8px;
+}
+
+/* Individual thought bubble */
+.thought-bubble {
+  background: var(--thought-bg);
+  border-radius: 24px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 16px var(--thought-shadow), 
+              0 0 0 1px var(--thought-border);
+  position: relative;
+  opacity: 0.95;
+  transition: all 0.3s ease;
+  transform: translateY(10px);
+  animation: appear 0.5s forwards, float 3s ease-in-out infinite;
+  max-width: 100%;
+  word-wrap: break-word;
+  color: var(--primary-text);
+}
+
+/* Bubble appearance animation */
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 0.95;
+    transform: translateY(0);
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Hover effect */
+.thought-bubble:hover {
+  opacity: 1;
+  box-shadow: 0 8px 20px var(--thought-shadow), 
+              0 0 0 1px var(--thought-border);
+  transform: translateY(-5px);
+}
+
+/* Content formatting */
+.thought-bubble p {
+  margin: 0 0 10px 0;
+}
+
+.thought-bubble p:last-child {
+  margin-bottom: 0;
+}
+
+/* Thought bubble decorations - small cloud bubbles */
+.thought-bubble::before,
+.thought-bubble::after {
+  content: "";
+  position: absolute;
+  background: var(--thought-bg);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.thought-bubble::before {
+  width: 20px;
+  height: 20px;
+  left: -10px;
+  bottom: 20px;
+  box-shadow: 0 3px 10px var(--thought-shadow);
+}
+
+.thought-bubble::after {
+  width: 14px;
+  height: 14px;
+  left: -20px;
+  bottom: 10px;
+  box-shadow: 0 2px 8px var(--thought-shadow);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #thoughts-container {
+    width: 200px;
+    right: 10px;
+    top: 70px;
+    max-height: calc(100vh - 140px);
+  }
+  
+  .thought-bubble {
+    padding: 12px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .thought-bubble::before,
+  .thought-bubble::after {
+    display: none; /* Hide decorative elements on mobile */
+  }
+}
+
+/* Accessibility: respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .thought-bubble {
+    animation: none;
+    transition: none;
+  }
+  
+  .thought-bubble:hover {
+    transform: none;
+  }
+} 

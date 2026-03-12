@@ -1,0 +1,153 @@
+components:
+    examples:
+        LocationsAddress_get:
+            value:
+                ReqExample:
+                    benchmark: Public_AR_Current
+                    city: Santa Barbara
+                    format: json
+                    state: California
+                    street: "309"
+                    zip: "93103"
+                RespExample:
+                    result:
+                        addressMatches: []
+                        input:
+                            address:
+                                city: Santa Barbara
+                                state: California
+                                street: "309"
+                                zip: "93103"
+                            benchmark:
+                                benchmarkDescription: Public Address Ranges - Current Benchmark
+                                benchmarkName: Public_AR_Current
+                                id: "4"
+                                isDefault: true
+info:
+    contact:
+        email: geo.geocoding.services@census.gov
+        url: https://www.census.gov/about/policies/privacy.html
+    description: A US Government resource that converts addresses or geographic coordinates (latitude/longitude) into standardized geographic identifiers. These identifiers can include census tracts, block groups, blocks, or other administrative areas.
+    title: US Census Geocoding
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /locations/address:
+        get:
+            description: Returns geocoded information for a given address.
+            operationId: LocationsAddress_get
+            parameters:
+                - description: The street address to geocode.
+                  in: query
+                  name: street
+                  required: true
+                  schema:
+                    default: "309"
+                    type: string
+                - description: The city of the address to geocode.
+                  in: query
+                  name: city
+                  required: true
+                  schema:
+                    default: Santa Barbara
+                    type: string
+                - description: The state of the address to geocode.
+                  in: query
+                  name: state
+                  required: true
+                  schema:
+                    default: California
+                    type: string
+                - description: The ZIP code of the address to geocode.
+                  in: query
+                  name: zip
+                  schema:
+                    default: "93103"
+                    type: string
+                - description: The benchmark to use for geocoding.
+                  in: query
+                  name: benchmark
+                  required: true
+                  schema:
+                    default: Public_AR_Current
+                    type: string
+                - description: The format of the output.
+                  in: query
+                  name: format
+                  required: true
+                  schema:
+                    default: json
+                    type: string
+                    x-global-disable: true
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    result:
+                                        description: Geocoded information for the given address.
+                                        properties:
+                                            addressMatches:
+                                                description: Array of address matches found for the given address. Each match includes the geocoded information such as the latitude, longitude, and other relevant details.
+                                                items:
+                                                    description: Array item
+                                                    type: string
+                                                type: array
+                                            input:
+                                                description: Input address information to be geocoded.
+                                                properties:
+                                                    address:
+                                                        description: 'The object should contain the following properties: street, city, state, and postal code.'
+                                                        properties:
+                                                            city:
+                                                                description: City of the geocoded address.
+                                                                type: string
+                                                            state:
+                                                                description: State of the given address.
+                                                                type: string
+                                                            street:
+                                                                description: Address street name.
+                                                                type: string
+                                                            zip:
+                                                                description: Zip code of the geocoded address.
+                                                                type: string
+                                                        type: object
+                                                    benchmark:
+                                                        description: Benchmark for geocoding, including name and id.
+                                                        properties:
+                                                            benchmarkDescription:
+                                                                description: Description of the benchmark used for geocoding the address.
+                                                                type: string
+                                                            benchmarkName:
+                                                                description: Name of the benchmark used for geocoding the address.
+                                                                type: string
+                                                            id:
+                                                                description: Unique identifier for the geocoded information.
+                                                                type: string
+                                                            isDefault:
+                                                                description: Specify whether the geocoded information is the default address.
+                                                                type: boolean
+                                                        type: object
+                                                type: object
+                                        type: object
+                                type: object
+                        application/xml:
+                            schema:
+                                type: object
+                    description: Successful response
+                "400":
+                    description: Bad request
+                "404":
+                    description: Not found
+                "500":
+                    description: Internal server error
+            summary: Geocode an address
+servers:
+    - url: https://geocoding.geo.census.gov/geocoder

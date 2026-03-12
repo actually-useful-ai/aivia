@@ -1,0 +1,56 @@
+components:
+    examples:
+        predictAge:
+            value:
+                ReqExample:
+                    name: jim
+                RespExample:
+                    age: 73
+                    count: 30886
+                    name: jim
+info:
+    description: The Agify API predicts the age of a person given their name.
+    title: Agify
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /:
+        get:
+            operationId: predictAge
+            parameters:
+                - description: The name to predict age for.
+                  in: query
+                  name: name
+                  required: true
+                  schema:
+                    type: string
+                - description: An optional ISO 3166-1 alpha-2 country code to improve accuracy.
+                  in: query
+                  name: country_id
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    age:
+                                        type: integer
+                                    count:
+                                        type: integer
+                                    name:
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: This endpoint returns the predicted age, count of occurrences, and name provided.
+servers:
+    - url: https://api.agify.io

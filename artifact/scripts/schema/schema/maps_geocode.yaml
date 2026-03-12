@@ -1,0 +1,260 @@
+components:
+    examples:
+        forwardGeocode:
+            value:
+                ReqExample:
+                    api_key: 66be6044be017202539979xpl8d5b6b
+                    q: 309 por la mar cir 93103
+                RespExample:
+                    - boundingbox:
+                        - "34.4188"
+                        - "34.4189"
+                        - "-119.666089"
+                        - "-119.665989"
+                      class: place
+                      display_name: 309, Por la Mar Circle, El Escorial Villas, Santa Barbara, Santa Barbara County, California, 93103, United States
+                      importance: 0.62001
+                      lat: "34.41885"
+                      licence: Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright
+                      lon: "-119.666039"
+                      osm_id: 6070158923
+                      osm_type: node
+                      place_id: 285115037
+                      type: house
+        reverseGeocode:
+            value:
+                ReqExample:
+                    api_key: 66be6044be017202539979xpl8d5b6b
+                    format: json
+                    lat: 34.41885
+                    lon: -119.666039
+                RespExample:
+                    address:
+                        ISO3166-2-lvl4: US-CA
+                        city: Santa Barbara
+                        country: United States
+                        country_code: us
+                        county: Santa Barbara County
+                        house_number: "309"
+                        postcode: "93103"
+                        residential: El Escorial Villas
+                        road: Por la Mar Circle
+                        state: California
+                    boundingbox:
+                        - "34.4188"
+                        - "34.4189"
+                        - "-119.666089"
+                        - "-119.665989"
+                    display_name: 309, Por la Mar Circle, El Escorial Villas, Santa Barbara, Santa Barbara County, California, 93103, United States
+                    lat: "34.41885"
+                    licence: Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright
+                    lon: "-119.666039"
+                    osm_id: 6070158923
+                    osm_type: node
+                    place_id: 285115037
+    securitySchemes:
+        apiKey:
+            in: query
+            name: api_key
+            type: apiKey
+info:
+    description: Turns latitude/longitude into an address, or an address into latitude/longitude.
+    title: Reverse Geocoder
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /reverse:
+        get:
+            operationId: reverseGeocode
+            parameters:
+                - description: The latitude to reverse geocode.
+                  in: query
+                  name: lat
+                  required: true
+                  schema:
+                    type: number
+                - description: The longitude to reverse geocode.
+                  in: query
+                  name: lon
+                  required: true
+                  schema:
+                    type: number
+                - description: Your API key.
+                  in: query
+                  name: api_key
+                  required: true
+                  schema:
+                    default: 66be6044be017202539979xpl8d5b6b
+                    type: string
+                    x-global-disable: true
+                - description: The format of the response data.
+                  in: query
+                  name: format
+                  required: true
+                  schema:
+                    default: json
+                    type: string
+                    x-global-disable: true
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    address:
+                                        description: Geographic coordinates converted into a human-readable address. The address is returned as an object with various properties such as street, city, state, and country.
+                                        properties:
+                                            ISO3166-2-lvl4:
+                                                description: ISO3166-2-lvl4 code representing the specific administrative division within a country.
+                                                type: string
+                                            city:
+                                                description: City name of the human-readable address.
+                                                type: string
+                                            country:
+                                                description: Country of the geographic coordinates.
+                                                type: string
+                                            country_code:
+                                                description: Country code of the address to be returned.
+                                                type: string
+                                            county:
+                                                description: County name of the address.
+                                                type: string
+                                            house_number:
+                                                description: House number of the address.
+                                                type: string
+                                            postcode:
+                                                description: Postal code of the corresponding address.
+                                                type: string
+                                            residential:
+                                                description: Residential address corresponding to the given geographic coordinates.
+                                                type: string
+                                            road:
+                                                description: The name of the road or street at the given geographic coordinates.
+                                                type: string
+                                            state:
+                                                description: State of the human-readable address.
+                                                type: string
+                                        type: object
+                                    boundingbox:
+                                        description: Array of coordinates representing the bounding box of the address.
+                                        items:
+                                            description: Array item
+                                            type: string
+                                        type: array
+                                    display_name:
+                                        description: The human-readable address corresponding to the given geographic coordinates.
+                                        type: string
+                                    lat:
+                                        description: Latitude of the geographic coordinates in decimal format.
+                                        type: string
+                                    licence:
+                                        description: License key for accessing the geocoding service.
+                                        type: string
+                                    lon:
+                                        description: Longitude of the location in decimal degrees.
+                                        type: string
+                                    osm_id:
+                                        description: Unique identifier for the OpenStreetMap object corresponding to the address.
+                                        type: number
+                                    osm_type:
+                                        description: 'Type of OpenStreetMap object: node, way, or relation.'
+                                        type: string
+                                    place_id:
+                                        description: Unique identifier for a specific geographic location.
+                                        type: number
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Convert geographic coordinates into a human-readable address.
+    /search:
+        get:
+            operationId: forwardGeocode
+            parameters:
+                - description: The address to geocode.
+                  in: query
+                  name: q
+                  required: true
+                  schema:
+                    default: 309 por la mar cir 93103
+                    type: string
+                - description: Your API key.
+                  in: query
+                  name: api_key
+                  required: true
+                  schema:
+                    default: 66be6044be017202539979xpl8d5b6b
+                    type: string
+                - description: The format of the response data.
+                  in: query
+                  name: format
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                description: Root item
+                                items:
+                                    description: Array item
+                                    properties:
+                                        boundingbox:
+                                            description: |-
+                                                Array of four coordinates representing the bounding box of the address.
+
+                                                Improved Description: Bounding box coordinates of the address, represented as an array of four values [min_longitude, min_latitude, max_longitude, max_latitude].
+                                            items:
+                                                description: Array item
+                                                type: string
+                                            type: array
+                                        class:
+                                            description: Specify the class of the address.
+                                            type: string
+                                        display_name:
+                                            description: The human-readable address that corresponds to the geographic coordinates.
+                                            type: string
+                                        importance:
+                                            description: Importance of the geographic coordinates, ranging from 0 to 1. A higher value indicates a more accurate and relevant result.
+                                            type: number
+                                        lat:
+                                            description: Latitude coordinate of the address in decimal degrees.
+                                            type: string
+                                        licence:
+                                            description: License key required to access the geocoding service.
+                                            type: string
+                                        lon:
+                                            description: Longitude of the geographic coordinates.
+                                            type: string
+                                        osm_id:
+                                            description: Unique identifier for the OpenStreetMap element corresponding to the address.
+                                            type: number
+                                        osm_type:
+                                            description: Type of OpenStreetMap element associated with the address.
+                                            type: string
+                                        place_id:
+                                            description: Unique identifier for a specific place.
+                                            type: number
+                                        type:
+                                            description: Specify the type of geographic coordinates to be returned.
+                                            type: string
+                                    type: object
+                                type: array
+                    description: new desc
+                default:
+                    description: ""
+            summary: Convert a human-readable address into geographic coordinates.
+servers:
+    - url: https://geocode.maps.co

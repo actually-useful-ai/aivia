@@ -1,0 +1,155 @@
+components:
+    securitySchemes:
+        apiKey:
+            in: query
+            name: key
+            type: apiKey
+info:
+    contact:
+        email: support@windy.com
+    description: Provides access to webcams worldwide, including filtering by country, category, and location.
+    license:
+        name: Proprietary
+        url: https://api.windy.com/webcams/api/v3/legal
+    title: Windy Webcams API
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /categories:
+        get:
+            operationId: Categories_get
+            parameters:
+                - description: api key
+                  in: header
+                  name: x-windy-api-key
+                  required: true
+                  schema:
+                    default: 
+                    type: string
+                    x-global-disable: true
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    type: string
+                                type: array
+                    description: A list of categories.
+            summary: Returns a list of categories for webcam filtering.
+    /continents:
+        get:
+            operationId: Continents_get
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    type: string
+                                type: array
+                    description: A list of continents.
+            summary: Returns geo codes for specific continents.
+    /countries:
+        get:
+            operationId: Countries_get
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    type: string
+                                type: array
+                    description: A list of countries.
+            summary: Returns geo codes for specific countries.
+    /export/all-webcams.json:
+        get:
+            operationId: ExportAllWebcamsJson_get
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                    description: A JSON file with all webcams.
+            summary: Returns a JSON file with basic information about all webcams.
+    /map/clusters:
+        get:
+            operationId: MapClusters_get
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    type: object
+                                type: array
+                    description: A list of map clusters.
+            summary: Returns a list of webcams optimized for display on a map.
+    /regions:
+        get:
+            operationId: Regions_get
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    type: string
+                                type: array
+                    description: A list of regions.
+            summary: Returns geo codes for specific regions.
+    /webcams:
+        get:
+            operationId: Webcams_get
+            parameters:
+                - in: query
+                  name: key
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: country
+                  schema:
+                    type: string
+                - in: query
+                  name: category
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    type: object
+                                type: array
+                    description: A list of webcams.
+            summary: Returns a list of webcams based on applied filters.
+    /webcams/{webcamId}:
+        get:
+            operationId: WebcamsWebcamid_get
+            parameters:
+                - in: path
+                  name: webcamId
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                    description: Webcam details.
+            summary: Returns details for a specific webcam by its ID.
+security:
+    - apiKey: []
+servers:
+    - url: https://api.windy.com/webcams/api/v3

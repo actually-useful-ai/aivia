@@ -1,0 +1,291 @@
+components:
+    examples:
+        getWordDefinitions:
+            value:
+                ReqExample:
+                    language: en
+                    word: apotheosis
+                RespExample:
+                    - license:
+                        name: CC BY-SA 3.0
+                        url: https://creativecommons.org/licenses/by-sa/3.0
+                      meanings:
+                        - antonyms: []
+                          definitions:
+                            - antonyms: []
+                              definition: The fact or action of becoming or making into a god; deification.
+                              synonyms:
+                                - deification
+                            - antonyms: []
+                              definition: Glorification, exaltation; crediting someone or something with extraordinary power or status.
+                              synonyms:
+                                - exaltation
+                                - glorification
+                            - antonyms: []
+                              definition: A glorified example or ideal; the apex or pinnacle (of a concept or belief).
+                              synonyms:
+                                - apex
+                                - paragon
+                            - antonyms: []
+                              definition: The best moment or highest point in the development of something, for example of a life or career; the apex, culmination, or climax (of a development).
+                              synonyms:
+                                - apex
+                                - climax
+                                - culmination
+                                - peak
+                                - pinnacle
+                            - antonyms: []
+                              definition: Release from earthly life, ascension to heaven; death.
+                              synonyms:
+                                - death
+                            - antonyms: []
+                              definition: The latent entity that mediates between a person's psyche and their thoughts. The id, ego and superego in Freudian Psychology are examples of this.
+                              synonyms: []
+                          partOfSpeech: noun
+                          synonyms:
+                            - apex
+                            - climax
+                            - culmination
+                            - peak
+                            - pinnacle
+                            - apex
+                            - paragon
+                            - death
+                            - deification
+                            - exaltation
+                            - glorification
+                      phonetic: /əˌpɒθ.iːˈəʊ.sɪs/
+                      phonetics:
+                        - audio: https://api.dictionaryapi.dev/media/pronunciations/en/apotheosis-uk.mp3
+                          license:
+                            name: BY 4.0
+                            url: https://creativecommons.org/licenses/by/4.0
+                          sourceUrl: https://commons.wikimedia.org/w/index.php?curid=68569043
+                          text: /əˌpɒθ.iːˈəʊ.sɪs/
+                        - audio: https://api.dictionaryapi.dev/media/pronunciations/en/apotheosis-us.mp3
+                          license:
+                            name: BY-SA 3.0
+                            url: https://creativecommons.org/licenses/by-sa/3.0
+                          sourceUrl: https://commons.wikimedia.org/w/index.php?curid=3073886
+                          text: /əˌpɑː.θiˈoʊ.sɪs/
+                      sourceUrls:
+                        - https://en.wiktionary.org/wiki/apotheosis
+                      word: apotheosis
+    schemas:
+        Definition:
+            description: new param
+            properties:
+                antonyms:
+                    description: new param
+                    items:
+                        type: string
+                    type: array
+                definition:
+                    description: new param
+                    type: string
+                example:
+                    description: new param
+                    type: string
+                synonyms:
+                    description: new param
+                    items:
+                        type: string
+                    type: array
+            type: object
+        Meaning:
+            description: new param
+            properties:
+                definitions:
+                    description: new param
+                    items:
+                        properties:
+                            antonyms:
+                                items:
+                                    type: string
+                                type: array
+                            definition:
+                                type: string
+                            example:
+                                type: string
+                            synonyms:
+                                items:
+                                    type: string
+                                type: array
+                        type: object
+                    type: array
+                partOfSpeech:
+                    description: new param
+                    type: string
+            type: object
+        Phonetic:
+            description: new param
+            properties:
+                audio:
+                    description: new param
+                    type: string
+                text:
+                    description: new param
+                    type: string
+            type: object
+        WordDefinition:
+            description: new param
+            properties:
+                meanings:
+                    description: new param
+                    items:
+                        $ref: '#/components/schemas/Meaning'
+                    type: array
+                origin:
+                    description: new param
+                    type: string
+                phonetic:
+                    description: new param
+                    type: string
+                phonetics:
+                    description: new param
+                    items:
+                        $ref: '#/components/schemas/Phonetic'
+                    type: array
+                word:
+                    description: new param
+                    type: string
+            type: object
+info:
+    description: Free word definitions in multiple languages drawn from the Free Dictionary API
+    title: Free Dictionary
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /api/v2/entries/{language}/{word}:
+        get:
+            operationId: getWordDefinitions
+            parameters:
+                - description: new param
+                  in: path
+                  name: language
+                  required: true
+                  schema:
+                    default: en
+                    type: string
+                - description: new param
+                  in: path
+                  name: word
+                  required: true
+                  schema:
+                    default: apotheosis
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                description: Root item
+                                items:
+                                    description: Array item
+                                    properties:
+                                        license:
+                                            description: License information for accessing the dictionary API.
+                                            properties:
+                                                name:
+                                                    description: The word you want to retrieve the definition for. Please input the desired word.
+                                                    type: string
+                                                url:
+                                                    description: URL of the dictionary API to retrieve word definitions.
+                                                    type: string
+                                            type: object
+                                        meanings:
+                                            description: An array of meanings of the input word. Each meaning includes the definition, part of speech, and example sentences.
+                                            items:
+                                                description: Array item
+                                                properties:
+                                                    antonyms:
+                                                        description: Retrieve the antonyms of a given word. The antonyms are returned as an array.
+                                                        items:
+                                                            description: Array item
+                                                            type: string
+                                                        type: array
+                                                    definitions:
+                                                        description: Array of definitions of the input word.
+                                                        items:
+                                                            description: Array item
+                                                            properties:
+                                                                antonyms:
+                                                                    description: Retrieve the antonyms (words with opposite meanings) of the input word as an array.
+                                                                    items:
+                                                                        description: Array item
+                                                                        type: string
+                                                                    type: array
+                                                                definition:
+                                                                    description: Definition of the word in string format.
+                                                                    type: string
+                                                                synonyms:
+                                                                    description: Array of words that have similar meanings to the input word.
+                                                                    items:
+                                                                        description: Array item
+                                                                        type: string
+                                                                    type: array
+                                                            type: object
+                                                        type: array
+                                                    partOfSpeech:
+                                                        description: Specify the part of speech for the word.
+                                                        type: string
+                                                    synonyms:
+                                                        description: Array of words that have similar meanings to the input word.
+                                                        items:
+                                                            description: Array item
+                                                            type: string
+                                                        type: array
+                                                type: object
+                                            type: array
+                                        phonetic:
+                                            description: Phonetic representation of the word pronunciation.
+                                            type: string
+                                        phonetics:
+                                            description: Array of phonetic representations of the word
+                                            items:
+                                                description: Array item
+                                                properties:
+                                                    audio:
+                                                        description: The audio file of the pronunciation for the word.
+                                                        type: string
+                                                    license:
+                                                        description: Specify the type of license for accessing the dictionary API.
+                                                        properties:
+                                                            name:
+                                                                description: Specify the word for which you want to retrieve the definition.
+                                                                type: string
+                                                            url:
+                                                                description: URL of the dictionary API to retrieve word definitions, in string format.
+                                                                type: string
+                                                        type: object
+                                                    sourceUrl:
+                                                        description: URL of the source where the definition is retrieved from.
+                                                        type: string
+                                                    text:
+                                                        description: The word to retrieve the definition for, in string format.
+                                                        type: string
+                                                type: object
+                                            type: array
+                                        sourceUrls:
+                                            description: Array of source URLs for the word's definition
+                                            items:
+                                                description: Array item
+                                                type: string
+                                            type: array
+                                        word:
+                                            description: Specify the word for which you want to retrieve the definition.
+                                            type: string
+                                    type: object
+                                type: array
+                    description: new desc
+                default:
+                    description: ""
+            summary: This tool allows you to access a free dictionary API to retrieve definitions of words. Simply input the desired word and receive its definition as the output.
+servers:
+    - url: https://api.dictionaryapi.dev

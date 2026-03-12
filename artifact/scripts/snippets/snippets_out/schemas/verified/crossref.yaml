@@ -1,0 +1,391 @@
+openapi: 3.1.0
+info:
+  title: CrossRef Journal Search
+  description: |
+    CrossRef API allows developers to access metadata of scholarly content such as journal articles, books, and conference proceedings. With it, you can retrieve DOI, authors, publication dates, citations, and more, making it ideal for research tools, citation managers, or content aggregation plugins.
+  version: 1.0.0
+servers:
+  - url: https://api.crossref.org
+paths:
+  /works:
+    get:
+      summary: Search for academic articles and scholarly content
+      operationId: getWorks
+      parameters:
+        - in: query
+          name: filter
+          description: Filter results
+          schema:
+            type: string
+        - in: query
+          name: rows
+          description: Number of results to return
+          schema:
+            type: integer
+        - in: query
+          name: offset
+          description: Offset for pagination
+          schema:
+            type: integer
+        - in: query
+          name: query
+          description: Search query for works
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successful search response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkSearchResponse'
+        default:
+          description: Error response
+
+  /works/{doi}:
+    get:
+      summary: Retrieve work by DOI
+      operationId: getWorkByDoi
+      parameters:
+        - in: path
+          name: doi
+          required: true
+          description: DOI of the work
+          schema:
+            type: string
+            default: 10.1093/obo/9780199756810-0282
+      responses:
+        "200":
+          description: Successful DOI lookup response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkByDoiResponse'
+        default:
+          description: Error response
+
+components:
+  schemas:
+    WorkSearchResponse:
+      type: object
+      properties:
+        message:
+          type: object
+          properties:
+            facets:
+              type: object
+              description: Facets included in the search results for filtering.
+            items:
+              type: array
+              description: List of works matching the query.
+              items:
+                $ref: '#/components/schemas/WorkItem'
+            items-per-page:
+              type: number
+              description: Number of items returned per page.
+            query:
+              type: object
+              properties:
+                search-terms:
+                  type: string
+                  description: The search terms used in the query.
+                start-index:
+                  type: number
+                  description: Index of the first result returned.
+            total-results:
+              type: number
+              description: Total number of results for the query.
+        message-type:
+          type: string
+          description: Type of message (e.g., work-list).
+        message-version:
+          type: string
+          description: Version of the message format.
+        status:
+          type: string
+          description: Status of the response (e.g., "ok").
+
+    WorkByDoiResponse:
+      type: object
+      properties:
+        message:
+          type: object
+          properties:
+            DOI:
+              type: string
+              description: Digital Object Identifier of the work.
+            ISBN:
+              type: array
+              items:
+                type: string
+              description: ISBN(s) associated with the work.
+            URL:
+              type: string
+              description: URL to access the work.
+            abstract:
+              type: string
+              description: Abstract of the work.
+            container-title:
+              type: array
+              items:
+                type: string
+              description: Titles of the container (journal, book, etc.) where the work is published.
+            content-domain:
+              type: object
+              properties:
+                crossmark-restriction:
+                  type: boolean
+                  description: Crossmark restriction status.
+                domain:
+                  type: array
+                  items:
+                    type: string
+                  description: Domain(s) associated with the work.
+            created:
+              $ref: '#/components/schemas/WorkDate'
+            deposited:
+              $ref: '#/components/schemas/WorkDate'
+            indexed:
+              $ref: '#/components/schemas/WorkDate'
+            is-referenced-by-count:
+              type: number
+              description: Number of references citing the work.
+            isbn-type:
+              type: array
+              items:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    description: Type of ISBN (e.g., electronic, print).
+                  value:
+                    type: string
+                    description: ISBN value.
+            issued:
+              $ref: '#/components/schemas/WorkDate'
+            language:
+              type: string
+              description: Language of the work.
+            member:
+              type: string
+              description: Member associated with the work.
+            original-title:
+              type: array
+              items:
+                type: string
+              description: Original titles of the work.
+            prefix:
+              type: string
+              description: DOI prefix of the work.
+            published:
+              $ref: '#/components/schemas/WorkDate'
+            published-online:
+              $ref: '#/components/schemas/WorkDate'
+            publisher:
+              type: string
+              description: Publisher of the work.
+            reference-count:
+              type: number
+              description: Number of references in the work.
+            references-count:
+              type: number
+              description: Number of references cited by the work.
+            relation:
+              type: object
+              description: Relation to other works.
+            resource:
+              type: object
+              properties:
+                primary:
+                  type: object
+                  properties:
+                    URL:
+                      type: string
+                      description: Primary URL of the work.
+            score:
+              type: number
+              description: Relevance score of the work.
+            short-container-title:
+              type: array
+              items:
+                type: string
+              description: Short title(s) of the container where the work is published.
+            short-title:
+              type: array
+              items:
+                type: string
+              description: Short title(s) of the work.
+            source:
+              type: string
+              description: Source of the work metadata.
+            subject:
+              type: array
+              items:
+                type: string
+              description: Subjects associated with the work.
+            subtitle:
+              type: array
+              items:
+                type: string
+              description: Subtitle(s) of the work.
+            title:
+              type: array
+              items:
+                type: string
+              description: Title(s) of the work.
+            type:
+              type: string
+              description: Type of the work (e.g., journal-article, book-chapter).
+        message-type:
+          type: string
+          description: Type of message (e.g., work).
+        message-version:
+          type: string
+          description: Version of the message format.
+        status:
+          type: string
+          description: Status of the response (e.g., "ok").
+
+    WorkItem:
+      type: object
+      properties:
+        DOI:
+          type: string
+          description: DOI of the work.
+        ISBN:
+          type: array
+          items:
+            type: string
+          description: ISBN(s) associated with the work.
+        URL:
+          type: string
+          description: URL to access the work.
+        abstract:
+          type: string
+          description: Abstract of the work.
+        container-title:
+          type: array
+          items:
+            type: string
+          description: Titles of the containers where the work is published.
+        created:
+          $ref: '#/components/schemas/WorkDate'
+        deposited:
+          $ref: '#/components/schemas/WorkDate'
+        indexed:
+          $ref: '#/components/schemas/WorkDate'
+        is-referenced-by-count:
+          type: number
+          description: Number of times the work has been referenced by other works.
+        issued:
+          $ref: '#/components/schemas/WorkDate'
+        language:
+          type: string
+          description: Language of the work.
+        member:
+          type: string
+          description: Member associated with the work.
+        published:
+          $ref: '#/components/schemas/WorkDate'
+        published-online:
+          $ref: '#/components/schemas/WorkDate'
+        publisher:
+          type: string
+          description: Publisher of the work.
+        reference-count:
+          type: number
+          description: Number of references in the work.
+        references-count:
+          type: number
+          description: Number of references cited by the work.
+        score:
+          type: number
+          description: Relevance score of the work.
+        source:
+          type: string
+          description: Source of the work metadata.
+        title:
+          type: array
+          items:
+            type: string
+          description: Title(s) of the work.
+        type:
+          type: string
+          description: Type of the work (e.g., journal-article, book-chapter).
+
+    WorkDate:
+      type: object
+      properties:
+        date-parts:
+          type: array
+          items:
+            type: array
+            items:
+              type: number
+          description: Date parts (e.g., year, month, day).
+        date-time:
+          type: string
+          description: Date and time in ISO format.
+        timestamp:
+          type: number
+          description: Unix timestamp of the date.
+
+  examples:
+    getWorks:
+      value:
+        ReqExample:
+          filter: "is-update:true"
+          rows: 5
+        RespExample:
+          status: "ok"
+          message-type: "work-list"
+          message-version: "1.0.0"
+          message:
+            items-per-page: 5
+            query:
+              start-index: 0
+              "search-terms": null
+            total-results: 12345
+            items:
+              - DOI: "10.1093/ajae/aaq063"
+                title: "The Economics of Agricultural Development: World Food Systems and Resource Use"
+                author:
+                  - family: "Norton"
+                    given: "George W."
+                type: "journal-article"
+                created:
+                  date-parts: [[2010, 9, 7]]
+                  timestamp: 1283817600000
+                container-title: "American Journal of Agricultural Economics"
+                publisher: "Oxford University Press (OUP)"
+    
+    getWorkByDoi:
+      value:
+        ReqExample:
+          doi: 10.1093/obo/9780199756810-0282
+        RespExample:
+          status: "ok"
+          message-type: "work"
+          message-version: "1.0.0"
+          message:
+            DOI: 10.1093/obo/9780199756810-0282
+            ISBN:
+              - "9780199756810"
+            URL: http://dx.doi.org/10.1093/obo/9780199756810-0282
+            abstract: "<p>Considering the vicious cycle of exclusion that students with special needs are often trapped in— lacking the means for equal participation in education, society, and mainstream development programs—assistive technology has proven to have great potential in providing to all learners the ability to access the general education curriculum...</p>"
+            container-title:
+              - Education
+            content-domain:
+              crossmark-restriction: false
+              domain: []
+            created:
+              date-parts: []
+              date-time: "2021-07-27T12:25:10Z"
+              timestamp: 1627388710000
+            language: en
+            member: "286"
+            original-title:
+              - Assistive Technology
+            prefix: "10.1093"
+            publisher: Oxford University Press 

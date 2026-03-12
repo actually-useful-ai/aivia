@@ -1,0 +1,750 @@
+components:
+    examples:
+        GET_random_quo_nYMREW:
+            value:
+                ReqExample:
+                    accept: application/json
+                RespExample:
+                    _embedded:
+                        author:
+                            - _links:
+                                self:
+                                    href: http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw
+                              author_id: wVE8Y7BoRKCBkxs1JkqAvw
+                              bio: null
+                              created_at: "2016-11-14T01:14:02.096Z"
+                              name: Donald Trump
+                              slug: donald-trump
+                              updated_at: "2016-11-14T01:14:02.096Z"
+                        source:
+                            - _links:
+                                self:
+                                    href: http://api.tronalddump.io/quote-source/NlwaPs51S36GCZIv0--MRQ
+                              created_at: "2016-11-20T01:41:40.787Z"
+                              filename: null
+                              quote_source_id: NlwaPs51S36GCZIv0--MRQ
+                              remarks: null
+                              updated_at: "2016-11-20T01:41:40.787Z"
+                              url: https://twitter.com/realDonaldTrump/status/758120321845235712
+                    _links:
+                        self:
+                            href: http://api.tronalddump.io/quote/D4nE5UsHQYiE4_NCWIBQ2Q
+                    appeared_at: "2016-07-27T02:02:24.000Z"
+                    created_at: "2016-11-20T01:41:41.213Z"
+                    quote_id: D4nE5UsHQYiE4_NCWIBQ2Q
+                    tags: []
+                    updated_at: "2016-11-20T01:41:41.213Z"
+                    value: No matter what Bill Clinton says and no matter how well he says it, the phony media will exclaim it to be incredible. Highly overrated!
+        getRandomQuote:
+            value:
+                ReqExample:
+                    accept: application/json
+                RespExample:
+                    _embedded:
+                        author:
+                            - _links:
+                                self:
+                                    href: http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw
+                              author_id: wVE8Y7BoRKCBkxs1JkqAvw
+                              bio: null
+                              created_at: "2016-11-14T01:14:02.096Z"
+                              name: Donald Trump
+                              slug: donald-trump
+                              updated_at: "2016-11-14T01:14:02.096Z"
+                        source:
+                            - _links:
+                                self:
+                                    href: http://api.tronalddump.io/quote-source/FOaTMAmhSQC_UEOwHYH83w
+                              created_at: "2016-11-20T01:32:01.819Z"
+                              filename: null
+                              quote_source_id: FOaTMAmhSQC_UEOwHYH83w
+                              remarks: null
+                              updated_at: "2016-11-20T01:32:01.819Z"
+                              url: https://twitter.com/realDonaldTrump/status/747194865633595392
+                    _links:
+                        self:
+                            href: http://api.tronalddump.io/quote/MYY3u_skQ7u-iQe4e0SsIQ
+                    appeared_at: "2016-06-26T22:28:32.000Z"
+                    created_at: "2016-11-20T01:32:02.227Z"
+                    quote_id: MYY3u_skQ7u-iQe4e0SsIQ
+                    tags:
+                        - Hillary Clinton
+                    updated_at: "2016-11-20T01:32:02.227Z"
+                    value: 'Crooked Hillary Attacks Foreign Government Donations - While Ignoring Her Own: https://t.co/pr3BSHJSxL'
+        searchQuotes:
+            value:
+                ReqExample:
+                    accept: application/json
+                    query: hillary
+                RespExample:
+                    _embedded:
+                        quotes:
+                            - _embedded:
+                                author:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw
+                                      author_id: wVE8Y7BoRKCBkxs1JkqAvw
+                                      bio: null
+                                      created_at: "2016-11-14T01:14:02.096Z"
+                                      name: Donald Trump
+                                      slug: donald-trump
+                                      updated_at: "2016-11-14T01:14:02.096Z"
+                                source:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/quote-source/in8rU9GMRxeeweuLiqz8yg
+                                      created_at: "2016-11-14T01:15:13.359Z"
+                                      filename: null
+                                      quote_source_id: in8rU9GMRxeeweuLiqz8yg
+                                      remarks: null
+                                      updated_at: "2016-11-14T01:15:13.359Z"
+                                      url: https://twitter.com/realDonaldTrump/status/785296480672382979
+                              _links:
+                                self:
+                                    href: http://api.tronalddump.io/quote/YqNjg0CWTfeaBjFGnfN_mw
+                              appeared_at: "2016-10-10T00:00:00.000Z"
+                              created_at: "2016-11-14T01:15:13.463Z"
+                              quote_id: YqNjg0CWTfeaBjFGnfN_mw
+                              tags:
+                                - Hillary Clinton
+                              updated_at: "2016-11-14T01:15:13.463Z"
+                              value: Hypocrite! Hillary Clinton claims she needs a "public and a private stance" in discussions with Wall Street banks.
+                            - _embedded:
+                                author:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw
+                                      author_id: wVE8Y7BoRKCBkxs1JkqAvw
+                                      bio: null
+                                      created_at: "2016-11-14T01:14:02.096Z"
+                                      name: Donald Trump
+                                      slug: donald-trump
+                                      updated_at: "2016-11-14T01:14:02.096Z"
+                                source:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/quote-source/OEQgczdER7ePhLXysL-_kg
+                                      created_at: "2016-11-14T01:18:19.858Z"
+                                      filename: null
+                                      quote_source_id: OEQgczdER7ePhLXysL-_kg
+                                      remarks: null
+                                      updated_at: "2016-11-14T01:18:19.858Z"
+                                      url: https://twitter.com/realDonaldTrump/status/789599646821806085
+                              _links:
+                                self:
+                                    href: http://api.tronalddump.io/quote/tQw5s7yDQhiTHhXwagN4eg
+                              appeared_at: "2016-10-22T00:00:00.000Z"
+                              created_at: "2016-11-14T01:18:19.912Z"
+                              quote_id: tQw5s7yDQhiTHhXwagN4eg
+                              tags:
+                                - Hillary Clinton
+                              updated_at: "2016-11-14T01:18:19.912Z"
+                              value: '#CrookedHillary sending U.S. intelligence info. to Podesta’s hacked email is ‘unquestionably an OPSEC violation’'
+                            - _embedded:
+                                author:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw
+                                      author_id: wVE8Y7BoRKCBkxs1JkqAvw
+                                      bio: null
+                                      created_at: "2016-11-14T01:14:02.096Z"
+                                      name: Donald Trump
+                                      slug: donald-trump
+                                      updated_at: "2016-11-14T01:14:02.096Z"
+                                source:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/quote-source/ZW0YQfSPRYST47bSHPGyAQ
+                                      created_at: "2016-11-14T01:19:43.325Z"
+                                      filename: null
+                                      quote_source_id: ZW0YQfSPRYST47bSHPGyAQ
+                                      remarks: null
+                                      updated_at: "2016-11-14T01:19:43.325Z"
+                                      url: https://twitter.com/realDonaldTrump/status/789594671387447297
+                              _links:
+                                self:
+                                    href: http://api.tronalddump.io/quote/7GRjR4JtSiSr5E1kRsUYXA
+                              appeared_at: "2016-10-22T00:00:00.000Z"
+                              created_at: "2016-11-14T01:19:43.346Z"
+                              quote_id: 7GRjR4JtSiSr5E1kRsUYXA
+                              tags:
+                                - Hillary Clinton
+                              updated_at: "2016-11-14T01:19:43.346Z"
+                              value: '"{Crooked Hillary Clinton} created this mess, and she knows it." #DrainTheSwamp'
+                            - _embedded:
+                                author:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw
+                                      author_id: wVE8Y7BoRKCBkxs1JkqAvw
+                                      bio: null
+                                      created_at: "2016-11-14T01:14:02.096Z"
+                                      name: Donald Trump
+                                      slug: donald-trump
+                                      updated_at: "2016-11-14T01:14:02.096Z"
+                                source:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/quote-source/CDUrW0fDQj-o-ljz4wN_PQ
+                                      created_at: "2016-11-20T01:30:50.183Z"
+                                      filename: null
+                                      quote_source_id: CDUrW0fDQj-o-ljz4wN_PQ
+                                      remarks: null
+                                      updated_at: "2016-11-20T01:30:50.183Z"
+                                      url: https://twitter.com/realDonaldTrump/status/747191624535511040
+                              _links:
+                                self:
+                                    href: http://api.tronalddump.io/quote/euKVPx1FTSmkpnbPGTB18w
+                              appeared_at: "2016-06-26T22:15:40.000Z"
+                              created_at: "2016-11-20T01:30:51.752Z"
+                              quote_id: euKVPx1FTSmkpnbPGTB18w
+                              tags:
+                                - Hillary Clinton
+                              updated_at: "2016-11-20T01:30:51.752Z"
+                              value: Crooked Hillary Clinton got Brexit wrong. I said LEAVE will win. She has no sense of markets and such bad judgement. Only a question of time
+                            - _embedded:
+                                author:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw
+                                      author_id: wVE8Y7BoRKCBkxs1JkqAvw
+                                      bio: null
+                                      created_at: "2016-11-14T01:14:02.096Z"
+                                      name: Donald Trump
+                                      slug: donald-trump
+                                      updated_at: "2016-11-14T01:14:02.096Z"
+                                source:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/quote-source/-tPe7tBXTPODC8SBNTtwhg
+                                      created_at: "2016-11-20T01:30:58.736Z"
+                                      filename: null
+                                      quote_source_id: -tPe7tBXTPODC8SBNTtwhg
+                                      remarks: null
+                                      updated_at: "2016-11-20T01:30:58.736Z"
+                                      url: http://twitter.com/realDonaldTrump/status/710920670608236544
+                              _links:
+                                self:
+                                    href: http://api.tronalddump.io/quote/OW5xPT6ET2qwPde1ltwDuA
+                              appeared_at: "2016-03-18T20:07:50.000Z"
+                              created_at: "2016-11-20T01:30:59.399Z"
+                              quote_id: OW5xPT6ET2qwPde1ltwDuA
+                              tags:
+                                - Ted Cruz
+                              updated_at: "2016-11-20T01:30:59.399Z"
+                              value: Going to Salt Lake City, Utah, for a big rally. Lyin' Ted Cruz should not be allowed to win there - Mormons don't like LIARS! I beat Hillary
+                            - _embedded:
+                                author:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw
+                                      author_id: wVE8Y7BoRKCBkxs1JkqAvw
+                                      bio: null
+                                      created_at: "2016-11-14T01:14:02.096Z"
+                                      name: Donald Trump
+                                      slug: donald-trump
+                                      updated_at: "2016-11-14T01:14:02.096Z"
+                                source:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/quote-source/3aEtV_PUTZmfG0UcsYsv6w
+                                      created_at: "2016-11-20T01:31:00.352Z"
+                                      filename: null
+                                      quote_source_id: 3aEtV_PUTZmfG0UcsYsv6w
+                                      remarks: null
+                                      updated_at: "2016-11-20T01:31:00.352Z"
+                                      url: https://twitter.com/realDonaldTrump/status/759082026687352834
+                              _links:
+                                self:
+                                    href: http://api.tronalddump.io/quote/DeSd-G-gSJiV_DDgb-Mo5A
+                              appeared_at: "2016-07-29T17:43:52.000Z"
+                              created_at: "2016-11-20T01:31:01.149Z"
+                              quote_id: DeSd-G-gSJiV_DDgb-Mo5A
+                              tags:
+                                - Hillary Clinton
+                              updated_at: "2016-11-20T01:31:01.149Z"
+                              value: I am watching Crooked Hillary speak. Same old stuff, our country needs change!
+                            - _embedded:
+                                author:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw
+                                      author_id: wVE8Y7BoRKCBkxs1JkqAvw
+                                      bio: null
+                                      created_at: "2016-11-14T01:14:02.096Z"
+                                      name: Donald Trump
+                                      slug: donald-trump
+                                      updated_at: "2016-11-14T01:14:02.096Z"
+                                source:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/quote-source/t8ady1UaSdWXysNVu9D-Kw
+                                      created_at: "2016-11-20T01:31:01.670Z"
+                                      filename: null
+                                      quote_source_id: t8ady1UaSdWXysNVu9D-Kw
+                                      remarks: null
+                                      updated_at: "2016-11-20T01:31:01.670Z"
+                                      url: https://twitter.com/realDonaldTrump/status/785979396620324865
+                              _links:
+                                self:
+                                    href: http://api.tronalddump.io/quote/FObRdd6iT52XbLNOIAm8YQ
+                              appeared_at: "2016-10-11T23:04:25.000Z"
+                              created_at: "2016-11-20T01:31:02.318Z"
+                              quote_id: FObRdd6iT52XbLNOIAm8YQ
+                              tags:
+                                - Hillary Clinton
+                              updated_at: "2016-11-20T01:31:02.318Z"
+                              value: Wow, CNN Town Hall questions were given to Crooked Hillary Clinton in advance of big debates against Bernie Sanders. Hillary & CNN FRAUD!
+                            - _embedded:
+                                author:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw
+                                      author_id: wVE8Y7BoRKCBkxs1JkqAvw
+                                      bio: null
+                                      created_at: "2016-11-14T01:14:02.096Z"
+                                      name: Donald Trump
+                                      slug: donald-trump
+                                      updated_at: "2016-11-14T01:14:02.096Z"
+                                source:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/quote-source/OHLahvKWRrOppMdQJFUTVQ
+                                      created_at: "2016-11-20T01:31:05.651Z"
+                                      filename: null
+                                      quote_source_id: OHLahvKWRrOppMdQJFUTVQ
+                                      remarks: null
+                                      updated_at: "2016-11-20T01:31:05.651Z"
+                                      url: https://twitter.com/realDonaldTrump/status/762016426102296576
+                              _links:
+                                self:
+                                    href: http://api.tronalddump.io/quote/aDyy5-6RRtCPY15pYeS7Jg
+                              appeared_at: "2016-08-06T20:04:08.000Z"
+                              created_at: "2016-11-20T01:31:06.416Z"
+                              quote_id: aDyy5-6RRtCPY15pYeS7Jg
+                              tags:
+                                - Hillary Clinton
+                              updated_at: "2016-11-20T01:31:06.416Z"
+                              value: "#CrookedHillary is not fit to be our next president! #TrumpPence16 \nhttps://t.co/I0zJO2sZKk"
+                            - _embedded:
+                                author:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw
+                                      author_id: wVE8Y7BoRKCBkxs1JkqAvw
+                                      bio: null
+                                      created_at: "2016-11-14T01:14:02.096Z"
+                                      name: Donald Trump
+                                      slug: donald-trump
+                                      updated_at: "2016-11-14T01:14:02.096Z"
+                                source:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/quote-source/N41LZiIwTWuvR2RjrCW1LQ
+                                      created_at: "2016-11-20T01:31:38.411Z"
+                                      filename: null
+                                      quote_source_id: N41LZiIwTWuvR2RjrCW1LQ
+                                      remarks: null
+                                      updated_at: "2016-11-20T01:31:38.411Z"
+                                      url: https://twitter.com/realDonaldTrump/status/788150475258343424
+                              _links:
+                                self:
+                                    href: http://api.tronalddump.io/quote/d1NDHhK4QSCie2_iSr37Bg
+                              appeared_at: "2016-10-17T22:51:31.000Z"
+                              created_at: "2016-11-20T01:31:38.878Z"
+                              quote_id: d1NDHhK4QSCie2_iSr37Bg
+                              tags:
+                                - Hillary Clinton
+                              updated_at: "2016-11-20T01:31:38.878Z"
+                              value: 'Get rich quick! Crooked Hillary Clinton''s pay to play guide: https://t.co/uKh5sCFfrv'
+                            - _embedded:
+                                author:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw
+                                      author_id: wVE8Y7BoRKCBkxs1JkqAvw
+                                      bio: null
+                                      created_at: "2016-11-14T01:14:02.096Z"
+                                      name: Donald Trump
+                                      slug: donald-trump
+                                      updated_at: "2016-11-14T01:14:02.096Z"
+                                source:
+                                    - _links:
+                                        self:
+                                            href: http://api.tronalddump.io/quote-source/0-4RwS84Qguy3wRcKjCYYw
+                                      created_at: "2016-11-20T01:31:39.910Z"
+                                      filename: null
+                                      quote_source_id: 0-4RwS84Qguy3wRcKjCYYw
+                                      remarks: null
+                                      updated_at: "2016-11-20T01:31:39.910Z"
+                                      url: https://twitter.com/realDonaldTrump/status/738720347239809024
+                              _links:
+                                self:
+                                    href: http://api.tronalddump.io/quote/FD-bbzfeR8-FWuPUGRVqrg
+                              appeared_at: "2016-06-03T13:13:50.000Z"
+                              created_at: "2016-11-20T01:31:40.442Z"
+                              quote_id: FD-bbzfeR8-FWuPUGRVqrg
+                              tags:
+                                - Hillary Clinton
+                              updated_at: "2016-11-20T01:31:40.442Z"
+                              value: In Crooked Hillary's telepromter speech yesterday, she made up things that I said or believe but have no basis in fact. Not honest!
+                    _links:
+                        first:
+                            href: http://api.tronalddump.io/search/quote?query=hillary&page=0
+                        last:
+                            href: http://api.tronalddump.io/search/quote?query=hillary&page=29
+                        next:
+                            href: http://api.tronalddump.io/search/quote?query=hillary&page=1
+                        prev:
+                            href: http://api.tronalddump.io/search/quote?query=hillary&page=0
+                        self:
+                            href: http://api.tronalddump.io/search/quote?query=hillary&page=0
+                    count: 10
+                    total: 286
+info:
+    description: Quotes from everyone's favorite President!
+    title: Tronald Dump API
+    version: v1
+openapi: 3.0.0
+paths:
+    /random/quote:
+        get:
+            operationId: getRandomQuote
+            parameters:
+                - description: Specify the desired format to receive the quote response. Acceptable values are "text/plain" or "application/json". Default is "text/plain".
+                  in: header
+                  name: accept
+                  required: true
+                  schema:
+                    default: application/json
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    _embedded:
+                                        description: An object containing embedded resources related to the random quote.
+                                        properties:
+                                            author:
+                                                description: Array of authors of the random quotes.
+                                                items:
+                                                    description: Array item
+                                                    properties:
+                                                        _links:
+                                                            description: Links to related resources.
+                                                            properties:
+                                                                self:
+                                                                    description: This parameter represents the quote object itself.
+                                                                    properties:
+                                                                        href:
+                                                                            description: URL of the quote's source website.
+                                                                            type: string
+                                                                    type: object
+                                                            type: object
+                                                        author_id:
+                                                            description: ID of the author of the quote.
+                                                            type: string
+                                                        bio:
+                                                            type: string
+                                                        created_at:
+                                                            description: The date and time when the quote was created, in the format "YYYY-MM-DD HH:MM:SS".
+                                                            type: string
+                                                        name:
+                                                            description: Name of the person or character who said the quote, in string format.
+                                                            type: string
+                                                        slug:
+                                                            description: Unique identifier for the quote
+                                                            type: string
+                                                        updated_at:
+                                                            description: The last updated date and time of the quote. The format of the timestamp is YYYY-MM-DD HH:MM:SS.
+                                                            type: string
+                                                    type: object
+                                                type: array
+                                            source:
+                                                description: The source of the quote. It can be an array of strings representing the sources of the quote.
+                                                items:
+                                                    description: Array item
+                                                    properties:
+                                                        _links:
+                                                            description: Links to related resources.
+                                                            properties:
+                                                                self:
+                                                                    description: The response object containing the random quote.
+                                                                    properties:
+                                                                        href:
+                                                                            description: URL of the random quote page.
+                                                                            type: string
+                                                                    type: object
+                                                            type: object
+                                                        created_at:
+                                                            description: The timestamp when the quote was created, in format yyyy-mm-dd hh:mm:ss.
+                                                            type: string
+                                                        filename:
+                                                            type: string
+                                                        quote_source_id:
+                                                            description: ID of the source from which the quote is retrieved.
+                                                            type: string
+                                                        remarks:
+                                                            type: string
+                                                        updated_at:
+                                                            description: Last updated date and time of the quote.
+                                                            type: string
+                                                        url:
+                                                            description: URL of the random quote.
+                                                            type: string
+                                                    type: object
+                                                type: array
+                                        type: object
+                                    _links:
+                                        description: Links to related resources.
+                                        properties:
+                                            self:
+                                                description: Object representing the quote.
+                                                properties:
+                                                    href:
+                                                        description: URL of the quote's source website.
+                                                        type: string
+                                                type: object
+                                        type: object
+                                    appeared_at:
+                                        description: The date and time when the quote appeared. The format of the string should be yyyy-mm-dd hh:mm:ss.
+                                        type: string
+                                    created_at:
+                                        description: Date and time when the quote was created.
+                                        type: string
+                                    quote_id:
+                                        description: ID of the quote to retrieve.
+                                        type: string
+                                    tags:
+                                        description: The tags associated with the random quote.
+                                        items:
+                                            description: Array item
+                                            type: string
+                                        type: array
+                                    updated_at:
+                                        description: Last updated date and time of the quote. Please provide the date and time in ISO 8601 format (YYYY-MM-DDTHH:MM:SSZ).
+                                        type: string
+                                    value:
+                                        description: The random quote value returned as a string.
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: This tool allows you to retrieve a random quote. Simply make a GET request to the /random/quote endpoint to receive a random quote as the response.
+    /search/quote:
+        get:
+            operationId: searchQuotes
+            parameters:
+                - description: Specify the search query to retrieve Trump quotes.
+                  in: query
+                  name: query
+                  required: true
+                  schema:
+                    type: string
+                - description: Specify the tag to search for Trump quotes.
+                  in: query
+                  name: tag
+                  schema:
+                    type: string
+                - description: Specify the page number to retrieve Trump quotes.
+                  in: query
+                  name: page
+                  schema:
+                    type: string
+                - description: Specify the desired format to receive the quote response. Acceptable values are "text/plain" or "application/json". Default is "text/plain".
+                  in: header
+                  name: accept
+                  required: true
+                  schema:
+                    default: application/json
+                    type: string
+                    x-global-disable: true
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    _embedded:
+                                        description: Retrieve the embedded data containing the Trump quotes.
+                                        properties:
+                                            quotes:
+                                                description: Returns a list of quotes made by Donald Trump.
+                                                items:
+                                                    description: Array item
+                                                    properties:
+                                                        _embedded:
+                                                            description: Object containing embedded data for each quote.
+                                                            properties:
+                                                                author:
+                                                                    description: Array of authors of the Trump quotes
+                                                                    items:
+                                                                        description: Array item
+                                                                        properties:
+                                                                            _links:
+                                                                                description: Returns an object containing links related to the Trump quotes.
+                                                                                properties:
+                                                                                    self:
+                                                                                        description: Retrieve the quote information of Donald Trump.
+                                                                                        properties:
+                                                                                            href:
+                                                                                                description: URL of the website where the Trump quotes are sourced from.
+                                                                                                type: string
+                                                                                        type: object
+                                                                                type: object
+                                                                            author_id:
+                                                                                description: ID of the author of the Trump quotes
+                                                                                type: string
+                                                                            bio:
+                                                                                type: string
+                                                                            created_at:
+                                                                                description: Date and time when the quote was created, in the format "yyyy-mm-dd hh:mm:ss".
+                                                                                type: string
+                                                                            name:
+                                                                                description: Name of the person who said the quote
+                                                                                type: string
+                                                                            slug:
+                                                                                description: Unique identifier for each Trump quote
+                                                                                type: string
+                                                                            updated_at:
+                                                                                description: The date and time when the Trump quotes were last updated, in the format yyyy-mm-dd hh:mm:ss.
+                                                                                type: string
+                                                                        type: object
+                                                                    type: array
+                                                                source:
+                                                                    description: Return the source of the Trump quotes in a list.
+                                                                    items:
+                                                                        description: Array item
+                                                                        properties:
+                                                                            _links:
+                                                                                description: Return links related to the Trump quotes.
+                                                                                properties:
+                                                                                    self:
+                                                                                        description: Return the details of a specific Trump quote
+                                                                                        properties:
+                                                                                            href:
+                                                                                                description: URL of the source where the Trump quote was found.
+                                                                                                type: string
+                                                                                        type: object
+                                                                                type: object
+                                                                            created_at:
+                                                                                description: Specify the date and time when the Trump quote was created, in format yyyy-mm-dd hh:mm:ss.
+                                                                                type: string
+                                                                            filename:
+                                                                                type: string
+                                                                            quote_source_id:
+                                                                                description: The ID of the source from which the Trump quote is obtained.
+                                                                                type: string
+                                                                            remarks:
+                                                                                type: string
+                                                                            updated_at:
+                                                                                description: Date and time when the quote was last updated, in format yyyy-mm-dd hh:mm:ss.
+                                                                                type: string
+                                                                            url:
+                                                                                description: URL of the website where the Trump quotes are searched.
+                                                                                type: string
+                                                                        type: object
+                                                                    type: array
+                                                            type: object
+                                                        _links:
+                                                            description: Links to related resources
+                                                            properties:
+                                                                self:
+                                                                    description: Return the Trump quotes in the form of an object.
+                                                                    properties:
+                                                                        href:
+                                                                            description: URL of the web page where the Trump quotes are located.
+                                                                            type: string
+                                                                    type: object
+                                                            type: object
+                                                        appeared_at:
+                                                            description: The date and time when the Trump quote appeared.
+                                                            type: string
+                                                        created_at:
+                                                            description: Date and time when the quote was created, in format yyyy-mm-dd hh:mm:ss
+                                                            type: string
+                                                        quote_id:
+                                                            description: ID of the quote from the search results.
+                                                            type: string
+                                                        tags:
+                                                            description: Specify the tags to filter the Trump quotes.
+                                                            items:
+                                                                description: Array item
+                                                                type: string
+                                                            type: array
+                                                        updated_at:
+                                                            description: Last updated date of the Trump quotes.
+                                                            type: string
+                                                        value:
+                                                            description: The quote value returned from the search.
+                                                            type: string
+                                                    type: object
+                                                type: array
+                                        type: object
+                                    _links:
+                                        description: Return the links related to the Trump quotes
+                                        properties:
+                                            first:
+                                                description: Retrieve the first quote from the search results.
+                                                properties:
+                                                    href:
+                                                        description: URL of the webpage containing the Trump quote.
+                                                        type: string
+                                                type: object
+                                            last:
+                                                description: The last quote returned in the search results.
+                                                properties:
+                                                    href:
+                                                        description: URL of the source website for the Trump quotes.
+                                                        type: string
+                                                type: object
+                                            next:
+                                                description: Retrieve the next page of Trump quotes.
+                                                properties:
+                                                    href:
+                                                        description: URL of the webpage containing the Trump quote.
+                                                        type: string
+                                                type: object
+                                            prev:
+                                                description: Return the previous quote in an object format.
+                                                properties:
+                                                    href:
+                                                        description: URL of the webpage containing the Trump quote.
+                                                        type: string
+                                                type: object
+                                            self:
+                                                description: Retrieve the quotes spoken by Donald Trump. The response will be an object containing the details of the quote.
+                                                properties:
+                                                    href:
+                                                        description: URL of the web page where the Trump quotes are located.
+                                                        type: string
+                                                type: object
+                                        type: object
+                                    count:
+                                        description: Number of Trump quotes to retrieve
+                                        type: number
+                                    total:
+                                        description: Total number of Trump quotes found.
+                                        type: number
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Searches the trump quotes
+servers:
+    - url: https://api.tronalddump.io

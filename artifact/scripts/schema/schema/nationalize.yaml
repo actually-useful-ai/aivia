@@ -1,0 +1,70 @@
+components:
+    examples:
+        predictNationality:
+            value:
+                ReqExample:
+                    name: estelle
+                RespExample:
+                    country:
+                        - country_id: CI
+                          probability: 0.2389928654431706
+                        - country_id: CM
+                          probability: 0.1146388541556672
+                        - country_id: FR
+                          probability: 0.08098154045322474
+                        - country_id: CN
+                          probability: 0.053626439457082675
+                        - country_id: BF
+                          probability: 0.050518817085548264
+                    name: estelle
+info:
+    description: The Nationalize API predicts the nationality of a person given their name.
+    title: Nationalize
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /:
+        get:
+            operationId: predictNationality
+            parameters:
+                - description: The name to predict nationality for.
+                  in: query
+                  name: name
+                  required: true
+                  schema:
+                    type: string
+                - description: An optional ISO 3166-1 alpha-2 country code to improve accuracy.
+                  in: query
+                  name: country_id
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    country:
+                                        items:
+                                            properties:
+                                                country_id:
+                                                    type: string
+                                                probability:
+                                                    type: number
+                                            type: object
+                                        type: array
+                                    name:
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: This endpoint returns the probabilities of nationalities for the given name.
+servers:
+    - url: https://api.nationalize.io

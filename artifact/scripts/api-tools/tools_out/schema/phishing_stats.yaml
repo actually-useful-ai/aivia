@@ -1,0 +1,1145 @@
+components:
+    examples:
+        getPhishingData:
+            value:
+                ReqExample: {}
+                RespExample:
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS47583
+                      bgp: 2a02:4780:dead::/48
+                      city: ""
+                      countrycode: US
+                      countryname: United States
+                      date: "2017-05-26T03:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: 9b4aa54561d60ebbf98677565c30330621c40bd10dc74da9e387a85809ec5ecc
+                      host: 00000-00.000webhostapp.com
+                      http_code: null
+                      http_server: null
+                      id: 2
+                      ip: 2a02:4780:dead:6c62::1
+                      isp: HOSTINGER-AS, LT
+                      latitude: "38"
+                      longitude: "-97.82200000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: ""
+                      regionname: ""
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://00000-00.000webhostapp.com/
+                      virus_total: null
+                      vulns: null
+                      zipcode: ""
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS40034
+                      bgp: 208.91.196.0/23
+                      city: ""
+                      countrycode: US
+                      countryname: United States
+                      date: "2017-02-04T02:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: 2d0796d76d0bc902c2df3553198df2ed4e86f8117101f09138c2c89b3cf48456
+                      host: 000gbf1.wcomhost.com
+                      http_code: null
+                      http_server: null
+                      id: 3
+                      ip: 208.91.197.27
+                      isp: CONFLUENCE-NETWORK-INC - Confluence Networks Inc, VG
+                      latitude: "38"
+                      longitude: "-97.82200000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: ""
+                      regionname: ""
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://000gbf1.wcomhost.com/3K8D4N2/index.php
+                      virus_total: null
+                      vulns: null
+                      zipcode: ""
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS40034
+                      bgp: 208.91.196.0/23
+                      city: ""
+                      countrycode: US
+                      countryname: United States
+                      date: "2017-02-04T02:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: e3bbc26bb59186f749d50b32636187d5152ee6ca6d97094e902cb88f1c710350
+                      host: 000gbf1.wcomhost.com
+                      http_code: null
+                      http_server: null
+                      id: 4
+                      ip: 208.91.197.27
+                      isp: CONFLUENCE-NETWORK-INC - Confluence Networks Inc, VG
+                      latitude: "38"
+                      longitude: "-97.82200000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: ""
+                      regionname: ""
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://000gbf1.wcomhost.com/3K8D4N2/signin/222AACM965/login.php
+                      virus_total: null
+                      vulns: null
+                      zipcode: ""
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS40034
+                      bgp: 208.91.196.0/23
+                      city: ""
+                      countrycode: US
+                      countryname: United States
+                      date: "2017-02-04T02:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: ba66742ea0fd1fd63c7f88f2debeb566364346266f26d07ab56fc4f18757ca45
+                      host: 000gbf1.wcomhost.com
+                      http_code: null
+                      http_server: null
+                      id: 5
+                      ip: 208.91.197.27
+                      isp: CONFLUENCE-NETWORK-INC - Confluence Networks Inc, VG
+                      latitude: "38"
+                      longitude: "-97.82200000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: ""
+                      regionname: ""
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://000gbf1.wcomhost.com/3K8D4N2/signin/2598CN811B/login.php
+                      virus_total: null
+                      vulns: null
+                      zipcode: ""
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS40034
+                      bgp: 208.91.196.0/23
+                      city: ""
+                      countrycode: US
+                      countryname: United States
+                      date: "2017-05-01T03:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: 22b1c4a94c1279287a180d276398070ca7f6710b77fbf180ee4624f322ef1bdc
+                      host: 000hejn.wcomhost.com
+                      http_code: null
+                      http_server: null
+                      id: 6
+                      ip: 208.91.197.27
+                      isp: CONFLUENCE-NETWORK-INC - Confluence Networks Inc, VG
+                      latitude: "38"
+                      longitude: "-97.82200000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: ""
+                      regionname: ""
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://000hejn.wcomhost.com/PL/signin/DAD782MD49/login.php
+                      virus_total: null
+                      vulns: null
+                      zipcode: ""
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS40034
+                      bgp: 208.91.196.0/23
+                      city: ""
+                      countrycode: US
+                      countryname: United States
+                      date: "2017-05-01T03:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: c7306fe3e4e6d86b076deade35dfbc861e54bf621c1445e13fab5dcfc770784a
+                      host: 000hejn.wcomhost.com
+                      http_code: null
+                      http_server: null
+                      id: 7
+                      ip: 208.91.197.27
+                      isp: CONFLUENCE-NETWORK-INC - Confluence Networks Inc, VG
+                      latitude: "38"
+                      longitude: "-97.82200000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: ""
+                      regionname: ""
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://000hejn.wcomhost.com/PL/signin/M46BN3598A/login.php
+                      virus_total: null
+                      vulns: null
+                      zipcode: ""
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS40034
+                      bgp: 208.91.196.0/23
+                      city: ""
+                      countrycode: US
+                      countryname: United States
+                      date: "2017-05-02T03:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: 466e46031899ade61e0e9a6e3e70968eb56b8bf20ceab08360c7f03569d1f2d7
+                      host: 000hejn.wcomhost.com
+                      http_code: null
+                      http_server: null
+                      id: 8
+                      ip: 208.91.197.27
+                      isp: CONFLUENCE-NETWORK-INC - Confluence Networks Inc, VG
+                      latitude: "38"
+                      longitude: "-97.82200000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: ""
+                      regionname: ""
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://000hejn.wcomhost.com/PL/signin/M48E78E6A8/login.php
+                      virus_total: null
+                      vulns: null
+                      zipcode: ""
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS29119
+                      bgp: 5.57.224.0/21
+                      city: Madrid
+                      countrycode: ES
+                      countryname: Spain
+                      date: "2017-05-15T03:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: bb06cd529c831d07911ba0a1010e7776be3a1d88acdb06a324d646a36ff5775d
+                      host: 019201.webcindario.com
+                      http_code: null
+                      http_server: null
+                      id: 9
+                      ip: 5.57.226.202
+                      isp: SERVIHOSTING-AS AireNetworks - StackScale, ES
+                      latitude: "40"
+                      longitude: "-3.70260000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: MD
+                      regionname: Madrid
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://019201.webcindario.com/Password.php
+                      virus_total: null
+                      vulns: null
+                      zipcode: "28037"
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS36024
+                      bgp: 143.95.224.0/19
+                      city: Los Angeles
+                      countrycode: US
+                      countryname: United States
+                      date: "2017-04-27T03:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: e7955380a3bbf38fb13e8bafc13cebb7064ce2e1baf73ef4f425c3c1482bcf1d
+                      host: 029344t20.beijingvampires.com
+                      http_code: null
+                      http_server: null
+                      id: 10
+                      ip: 143.95.239.83
+                      isp: COLO4-CO - Colo4, LLC, US
+                      latitude: "34"
+                      longitude: "-118.26410000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: CA
+                      regionname: California
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://029344t20.beijingvampires.com/hta/.0291/.js/extend.php
+                      virus_total: null
+                      vulns: null
+                      zipcode: "90014"
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS36024
+                      bgp: 143.95.224.0/19
+                      city: Los Angeles
+                      countrycode: US
+                      countryname: United States
+                      date: "2017-08-14T03:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: 5d643e29c25b7aa36c9dd2e23a7473bff1354a3ad2461265a1aa41610e283aff
+                      host: 029344t20.beijingvampires.com
+                      http_code: null
+                      http_server: null
+                      id: 11
+                      ip: 143.95.239.83
+                      isp: COLO4-CO - Colo4, LLC, US
+                      latitude: "34"
+                      longitude: "-118.26410000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: CA
+                      regionname: California
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://029344t20.beijingvampires.com/hta/.0291/.js/extend.php?rand=13inboxlightaspxn.1774256418&amp;fid.4.1252899642&amp;fid=1&amp;fav.1&amp;rand.13inboxlight.aspxn.1774256418&amp;fid.1252899642&amp;fid.1&amp;fav.1&amp;login=&amp;loginid=&amp;.rand=13inboxlight.aspx?n=1774256418&amp;fid=4/
+                      virus_total: null
+                      vulns: null
+                      zipcode: "90014"
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS36024
+                      bgp: 143.95.224.0/19
+                      city: Los Angeles
+                      countrycode: US
+                      countryname: United States
+                      date: "2017-08-14T03:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: 5b2a6b9540a564e1274580b709bf14ca65c7e0ba7d94400e3854af5eaa7cdab0
+                      host: 029344t20.beijingvampires.com
+                      http_code: null
+                      http_server: null
+                      id: 12
+                      ip: 143.95.239.83
+                      isp: COLO4-CO - Colo4, LLC, US
+                      latitude: "34"
+                      longitude: "-118.26410000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: CA
+                      regionname: California
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://029344t20.beijingvampires.com/hta/.0291/.js/extend.php?rand=13InboxLightaspxn.1774256418&fid.4.1252899642&fid=1&fav.1&rand.13InboxLight.aspxn.1774256418&fid.1252899642&fid.1&fav.1&login=&loginID=&.rand=13InboxLight.aspx?n=1774256418&fid=4#n=1252899642&fid=1&fav=1/
+                      virus_total: null
+                      vulns: null
+                      zipcode: "90014"
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS36024
+                      bgp: 143.95.224.0/19
+                      city: Los Angeles
+                      countrycode: US
+                      countryname: United States
+                      date: "2017-04-27T03:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: a6a4d6da9de33df1cc6ef76a18e71e568aa718bc2519dfbe7846a04f0ce943e9
+                      host: 029344t20.beijingvampires.com
+                      http_code: null
+                      http_server: null
+                      id: 13
+                      ip: 143.95.239.83
+                      isp: COLO4-CO - Colo4, LLC, US
+                      latitude: "34"
+                      longitude: "-118.26410000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: CA
+                      regionname: California
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://029344t20.beijingvampires.com/hta/.0291/.js/index2.php
+                      virus_total: null
+                      vulns: null
+                      zipcode: "90014"
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS3900
+                      bgp: 209.99.0.0/17
+                      city: Austin
+                      countrycode: US
+                      countryname: United States
+                      date: "2017-07-27T14:30:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: ca4a6d6c8c3a15e17f3b33ac27e51400dc3c4ceab8a5373b46f6463fc6f47f57
+                      host: 0ntotext.com
+                      http_code: null
+                      http_server: null
+                      id: 14
+                      ip: 209.99.64.52
+                      isp: TEXASNET-ASN - YHC Corporation, US
+                      latitude: "30"
+                      longitude: "-97.71390000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: TX
+                      regionname: Texas
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://0ntotext.com/g_check/source/
+                      virus_total: null
+                      vulns: null
+                      zipcode: "78702"
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS3900
+                      bgp: 209.99.0.0/17
+                      city: Austin
+                      countrycode: US
+                      countryname: United States
+                      date: "2017-07-27T14:30:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: 8ba33a0bd408cc39f2c0df975bb41ce86ccc3b6421810a8da37be75430926206
+                      host: 0ntotext.com
+                      http_code: null
+                      http_server: null
+                      id: 15
+                      ip: 209.99.64.52
+                      isp: TEXASNET-ASN - YHC Corporation, US
+                      latitude: "30"
+                      longitude: "-97.71390000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: TX
+                      regionname: Texas
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: com
+                      url: http://0ntotext.com/g_check/source/Proccess.php
+                      virus_total: null
+                      vulns: null
+                      zipcode: "78702"
+                    - abuse_ch_malware: null
+                      abuse_contact: abuse@0rz.tw abuse@0rz.tw abuse@cis92.net abuse@twnic.net.tw admin@0rz.tw spam@anet.net.tw spam@ms1.hinet.net hostmaster@twnic.net.tw ethanchen@taiwanmobile.com
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS9924
+                      bgp: 103.23.108.0/22
+                      city: Taipei
+                      countrycode: TW
+                      countryname: Taiwan
+                      date: "2016-09-25T03:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: 0rz.tw
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: 4bdebd5255b91be64536ed21ce06c5f35fde612826473533d5e446be561894b4
+                      host: 0rz.tw
+                      http_code: null
+                      http_server: null
+                      id: 16
+                      ip: 103.23.108.138
+                      isp: TFN-TW Taiwan Fixed Network, Telco and Network Service Provider., TW
+                      latitude: "25"
+                      longitude: "121.49660000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: TPE
+                      regionname: Taipei City
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: tw
+                      url: http://0rz.tw/CssbD/
+                      virus_total: null
+                      vulns: null
+                      zipcode: ""
+                    - abuse_ch_malware: null
+                      abuse_contact: abuse@0rz.tw abuse@0rz.tw abuse@cis92.net abuse@twnic.net.tw admin@0rz.tw spam@anet.net.tw spam@ms1.hinet.net hostmaster@twnic.net.tw ethanchen@taiwanmobile.com
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS9924
+                      bgp: 103.23.108.0/22
+                      city: Taipei
+                      countrycode: TW
+                      countryname: Taiwan
+                      date: "2017-01-05T02:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: 0rz.tw
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: 6c04972684b480a3b8227181e28efd1c3a8fe53c75b120b57a37902a421c7177
+                      host: 0rz.tw
+                      http_code: null
+                      http_server: null
+                      id: 17
+                      ip: 103.23.108.138
+                      isp: TFN-TW Taiwan Fixed Network, Telco and Network Service Provider., TW
+                      latitude: "25"
+                      longitude: "121.49660000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: TPE
+                      regionname: Taipei City
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: tw
+                      url: http://0rz.tw/lKuL2/
+                      virus_total: null
+                      vulns: null
+                      zipcode: ""
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS24940
+                      bgp: 176.9.0.0/16
+                      city: ""
+                      countrycode: DE
+                      countryname: Germany
+                      date: "2015-07-22T03:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: 49ef0836928923d7e66a31e184543f87bf500924f4e2457b713197cacf21e49d
+                      host: 0s.mfrwg33vnz2hg.m5xw6z3mmuxgg33n.cmle.ru
+                      http_code: null
+                      http_server: null
+                      id: 18
+                      ip: 176.9.136.58
+                      isp: HETZNER-AS, DE
+                      latitude: "51"
+                      longitude: "9.49100000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: ""
+                      regionname: ""
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: ru
+                      url: http://0s.mfrwg33vnz2hg.m5xw6z3mmuxgg33n.cmle.ru/ServiceLogin/
+                      virus_total: null
+                      vulns: null
+                      zipcode: ""
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS24940
+                      bgp: 178.63.0.0/16
+                      city: ""
+                      countrycode: DE
+                      countryname: Germany
+                      date: "2015-08-07T03:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: af5f7eeaf291fede5b99f11df8ea034965a6c6e43dd310d15ee6eeaf2627b3b3
+                      host: 0s.mfrwg33vnz2hg.m5xw6z3mmuxgg33n.mbway.ru
+                      http_code: null
+                      http_server: null
+                      id: 19
+                      ip: 178.63.68.137
+                      isp: HETZNER-AS, DE
+                      latitude: "51"
+                      longitude: "9.49100000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: ""
+                      regionname: ""
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: ru
+                      url: http://0s.mfrwg33vnz2hg.m5xw6z3mmuxgg33n.mbway.ru/ManageAccount/
+                      virus_total: null
+                      vulns: null
+                      zipcode: ""
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS24940
+                      bgp: 148.251.0.0/16
+                      city: ""
+                      countrycode: DE
+                      countryname: Germany
+                      date: "2017-07-27T14:30:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: 32b4cdbf381d6f1fef0722822eb2441d8cd1e06b8ff5e352abd3d6ab756a8406
+                      host: 0s.mfrwg33vnz2hg.m5xw6z3mmuxgg33n.nblz.ru
+                      http_code: null
+                      http_server: null
+                      id: 20
+                      ip: 148.251.251.130
+                      isp: HETZNER-AS, DE
+                      latitude: "51"
+                      longitude: "9.49100000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: ""
+                      regionname: ""
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: ru
+                      url: http://0s.mfrwg33vnz2hg.m5xw6z3mmuxgg33n.nblz.ru/ServiceLogin?service=mail&amp;passive=true&amp;rm=false&amp;continue=https://mail.google.com/mail/&amp;ss=1&amp;scc=1&amp;ltmpl=googlemail&amp;emr=1&amp;osid=1/
+                      virus_total: null
+                      vulns: null
+                      zipcode: ""
+                    - abuse_ch_malware: null
+                      abuse_contact: null
+                      alexa_rank_domain: null
+                      alexa_rank_host: null
+                      asn: AS24940
+                      bgp: 5.9.0.0/16
+                      city: ""
+                      countrycode: DE
+                      countryname: Germany
+                      date: "2017-04-11T03:00:00.000Z"
+                      date_update: "2020-12-08T01:50:24.000Z"
+                      domain: null
+                      domain_registered_n_days_ago: null
+                      google_safebrowsing: null
+                      hash: 3d46a66859dce0fc84f1af571a4bc00eeb1f55d52287e72324830d2811a8781d
+                      host: 0s.n5vs44tv.verek.ru
+                      http_code: null
+                      http_server: null
+                      id: 21
+                      ip: 5.9.2.189
+                      isp: HETZNER-AS, DE
+                      latitude: "51"
+                      longitude: "9.49100000"
+                      n_times_seen_domain: null
+                      n_times_seen_host: null
+                      n_times_seen_ip: null
+                      os: null
+                      page_text: '   '
+                      ports: null
+                      regioncode: ""
+                      regionname: ""
+                      score: null
+                      screenshot: null
+                      ssl_issuer: null
+                      ssl_subject: null
+                      tags: null
+                      technology: null
+                      threat_crowd: null
+                      threat_crowd_subdomain_count: null
+                      threat_crowd_votes: null
+                      title: null
+                      tld: ru
+                      url: http://0s.n5vs44tv.verek.ru/
+                      virus_total: null
+                      vulns: null
+                      zipcode: ""
+    schemas:
+        PhishingData:
+            description: new param
+            properties:
+                asn:
+                    description: Autonomous System Number
+                    type: string
+                countrycode:
+                    description: Country code
+                    type: string
+                date:
+                    description: Date of the phishing record
+                    format: date-time
+                    type: string
+                id:
+                    description: Unique identifier for the phishing record
+                    type: integer
+                ip:
+                    description: IP address
+                    type: string
+                score:
+                    description: Phishing score
+                    type: integer
+                title:
+                    description: Title of the phishing record
+                    type: string
+                tld:
+                    description: Top-level domain
+                    type: string
+                url:
+                    description: URL of the phishing record
+                    type: string
+            type: object
+info:
+    description: API for accessing phishing data from PhishStats.
+    title: Phishing Stats
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /phishing:
+        get:
+            operationId: getPhishingData
+            parameters:
+                - description: Filter conditions for the query.
+                  in: query
+                  name: _where
+                  schema:
+                    type: string
+                - description: Sort order of the results.
+                  in: query
+                  name: _sort
+                  schema:
+                    type: string
+                - description: Page number of the results to fetch.
+                  in: query
+                  name: _p
+                  schema:
+                    type: integer
+                - description: Number of results per page (max 100).
+                  in: query
+                  name: _size
+                  schema:
+                    type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                description: Root item
+                                items:
+                                    description: Array item
+                                    properties:
+                                        abuse_ch_malware:
+                                            description: Specify the type of abuse.ch malware to retrieve information about. The default value is an empty string.
+                                            type: string
+                                        abuse_contact:
+                                            description: Contact information for reporting abuse related to phishing attacks.
+                                            type: string
+                                        alexa_rank_domain:
+                                            description: The Alexa rank of the domain for which phishing attack information is provided.
+                                            type: string
+                                        alexa_rank_host:
+                                            type: string
+                                        asn:
+                                            description: The Autonomous System Number (ASN) is a unique identifier assigned to a network or organization that operates a network. It is used for routing internet traffic between different networks. Specify the ASN in string format.
+                                            type: string
+                                        bgp:
+                                            description: Provide the BGP (Border Gateway Protocol) information for data transmission between networks.
+                                            type: string
+                                        city:
+                                            description: City where the phishing attack occurred. Please provide the name of the city.
+                                            type: string
+                                        countrycode:
+                                            description: Filter phishing attack data by country. Please provide a valid two-letter country code (ISO 3166-1 alpha-2).
+                                            type: string
+                                        countryname:
+                                            description: Specify the country name to filter phishing data. Please enter the full name of the country.
+                                            type: string
+                                        date:
+                                            description: Date of the phishing attack, in the format yyyy-mm-dd.
+                                            type: string
+                                        date_update:
+                                            description: Last date when the information about phishing attacks was updated, in format yyyy-mm-dd.
+                                            type: string
+                                        domain:
+                                            description: The domain parameter specifies the domain name of a website.
+                                            type: string
+                                        domain_registered_n_days_ago:
+                                            type: string
+                                        google_safebrowsing:
+                                            description: Check if the website is flagged as unsafe by Google Safe Browsing API.
+                                            type: string
+                                        hash:
+                                            description: A unique identifier for a phishing attack, represented as a string. This parameter is used to uniquely identify a specific phishing attack in the PhishStats database.
+                                            type: string
+                                        host:
+                                            description: The host parameter specifies the host name or IP address of the phishing website.
+                                            type: string
+                                        http_code:
+                                            description: HTTP status code of the response.
+                                            type: string
+                                        http_server:
+                                            description: Name of the HTTP server used by PhishStats.
+                                            type: string
+                                        id:
+                                            description: The unique identifier of a phishing attack. The ID is a number that uniquely identifies each phishing attack in the system.
+                                            type: number
+                                        ip:
+                                            description: IP address of the phishing attack. Please provide the IP address in the standard IPv4 or IPv6 format.
+                                            type: string
+                                        isp:
+                                            description: The name of the Internet Service Provider (ISP) associated with the phishing attack.
+                                            type: string
+                                        latitude:
+                                            description: Latitude of the location associated with the phishing attack, provided in decimal degrees format. The latitude represents the north-south position on the Earth's surface.
+                                            type: string
+                                        longitude:
+                                            description: Longitude of the location associated with the phishing attack, specified in decimal degrees. The longitude represents the east-west position on the Earth's surface. It is a string value.
+                                            type: string
+                                        n_times_seen_domain:
+                                            type: string
+                                        n_times_seen_host:
+                                            description: Number of times the host has been seen in phishing attacks.
+                                            type: string
+                                        n_times_seen_ip:
+                                            description: Number of times the IP address has been seen in PhishStats' database.
+                                            type: string
+                                        os:
+                                            type: string
+                                        page_text:
+                                            description: Text content of the page. Please provide more details about the type of content expected.
+                                            type: string
+                                        ports:
+                                            description: Specify the ports to retrieve information about phishing attacks. Please provide the port numbers separated by commas.
+                                            type: string
+                                        regioncode:
+                                            description: Specify the region code to retrieve phishing attack information from a specific geographical area. The region code should be provided as a string. The region code represents the geographical area from which you want to retrieve the phishing attack information.
+                                            type: string
+                                        regionname:
+                                            description: Filter phishing attacks by region name. Please provide the name of the region you want to filter.
+                                            type: string
+                                        score:
+                                            description: A score indicating the severity or risk level of the phishing attack.
+                                            type: string
+                                        screenshot:
+                                            description: Specify whether to include a screenshot of the phishing attack.
+                                            type: string
+                                        ssl_issuer:
+                                            description: The SSL issuer of a website. This refers to the entity that issued the SSL certificate for the website's secure connection.
+                                            type: string
+                                        ssl_subject:
+                                            description: Specifies the subject name in the SSL certificate used in the phishing attack.
+                                            type: string
+                                        tags:
+                                            type: string
+                                        technology:
+                                            description: Specify the technology related to phishing attacks.
+                                            type: string
+                                        threat_crowd:
+                                            description: Filter the phishing attacks based on the threat crowd.
+                                            type: string
+                                        threat_crowd_subdomain_count:
+                                            description: Number of subdomains related to the threat in the PhishStats database.
+                                            type: string
+                                        threat_crowd_votes:
+                                            description: Number of votes received from the ThreatCrowd community for a particular phishing attack.
+                                            type: string
+                                        title:
+                                            description: Title of the phishing attack.
+                                            type: string
+                                        tld:
+                                            description: Filter phishing attacks by top-level domain (TLD). The TLD is the last part of a domain name, such as ".com" or ".org".
+                                            type: string
+                                        url:
+                                            description: URL of the phishing website to be analyzed.
+                                            type: string
+                                        virus_total:
+                                            description: String representing the VirusTotal scan results of a phishing attack URL.
+                                            type: string
+                                        vulns:
+                                            description: Get the list of vulnerabilities associated with the phishing attacks.
+                                            type: string
+                                        zipcode:
+                                            description: Zip code of the location to search for phishing attacks. Please provide the zip code in the format of a string.
+                                            type: string
+                                    type: object
+                                type: array
+                    description: new desc
+                default:
+                    description: ""
+            summary: PhishStats has been actively combating phishing and cybercrime since 2014. It achieves this by collecting, improving, and distributing valuable information about phishing attacks to the information security (infosec) community.
+servers:
+    - url: https://phishstats.info:2096/api

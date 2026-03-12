@@ -1,0 +1,38 @@
+components:
+    examples:
+        getTechPhraseJson:
+            value:
+                ReqExample: {}
+                RespExample:
+                    message: Its the part where you had to hash linear phased
+info:
+    description: API for generating cool tech-savvy sounding phrases.
+    title: Techy Phrases
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /api/json:
+        get:
+            operationId: getTechPhraseJson
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    message:
+                                        description: The tech-savvy phrase
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: new api
+servers:
+    - url: https://techy-api.vercel.app

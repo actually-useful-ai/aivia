@@ -1,0 +1,1431 @@
+components:
+    examples:
+        getWorkByDoi:
+            value:
+                ReqExample:
+                    doi: 10.1093/obo/9780199756810-0282
+                RespExample:
+                    message:
+                        DOI: 10.1093/obo/9780199756810-0282
+                        ISBN:
+                            - "9780199756810"
+                        URL: http://dx.doi.org/10.1093/obo/9780199756810-0282
+                        abstract: <p>Considering the vicious cycle of exclusion that students with special needs are often trapped in— lacking the means for equal participation in education, society, and mainstream development programs—assistive technology has proven to have great potential in providing to all learners the ability to access the general education curriculum. Approaches in the use of assistive technology basically focus on facilitating individuals in their interaction with their environment. Assistive technology is a generic term that includes assistive, adaptive, and rehabilitative devices that might be used to compensate for lack of certain abilities, in order to participate in the activities of daily life. With assistive technology individuals have the option of approaching and completing their tasks with greater ease and independence, since it helps in removing functional barriers that inhibit their individual performance. With the emergence of the social model of disability, it is increasingly being argued that inaccessible environments have been the greatest barrier to the inclusion of students with special needs. Research on the successful implementation of inclusive education in developing countries identifies the ineffective and inefficient use of assistive technologies, citing this as the major obstacle hindering inclusion. Since it has been widely acknowledged, that the success and applicability of an assistive device is governed by its acceptance and actual usage by its users considering their perception, expectations, satisfaction, and their level of access and success with the technology when interacting with their environment; approaches in the use of technology therefore have to be needs-based; inexpensive to produce, purchase, and maintain; and be easy to use and effective in addressing an identified need. This can be ensured by the direct involvement of potential users at each stage of the planning and implementation process to help overcome barriers that inhibit the efficient use and applicability of assistive technology devices in different contexts. Moreover, although assistive technology is seen to have a major role in remediating and compensating the performance deficits experienced by students with special needs, it should not be viewed merely within a rehabilitative or remediative context, but as a tool for accessing curriculum and exploring and drawing out means to help learners achieve positive outcomes. Researches on the use of assistive technology point toward the distinct need to identify ways to encourage the development of tools and strategies for effective technology integration, and to work together on issues surrounding the use of technology, ensuring that the same high standards of instruction and need-based assistance is available to all despite the difference in their functional abilities.</p>
+                        container-title:
+                            - Education
+                        content-domain:
+                            crossmark-restriction: false
+                            domain: []
+                        created:
+                            date-parts: []
+                            date-time: "2021-07-27T12:25:10Z"
+                            timestamp: 1627388710000
+                        deposited:
+                            date-parts: []
+                            date-time: "2021-09-23T19:42:41Z"
+                            timestamp: 1632426161000
+                        indexed:
+                            date-parts: []
+                            date-time: "2024-05-03T09:47:25Z"
+                            timestamp: 1714729645007
+                        is-referenced-by-count: 1
+                        isbn-type:
+                            - type: electronic
+                              value: "9780199756810"
+                        issued:
+                            date-parts: []
+                        language: en
+                        member: "286"
+                        original-title:
+                            - Assistive Technology
+                        prefix: "10.1093"
+                        published:
+                            date-parts: []
+                        published-online:
+                            date-parts: []
+                        publisher: Oxford University Press
+                        reference-count: 0
+                        references-count: 0
+                        relation: {}
+                        resource:
+                            primary:
+                                URL: https://oxfordbibliographies.com/view/document/obo-9780199756810/obo-9780199756810-0282.xml
+                        score: 1
+                        short-container-title: []
+                        short-title: []
+                        source: Crossref
+                        subject: []
+                        subtitle: []
+                        title:
+                            - Assistive Technology
+                        type: reference-entry
+                    message-type: work
+                    message-version: 1.0.0
+                    status: ok
+        getWorks:
+            value:
+                ReqExample:
+                    query: assistive technology
+                RespExample:
+                    message:
+                        facets: {}
+                        items:
+                            - DOI: 10.1093/obo/9780199756810-0282
+                              ISBN:
+                                - "9780199756810"
+                              URL: http://dx.doi.org/10.1093/obo/9780199756810-0282
+                              abstract: <p>Considering the vicious cycle of exclusion that students with special needs are often trapped in— lacking the means for equal participation in education, society, and mainstream development programs—assistive technology has proven to have great potential in providing to all learners the ability to access the general education curriculum. Approaches in the use of assistive technology basically focus on facilitating individuals in their interaction with their environment. Assistive technology is a generic term that includes assistive, adaptive, and rehabilitative devices that might be used to compensate for lack of certain abilities, in order to participate in the activities of daily life. With assistive technology individuals have the option of approaching and completing their tasks with greater ease and independence, since it helps in removing functional barriers that inhibit their individual performance. With the emergence of the social model of disability, it is increasingly being argued that inaccessible environments have been the greatest barrier to the inclusion of students with special needs. Research on the successful implementation of inclusive education in developing countries identifies the ineffective and inefficient use of assistive technologies, citing this as the major obstacle hindering inclusion. Since it has been widely acknowledged, that the success and applicability of an assistive device is governed by its acceptance and actual usage by its users considering their perception, expectations, satisfaction, and their level of access and success with the technology when interacting with their environment; approaches in the use of technology therefore have to be needs-based; inexpensive to produce, purchase, and maintain; and be easy to use and effective in addressing an identified need. This can be ensured by the direct involvement of potential users at each stage of the planning and implementation process to help overcome barriers that inhibit the efficient use and applicability of assistive technology devices in different contexts. Moreover, although assistive technology is seen to have a major role in remediating and compensating the performance deficits experienced by students with special needs, it should not be viewed merely within a rehabilitative or remediative context, but as a tool for accessing curriculum and exploring and drawing out means to help learners achieve positive outcomes. Researches on the use of assistive technology point toward the distinct need to identify ways to encourage the development of tools and strategies for effective technology integration, and to work together on issues surrounding the use of technology, ensuring that the same high standards of instruction and need-based assistance is available to all despite the difference in their functional abilities.</p>
+                              container-title:
+                                - Education
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2021-07-27T12:25:10Z"
+                                timestamp: 1627388710000
+                              deposited:
+                                date-parts: []
+                                date-time: "2021-09-23T19:42:41Z"
+                                timestamp: 1632426161000
+                              indexed:
+                                date-parts: []
+                                date-time: "2024-05-03T09:47:25Z"
+                                timestamp: 1714729645007
+                              is-referenced-by-count: 1
+                              isbn-type:
+                                - type: electronic
+                                  value: "9780199756810"
+                              issued:
+                                date-parts: []
+                              language: en
+                              member: "286"
+                              original-title:
+                                - Assistive Technology
+                              prefix: "10.1093"
+                              published:
+                                date-parts: []
+                              published-online:
+                                date-parts: []
+                              publisher: Oxford University Press
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: https://oxfordbibliographies.com/view/document/obo-9780199756810/obo-9780199756810-0282.xml
+                              score: 21.337545
+                              source: Crossref
+                              title:
+                                - Assistive Technology
+                              type: reference-entry
+                            - DOI: 10.1080/10400435.2022.2077596
+                              URL: http://dx.doi.org/10.1080/10400435.2022.2077596
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: true
+                                domain:
+                                    - www.tandfonline.com
+                              created:
+                                date-parts: []
+                                date-time: "2022-06-09T19:40:52Z"
+                                timestamp: 1654803652000
+                              deposited:
+                                date-parts: []
+                                date-time: "2022-06-09T19:41:53Z"
+                                timestamp: 1654803713000
+                              indexed:
+                                date-parts: []
+                                date-time: "2023-11-05T14:33:30Z"
+                                timestamp: 1699194810081
+                              is-referenced-by-count: 3
+                              issued:
+                                date-parts: []
+                              language: en
+                              member: "301"
+                              prefix: "10.1080"
+                              published:
+                                date-parts: []
+                              published-online:
+                                date-parts: []
+                              publisher: Informa UK Limited
+                              reference-count: 3
+                              references-count: 3
+                              resource:
+                                primary:
+                                    URL: https://www.tandfonline.com/doi/full/10.1080/10400435.2022.2077596
+                              score: 21.043308
+                              source: Crossref
+                              title:
+                                - 'The Global Report on Assistive Technology: a new era in assistive technology'
+                              type: journal-article
+                            - DOI: 10.1080/10400435.2014.926742
+                              URL: http://dx.doi.org/10.1080/10400435.2014.926742
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: true
+                                domain:
+                                    - www.tandfonline.com
+                              created:
+                                date-parts: []
+                                date-time: "2014-06-26T15:18:48Z"
+                                timestamp: 1403795928000
+                              deposited:
+                                date-parts: []
+                                date-time: "2016-12-11T07:45:03Z"
+                                timestamp: 1481442303000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-03-31T21:24:08Z"
+                                timestamp: 1648761848900
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              language: en
+                              member: "301"
+                              prefix: "10.1080"
+                              published:
+                                date-parts: []
+                              published-online:
+                                date-parts: []
+                              publisher: Informa UK Limited
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: http://www.tandfonline.com/doi/abs/10.1080/10400435.2014.926742
+                              score: 20.940773
+                              source: Crossref
+                              title:
+                                - Assistive Technology® CEU Quiz 26.3a
+                              type: journal-article
+                            - DOI: 10.1080/10400435.2014.872448
+                              URL: http://dx.doi.org/10.1080/10400435.2014.872448
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: true
+                                domain:
+                                    - www.tandfonline.com
+                              created:
+                                date-parts: []
+                                date-time: "2014-02-20T12:20:24Z"
+                                timestamp: 1392898824000
+                              deposited:
+                                date-parts: []
+                                date-time: "2016-12-11T02:44:40Z"
+                                timestamp: 1481424280000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-04-05T04:03:20Z"
+                                timestamp: 1649131400903
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              language: en
+                              member: "301"
+                              prefix: "10.1080"
+                              published:
+                                date-parts: []
+                              published-online:
+                                date-parts: []
+                              publisher: Informa UK Limited
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: http://www.tandfonline.com/doi/abs/10.1080/10400435.2014.872448
+                              score: 20.93534
+                              source: Crossref
+                              title:
+                                - Assistive Technology® CEU Quiz 26.1a
+                              type: journal-article
+                            - DOI: 10.4135/9781071872765.n2
+                              URL: http://dx.doi.org/10.4135/9781071872765.n2
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:17Z"
+                                timestamp: 1644985397000
+                              deposited:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:20Z"
+                                timestamp: 1644985400000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-04-02T04:22:46Z"
+                                timestamp: 1648873366822
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              member: "179"
+                              prefix: "10.4135"
+                              published:
+                                date-parts: []
+                              publisher: SAGE Publications, Inc
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: https://sk.sagepub.com/books/assistive-technology-1e/i686.xml
+                              score: 20.925964
+                              source: Crossref
+                              title:
+                                - (Assistive) Technology Frameworks
+                              type: book-chapter
+                            - DOI: 10.4135/9781071872765.n1
+                              URL: http://dx.doi.org/10.4135/9781071872765.n1
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:17Z"
+                                timestamp: 1644985397000
+                              deposited:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:19Z"
+                                timestamp: 1644985399000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-04-05T23:17:18Z"
+                                timestamp: 1649200638616
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              member: "179"
+                              prefix: "10.4135"
+                              published:
+                                date-parts: []
+                              publisher: SAGE Publications, Inc
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: https://sk.sagepub.com/books/assistive-technology-1e/i554.xml
+                              score: 20.925964
+                              source: Crossref
+                              title:
+                                - Assistive Technology Background
+                              type: book-chapter
+                            - DOI: 10.4135/9781071872765.n3
+                              URL: http://dx.doi.org/10.4135/9781071872765.n3
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:17Z"
+                                timestamp: 1644985397000
+                              deposited:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:21Z"
+                                timestamp: 1644985401000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-04-05T18:01:20Z"
+                                timestamp: 1649181680321
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              member: "179"
+                              prefix: "10.4135"
+                              published:
+                                date-parts: []
+                              publisher: SAGE Publications, Inc
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: https://sk.sagepub.com/books/assistive-technology-1e/i788.xml
+                              score: 20.7227
+                              source: Crossref
+                              title:
+                                - Assistive Technology for Communication
+                              type: book-chapter
+                            - DOI: 10.1080/10400435.2014.905304
+                              URL: http://dx.doi.org/10.1080/10400435.2014.905304
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: true
+                                domain:
+                                    - www.tandfonline.com
+                              created:
+                                date-parts: []
+                                date-time: "2014-05-16T15:50:23Z"
+                                timestamp: 1400255423000
+                              deposited:
+                                date-parts: []
+                                date-time: "2016-12-11T07:45:00Z"
+                                timestamp: 1481442300000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-04-04T08:55:20Z"
+                                timestamp: 1649062520462
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              language: en
+                              member: "301"
+                              prefix: "10.1080"
+                              published:
+                                date-parts: []
+                              published-online:
+                                date-parts: []
+                              publisher: Informa UK Limited
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: http://www.tandfonline.com/doi/abs/10.1080/10400435.2014.905304
+                              score: 20.6721
+                              source: Crossref
+                              title:
+                                - CEU Quiz
+                              type: journal-article
+                            - DOI: 10.4135/9781071810101
+                              URL: http://dx.doi.org/10.4135/9781071810101
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2020-01-27T18:29:57Z"
+                                timestamp: 1580149797000
+                              deposited:
+                                date-parts: []
+                                date-time: "2020-01-27T18:29:58Z"
+                                timestamp: 1580149798000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-04-03T16:18:12Z"
+                                timestamp: 1649002692077
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              member: "179"
+                              prefix: "10.4135"
+                              published:
+                                date-parts: []
+                              publisher: SAGE Publications, Inc
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: https://sk.sagepub.com/video/assistive-technology
+                              score: 20.602253
+                              source: Crossref
+                              title:
+                                - Assistive Technology
+                            - DOI: 10.4135/9781071809945
+                              URL: http://dx.doi.org/10.4135/9781071809945
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2020-01-27T20:19:12Z"
+                                timestamp: 1580156352000
+                              deposited:
+                                date-parts: []
+                                date-time: "2020-01-27T20:19:12Z"
+                                timestamp: 1580156352000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-04-03T21:05:06Z"
+                                timestamp: 1649019906217
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              member: "179"
+                              prefix: "10.4135"
+                              published:
+                                date-parts: []
+                              publisher: SAGE Publications, Inc
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: https://sk.sagepub.com/video/assistive-technology-garg
+                              score: 20.602253
+                              source: Crossref
+                              title:
+                                - Assistive Technology
+                            - DOI: 10.4135/9781071872765.n5
+                              URL: http://dx.doi.org/10.4135/9781071872765.n5
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:17Z"
+                                timestamp: 1644985397000
+                              deposited:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:23Z"
+                                timestamp: 1644985403000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-03-31T07:11:39Z"
+                                timestamp: 1648710699003
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              member: "179"
+                              prefix: "10.4135"
+                              published:
+                                date-parts: []
+                              publisher: SAGE Publications, Inc
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: https://sk.sagepub.com/books/assistive-technology-1e/i1045.xml
+                              score: 20.529964
+                              source: Crossref
+                              title:
+                                - Assistive Technology for Computer Access
+                              type: book-chapter
+                            - DOI: 10.4135/9781071872765.n8
+                              URL: http://dx.doi.org/10.4135/9781071872765.n8
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:17Z"
+                                timestamp: 1644985397000
+                              deposited:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:26Z"
+                                timestamp: 1644985406000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-04-05T21:54:07Z"
+                                timestamp: 1649195647550
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              member: "179"
+                              prefix: "10.4135"
+                              published:
+                                date-parts: []
+                              publisher: SAGE Publications, Inc
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: https://sk.sagepub.com/books/assistive-technology-1e/i1418.xml
+                              score: 20.529964
+                              source: Crossref
+                              title:
+                                - Assistive Technology as Instructional Aids
+                              type: book-chapter
+                            - DOI: 10.4135/9781071872765.n10
+                              URL: http://dx.doi.org/10.4135/9781071872765.n10
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:17Z"
+                                timestamp: 1644985397000
+                              deposited:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:29Z"
+                                timestamp: 1644985409000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-03-31T14:17:12Z"
+                                timestamp: 1648736232167
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              member: "179"
+                              prefix: "10.4135"
+                              published:
+                                date-parts: []
+                              publisher: SAGE Publications, Inc
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: https://sk.sagepub.com/books/assistive-technology-1e/i1737.xml
+                              score: 20.41758
+                              source: Crossref
+                              title:
+                                - Assistive Technology for Young Children
+                              type: book-chapter
+                            - DOI: 10.1080/10400435.2024.2344414
+                              URL: http://dx.doi.org/10.1080/10400435.2024.2344414
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: true
+                                domain:
+                                    - www.tandfonline.com
+                              created:
+                                date-parts: []
+                                date-time: "2024-05-15T17:24:17Z"
+                                timestamp: 1715793857000
+                              deposited:
+                                date-parts: []
+                                date-time: "2024-05-15T17:24:26Z"
+                                timestamp: 1715793866000
+                              indexed:
+                                date-parts: []
+                                date-time: "2024-05-16T00:35:43Z"
+                                timestamp: 1715819743464
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              language: en
+                              member: "301"
+                              prefix: "10.1080"
+                              published:
+                                date-parts: []
+                              published-online:
+                                date-parts: []
+                              publisher: Informa UK Limited
+                              reference-count: 5
+                              references-count: 5
+                              resource:
+                                primary:
+                                    URL: https://www.tandfonline.com/doi/full/10.1080/10400435.2024.2344414
+                              score: 20.408628
+                              source: Crossref
+                              title:
+                                - Assistive technology requires an intersectoral approach
+                              type: journal-article
+                            - DOI: 10.1016/b978-0-12-812979-1.00037-0
+                              ISBN:
+                                - "9780128129791"
+                              URL: http://dx.doi.org/10.1016/b978-0-12-812979-1.00037-0
+                              container-title:
+                                - Assistive Technology Service Delivery
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2018-09-21T12:17:59Z"
+                                timestamp: 1537532279000
+                              deposited:
+                                date-parts: []
+                                date-time: "2018-09-21T12:18:00Z"
+                                timestamp: 1537532280000
+                              indexed:
+                                date-parts: []
+                                date-time: "2024-05-09T14:06:26Z"
+                                timestamp: 1715263586159
+                              is-referenced-by-count: 0
+                              isbn-type:
+                                - type: print
+                                  value: "9780128129791"
+                              issued:
+                                date-parts: []
+                              language: en
+                              member: "78"
+                              prefix: "10.1016"
+                              published:
+                                date-parts: []
+                              publisher: Elsevier
+                              reference-count: 2
+                              references-count: 2
+                              resource:
+                                primary:
+                                    URL: https://linkinghub.elsevier.com/retrieve/pii/B9780128129791000370
+                              score: 20.407314
+                              source: Crossref
+                              title:
+                                - Part 3. Assistive Technology Toolkit
+                              type: book-chapter
+                            - DOI: 10.1080/10400435.1993.10132212
+                              URL: http://dx.doi.org/10.1080/10400435.1993.10132212
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2010-10-24T16:20:04Z"
+                                timestamp: 1287937204000
+                              deposited:
+                                date-parts: []
+                                date-time: "2016-12-11T07:48:36Z"
+                                timestamp: 1481442516000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-04-03T07:29:50Z"
+                                timestamp: 1648970990223
+                              is-referenced-by-count: 3
+                              issued:
+                                date-parts: []
+                              language: en
+                              member: "301"
+                              prefix: "10.1080"
+                              published:
+                                date-parts: []
+                              publisher: Informa UK Limited
+                              reference-count: 5
+                              references-count: 5
+                              resource:
+                                primary:
+                                    URL: http://www.tandfonline.com/doi/abs/10.1080/10400435.1993.10132212
+                              score: 20.405993
+                              source: Crossref
+                              title:
+                                - 'Assistive Technology and AAC: An Industry Perspective'
+                              type: journal-article
+                            - DOI: 10.1201/b11821-8
+                              ISBN:
+                                - "9780429151484"
+                              URL: http://dx.doi.org/10.1201/b11821-8
+                              container-title:
+                                - Assistive Technology Assessment Handbook
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2020-07-09T19:10:14Z"
+                                timestamp: 1594321814000
+                              deposited:
+                                date-parts: []
+                                date-time: "2021-04-10T12:38:32Z"
+                                timestamp: 1618058312000
+                              indexed:
+                                date-parts: []
+                                date-time: "2024-05-11T11:56:43Z"
+                                timestamp: 1715428603456
+                              is-referenced-by-count: 0
+                              isbn-type:
+                                - type: electronic
+                                  value: "9780429151484"
+                              issued:
+                                date-parts: []
+                              language: en
+                              member: "301"
+                              prefix: "10.1201"
+                              published:
+                                date-parts: []
+                              publisher: CRC Press
+                              reference-count: 1
+                              references-count: 1
+                              resource:
+                                primary:
+                                    URL: https://www.taylorfrancis.com/books/9781439838662/chapters/10.1201/b11821-8
+                              score: 20.33753
+                              source: Crossref
+                              title:
+                                - Measuring the Assistive Technology Match
+                              type: book-chapter
+                            - DOI: 10.4135/9781071872765.n6
+                              URL: http://dx.doi.org/10.4135/9781071872765.n6
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:17Z"
+                                timestamp: 1644985397000
+                              deposited:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:24Z"
+                                timestamp: 1644985404000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-03-30T06:54:49Z"
+                                timestamp: 1648623289367
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              member: "179"
+                              prefix: "10.4135"
+                              published:
+                                date-parts: []
+                              publisher: SAGE Publications, Inc
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: https://sk.sagepub.com/books/assistive-technology-1e/i1175.xml
+                              score: 20.334974
+                              source: Crossref
+                              title:
+                                - Assistive Technology for Vision and Hearing
+                              type: book-chapter
+                            - DOI: 10.4135/9781071872765.n4
+                              URL: http://dx.doi.org/10.4135/9781071872765.n4
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:17Z"
+                                timestamp: 1644985397000
+                              deposited:
+                                date-parts: []
+                                date-time: "2022-02-16T04:23:22Z"
+                                timestamp: 1644985402000
+                              indexed:
+                                date-parts: []
+                                date-time: "2022-04-03T18:35:15Z"
+                                timestamp: 1649010915970
+                              is-referenced-by-count: 0
+                              issued:
+                                date-parts: []
+                              member: "179"
+                              prefix: "10.4135"
+                              published:
+                                date-parts: []
+                              publisher: SAGE Publications, Inc
+                              reference-count: 0
+                              references-count: 0
+                              resource:
+                                primary:
+                                    URL: https://sk.sagepub.com/books/assistive-technology-1e/i917.xml
+                              score: 20.334974
+                              source: Crossref
+                              title:
+                                - Assistive Technology for Mobility and Positioning
+                              type: book-chapter
+                            - DOI: 10.1080/10400430902945868
+                              URL: http://dx.doi.org/10.1080/10400430902945868
+                              container-title:
+                                - Assistive Technology
+                              content-domain:
+                                crossmark-restriction: false
+                                domain: []
+                              created:
+                                date-parts: []
+                                date-time: "2010-07-08T13:00:51Z"
+                                timestamp: 1278594051000
+                              deposited:
+                                date-parts: []
+                                date-time: "2020-06-06T19:14:28Z"
+                                timestamp: 1591470868000
+                              indexed:
+                                date-parts: []
+                                date-time: "2024-06-19T14:37:15Z"
+                                timestamp: 1718807835097
+                              is-referenced-by-count: 4
+                              issued:
+                                date-parts: []
+                              language: en
+                              member: "301"
+                              prefix: "10.1080"
+                              published:
+                                date-parts: []
+                              publisher: Informa UK Limited
+                              reference-count: 11
+                              references-count: 11
+                              resource:
+                                primary:
+                                    URL: http://www.tandfonline.com/doi/abs/10.1080/10400430902945868
+                              score: 20.309559
+                              source: Crossref
+                              title:
+                                - Hispanics' Awareness of Assistive Technology
+                              type: journal-article
+                        items-per-page: 20
+                        query:
+                            search-terms: assistive technology
+                            start-index: 0
+                        total-results: 5186249
+                    message-type: work-list
+                    message-version: 1.0.0
+                    status: ok
+    schemas:
+        Error:
+            description: new param
+            properties:
+                code:
+                    description: new param
+                    type: integer
+                message:
+                    description: new param
+                    type: string
+            type: object
+info:
+    description: CrossRef API allows developers to access metadata of scholarly content such as journal articles, books, and conference proceedings. With it, you can retrieve DOI, authors, publication dates, citations, and more, making it ideal for research tools, citation managers, or content aggregation plugins.
+    title: CrossRef Journal Search
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /works:
+        get:
+            operationId: getWorks
+            parameters:
+                - description: Filter results
+                  in: query
+                  name: filter
+                  schema:
+                    type: string
+                - description: Number of results to return
+                  in: query
+                  name: rows
+                  schema:
+                    type: integer
+                - description: Offset for pagination
+                  in: query
+                  name: offset
+                  schema:
+                    type: integer
+                - description: Search query for works
+                  in: query
+                  name: query
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    message:
+                                        description: Response object containing the message from the Crossref search API.
+                                        properties:
+                                            facets:
+                                                description: 'Specify the facets to be included in the search results. Facets are categories or attributes that can be used to filter and refine the search results. For example, you can include facets such as publication year, author, journal, or subject. By specifying the desired facets, you can narrow down the '
+                                                type: object
+                                            items:
+                                                description: Retrieve the search results as an array of items. Each item represents a scholarly publication or academic article.
+                                                items:
+                                                    description: Array item
+                                                    properties:
+                                                        DOI:
+                                                            description: DOI (Digital Object Identifier) is a unique alphanumeric string assigned to a digital object, such as a research article, to provide a persistent link to its location on the internet. Enter the DOI of the academic article or scholarly content you want to retrieve.
+                                                            type: string
+                                                        ISBN:
+                                                            description: ISBN (array) of the scholarly content.
+                                                            items:
+                                                                description: Array item
+                                                                type: string
+                                                            type: array
+                                                        URL:
+                                                            description: URL of the scholarly content found through the Crossref search.
+                                                            type: string
+                                                        abstract:
+                                                            description: Abstract of the scholarly article.
+                                                            type: string
+                                                        container-title:
+                                                            description: Array of titles of the containers in which the articles are published.
+                                                            items:
+                                                                description: Array item
+                                                                type: string
+                                                            type: array
+                                                        content-domain:
+                                                            description: Specify the domain of the content you want to search.
+                                                            properties:
+                                                                crossmark-restriction:
+                                                                    description: Flag to indicate whether to restrict the search results to documents with Crossmark metadata.
+                                                                    type: boolean
+                                                                domain:
+                                                                    description: Specify the domain or field of study for which you want to retrieve scholarly content. Provide one or more domains as an array of strings. For example, ["Computer Science", "Biology", "Economics"]. By specifying the domain, you can narrow down the search results to articles and content specific to y
+                                                                    items:
+                                                                        description: Array item
+                                                                        type: string
+                                                                    type: array
+                                                            type: object
+                                                        created:
+                                                            description: Created date of the scholarly content.
+                                                            properties:
+                                                                date-parts:
+                                                                    description: Array containing the date of publication of the scholarly content. Each date is represented as an array of integers in the format [year, month, day].
+                                                                    items:
+                                                                        description: Array item
+                                                                        items:
+                                                                            description: Array item
+                                                                            type: number
+                                                                        type: array
+                                                                    type: array
+                                                                date-time:
+                                                                    description: Date and time of the search query, in the format yyyy-mm-ddThh:mm:ss.
+                                                                    type: string
+                                                                timestamp:
+                                                                    description: Timestamp of the search query execution.
+                                                                    type: number
+                                                            type: object
+                                                        deposited:
+                                                            description: Deposited information of the scholarly content, including the date and time it was deposited.
+                                                            properties:
+                                                                date-parts:
+                                                                    description: Array of date parts to filter the search results.
+                                                                    items:
+                                                                        description: Array item
+                                                                        items:
+                                                                            description: Array item
+                                                                            type: number
+                                                                        type: array
+                                                                    type: array
+                                                                date-time:
+                                                                    description: Date and time when the search for academic articles was performed. Please enter the date and time in the format yyyy-mm-dd hh:mm:ss.
+                                                                    type: string
+                                                                timestamp:
+                                                                    description: Timestamp of the search result, representing the date and time when the search was performed.
+                                                                    type: number
+                                                            type: object
+                                                        indexed:
+                                                            description: Retrieve information about the indexed status of the scholarly content.
+                                                            properties:
+                                                                date-parts:
+                                                                    description: Array of date parts to filter the search results by publication date. Each element of the array represents a specific date part (year, month, day) in the format [year, month, day].
+                                                                    items:
+                                                                        description: Array item
+                                                                        items:
+                                                                            description: Array item
+                                                                            type: number
+                                                                        type: array
+                                                                    type: array
+                                                                date-time:
+                                                                    description: Specify the date and time range for retrieving scholarly content from Crossref. Use the format "yyyy-mm-ddThh:mm:ssZ" to specify the start and end date-time.
+                                                                    type: string
+                                                                timestamp:
+                                                                    description: Timestamp of the search result in Unix time format.
+                                                                    type: number
+                                                            type: object
+                                                        is-referenced-by-count:
+                                                            description: Number of times the article has been referenced by other scholarly publications.
+                                                            type: number
+                                                        isbn-type:
+                                                            description: Specify the type(s) of ISBN(s) to search for. Enter one or more ISBN types as an array.
+                                                            items:
+                                                                description: Array item
+                                                                properties:
+                                                                    type:
+                                                                        description: Specify the type of content to retrieve. Options include "journal", "conference", "thesis", and more. Default is "journal".
+                                                                        type: string
+                                                                    value:
+                                                                        description: Retrieve the value associated with the search query.
+                                                                        type: string
+                                                                type: object
+                                                            type: array
+                                                        issued:
+                                                            description: The date the scholarly content was issued, in the format of an object.
+                                                            properties:
+                                                                date-parts:
+                                                                    description: An array of date parts to filter the search results by specific date range. Each element in the array represents a specific part of the date, such as year, month, or day. The default value is an empty array, which indicates no date filtering.
+                                                                    items:
+                                                                        description: Array item
+                                                                        items:
+                                                                            description: Array item
+                                                                            type: number
+                                                                        type: array
+                                                                    type: array
+                                                            type: object
+                                                        language:
+                                                            description: Specify the language of the academic articles and scholarly content you want to retrieve.
+                                                            type: string
+                                                        member:
+                                                            description: Specify the member name to search within Crossref.
+                                                            type: string
+                                                        original-title:
+                                                            description: Retrieve the original titles of academic articles and scholarly content.
+                                                            items:
+                                                                description: Array item
+                                                                type: string
+                                                            type: array
+                                                        prefix:
+                                                            description: Specify the prefix to be used for searching academic articles and scholarly content. The prefix can be keywords, authors, titles, or any other relevant information.
+                                                            type: string
+                                                        published:
+                                                            description: Object containing information about the publication date of the article.
+                                                            properties:
+                                                                date-parts:
+                                                                    description: Array of date parts to filter the search results by publication date. Each element of the array represents a different part of the date, such as year, month, or day.
+                                                                    items:
+                                                                        description: Array item
+                                                                        items:
+                                                                            description: Array item
+                                                                            type: number
+                                                                        type: array
+                                                                    type: array
+                                                            type: object
+                                                        published-online:
+                                                            description: Date when the content was published online
+                                                            properties:
+                                                                date-parts:
+                                                                    description: Array of date parts to filter search results by publication date. Each element in the array represents a specific part of the date, such as year, month, or day.
+                                                                    items:
+                                                                        description: Array item
+                                                                        items:
+                                                                            description: Array item
+                                                                            type: number
+                                                                        type: array
+                                                                    type: array
+                                                            type: object
+                                                        publisher:
+                                                            description: Specify the name of the publisher of the scholarly content.
+                                                            type: string
+                                                        reference-count:
+                                                            description: Number of times the article has been cited by other scholarly publications.
+                                                            type: number
+                                                        references-count:
+                                                            description: Number of references cited in the scholarly article.
+                                                            type: number
+                                                        resource:
+                                                            description: An object containing the details of the academic resource.
+                                                            properties:
+                                                                primary:
+                                                                    description: Primary information for the search results, including title, author, publication date, and abstract.
+                                                                    properties:
+                                                                        URL:
+                                                                            description: URL of the retrieved scholarly content.
+                                                                            type: string
+                                                                    type: object
+                                                            type: object
+                                                        score:
+                                                            description: Numerical score indicating the relevance or quality of the search results. Higher scores generally indicate more relevant or higher-quality content.
+                                                            type: number
+                                                        source:
+                                                            description: Specify the source of the academic articles or scholarly content.
+                                                            type: string
+                                                        title:
+                                                            description: Retrieve the titles of academic articles and scholarly content that match the search query. The titles will be returned in an array format.
+                                                            items:
+                                                                description: Array item
+                                                                type: string
+                                                            type: array
+                                                        type:
+                                                            description: Specify the type of scholarly content you want to retrieve. Valid options include research articles, conference papers, theses, and more.
+                                                            type: string
+                                                    type: object
+                                                type: array
+                                            items-per-page:
+                                                description: Specify the number of items to be displayed per page in the search results. The default is 25.
+                                                type: number
+                                            query:
+                                                description: Specify the search query parameters. This should be an object containing the relevant search criteria such as keywords, authors, titles, or other relevant information. Use this parameter to retrieve the desired academic articles and scholarly content from the Crossref database.
+                                                properties:
+                                                    search-terms:
+                                                        description: Enter the search terms to retrieve relevant academic articles and scholarly content from Crossref. You can use keywords, authors, titles, or any other relevant information to refine your search. Stay up-to-date with the latest advancements in your field by utilizing this powerful tool.
+                                                        type: string
+                                                    start-index:
+                                                        description: Specify the index of the first result to retrieve from the search. The default value is 0.
+                                                        type: number
+                                                type: object
+                                            total-results:
+                                                description: Total number of search results retrieved from Crossref.
+                                                type: number
+                                        type: object
+                                    message-type:
+                                        description: Specify the type of message to retrieve from the Crossref search. Possible values include "article", "conference_paper", "thesis", and more.
+                                        type: string
+                                    message-version:
+                                        description: Version of the message format.
+                                        type: string
+                                    status:
+                                        description: Status of the search request.
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Search for academic articles and other scholarly content using Crossref, a comprehensive database of scholarly publications. Enter keywords, authors, titles, or other relevant information to retrieve relevant results. Crossref search allows you to access a vast collection of research articles, conference papers, theses, and more. Stay up-to-date with the latest advancements in your field by utilizing this powerful tool.
+    /works/{doi}:
+        get:
+            operationId: getWorkByDoi
+            parameters:
+                - description: DOI of the work
+                  in: path
+                  name: doi
+                  required: true
+                  schema:
+                    default: 10.1093/obo/9780199756810-0282
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    message:
+                                        description: Object containing the response message and details of the scholarly publication.
+                                        properties:
+                                            DOI:
+                                                description: Specify the DOI (Digital Object Identifier) of the scholarly publication for which you want to retrieve information. The DOI is a unique alphanumeric string assigned to a digital object, such as a journal article or conference paper.
+                                                type: string
+                                            ISBN:
+                                                description: Array of International Standard Book Numbers (ISBNs) associated with the scholarly publication.
+                                                items:
+                                                    description: Array item
+                                                    type: string
+                                                type: array
+                                            URL:
+                                                description: URL of the scholarly publication.
+                                                type: string
+                                            abstract:
+                                                description: Abstract of the scholarly publication in string format.
+                                                type: string
+                                            container-title:
+                                                description: Specify the titles of the containers in which the publication is included.
+                                                items:
+                                                    description: Array item
+                                                    type: string
+                                                type: array
+                                            content-domain:
+                                                description: |-
+                                                    Specify the content domain of the scholarly publication. The available options are:
+                                                    - article
+                                                    - book
+                                                    - conference paper
+                                                    - dataset
+                                                    - patent
+                                                    - preprint
+                                                    - software
+                                                    - thesis
+                                                    - other
+
+                                                    Please provide the content domain of the publication.
+                                                properties:
+                                                    crossmark-restriction:
+                                                        description: Specify whether to retrieve the Crossmark restriction information associated with the specified DOI. Set to true to include the Crossmark restriction information, or false to exclude it. Default is false.
+                                                        type: boolean
+                                                    domain:
+                                                        description: Specify the domain(s) to retrieve information from. This parameter should be an array of domain names.
+                                                        items:
+                                                            description: Array item
+                                                            type: string
+                                                        type: array
+                                                type: object
+                                            created:
+                                                description: Details about when the publication was created, including the date, time, and other relevant information.
+                                                properties:
+                                                    date-parts:
+                                                        description: Array of date parts (year, month, day) representing the publication date of the scholarly publication.
+                                                        items:
+                                                            description: Array item
+                                                            items:
+                                                                description: Array item
+                                                                type: number
+                                                            type: array
+                                                        type: array
+                                                    date-time:
+                                                        description: Date and time of the scholarly publication. Please provide the date and time in the format "YYYY-MM-DD HH:MM:SS".
+                                                        type: string
+                                                    timestamp:
+                                                        description: Timestamp indicating the date and time when the information was retrieved.
+                                                        type: number
+                                                type: object
+                                            deposited:
+                                                description: Retrieve information about the deposit status of a scholarly publication. The deposit object contains details such as the deposit ID, deposit date, and deposit status.
+                                                properties:
+                                                    date-parts:
+                                                        description: An array containing the date of publication in parts. The format of the date is [year, month, day].
+                                                        items:
+                                                            description: Array item
+                                                            items:
+                                                                description: Array item
+                                                                type: number
+                                                            type: array
+                                                        type: array
+                                                    date-time:
+                                                        description: Date and time of the scholarly publication.
+                                                        type: string
+                                                    timestamp:
+                                                        description: Timestamp of the publication in Unix time format.
+                                                        type: number
+                                                type: object
+                                            indexed:
+                                                description: Object containing information about whether the publication is indexed or not.
+                                                properties:
+                                                    date-parts:
+                                                        description: An array containing the publication date of the scholarly publication. Each element in the array represents a part of the date, such as year, month, and day.
+                                                        items:
+                                                            description: Array item
+                                                            items:
+                                                                description: Array item
+                                                                type: number
+                                                            type: array
+                                                        type: array
+                                                    date-time:
+                                                        description: Date and time when the publication information was retrieved.
+                                                        type: string
+                                                    timestamp:
+                                                        description: Timestamp of when the information was retrieved.
+                                                        type: number
+                                                type: object
+                                            is-referenced-by-count:
+                                                description: Number of times the publication has been referenced by other scholarly articles
+                                                type: number
+                                            isbn-type:
+                                                description: Specify the type(s) of ISBN(s) to retrieve for the scholarly publication. Provide as an array of strings. Possible values include "ISBN-10" and "ISBN-13". Default is an empty array.
+                                                items:
+                                                    description: Array item
+                                                    properties:
+                                                        type:
+                                                            description: Specify the type of information you want to retrieve. Valid options include "title", "authors", "publication date", and "metadata". Default is "metadata".
+                                                            type: string
+                                                        value:
+                                                            description: The value of the parameter should be the DOI of the scholarly publication.
+                                                            type: string
+                                                    type: object
+                                                type: array
+                                            issued:
+                                                description: The date of publication associated with the specified DOI.
+                                                properties:
+                                                    date-parts:
+                                                        description: Array of date parts (year, month, day) representing the publication date.
+                                                        items:
+                                                            description: Array item
+                                                            items:
+                                                                description: Array item
+                                                                type: number
+                                                            type: array
+                                                        type: array
+                                                type: object
+                                            language:
+                                                description: Specify the language of the publication.
+                                                type: string
+                                            member:
+                                                description: Specify the member or organization associated with the DOI.
+                                                type: string
+                                            original-title:
+                                                description: Array of original titles associated with the specified DOI
+                                                items:
+                                                    description: Array item
+                                                    type: string
+                                                type: array
+                                            prefix:
+                                                description: Prefix of the DOI. The DOI typically consists of a prefix followed by a slash and a unique identifier. For example, the prefix "10.123" in the DOI "10.123/456abc" identifies the publisher or organization responsible for the assigned DOI.
+                                                type: string
+                                            published:
+                                                description: Object containing details about the publication, including the title, authors, publication date, and other metadata.
+                                                properties:
+                                                    date-parts:
+                                                        description: Array containing the date of publication in the format [year, month, day].
+                                                        items:
+                                                            description: Array item
+                                                            items:
+                                                                description: Array item
+                                                                type: number
+                                                            type: array
+                                                        type: array
+                                                type: object
+                                            published-online:
+                                                description: This parameter represents the online publication details of the scholarly publication. It includes information such as the publication date, volume, issue, and page numbers.
+                                                properties:
+                                                    date-parts:
+                                                        description: Array containing the parts of the publication date, in the format [year, month, day].
+                                                        items:
+                                                            description: Array item
+                                                            items:
+                                                                description: Array item
+                                                                type: number
+                                                            type: array
+                                                        type: array
+                                                type: object
+                                            publisher:
+                                                description: The name of the publisher of the scholarly publication.
+                                                type: string
+                                            reference-count:
+                                                description: Number of references that cite the scholarly publication.
+                                                type: number
+                                            references-count:
+                                                description: Number of references cited in the scholarly publication.
+                                                type: number
+                                            relation:
+                                                description: The relation parameter is an object that represents the relationship between the scholarly publication and other related entities. Please provide more details about the specific information you want to retrieve.
+                                                type: object
+                                            resource:
+                                                description: The resource object containing the details of the scholarly publication.
+                                                properties:
+                                                    primary:
+                                                        description: Primary details of the scholarly publication, including title, authors, and publication date.
+                                                        properties:
+                                                            URL:
+                                                                description: URL of the scholarly publication.
+                                                                type: string
+                                                        type: object
+                                                type: object
+                                            score:
+                                                description: The score of the scholarly publication, indicating its relevance or quality. The score is a numerical value that can range from 0 to 100, with higher scores indicating higher relevance or quality. The default score is 0.
+                                                type: number
+                                            short-container-title:
+                                                description: Array of short titles of the publication's container, such as the journal or conference name.
+                                                items:
+                                                    description: Array item
+                                                    type: string
+                                                type: array
+                                            short-title:
+                                                description: Array of short titles associated with the specified DOI
+                                                items:
+                                                    description: Array item
+                                                    type: string
+                                                type: array
+                                            source:
+                                                description: The source of the scholarly publication.
+                                                type: string
+                                            subject:
+                                                description: Array of subjects or disciplines related to the scholarly publication
+                                                items:
+                                                    description: Array item
+                                                    type: string
+                                                type: array
+                                            subtitle:
+                                                description: Subtitle associated with the scholarly publication. Can be multiple subtitles.
+                                                items:
+                                                    description: Array item
+                                                    type: string
+                                                type: array
+                                            title:
+                                                description: Array of titles of the scholarly publications
+                                                items:
+                                                    description: Array item
+                                                    type: string
+                                                type: array
+                                            type:
+                                                description: 'Specify the type of information you want to retrieve. The available options are: title, authors, publication_date, and metadata.'
+                                                type: string
+                                        type: object
+                                    message-type:
+                                        description: Specify the type of message to retrieve. The available options are "title", "authors", "publication_date", and "metadata". The default is "metadata".
+                                        type: string
+                                    message-version:
+                                        description: Version of the message format used for the response.
+                                        type: string
+                                    status:
+                                        description: Status of the scholarly publication. Possible values include "published", "in press", "submitted", "under review", "accepted", "rejected", or "withdrawn".
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: This tool allows you to retrieve information about a scholarly publication by providing its DOI (Digital Object Identifier). You can use this tool to obtain details such as the title, authors, publication date, and other metadata associated with the specified DOI. Simply input the DOI and retrieve the relevant information.
+servers:
+    - url: https://api.crossref.org

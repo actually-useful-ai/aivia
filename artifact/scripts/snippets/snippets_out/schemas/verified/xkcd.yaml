@@ -1,0 +1,115 @@
+openapi: 3.1.0
+info:
+    title: XKCD API
+    description: API to retrieve XKCD comics and information.
+    version: 1.0.0
+
+servers:
+    - url: https://xkcd.com
+
+paths:
+    /info.0.json:
+        get:
+            operationId: getCurrentComic
+            summary: Get the latest XKCD comic
+            description: Retrieves the latest XKCD comic information.
+            responses:
+                "200":
+                    description: Successful response containing the latest comic information
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Comic'
+    /{comicId}/info.0.json:
+        get:
+            operationId: getComicById
+            summary: Get a specific XKCD comic by ID
+            description: Retrieves information about a specific XKCD comic based on its ID.
+            parameters:
+                - name: comicId
+                  in: path
+                  required: true
+                  description: The ID of the comic to retrieve
+                  schema:
+                    type: integer
+            responses:
+                "200":
+                    description: Successful response containing the requested comic information
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Comic'
+                "404":
+                    description: Comic not found
+
+components:
+    schemas:
+        Comic:
+            type: object
+            properties:
+                num:
+                    type: integer
+                    description: The unique ID of the comic
+                title:
+                    type: string
+                    description: The title of the comic
+                safe_title:
+                    type: string
+                    description: A safe (for API) version of the title
+                img:
+                    type: string
+                    description: URL to the comic image
+                alt:
+                    type: string
+                    description: The alt text of the comic
+                transcript:
+                    type: string
+                    description: Transcript of the comic
+                year:
+                    type: string
+                    description: Year the comic was published
+                month:
+                    type: string
+                    description: Month the comic was published (as a string)
+                day:
+                    type: string
+                    description: Day the comic was published (as a string)
+                link:
+                    type: string
+                    description: URL to related content (if any)
+                news:
+                    type: string
+                    description: News or updates related to this comic (if any)
+
+    examples:
+        getComicById:
+            value:
+                ReqExample:
+                    comicId: 2973
+                RespExample:
+                    alt: They left the belt drive in place but switched which wheel was powered, so people could choose between a regular ride, a long ride, and a REALLY long ride.
+                    day: "16"
+                    img: https://imgs.xkcd.com/comics/ferris_wheels.png
+                    link: ""
+                    month: "8"
+                    news: ""
+                    num: 2973
+                    safe_title: Ferris Wheels
+                    title: Ferris Wheels
+                    transcript: ""
+                    year: "2024"
+        getCurrentComic:
+            value:
+                ReqExample: {}
+                RespExample:
+                    alt: They left the belt drive in place but switched which wheel was powered, so people could choose between a regular ride, a long ride, and a REALLY long ride.
+                    day: "16"
+                    img: https://imgs.xkcd.com/comics/ferris_wheels.png
+                    link: ""
+                    month: "8"
+                    news: ""
+                    num: 2973
+                    safe_title: Ferris Wheels
+                    title: Ferris Wheels
+                    transcript: ""
+                    year: "2024"

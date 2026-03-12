@@ -1,0 +1,47 @@
+# LLM Tools Configuration
+
+cohere:
+  api_key: "g6KjvSLHSTOZv7E6Y749YYpOO1gc3pmbVqW0x0DJ"
+  default_model: "command"
+  max_retries: 3
+  timeout: 30
+  models:
+    command:
+      max_tokens: 4096
+      temperature: 0.7
+    command-light:
+      max_tokens: 2048
+      temperature: 0.7
+    embed-english-v3.0:
+      truncate: "END"
+
+mistral:
+  api_key: "n8R347515VqP48oDHwBeL9BS6nW1L8zY"
+  default_model: "mistral-small"
+  max_retries: 3
+  timeout: 30
+  models:
+    mistral-tiny:
+      max_tokens: 4096
+      temperature: 0.7
+    mistral-small:
+      max_tokens: 8192
+      temperature: 0.7
+    mistral-medium:
+      max_tokens: 16384
+      temperature: 0.7
+    mistral-embed:
+      dimensions: 1024
+
+perplexity:
+  api_key: "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"
+  default_model: "pplx-7b-chat"
+  max_retries: 3
+  timeout: 30
+  models:
+    pplx-7b-chat:
+      max_tokens: 4096
+      temperature: 0.7
+    pplx-70b-chat:
+      max_tokens: 8192
+      temperature: 0.7 

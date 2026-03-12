@@ -1,0 +1,65 @@
+components:
+    examples:
+        predictGender:
+            value:
+                ReqExample:
+                    name: lucas
+                RespExample:
+                    count: 329877
+                    gender: male
+                    name: lucas
+                    probability: 1
+info:
+    description: The Genderize API predicts the gender of a person given their name.
+    title: Genderize API
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /:
+        get:
+            description: This endpoint returns the gender, probability, and count of the given name.
+            operationId: predictGender
+            parameters:
+                - description: The name to predict gender for.
+                  in: query
+                  name: name
+                  required: true
+                  schema:
+                    type: string
+                - description: An optional ISO 3166-1 alpha-2 country code to improve accuracy.
+                  in: query
+                  name: country_id
+                  schema:
+                    type: string
+                - description: An optional ISO 639-1 language code to improve accuracy.
+                  in: query
+                  name: language_id
+                  schema:
+                    type: string
+            requestBody:
+                content: {}
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    count:
+                                        type: integer
+                                    gender:
+                                        type: string
+                                    name:
+                                        type: string
+                                    probability:
+                                        format: float
+                                        type: number
+                                type: object
+                    description: A successful response
+                "400":
+                    description: Bad request, possibly due to missing name parameter
+                "500":
+                    description: Internal server error
+            summary: Predict the gender by name
+servers:
+    - description: Main (production) server
+      url: https://api.genderize.io

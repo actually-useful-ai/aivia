@@ -1,0 +1,151 @@
+components:
+    examples:
+        Breweries_get:
+            value:
+                ReqExample:
+                    by_postal: "93103"
+                    page: 1
+                    per_page: 20
+                RespExample:
+                    - address_1: 410 N Quarantina St
+                      address_2: null
+                      address_3: null
+                      brewery_type: micro
+                      city: Santa Barbara
+                      country: United States
+                      id: d0dd6285-194e-4a7e-b260-1304a482c335
+                      latitude: "34.42351207"
+                      longitude: "-119.6864979"
+                      name: Pure Order Brewing Co
+                      phone: "8059662881"
+                      postal_code: 93103-3119
+                      state: California
+                      state_province: California
+                      street: 410 N Quarantina St
+                      website_url: http://www.pureorderbrewing.com
+                    - address_1: 418 N Salsipuedes St
+                      address_2: null
+                      address_3: null
+                      brewery_type: micro
+                      city: Santa Barbara
+                      country: United States
+                      id: 3bd29102-fc0a-4ce2-bcb6-940df953a00f
+                      latitude: "34.4228601"
+                      longitude: "-119.6881651"
+                      name: Telegraph Brewing Co
+                      phone: "8059635018"
+                      postal_code: 93103-3127
+                      state: California
+                      state_province: California
+                      street: 418 N Salsipuedes St
+                      website_url: http://www.telegraphbrewing.com
+info:
+    description: API to access to small brewery information all over the world given a wide variety of low to high detail input
+    title: Open Brewery DB
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /breweries:
+        get:
+            operationId: Breweries_get
+            parameters:
+                - description: Filter breweries by type.
+                  in: query
+                  name: by_type
+                  schema:
+                    type: string
+                - description: Filter breweries by city.
+                  in: query
+                  name: by_city
+                  schema:
+                    type: string
+                - description: Filter breweries by state.
+                  in: query
+                  name: by_state
+                  schema:
+                    type: string
+                - description: Filter breweries by country.
+                  in: query
+                  name: by_country
+                  schema:
+                    type: string
+                - description: Sort results by specified field.
+                  in: query
+                  name: sort
+                  schema:
+                    type: string
+                - description: The page number to retrieve.
+                  in: query
+                  name: page
+                  schema:
+                    default: 1
+                    type: integer
+                - description: The number of results per page.
+                  in: query
+                  name: per_page
+                  schema:
+                    default: 20
+                    type: integer
+                - description: Filter breweries by name.
+                  in: query
+                  name: by_name
+                  schema:
+                    type: string
+                - description: Filter breweries by postal code.
+                  in: query
+                  name: by_postal
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    properties:
+                                        address_1:
+                                            type: string
+                                        address_2:
+                                            type: string
+                                        address_3:
+                                            type: string
+                                        brewery_type:
+                                            type: string
+                                        city:
+                                            type: string
+                                        country:
+                                            type: string
+                                        id:
+                                            type: string
+                                        latitude:
+                                            type: string
+                                        longitude:
+                                            type: string
+                                        name:
+                                            type: string
+                                        phone:
+                                            type: string
+                                        postal_code:
+                                            type: string
+                                        state:
+                                            type: string
+                                        state_province:
+                                            type: string
+                                        street:
+                                            type: string
+                                        website_url:
+                                            type: string
+                                    type: object
+                                type: array
+                    description: new desc
+                default:
+                    description: ""
+            summary: Retrieve a list of all breweries in the database.
+servers:
+    - url: https://api.openbrewerydb.org

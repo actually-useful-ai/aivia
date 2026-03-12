@@ -1,0 +1,807 @@
+components:
+    examples:
+        getDataAtLevel:
+            value:
+                ReqExample:
+                    alias: pop
+                    level: pic
+                RespExample:
+                    data:
+                        - id: "1"
+                          iso3: ARM
+                          popyear: null
+                          title: Armenia 100m Population
+                        - id: "2"
+                          iso3: AZE
+                          popyear: null
+                          title: Azerbaijan 100m Population
+                        - id: "3"
+                          iso3: IRQ
+                          popyear: null
+                          title: Iraq 100m Population
+                        - id: "4"
+                          iso3: SAU
+                          popyear: null
+                          title: Saudi Arabia 100m Population
+                        - id: "5"
+                          iso3: UZB
+                          popyear: null
+                          title: Uzbekistan 100m Population
+                        - id: "6"
+                          iso3: BLZ
+                          popyear: null
+                          title: Belize 100m Population
+                        - id: "7"
+                          iso3: BOL
+                          popyear: null
+                          title: Bolivia (Plurinational State of) 100m Population
+                        - id: "8"
+                          iso3: BRA
+                          popyear: null
+                          title: Brazil 100m Population
+                        - id: "9"
+                          iso3: CHL
+                          popyear: null
+                          title: Chile 100m Population
+                        - id: "10"
+                          iso3: COL
+                          popyear: null
+                          title: Colombia 100m Population
+                        - id: "11"
+                          iso3: CRI
+                          popyear: null
+                          title: Costa Rica 100m Population
+                        - id: "12"
+                          iso3: CUB
+                          popyear: null
+                          title: Cuba 100m Population
+                        - id: "13"
+                          iso3: DOM
+                          popyear: null
+                          title: Dominican Republic 100m Population
+                        - id: "14"
+                          iso3: ECU
+                          popyear: null
+                          title: Ecuador 100m Population
+                        - id: "15"
+                          iso3: SLV
+                          popyear: null
+                          title: El Salvador 100m Population
+                        - id: "16"
+                          iso3: GUF
+                          popyear: null
+                          title: French Guiana 100m Population
+                        - id: "17"
+                          iso3: GTM
+                          popyear: null
+                          title: Guatemala 100m Population
+                        - id: "18"
+                          iso3: GUY
+                          popyear: null
+                          title: Guyana 100m Population
+                        - id: "19"
+                          iso3: HND
+                          popyear: null
+                          title: Honduras 100m Population
+                        - id: "20"
+                          iso3: JAM
+                          popyear: null
+                          title: Jamaica 100m Population
+                        - id: "21"
+                          iso3: MEX
+                          popyear: null
+                          title: Mexico 100m Population
+                        - id: "22"
+                          iso3: NIC
+                          popyear: null
+                          title: Nicaragua 100m Population
+                        - id: "23"
+                          iso3: PAN
+                          popyear: null
+                          title: Panama 100m Population
+                        - id: "24"
+                          iso3: PRY
+                          popyear: null
+                          title: Paraguay 100m Population
+                        - id: "25"
+                          iso3: PER
+                          popyear: null
+                          title: Peru 100m Population
+                        - id: "26"
+                          iso3: PRI
+                          popyear: null
+                          title: Puerto Rico 100m Population
+                        - id: "27"
+                          iso3: SUR
+                          popyear: null
+                          title: Suriname 100m Population
+                        - id: "28"
+                          iso3: TTO
+                          popyear: null
+                          title: Trinidad and Tobago 100m Population
+                        - id: "29"
+                          iso3: URY
+                          popyear: null
+                          title: Uruguay 100m Population
+                        - id: "30"
+                          iso3: VEN
+                          popyear: null
+                          title: Venezuela (Bolivarian Republic of) 100m Population
+                        - id: "31"
+                          iso3: ZWE
+                          popyear: null
+                          title: Zimbabwe 100m Population
+                        - id: "32"
+                          iso3: CMR
+                          popyear: null
+                          title: Cameroon 100m Population
+                        - id: "33"
+                          iso3: GIN
+                          popyear: null
+                          title: Guinea 100m Population
+                        - id: "34"
+                          iso3: ZAF
+                          popyear: null
+                          title: South Africa 100m Population
+                        - id: "35"
+                          iso3: TWN
+                          popyear: null
+                          title: Taiwan 100m Population
+                        - id: "36"
+                          iso3: SSD
+                          popyear: null
+                          title: South Sudan 100m Population
+                        - id: "37"
+                          iso3: SSD
+                          popyear: null
+                          title: South Sudan 100m Population
+                        - id: "38"
+                          iso3: ZMB
+                          popyear: null
+                          title: Zambia 100m Population
+                        - id: "39"
+                          iso3: DZA
+                          popyear: null
+                          title: Algeria 100m Population
+                        - id: "40"
+                          iso3: GEO
+                          popyear: null
+                          title: Georgia 100m Population
+                        - id: "41"
+                          iso3: PNG
+                          popyear: null
+                          title: Papua New Guinea 100m Population
+                        - id: "42"
+                          iso3: JPN
+                          popyear: null
+                          title: Japan 100m Population
+                        - id: "43"
+                          iso3: AGO
+                          popyear: null
+                          title: Angola 100m Population
+                        - id: "44"
+                          iso3: BDI
+                          popyear: null
+                          title: Burundi 100m Population
+                        - id: "45"
+                          iso3: KHM
+                          popyear: null
+                          title: Cambodia 100m Population
+                        - id: "46"
+                          iso3: WSM
+                          popyear: null
+                          title: Samoa 100m Population
+                        - id: "47"
+                          iso3: FJI
+                          popyear: null
+                          title: Fiji 100m Population
+                        - id: "48"
+                          iso3: BEN
+                          popyear: null
+                          title: Benin 100m Population
+                        - id: "49"
+                          iso3: NER
+                          popyear: null
+                          title: Niger 100m Population
+                        - id: "50"
+                          iso3: COG
+                          popyear: null
+                          title: Congo 100m Population
+                        - id: "51"
+                          iso3: GHA
+                          popyear: null
+                          title: Ghana 100m Population
+                        - id: "52"
+                          iso3: TCD
+                          popyear: null
+                          title: Chad 100m Population
+                        - id: "53"
+                          iso3: ERI
+                          popyear: null
+                          title: Eritrea 100m Population
+                        - id: "54"
+                          iso3: MYS
+                          popyear: null
+                          title: Malaysia 100m Population
+                        - id: "55"
+                          iso3: BFA
+                          popyear: null
+                          title: Burkina Faso 100m Population
+                        - id: "56"
+                          iso3: GAB
+                          popyear: null
+                          title: Gabon 100m Population
+                        - id: "57"
+                          iso3: MMR
+                          popyear: null
+                          title: Myanmar 100m Population
+                        - id: "58"
+                          iso3: MHL
+                          popyear: null
+                          title: Marshall Islands 100m Population
+                        - id: "59"
+                          iso3: RWA
+                          popyear: null
+                          title: Rwanda 100m Population
+                        - id: "60"
+                          iso3: RWA
+                          popyear: null
+                          title: Rwanda 100m Population
+                        - id: "61"
+                          iso3: LAO
+                          popyear: null
+                          title: Lao Peoples Democratic Republic 100m Population
+                        - id: "62"
+                          iso3: EGY
+                          popyear: null
+                          title: Egypt 100m Population
+                        - id: "63"
+                          iso3: KOR
+                          popyear: null
+                          title: Republic of Korea 100m Population
+                        - id: "64"
+                          iso3: TLS
+                          popyear: null
+                          title: Timor-Leste 100m Population
+                        - id: "65"
+                          iso3: MAR
+                          popyear: null
+                          title: Morocco 100m Population
+                        - id: "66"
+                          iso3: GNB
+                          popyear: null
+                          title: Guinea-Bissau 100m Population
+                        - id: "67"
+                          iso3: SLE
+                          popyear: null
+                          title: Sierra Leone 100m Population
+                        - id: "68"
+                          iso3: MDG
+                          popyear: null
+                          title: Madagascar 100m Population
+                        - id: "69"
+                          iso3: MDG
+                          popyear: null
+                          title: Madagascar 100m Population
+                        - id: "70"
+                          iso3: MDG
+                          popyear: null
+                          title: Madagascar 100m Population
+                        - id: "71"
+                          iso3: LBY
+                          popyear: null
+                          title: Libya 100m Population
+                        - id: "72"
+                          iso3: LBY
+                          popyear: null
+                          title: Libya 100m Population
+                        - id: "73"
+                          iso3: KIR
+                          popyear: null
+                          title: Kiribati 100m Population
+                        - id: "74"
+                          iso3: CIV
+                          popyear: null
+                          title: Cte dIvoire 100m Population
+                        - id: "75"
+                          iso3: SOM
+                          popyear: null
+                          title: Somalia 100m Population
+                        - id: "76"
+                          iso3: SOM
+                          popyear: null
+                          title: Somalia 100m Population
+                        - id: "77"
+                          iso3: THA
+                          popyear: null
+                          title: Thailand 100m Population
+                        - id: "78"
+                          iso3: AFG
+                          popyear: null
+                          title: Afghanistan 100m Population
+                        - id: "79"
+                          iso3: PAK
+                          popyear: null
+                          title: Pakistan 100m Population
+                        - id: "80"
+                          iso3: MNG
+                          popyear: null
+                          title: Mongolia 100m Population
+                        - id: "81"
+                          iso3: MLI
+                          popyear: null
+                          title: Mali 100m Population
+                        - id: "82"
+                          iso3: TZA
+                          popyear: null
+                          title: United Republic of Tanzania 100m Population
+                        - id: "83"
+                          iso3: KEN
+                          popyear: null
+                          title: Kenya 100m Population
+                        - id: "84"
+                          iso3: VNM
+                          popyear: null
+                          title: Viet Nam 100m Population
+                        - id: "85"
+                          iso3: PHL
+                          popyear: null
+                          title: Philippines 100m Population
+                        - id: "86"
+                          iso3: TON
+                          popyear: null
+                          title: Tonga 100m Population
+                        - id: "87"
+                          iso3: UGA
+                          popyear: null
+                          title: Uganda 100m Population
+                        - id: "88"
+                          iso3: LKA
+                          popyear: null
+                          title: Sri Lanka 100m Population
+                        - id: "89"
+                          iso3: KGZ
+                          popyear: null
+                          title: Kyrgyzstan 100m Population
+                        - id: "90"
+                          iso3: YEM
+                          popyear: null
+                          title: Yemen 100m Population
+                        - id: "91"
+                          iso3: IND
+                          popyear: null
+                          title: India 100m Population
+                        - id: "92"
+                          iso3: IND
+                          popyear: null
+                          title: India 100m Population
+                        - id: "93"
+                          iso3: BGD
+                          popyear: null
+                          title: Bangladesh 100m Population
+                        - id: "94"
+                          iso3: BGD
+                          popyear: null
+                          title: Bangladesh 100m Population
+                        - id: "95"
+                          iso3: NGA
+                          popyear: null
+                          title: Nigeria 100m Population
+                        - id: "96"
+                          iso3: GNQ
+                          popyear: null
+                          title: Equatorial Guinea 100m Population
+                        - id: "97"
+                          iso3: TUN
+                          popyear: null
+                          title: Tunisia 100m Population
+                        - id: "98"
+                          iso3: TUN
+                          popyear: null
+                          title: Tunisia 100m Population
+                        - id: "99"
+                          iso3: LSO
+                          popyear: null
+                          title: Lesotho 100m Population
+                        - id: "100"
+                          iso3: NAM
+                          popyear: null
+                          title: Namibia 100m Population
+                        - id: "101"
+                          iso3: TJK
+                          popyear: null
+                          title: Tajikistan 100m Population
+                        - id: "102"
+                          iso3: MOZ
+                          popyear: null
+                          title: Mozambique 100m Population
+                        - id: "103"
+                          iso3: MRT
+                          popyear: null
+                          title: Mauritania 100m Population
+                        - id: "104"
+                          iso3: ESH
+                          popyear: null
+                          title: Western Sahara 100m Population
+                        - id: "105"
+                          iso3: SWZ
+                          popyear: null
+                          title: Swaziland 100m Population
+                        - id: "106"
+                          iso3: PRK
+                          popyear: null
+                          title: Democratic Peoples Republic of Korea 100m Population
+                        - id: "107"
+                          iso3: LBR
+                          popyear: null
+                          title: Liberia 100m Population
+                        - id: "108"
+                          iso3: FSM
+                          popyear: null
+                          title: Micronesia (Federated States of) 100m Population
+                        - id: "109"
+                          iso3: BWA
+                          popyear: null
+                          title: Botswana 100m Population
+                        - id: "110"
+                          iso3: SLB
+                          popyear: null
+                          title: Solomon Islands 100m Population
+                        - id: "111"
+                          iso3: NPL
+                          popyear: null
+                          title: Nepal 100m Population
+                        - id: "112"
+                          iso3: NPL
+                          popyear: null
+                          title: Nepal 100m Population
+                        - id: "113"
+                          iso3: SDN
+                          popyear: null
+                          title: Sudan 100m Population
+                        - id: "114"
+                          iso3: VUT
+                          popyear: null
+                          title: Vanuatu 100m Population
+                        - id: "115"
+                          iso3: CAF
+                          popyear: null
+                          title: Central African Republic 100m Population
+                        - id: "116"
+                          iso3: MDV
+                          popyear: null
+                          title: Maldives 100m Population
+                        - id: "117"
+                          iso3: TGO
+                          popyear: null
+                          title: Togo 100m Population
+                        - id: "118"
+                          iso3: IDN
+                          popyear: null
+                          title: Indonesia 100m Population
+                        - id: "119"
+                          iso3: DJI
+                          popyear: null
+                          title: Djibouti 100m Population
+                        - id: "120"
+                          iso3: SGP
+                          popyear: null
+                          title: Singapore 100m Population
+                        - id: "121"
+                          iso3: PLW
+                          popyear: null
+                          title: Palau 100m Population
+                        - id: "122"
+                          iso3: MWI
+                          popyear: null
+                          title: Malawi 100m Population
+                        - id: "123"
+                          iso3: MWI
+                          popyear: null
+                          title: Malawi 100m Population
+                        - id: "124"
+                          iso3: ETH
+                          popyear: null
+                          title: Ethiopia 100m Population
+                        - id: "125"
+                          iso3: COD
+                          popyear: null
+                          title: Democratic Republic of the Congo 100m Population
+                        - id: "126"
+                          iso3: BRN
+                          popyear: null
+                          title: Brunei Darussalam 100m Population
+                        - id: "127"
+                          iso3: SEN
+                          popyear: null
+                          title: Senegal 100m Population
+                        - id: "128"
+                          iso3: GMB
+                          popyear: null
+                          title: Gambia 100m Population
+                        - id: "129"
+                          iso3: HTI
+                          popyear: null
+                          title: Haiti 100m Population
+                        - id: "130"
+                          iso3: ATG
+                          popyear: null
+                          title: Antigua and Barbuda 100m Population
+                        - id: "131"
+                          iso3: CHN
+                          popyear: null
+                          title: China 100m Population
+                        - id: "132"
+                          iso3: ARG
+                          popyear: null
+                          title: Argentina 100m Population
+                        - id: "133"
+                          iso3: OMN
+                          popyear: null
+                          title: Oman 100m Population
+                        - id: "134"
+                          iso3: SYR
+                          popyear: null
+                          title: Syrian Arab Republic 100m Population
+                        - id: "135"
+                          iso3: BTN
+                          popyear: null
+                          title: Bhutan 100m Population
+                        - id: "136"
+                          iso3: PSE
+                          popyear: null
+                          title: State of Palestine 100m Population
+                        - id: "137"
+                          iso3: UKR
+                          popyear: null
+                          title: Ukraine 100m Population
+                        - id: "138"
+                          iso3: KAZ
+                          popyear: null
+                          title: Kazakhstan 100m Population
+                        - id: "17044"
+                          iso3: NGA
+                          popyear: null
+                          title: Nigeria 100m Population
+        getDatasetsMetadata:
+            value:
+                ReqExample: {}
+                RespExample:
+                    data:
+                        - alias: pop
+                          desc: "<b>WorldPop produces different types of gridded population count datasets, depending on the methods used and end application. \r\nPlease make sure you have read our <a href=\"https://www.worldpop.org/methods/populations\" target=\"_blank\">Mapping Populations</a> overview page before choosing and downloading a dataset.</b> \r\n<br/><br/>   \r\nBespoke methods used to produce datasets for specific individual countries are available through the <b>WorldPop Open Population Repository (WOPR)</b> link below. \r\nThese are 100m resolution gridded population estimates using customized methods (\"<a href=\"https://www.worldpop.org/methods/populations\" target=\"_blank\">bottom-up</a>\" and/or \"<a href=\"https://www.worldpop.org/methods/populations\" target=\"_blank\">top-down</a>\") developed for the latest data available from each country. \r\nThey can also be visualised and explored through the <a href=\"https://apps.worldpop.org/woprVision/\" target=\"_blank\">woprVision App</a>.\r\n<br/>\r\nThe remaining datasets in the links below are produced using the \"<a href=\"https://www.worldpop.org/methods/populations\" target=\"_blank\">top-down</a>\" method, \r\nwith either the unconstrained or constrained top-down disaggregation method used. \r\nPlease make sure you read the <a href=\"https://www.worldpop.org/methods/top_down_constrained_vs_unconstrained\" target=\"_blank\">Top-down estimation modelling overview page</a> to decide on which datasets best meet your needs. \r\nDatasets are available to download in Geotiff and ASCII XYZ format at a <u>resolution of 3 and 30 arc-seconds (approximately 100m and 1km at the equator, respectively)</u>:\r\n<br/><br/>\r\n- Unconstrained individual countries 2000-2020  ( 1km resolution ): Consistent 1km resolution population count datasets created using \r\n<a href=\"https://www.worldpop.org/methods/top_down_constrained_vs_unconstrained\" target=\"_blank\">unconstrained top-down methods</a> for all countries of the World for each year 2000-2020. \r\n<br/>\r\n- Unconstrained individual countries 2000-2020 ( 100m resolution ): Consistent 100m resolution population count datasets created using \r\n<a href=\"https://www.worldpop.org/methods/top_down_constrained_vs_unconstrained\" target=\"_blank\">unconstrained top-down methods</a> for all countries of the World for each year 2000-2020. \r\n<br/>\r\n- Unconstrained individual countries 2000-2020 UN adjusted ( 100m resolution ): Consistent 100m resolution population count datasets created using \r\n<a href=\"https://www.worldpop.org/methods/top_down_constrained_vs_unconstrained\" target=\"_blank\">unconstrained top-down methods</a> for all countries of the World for each year 2000-2020 and adjusted to match United Nations national population estimates (<a href=\"https://population.un.org/wpp/Download/Files/1_Indicators (Standard)/EXCEL_FILES/1_Population/WPP2019_POP_F01_1_TOTAL_POPULATION_BOTH_SEXES.xlsx\" target=\"_blank\">UN 2019</a>)\r\n<br/>\r\n-Unconstrained individual countries 2000-2020 UN adjusted ( 1km resolution ): Consistent 1km resolution population count datasets created using \r\n<a href=\"https://www.worldpop.org/methods/top_down_constrained_vs_unconstrained\" target=\"_blank\">unconstrained top-down methods</a> for all countries of the World for each year 2000-2020 and adjusted to match United Nations national population estimates (<a href=\"https://population.un.org/wpp/Download/Files/1_Indicators (Standard)/EXCEL_FILES/1_Population/WPP2019_POP_F01_1_TOTAL_POPULATION_BOTH_SEXES.xlsx\" target=\"_blank\">UN 2019</a>).\r\n<br/>\r\n-Unconstrained global mosaics 2000-2020 ( 1km resolution ): Mosaiced 1km resolution versions of the \"Unconstrained individual countries 2000-2020\" datasets.\r\n<br/>\r\n-Constrained individual countries 2020 ( 100m resolution ): Consistent 100m resolution population count datasets created using \r\n<a href=\"https://www.worldpop.org/methods/top_down_constrained_vs_unconstrained\" target=\"_blank\">constrained top-down methods</a> for all countries of the World for 2020.\r\n<br/>\r\n-Constrained individual countries 2020 UN adjusted ( 100m resolution ): Consistent 100m resolution population count datasets created using \r\n<a href=\"https://www.worldpop.org/methods/top_down_constrained_vs_unconstrained\" target=\"_blank\">constrained top-down methods</a> for all countries of the World for 2020 and adjusted to match United Nations national \r\npopulation estimates (<a href=\"https://population.un.org/wpp/Download/Files/1_Indicators (Standard)/EXCEL_FILES/1_Population/WPP2019_POP_F01_1_TOTAL_POPULATION_BOTH_SEXES.xlsx\" target=\"_blank\">UN 2019</a>).\r\n<br/>\r\n<br/>\r\nOlder datasets produced for specific individual countries and continents, using a set of tailored geospatial inputs and differing \"top-down\" methods and time periods are still available for download here: <a href=\"https://www.worldpop.org/geodata/listing?id=16\">Individual countries</a> and <a href=\"https://www.worldpop.org/geodata/listing?id=17\">Whole Continent</a>.\r\n"
+                          name: Population Counts
+                          title: Population Counts
+                        - alias: births
+                          desc: The health and survival of women and their new-born babies in low income countries is a key public health priority, but basic and consistent subnational data on the number of live births to support decision making has been lacking. WorldPop integrates small area data on the distribution of women of childbearing age and age-specific fertility rates to map the estimated distributions of births for each 1x1km grid square across all low and middle income countries. Further details on the methods can be found in <a href="https://ij-healthgeographics.biomedcentral.com/articles/10.1186/1476-072X-13-2"  target="_blank">Tatem et al.</a> and <a href="https://www.nature.com/articles/sdata201890"  target="_blank">James et al.</a>.
+                          name: Births
+                          title: Births
+                        - alias: pregnancies
+                          desc: The health and survival of women and their new-born babies in low income countries is a key public health priority, but basic and consistent subnational data on the number of pregnancies to support decision making has been lacking. WorldPop integrates small area data on the distribution of women of childbearing age, age-specific fertility rates, still births and abortions to map the estimated distributions of pregnancies for each 1x1km grid square across all low and middle income countries. Further details on the methods can be found in <a href="https://ij-healthgeographics.biomedcentral.com/articles/10.1186/1476-072X-13-2"  target="_blank">Tatem et al</a> and <a href="https://www.nature.com/articles/sdata201890"  target="_blank">James et al.</a>.
+                          name: Pregnancies
+                          title: Pregnancies
+                        - alias: urban_change
+                          desc: East–Southeast Asia is currently one of the fastest urbanizing regions in the world, with countries such as China climbing from 20 to 50% urbanized in just a few decades. However, spatially-and temporally-detailed information on regional-scale changes in urban land or population distribution have not previously been available; previous efforts have been either sample-based, focused on one country, or drawn conclusions from datasets with substantial temporal/spatial mismatch and variability in urban definitions. In collaboration with the World Bank and University of Wisconsin-Madison, WorldPop used consistent methodology, satellite imagery and census data for >1000 agglomerations in the East–Southeast Asian region to map population changes between 2000 and 2010. The data are available here and described in detail in <a href="http://iopscience.iop.org/article/10.1088/1748-9326/10/3/034002"  target="_blank">Schneider et al</a>, and this <a href="https://openknowledge.worldbank.org/handle/10986/21159"  target="_blank">report</a>.
+                          name: Urban change
+                          title: Urban change
+                        - alias: age_structures
+                          desc: "<b>WorldPop produces different types of gridded population count datasets, depending on the methods used and end application. \r\nPlease make sure you have read our <a href=\"/methods/populations\" target=\"_blank\">Mapping Populations</a> overview page before choosing and downloading a dataset.</b> \r\n<br/><br/>   \r\n\r\nA description of the modelling methods used for age and sex structures can be found in \r\n<a href=\"https://pophealthmetrics.biomedcentral.com/articles/10.1186/1478-7954-11-11\" target=\"_blank\">\r\nTatem et al</a> and \r\n<a href=\"https://dx.doi.org/10.1038/sdata.2017.89\" target=\"_blank\">Pezzulo et al</a>. Details of the input population count datasets used can be found <a href=\"https://www.worldpop.org/project/categories?id=3\" target=\"_blank\">here</a>, and age/sex structure proportion datasets <a href=\"https://www.portal.worldpop.org/demographics/data/global_agesex_proportions_totals_2020.zip\" target=\"_blank\">here</a>. \r\n<br/>\r\nBoth top-down 'unconstrained' and 'constrained' versions of the datasets are available, and the differences between the two methods are outlined \r\n<a href=\"/methods/top_down_constrained_vs_unconstrained\" target=\"_blank\">here</a>. The  datasets represent the outputs from a project focused on construction of consistent 100m resolution population count datasets for all countries of the World structured by male/female and 5-year age classes (plus a <1 year class). These efforts necessarily involved some shortcuts for consistency. The unconstrained datasets are available for each year from 2000 to 2020.  \r\nThe constrained datasets are only available for 2020 at present, given the time periods represented by the building footprint and built settlement datasets used in the mapping."
+                          name: Age and sex structures
+                          title: Age and sex structures
+                        - alias: dahi
+                          desc: "Improved understanding of geographical variation and inequity in health status, wealth and access to resources within countries is increasingly being recognized as central to meeting development goals. Development and health indicators assessed at national or subnational scale can often conceal important inequities, with the rural poor often least well represented. WorldPop develops methods for the integration of geolocated cluster sample data from household surveys with geospatial covariates in Bayesian geostatistical modelling frameworks to map key development and health indicators at high spatial resolution. These include indicators relating to poverty, literacy, sanitation, maternal and newborn health, contraceptive use and vaccination coverage, among others. Details of methods used and outputs can be found in <a href=\"https://www.sciencedirect.com/science/article/pii/S0264410X18301944\"  target=\"_blank\">Utazi et al 1</a>, <a href=\"https://journals.sagepub.com/doi/abs/10.1177/0962280218797362\"  target=\"_blank\">Utazi et al 2</a>, <a href=\"https://royalsocietypublishing.org/doi/full/10.1098/rsif.2016.0690\"  target=\"_blank\">Steele et al</a>, <a href=\"https://royalsocietypublishing.org/doi/full/10.1098/rsif.2016.0825\"  target=\"_blank\">Bosco et al</a>, <a href=\"https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0162006\"  target=\"_blank\">Ruktanonchai et al</a> and <a href=\"http://www.dev.worldpop.uk/resources/docs/pdf/Poverty-mapping-report.pdf\"  target=\"_blank\">Tatem et al.</a>\r\n"
+                          name: Development Indicators
+                          title: Development and Health Indicators
+                        - alias: dependency_ratios
+                          desc: The age group composition of populations varies substantially across continents and within countries, and is linked to levels of development, health status and poverty. The subnational variability in the shape of the population pyramid as well as the respective dependency ratio are reflective of the different levels of development of a country and are drivers for a country’s economic prospects and health burdens. WorldPop’s assembly of subnational population pyramid data has here been used to produce continent-wide subnational scale dependency ratio datasets, with full details found in <a href="https://www.nature.com/articles/sdata201789"  target="_blank">Pezzulo et al</a>.
+                          name: Dependency Ratios
+                          title: Dependency Ratios
+                        - alias: internal_migration_f
+                          desc: "Human mobility continues to increase in terms of volumes and reach, producing growing global connectivity. Quantifying and modeling human migration can contribute towards a better understanding of the nature of migration and help develop evidence-based interventions for\r\ndisease control policy, economic development, and resource allocation. WorldPop has worked to pair census microdata from multiple low and middle income countries with migrant stock data and additional\r\ngeospatial datasets to develop models for internal and international migration flows,\r\nincluding key drivers that reflect the changing social, demographic, economic, and\r\nenvironmental landscapes. These have been applied to map internal and international migration at sub-national level for all low and middle income countries, with the datasets available to download here, and methods described in <a href=\"https://www.nature.com/articles/sdata201666\"  target=\"_blank\">Sorichetta et al</a>, <a href=\"https://academic.oup.com/migration/article-pdf/3/1/89/17170181/mnu036.pdf\"  target=\"_blank\">Garcia et al</a>,  Ceausu et al., Modelling sex-disaggregated internal migration flows in low- and middle-income countries (in preparation), and Ceausu et al., Estimating sex-disaggregated interregional migration in the Global South (in preparation)."
+                          name: Migration Flows
+                          title: Migration Flows
+                        - alias: dynamic_mapping
+                          desc: Knowing where people are is critical for accurate impact assessments and intervention planning, particularly those focused on population health, food security, climate change, conflicts, and natural disasters. WorldPop has demonstrated how data collected by mobile phone network operators can cost-effectively provide accurate and detailed maps of population distribution over national scales and any time period while guaranteeing phone users’ privacy. Methods are described in <a href="https://www.pnas.org/content/111/45/15888"  target="_blank">Deville et al</a> and <a href="https://pophealthmetrics.biomedcentral.com/articles/10.1186/s12963-016-0106-0"  target="_blank"> zu Erbach-Schoenberg et al</a>, and datasets representing estimated monthly population distributions for France and Portugal are available to download here.
+                          name: Dynamic Mapping
+                          title: Dynamic Mapping
+                        - alias: global_flight_data
+                          desc: The expanding global air network provides rapid and wide-reaching connections accelerating both domestic and international travel. To understand human movement patterns on the network and their socioeconomic, environmental and epidemiological implications, information on passenger flow is required. However, comprehensive data on global passenger flow remain difficult and expensive to obtain, prompting researchers and analysts to rely on scheduled flight seat capacity data or simple models of flow. WorldPop has collated openly available monthly statistics of air passengers across countries and years, and developed models of global air passenger flows, with annual flow methods described in <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0064317"  target="_blank">Huang et al</a>, seasonal flows described in <a href="https://www.sciencedirect.com/science/article/pii/S0966692315001581"  target="_blank">Mao et al</a>, and the dataset collected and output estimates available to download here.
+                          name: Global Flight Data
+                          title: Global Flight Data
+                        - alias: covariates
+                          desc: Recent years have seen substantial growth in openly available satellite and other geospatial data layers, which represent a range of metrics relevant to global human population mapping at fine spatial scales. The specifications of such data differ widely and therefore the harmonisation of data layers is a prerequisite to constructing detailed and contemporary spatial datasets which accurately describe population distributions. Such datasets are vital to measure impacts of population growth, monitor change, and plan interventions. To this end WorldPop has produced an open access archive of 3 and 30 arc-second resolution gridded data, which are available to download here and are described further in <a href="https://www.tandfonline.com/doi/full/10.1080/20964471.2019.1625151"  target="_blank">Lloyd et al 2019</a> and also <a href="https://www.nature.com/articles/sdata20171"  target="_blank">Lloyd et al 2017</a>.
+                          name: Covariates
+                          title: Geospatial covariate data layers
+                        - alias: gbsg
+                          desc: 'Changing populations are often accompanied by changing built-settlement landscapes. Here, small area population data and a limited set of environmental covariates have been combined with machine learning methods and dynamically-limited growth curves to annually interpolate (from 2000 to 2014) and annually project (from 2015 to 2020) the presence of built-settlements across the globe at 100m resolution. These annual built-settlement maps were then used to inform the WorldPop "Global per country 2000-2020" population datasets. An overview of the built-settlement growth modeling framework can be found in <a href="https://www.sciencedirect.com/science/article/pii/S019897151930290X" >Nieves et al.</a> '
+                          name: Global Settlement Growth
+                          title: Global Built-Settlement Growth
+                        - alias: gridcellsurfaceareas
+                          desc: Grid-cell surface areas
+                          name: Grid-cell surface areas
+                          title: Grid-cell surface areas
+                        - alias: adminareas
+                          desc: Administrative Areas
+                          name: Administrative Areas
+                          title: Administrative Areas
+                        - alias: pop_density
+                          desc: "<b>WorldPop produces different types of gridded population count datasets, depending on the methods used and end application. \r\nPlease make sure you have read our <a href=\"https://www.worldpop.org/methods/populations\" target=\"_blank\">Mapping Populations</a> overview page before choosing and downloading a dataset.</b> \r\n<br/><br/>\r\nDatasets are available to download in Geotiff and ASCII XYZ format at a <u>resolution of 30 arc-seconds (approximately 1km at the equator)</u>\r\n<br/> \r\n\r\n-Unconstrained individual countries 2000-2020: Population density datasets for all countries of the World for each year 2000-2020 – derived from the corresponding \r\n<a href=\"https://www.worldpop.org/geodata/listing?id=29\">Unconstrained individual countries 2000-2020 population count datasets</a> by dividing the number of people in each pixel by the pixel surface area. \r\nThese are produced using the <a href=\"https://www.worldpop.org/methods/top_down_constrained_vs_unconstrained\">unconstrained top-down modelling method</a>.\r\n<br/> \r\n-Unconstrained individual countries 2000-2020 UN adjusted: Population density datasets for all countries of the World for each year 2000-2020 – derived from the corresponding \r\n<a href=\"https://www.worldpop.org/geodata/listing?id=69\">Unconstrained individual countries 2000-2020 population UN adjusted count datasets</a> by dividing the number of people in each pixel, \r\nadjusted to match the country total from the official United Nations population estimates (UN 2019), by the pixel surface area. \r\nThese are produced using the <a href=\"https://www.worldpop.org/methods/top_down_constrained_vs_unconstrained\">unconstrained top-down modelling method</a>.\r\n"
+                          name: Population Density
+                          title: Population Density
+                        - alias: pwd
+                          desc: "<b>Population Weighted Density (PWD) is an alternative to conventional approaches to population density that is arguably better suited to some types of research in the fields of social science and epidemiology. In this release WorldPop publishes what we believe may be the first set of global estimates for PWD, which we offer at national and subnational levels since 2000. \r\nPlease make sure you have read our <a href=\"https://www.worldpop.org/methods/pwd\">Population Weighted Density</a> overview page before choosing and downloading a dataset.</b>"
+                          name: Population Weighted Density
+                          title: Population Weighted Density
+        getProjectInfo:
+            value:
+                ReqExample:
+                    alias: pop
+                RespExample:
+                    data:
+                        - alias: pic
+                          name: Individual countries
+                        - alias: pop_continent
+                          name: Whole Continent
+                        - alias: wpgp
+                          name: Unconstrained individual countries 2000-2020 ( 100m resolution )
+                        - alias: wpgp1km
+                          name: Unconstrained global mosaics 2000-2020 ( 1km resolution )
+                        - alias: ""
+                          name: WP00643
+                        - alias: wpgpunadj
+                          name: Unconstrained individual countries 2000-2020 UN adjusted ( 100m resolution )
+                        - alias: wpic1km
+                          name: Unconstrained individual countries 2000-2020  ( 1km resolution )
+                        - alias: wpicuadj1km
+                          name: Unconstrained individual countries 2000-2020 UN adjusted ( 1km resolution )
+                        - alias: cic2020_100m
+                          name: Constrained Individual countries 2020 ( 100m resolution )
+                        - alias: cic2020_UNadj_100m
+                          name: Constrained Individual countries 2020 UN adjusted  (100m resolution)
+info:
+    description: Access to WorldPop data to analyze, visualize, explore, and disseminate data on population and health.
+    title: World Populations
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /:
+        get:
+            operationId: getDatasetsMetadata
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    data:
+                                        description: Return data in an array format.
+                                        items:
+                                            description: Array item
+                                            properties:
+                                                alias:
+                                                    description: Specify the alias for the new API.
+                                                    type: string
+                                                desc:
+                                                    description: Description of the response data.
+                                                    type: string
+                                                name:
+                                                    description: Name of the object to retrieve.
+                                                    type: string
+                                                title:
+                                                    description: Title of the content.
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: new api
+    /{alias}:
+        get:
+            operationId: getProjectInfo
+            parameters:
+                - description: Alias of the WorldPop project
+                  in: path
+                  name: alias
+                  required: true
+                  schema:
+                    default: pop
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    data:
+                                        description: Return data in an array format.
+                                        items:
+                                            description: Array item
+                                            properties:
+                                                alias:
+                                                    description: Alias for the new API.
+                                                    type: string
+                                                name:
+                                                    description: Name of the item.
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: new api
+    /{alias}/{level}:
+        get:
+            operationId: getDataAtLevel
+            parameters:
+                - description: Alias of the WorldPop project
+                  in: path
+                  name: alias
+                  required: true
+                  schema:
+                    default: pop
+                    type: string
+                - description: Level to view the data (global, continental, or individual countries)
+                  in: path
+                  name: level
+                  required: true
+                  schema:
+                    default: pic
+                    type: string
+                - description: ISO3 country code (optional, only for country level)
+                  in: query
+                  name: iso3
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    data:
+                                        description: Return the data in an array format.
+                                        items:
+                                            description: Array item
+                                            properties:
+                                                id:
+                                                    description: Unique identifier for the data.
+                                                    type: string
+                                                iso3:
+                                                    description: ISO 3-letter country code in string format.
+                                                    type: string
+                                                popyear:
+                                                    description: year
+                                                    type: integer
+                                                title:
+                                                    description: title of dataset
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: new api
+servers:
+    - url: https://www.worldpop.org/rest/data

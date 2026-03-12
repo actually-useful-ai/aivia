@@ -1,0 +1,141 @@
+openapi: 3.1.0
+info:
+  title: Free Dictionary API
+  version: 1.0.0
+  description: A free dictionary API that provides word definitions, pronunciations, parts of speech, and examples.
+
+servers:
+  - url: https://api.dictionaryapi.dev/api/v2
+
+paths:
+  /entries/en/{word}:
+    get:
+      operationId: getWordDefinition
+      summary: Get definitions and information for a specific word
+      parameters:
+        - name: word
+          in: path
+          required: true
+          description: The word to look up
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successful response with word information
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/WordEntry'
+        "404":
+          description: Word not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        default:
+          description: Unexpected error
+
+components:
+  schemas:
+    WordEntry:
+      type: object
+      properties:
+        word:
+          type: string
+          description: The word that was looked up
+        phonetic:
+          type: string
+          description: Phonetic pronunciation of the word
+        phonetics:
+          type: array
+          description: List of phonetic pronunciations
+          items:
+            type: object
+            properties:
+              text:
+                type: string
+                description: Phonetic text
+              audio:
+                type: string
+                description: URL to audio pronunciation
+        origin:
+          type: string
+          description: Origin of the word
+        meanings:
+          type: array
+          description: List of meanings for different parts of speech
+          items:
+            type: object
+            properties:
+              partOfSpeech:
+                type: string
+                description: Part of speech (noun, verb, etc.)
+              definitions:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    definition:
+                      type: string
+                      description: The definition text
+                    example:
+                      type: string
+                      description: Example usage of the word
+                    synonyms:
+                      type: array
+                      items:
+                        type: string
+                      description: List of synonyms
+                    antonyms:
+                      type: array
+                      items:
+                        type: string
+                      description: List of antonyms
+    
+    ErrorResponse:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Error title
+        message:
+          type: string
+          description: Error message
+        resolution:
+          type: string
+          description: Suggested resolution
+
+  examples:
+    getWordDefinition:
+      value:
+        ReqExample:
+          word: hello
+        RespExample:
+          - word: hello
+            phonetic: həˈləʊ
+            phonetics:
+              - text: həˈləʊ
+                audio: "https://api.dictionaryapi.dev/media/pronunciations/en/hello-uk.mp3"
+            meanings:
+              - partOfSpeech: exclamation
+                definitions:
+                  - definition: Used as a greeting or to begin a phone conversation.
+                    example: hello there, Katie!
+                    synonyms:
+                      - hi
+                      - greetings
+                    antonyms: []
+              - partOfSpeech: noun
+                definitions:
+                  - definition: An utterance of 'hello'; a greeting.
+                    example: she was getting polite nods and hellos from people
+                    synonyms: []
+                    antonyms: []
+              - partOfSpeech: verb
+                definitions:
+                  - definition: Say or shout 'hello'.
+                    example: I pressed the phone button and helloed
+                    synonyms: []
+                    antonyms: []

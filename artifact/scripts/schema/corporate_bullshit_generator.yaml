@@ -1,0 +1,38 @@
+components:
+    examples:
+        getCorporateBuzzword:
+            value:
+                ReqExample: {}
+                RespExample:
+                    phrase: Enthusiastically Negotiate Reliable Nosql
+info:
+    description: API for generating corporate buzzwords and phrases.
+    title: Corporate Bullshit Generator
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /:
+        get:
+            operationId: getCorporateBuzzword
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    phrase:
+                                        description: Generate a random corporate jargon or buzzword phrase.
+                                        type: string
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Generate random corporate jargon and buzzwords to impress your colleagues and clients. Use this tool to come up with unique and impressive phrases that sound important but may not actually mean much. Perfect for presentations, meetings, and brainstorming sessions where you want to sound professional and knowledgeable. Enter the number of terms you want to generate, and let the corporate BS term generator do the rest!
+servers:
+    - url: https://corporatebs-generator.sameerkumar.website

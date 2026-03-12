@@ -1,0 +1,330 @@
+openapi: 3.1.0
+info:
+  title: Gutendex API
+  description: |
+    JSON web API for Project Gutenberg ebook metadata.
+    Provides access to book information with various filtering and search options.
+  version: 1.0.0
+
+servers:
+  - url: https://gutendex.com
+    description: Main Gutendex API server
+
+paths:
+  /books:
+    get:
+      summary: Retrieve metadata of ebooks from Project Gutenberg
+      description: |
+        Lists of book information in the database. By default, books are ordered by popularity,
+        determined by their numbers of downloads from Project Gutenberg.
+      operationId: getBooks
+      parameters:
+        - name: search
+          in: query
+          description: |
+            Search author names and book titles with given words.
+            Words must be separated by a space and are case-insensitive.
+          schema:
+            type: string
+          example: "dickens great"
+        - name: languages
+          in: query
+          description: |
+            Filter by language codes (comma-separated, two-character codes).
+            For example, "en" for English or "fr,fi" for French or Finnish.
+          schema:
+            type: string
+          example: "en"
+        - name: topic
+          in: query
+          description: |
+            Search for a case-insensitive key-phrase in books' bookshelves or subjects.
+            For example, "children" will find books on the "Children's Literature" bookshelf.
+          schema:
+            type: string
+          example: "children"
+        - name: author_year_start
+          in: query
+          description: |
+            Find books with at least one author born in or after the specified year.
+            Must be a positive or negative integer.
+          schema:
+            type: integer
+          example: 1800
+        - name: author_year_end
+          in: query
+          description: |
+            Find books with at least one author who died in or before the specified year.
+            Must be a positive or negative integer.
+          schema:
+            type: integer
+          example: 1899
+        - name: copyright
+          in: query
+          description: |
+            Filter by copyright status: true (existing copyright), false (public domain), 
+            or null (no available information). Can combine with commas.
+          schema:
+            type: string
+            enum: ["true", "false", "null", "true,false", "true,null", "false,null", "true,false,null"]
+          example: "false"
+        - name: ids
+          in: query
+          description: |
+            List books with specific Project Gutenberg ID numbers.
+            Must be comma-separated positive integers.
+          schema:
+            type: string
+          example: "11,12,13"
+        - name: mime_type
+          in: query
+          description: |
+            Find books with a given MIME type. Returns books with MIME types 
+            starting with the provided value.
+          schema:
+            type: string
+          example: "text/html"
+        - name: sort
+          in: query
+          description: |
+            Sort books by different criteria: 'ascending' for IDs lowest to highest,
+            'descending' for IDs highest to lowest, or 'popular' (default) for most to least popular.
+          schema:
+            type: string
+            enum: ["popular", "ascending", "descending"]
+            default: "popular"
+        - name: page
+          in: query
+          description: Page number for pagination
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+          example: 1
+      responses:
+        '200':
+          description: Successful response with book metadata
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookList'
+              example:
+                count: 1
+                next: null
+                previous: null
+                results:
+                  - id: 1342
+                    title: "Pride and Prejudice"
+                    authors:
+                      - name: "Austen, Jane"
+                        birth_year: 1775
+                        death_year: 1817
+                    translators: []
+                    subjects:
+                      - "Young women -- Fiction"
+                      - "Love stories"
+                      - "Domestic fiction"
+                    bookshelves:
+                      - "Best Books Ever Listings"
+                      - "Harvard Classics"
+                    languages: ["en"]
+                    copyright: false
+                    media_type: "text"
+                    download_count: 50000
+                    formats:
+                      "text/html": "https://www.gutenberg.org/files/1342/1342-h/1342-h.htm"
+                      "application/epub+zip": "https://www.gutenberg.org/ebooks/1342.epub.images"
+                      "text/plain; charset=utf-8": "https://www.gutenberg.org/files/1342/1342-0.txt"
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                detail: "Invalid parameter value"
+
+  /books/{id}:
+    get:
+      summary: Retrieve a specific book by ID
+      description: Get detailed information about a specific book using its Project Gutenberg ID.
+      operationId: getBookById
+      parameters:
+        - name: id
+          in: path
+          description: Project Gutenberg ID of the book
+          required: true
+          schema:
+            type: integer
+          example: 1342
+      responses:
+        '200':
+          description: Successful response with book details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+              example:
+                id: 1342
+                title: "Pride and Prejudice"
+                authors:
+                  - name: "Austen, Jane"
+                    birth_year: 1775
+                    death_year: 1817
+                translators: []
+                subjects:
+                  - "Young women -- Fiction"
+                  - "Love stories"
+                  - "Domestic fiction"
+                bookshelves:
+                  - "Best Books Ever Listings"
+                  - "Harvard Classics"
+                languages: ["en"]
+                copyright: false
+                media_type: "text"
+                download_count: 50000
+                formats:
+                  "text/html": "https://www.gutenberg.org/files/1342/1342-h/1342-h.htm"
+                  "application/epub+zip": "https://www.gutenberg.org/ebooks/1342.epub.images"
+                  "text/plain; charset=utf-8": "https://www.gutenberg.org/files/1342/1342-0.txt"
+        '404':
+          description: Book not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                detail: "Book not found"
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                detail: "An unexpected error occurred"
+
+components:
+  schemas:
+    BookList:
+      type: object
+      required:
+        - count
+        - results
+      properties:
+        count:
+          type: integer
+          description: Total number of books matching the query
+        next:
+          type: string
+          format: uri
+          nullable: true
+          description: URL for the next page of results
+        previous:
+          type: string
+          format: uri
+          nullable: true
+          description: URL for the previous page of results
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Book'
+          description: Array of books (0-32 per page)
+
+    Book:
+      type: object
+      required:
+        - id
+        - title
+        - authors
+        - subjects
+        - bookshelves
+        - languages
+        - media_type
+        - formats
+        - download_count
+      properties:
+        id:
+          type: integer
+          description: Unique ID of the book in Project Gutenberg
+        title:
+          type: string
+          description: Title of the book
+        authors:
+          type: array
+          description: List of authors
+          items:
+            $ref: '#/components/schemas/Person'
+        translators:
+          type: array
+          description: List of translators
+          items:
+            $ref: '#/components/schemas/Person'
+        subjects:
+          type: array
+          description: List of subjects/topics
+          items:
+            type: string
+        bookshelves:
+          type: array
+          description: List of bookshelves containing this book
+          items:
+            type: string
+        languages:
+          type: array
+          description: List of language codes
+          items:
+            type: string
+        copyright:
+          type: boolean
+          nullable: true
+          description: |
+            Copyright status: true (existing copyright), false (public domain), 
+            or null (no available information)
+        media_type:
+          type: string
+          description: Type of media (e.g., "text")
+        formats:
+          type: object
+          description: Available download formats
+          additionalProperties:
+            type: string
+            format: uri
+          example:
+            "text/html": "https://www.gutenberg.org/files/1342/1342-h/1342-h.htm"
+            "application/epub+zip": "https://www.gutenberg.org/ebooks/1342.epub.images"
+            "text/plain; charset=utf-8": "https://www.gutenberg.org/files/1342/1342-0.txt"
+        download_count:
+          type: integer
+          description: Number of times the book has been downloaded
+        summaries:
+          type: array
+          description: List of book summaries
+          items:
+            type: string
+
+    Person:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: Person's name
+        birth_year:
+          type: integer
+          nullable: true
+          description: Year of birth
+        death_year:
+          type: integer
+          nullable: true
+          description: Year of death
+
+    Error:
+      type: object
+      required:
+        - detail
+      properties:
+        detail:
+          type: string
+          description: Error message 

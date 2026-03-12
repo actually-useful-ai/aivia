@@ -1,0 +1,2141 @@
+components:
+    examples:
+        getArchive:
+            value:
+                ReqExample:
+                    board: "3"
+                RespExample:
+                    - 978378
+                    - 983192
+                    - 984668
+                    - 985151
+                    - 985205
+                    - 987145
+                    - 987978
+                    - 988015
+                    - 988471
+        getBoards:
+            value:
+                ReqExample: {}
+                RespExample:
+                    boards:
+                        - board: "3"
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/3/ - 3DCG&quot; is 4chan''s board for 3D modeling and imagery.'
+                          pages: 10
+                          per_page: 15
+                          title: 3DCG
+                          ws_board: 1
+                        - board: a
+                          bump_limit: 500
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/a/ - Anime &amp; Manga&quot; is 4chan''s imageboard dedicated to the discussion of Japanese animation and manga.'
+                          pages: 10
+                          per_page: 15
+                          title: Anime & Manga
+                          ws_board: 1
+                        - board: aco
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/aco/ - Adult Cartoons&quot; is 4chan''s imageboard for posting western-styled adult cartoon artwork.'
+                          pages: 10
+                          per_page: 15
+                          title: Adult Cartoons
+                          ws_board: 0
+                        - board: adv
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/adv/ - Advice&quot; is 4chan''s board for giving and receiving advice. '
+                          pages: 10
+                          per_page: 15
+                          title: Advice
+                          ws_board: 1
+                        - board: an
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/an/ - Animals &amp; Nature&quot; is 4chan''s imageboard for posting pictures of animals, pets, and nature.'
+                          pages: 10
+                          per_page: 15
+                          title: Animals & Nature
+                          ws_board: 1
+                        - board: b
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 30
+                            threads: 90
+                          image_limit: 150
+                          max_comment_chars: 2000
+                          max_filesize: 2097152
+                          max_webm_duration: 120
+                          max_webm_filesize: 2097152
+                          meta_description: '&quot;/b/ - Random&quot; is the birthplace of Anonymous, and where people go to discuss random topics and create memes on 4chan.'
+                          pages: 10
+                          per_page: 15
+                          title: Random
+                          ws_board: 0
+                        - board: bant
+                          bump_limit: 300
+                          cooldowns:
+                            images: 15
+                            replies: 15
+                            threads: 60
+                          image_limit: 150
+                          max_comment_chars: 2000
+                          max_filesize: 2097152
+                          max_webm_duration: 120
+                          max_webm_filesize: 2097152
+                          meta_description: '&quot;/bant/ - International/Random&quot; is 4chan''s international hanging out board, where you can have fun with Anonymous all over the world.'
+                          pages: 10
+                          per_page: 15
+                          title: International/Random
+                          ws_board: 0
+                        - board: biz
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/biz/ - Business &amp; Finance&quot; is 4chan''s imageboard for the discussion of business and finance, and cryptocurrencies such as Bitcoin and Dogecoin.'
+                          pages: 10
+                          per_page: 20
+                          title: Business & Finance
+                          ws_board: 1
+                        - board: c
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/c/ - Anime/Cute&quot; is 4chan''s imageboard for cute and moe anime images.'
+                          pages: 10
+                          per_page: 15
+                          title: Anime/Cute
+                          ws_board: 1
+                        - board: cgl
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/cgl/ - Cosplay &amp; EGL&quot; is 4chan''s imageboard for the discussion of cosplay, elegant gothic lolita (EGL), and anime conventions.'
+                          pages: 10
+                          per_page: 15
+                          title: Cosplay & EGL
+                          ws_board: 1
+                        - board: ck
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/ck/ - Food &amp; Cooking&quot; is 4chan''s imageboard for food pictures and cooking recipes.'
+                          pages: 10
+                          per_page: 15
+                          title: Food & Cooking
+                          ws_board: 1
+                        - board: cm
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/cm/ - Cute/Male&quot; is 4chan''s imageboard for posting pictures of cute anime males.'
+                          pages: 10
+                          per_page: 15
+                          title: Cute/Male
+                          ws_board: 1
+                        - board: co
+                          bump_limit: 500
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/co/ - Comics &amp; Cartoons&quot; is 4chan''s imageboard dedicated to the discussion of Western cartoons and comics.'
+                          pages: 10
+                          per_page: 15
+                          title: Comics & Cartoons
+                          ws_board: 1
+                        - board: d
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/d/ - Hentai/Alternative&quot; is 4chan''s imageboard for alternative hentai images.'
+                          pages: 10
+                          per_page: 15
+                          title: Hentai/Alternative
+                          ws_board: 0
+                        - board: diy
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/diy/ - Do It Yourself&quot; is 4chan''s imageboard for DIY/do it yourself projects, home improvement, and makers.'
+                          pages: 10
+                          per_page: 15
+                          title: Do It Yourself
+                          ws_board: 1
+                        - board: e
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/e/ - Ecchi&quot; is 4chan''s imageboard for suggestive (ecchi) hentai images.'
+                          pages: 10
+                          per_page: 15
+                          title: Ecchi
+                          ws_board: 0
+                        - board: f
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          max_comment_chars: 2000
+                          max_filesize: 10485760
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/f/ - Flash&quot; is 4chan''s upload board for sharing Adobe Flash files (SWFs).'
+                          pages: 1
+                          per_page: 30
+                          title: Flash
+                          ws_board: 0
+                        - board: fa
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/fa/ - Fashion&quot; is 4chan''s imageboard for images and discussion relating to fashion and apparel.'
+                          pages: 10
+                          per_page: 15
+                          title: Fashion
+                          ws_board: 1
+                        - board: fit
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/fit/ - Fitness&quot; is 4chan''s imageboard for weightlifting, health, and fitness.'
+                          pages: 10
+                          per_page: 15
+                          title: Fitness
+                          ws_board: 1
+                        - board: g
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/g/ - Technology&quot; is 4chan''s imageboard for discussing computer hardware and software, programming, and general technology.'
+                          pages: 10
+                          per_page: 15
+                          title: Technology
+                          ws_board: 1
+                        - board: gd
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 8388608
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/gd/ - Graphic Design&quot; is 4chan''s imageboard for graphic design.'
+                          pages: 10
+                          per_page: 15
+                          title: Graphic Design
+                          ws_board: 1
+                        - board: gif
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 300
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/gif/ - Adult GIF&quot; is 4chan''s imageboard dedicated to animated adult GIFs and WEBMs.'
+                          pages: 10
+                          per_page: 15
+                          title: Adult GIF
+                          ws_board: 0
+                        - board: h
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/h/ - Hentai&quot; is 4chan''s imageboard for adult Japanese anime hentai images.'
+                          pages: 10
+                          per_page: 15
+                          title: Hentai
+                          ws_board: 0
+                        - board: hc
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 8388608
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/hc/ - Hardcore&quot; is 4chan''s imageboard for the posting of adult hardcore pornography.'
+                          pages: 10
+                          per_page: 15
+                          title: Hardcore
+                          ws_board: 0
+                        - board: his
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/his/ - History &amp; Humanities&quot; is 4chan''s board for discussing and debating history.'
+                          pages: 10
+                          per_page: 15
+                          title: History & Humanities
+                          ws_board: 1
+                        - board: hm
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 8388608
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/hm/ - Handsome Men&quot; is 4chan''s imageboard dedicated to sharing adult images of handsome men.'
+                          pages: 10
+                          per_page: 15
+                          title: Handsome Men
+                          ws_board: 0
+                        - board: hr
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 8388608
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/hr/ - High Resolution&quot; is 4chan''s imageboard for the sharing of high resolution images.'
+                          pages: 10
+                          per_page: 15
+                          title: High Resolution
+                          ws_board: 0
+                        - board: i
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/i/ - Oekaki&quot; is 4chan''s oekaki board for drawing and sharing art.'
+                          pages: 10
+                          per_page: 15
+                          title: Oekaki
+                          ws_board: 0
+                        - board: ic
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/ic/ - Artwork/Critique&quot; is 4chan''s imageboard for the discussion and critique of art.'
+                          pages: 10
+                          per_page: 15
+                          title: Artwork/Critique
+                          ws_board: 0
+                        - board: int
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/int/ - International&quot; is 4chan''s international board, for the exchange of foreign language and culture.'
+                          pages: 10
+                          per_page: 15
+                          title: International
+                          ws_board: 1
+                        - board: jp
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 3600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 5000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/jp/ - Otaku Culture&quot; is 4chan''s board for discussing Japanese otaku culture.'
+                          pages: 10
+                          per_page: 15
+                          title: Otaku Culture
+                          ws_board: 1
+                        - board: k
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/k/ - Weapons&quot; is 4chan''s imageboard for discussing all types of weaponry, from military tanks to guns and knives.'
+                          pages: 10
+                          per_page: 15
+                          title: Weapons
+                          ws_board: 1
+                        - board: lgbt
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/lgbt/ - LGBT&quot; is 4chan''s imageboard for Lesbian-Gay-Bisexual-Transgender-Queer and sexuality discussion.'
+                          pages: 10
+                          per_page: 15
+                          title: LGBT
+                          ws_board: 1
+                        - board: lit
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 3000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/lit/ - Literature&quot; is 4chan''s board for the discussion of books, authors, and literature.'
+                          pages: 10
+                          per_page: 15
+                          title: Literature
+                          ws_board: 1
+                        - board: m
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/m/ - Mecha&quot; is 4chan''s imageboard for discussing Japanese mecha robots and anime, like Gundam and Macross.'
+                          pages: 10
+                          per_page: 15
+                          title: Mecha
+                          ws_board: 1
+                        - board: mlp
+                          bump_limit: 500
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 3000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/mlp/ - Pony&quot; is 4chan''s imageboard dedicated to the discussion of My Little Pony: Friendship is Magic.'
+                          pages: 10
+                          per_page: 15
+                          title: Pony
+                          ws_board: 1
+                        - board: mu
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/mu/ - Music&quot; is 4chan''s imageboard for discussing all types of music.'
+                          pages: 10
+                          per_page: 15
+                          title: Music
+                          ws_board: 1
+                        - board: "n"
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/n/ - Transportation&quot; is 4chan''s imageboard for discussing modes of transportation like trains and bicycles.'
+                          pages: 10
+                          per_page: 15
+                          title: Transportation
+                          ws_board: 1
+                        - board: news
+                          bump_limit: 500
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/news/ - Current News; is 4chan''s board for current news. '
+                          pages: 10
+                          per_page: 15
+                          title: Current News
+                          ws_board: 1
+                        - board: o
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/o/ - Auto&quot; is 4chan''s imageboard for discussing cars and motorcycles.'
+                          pages: 10
+                          per_page: 15
+                          title: Auto
+                          ws_board: 1
+                        - board: out
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 5242880
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/out/ - Outdoors&quot; is 4chan''s imageboard for discussing survivalist skills and outdoor activities such as hiking.'
+                          pages: 10
+                          per_page: 15
+                          title: Outdoors
+                          ws_board: 1
+                        - board: p
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 5242880
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/p/ - Photography&quot; is 4chan''s imageboard for sharing and critiquing photos.'
+                          pages: 10
+                          per_page: 15
+                          title: Photography
+                          ws_board: 1
+                        - board: po
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 8388608
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/po/ - Papercraft &amp; Origami&quot; is 4chan''s imageboard for posting papercraft and origami templates and instructions.'
+                          pages: 10
+                          per_page: 15
+                          title: Papercraft & Origami
+                          ws_board: 1
+                        - board: pol
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 30
+                            threads: 90
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/pol/ - Politically Incorrect&quot; is 4chan''s board for discussing and debating politics and current events.'
+                          pages: 10
+                          per_page: 20
+                          title: Politically Incorrect
+                          ws_board: 0
+                        - board: pw
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/pw/ - Professional Wrestling&quot; is 4chan''s imageboard for the discussion of professional wrestling.'
+                          pages: 10
+                          per_page: 15
+                          title: Professional Wrestling
+                          ws_board: 1
+                        - board: qa
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/qa/ - Question &amp; Answer&quot; is 4chan''s imageboard for question and answer threads.'
+                          pages: 10
+                          per_page: 15
+                          title: Question & Answer
+                          ws_board: 1
+                        - board: qst
+                          bump_limit: 750
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 375
+                          is_archived: 1
+                          max_comment_chars: 3000
+                          max_filesize: 8388608
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/qst/ - Quests&quot; is 4chan''s imageboard for grinding XP.'
+                          pages: 10
+                          per_page: 15
+                          title: Quests
+                          ws_board: 1
+                        - board: r
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 8388608
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/r/ - Request&quot; is 4chan''s imageboard dedicated to fulfilling all types of user requests.'
+                          pages: 10
+                          per_page: 15
+                          title: Adult Requests
+                          ws_board: 0
+                        - board: r9k
+                          bump_limit: 500
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/r9k/ - ROBOT9001&quot; is a board for hanging out and posting greentext stories.'
+                          pages: 10
+                          per_page: 15
+                          title: ROBOT9001
+                          ws_board: 0
+                        - board: s
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 8388608
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/s/ - Sexy Beautiful Women&quot; is 4chan''s imageboard dedicated to sharing images of softcore pornography.'
+                          pages: 10
+                          per_page: 15
+                          title: Sexy Beautiful Women
+                          ws_board: 0
+                        - board: s4s
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 300
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 2097152
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;[s4s] - Shit 4chan Says&quot; is 4chan''s imageboard for posting dank memes :^)'
+                          pages: 10
+                          per_page: 15
+                          title: Shit 4chan Says
+                          ws_board: 0
+                        - board: sci
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 250
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/sci/ - Science &amp; Math&quot; is 4chan''s board for the discussion of science and math.'
+                          pages: 10
+                          per_page: 15
+                          title: Science & Math
+                          ws_board: 1
+                        - board: soc
+                          bump_limit: 500
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 5242880
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/soc/ - Cams &amp; Meetups&quot; is 4chan''s board for camwhores and meetups.'
+                          pages: 10
+                          per_page: 15
+                          title: Cams & Meetups
+                          ws_board: 0
+                        - board: sp
+                          bump_limit: 500
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/sp/ - Sports&quot; is 4chan''s imageboard for sports discussion.'
+                          pages: 10
+                          per_page: 15
+                          title: Sports
+                          ws_board: 1
+                        - board: t
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/t/ - Torrents&quot; is 4chan''s imageboard for posting links and descriptions to torrents.'
+                          pages: 10
+                          per_page: 15
+                          title: Torrents
+                          ws_board: 0
+                        - board: tg
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 8388608
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/tg/ - Traditional Games&quot; is 4chan''s imageboard for discussing traditional gaming, such as board games and tabletop RPGs.'
+                          pages: 10
+                          per_page: 15
+                          title: Traditional Games
+                          ws_board: 1
+                        - board: toy
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/toy/ - Toys&quot; is 4chan''s imageboard for talking about all kinds of toys!'
+                          pages: 10
+                          per_page: 15
+                          title: Toys
+                          ws_board: 1
+                        - board: trash
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/trash/ - Off-topic&quot; is 4chan''s imageboard jail for off-topic threads.'
+                          pages: 10
+                          per_page: 15
+                          title: Off-Topic
+                          ws_board: 0
+                        - board: trv
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 8388608
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/trv/ - Travel&quot; is 4chan''s imageboard dedicated to travel and the countries of the world.'
+                          pages: 10
+                          per_page: 15
+                          title: Travel
+                          ws_board: 1
+                        - board: tv
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/tv/ - Television &amp; Film&quot; is 4chan''s imageboard dedicated to the discussion of television and film.'
+                          pages: 10
+                          per_page: 15
+                          title: Television & Film
+                          ws_board: 1
+                        - board: u
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/u/ - Yuri&quot; is 4chan''s imageboard for yuri hentai images.'
+                          pages: 10
+                          per_page: 15
+                          title: Yuri
+                          ws_board: 0
+                        - board: v
+                          bump_limit: 500
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/v/ - Video Games&quot; is 4chan''s imageboard dedicated to the discussion of PC and console video games.'
+                          pages: 10
+                          per_page: 20
+                          title: Video Games
+                          ws_board: 1
+                        - board: vg
+                          bump_limit: 750
+                          cooldowns:
+                            images: 120
+                            replies: 90
+                            threads: 600
+                          image_limit: 375
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/vg/ - Video Game Generals&quot; is 4chan''s imageboard dedicated to the discussion of PC and console video games.'
+                          pages: 10
+                          per_page: 20
+                          title: Video Game Generals
+                          ws_board: 1
+                        - board: vip
+                          bump_limit: 300
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/vip/ - Very Important Posts&quot; is 4chan''s imageboard for Pass users.'
+                          pages: 10
+                          per_page: 15
+                          title: Very Important Posts
+                          ws_board: 1
+                        - board: vm
+                          bump_limit: 500
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/vmg/ - Video Games/Multiplayer&quot; is 4chan''s imageboard dedicated to the discussion of multiplayer video games.'
+                          pages: 10
+                          per_page: 15
+                          title: Video Games/Multiplayer
+                          ws_board: 1
+                        - board: vmg
+                          bump_limit: 500
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/vmg/ - Video Games/Mobile&quot; is 4chan''s imageboard dedicated to the discussion of video games on mobile devices.'
+                          pages: 10
+                          per_page: 15
+                          title: Video Games/Mobile
+                          ws_board: 1
+                        - board: vp
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/vp/ - Pok&eacute;mon&quot; is 4chan''s imageboard dedicated to discussing the Pok&eacute;mon series of video games and shows.'
+                          pages: 10
+                          per_page: 15
+                          title: Pokémon
+                          ws_board: 1
+                        - board: vr
+                          bump_limit: 500
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/vr/ - Retro Games&quot; is 4chan''s imageboard for discussing retro console video games and classic arcade games.'
+                          pages: 10
+                          per_page: 15
+                          title: Retro Games
+                          ws_board: 1
+                        - board: vrpg
+                          bump_limit: 500
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/vrpg/ - Video Games/RPG&quot; is 4chan''s imageboard dedicated to the discussion of role-playing video games.'
+                          pages: 10
+                          per_page: 15
+                          title: Video Games/RPG
+                          ws_board: 1
+                        - board: vst
+                          bump_limit: 500
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/vst/ - Video Games/Strategy&quot; is 4chan''s imageboard dedicated to the discussion of strategy video games.'
+                          pages: 10
+                          per_page: 15
+                          title: Video Games/Strategy
+                          ws_board: 1
+                        - board: vt
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 3600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 5000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/vt/ - Virtual YouTubers&quot; is 4chan''s board for discussing virtual YouTubers (&quot;VTubers&quot;).'
+                          pages: 10
+                          per_page: 15
+                          title: Virtual YouTubers
+                          ws_board: 1
+                        - board: w
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 6291456
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/w/ - Anime/Wallpapers&quot; is 4chan''s imageboard for posting Japanese anime wallpapers.'
+                          pages: 10
+                          per_page: 15
+                          title: Anime/Wallpapers
+                          ws_board: 1
+                        - board: wg
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 6291456
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/wg/ - Wallpapers/General&quot; is 4chan''s imageboard for posting general wallpapers.'
+                          pages: 10
+                          per_page: 15
+                          title: Wallpapers/General
+                          ws_board: 0
+                        - board: wsg
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 6291456
+                          max_webm_duration: 400
+                          max_webm_filesize: 6291456
+                          meta_description: '&quot;/wsg/ - Worksafe GIF&quot; is 4chan''s imageboard dedicated to sharing worksafe animated GIFs and WEBMs.'
+                          pages: 10
+                          per_page: 15
+                          title: Worksafe GIF
+                          ws_board: 1
+                        - board: wsr
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 8388608
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/wsr/ - Worksafe Requests&quot; is 4chan''s imageboard dedicated to fulfilling non-NSFW requests.'
+                          pages: 10
+                          per_page: 15
+                          title: Worksafe Requests
+                          ws_board: 1
+                        - board: x
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/x/ - Paranormal&quot; is 4chan''s imageboard for the discussion of paranormal, spooky pictures and conspiracy theories.'
+                          pages: 10
+                          per_page: 15
+                          title: Paranormal
+                          ws_board: 1
+                        - board: xs
+                          bump_limit: 310
+                          cooldowns:
+                            images: 60
+                            replies: 60
+                            threads: 600
+                          image_limit: 150
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/xs/ - Extreme Sports&quot; is 4chan''s imageboard imageboard dedicated to the discussion of extreme sports.'
+                          pages: 10
+                          per_page: 15
+                          title: Extreme Sports
+                          ws_board: 1
+                        - board: "y"
+                          bump_limit: 300
+                          cooldowns:
+                            images: 30
+                            replies: 60
+                            threads: 600
+                          image_limit: 300
+                          is_archived: 1
+                          max_comment_chars: 2000
+                          max_filesize: 4194304
+                          max_webm_duration: 120
+                          max_webm_filesize: 4194304
+                          meta_description: '&quot;/y/ - Yaoi&quot; is 4chan''s imageboard for posting adult yaoi hentai images.'
+                          pages: 10
+                          per_page: 15
+                          title: Yaoi
+                          ws_board: 0
+        getThread:
+            value:
+                ReqExample:
+                    board: po
+                    thread: 570368
+                RespExample:
+                    posts:
+                        - capcode: mod
+                          closed: 1
+                          com: Welcome to /po/! We specialize in origami, papercraft, and everything that’s relevant to paper engineering. This board is also an great library of relevant PDF books and instructions, one of the best resource of its kind on the internet.<br><br>Questions and discussions of papercraft and origami are welcome. Threads for topics covered by paper engineering in general are also welcome, such as kirigami, bookbinding, printing technology, sticker making, gift boxes, greeting cards, and more.<br><br>Requesting is permitted, even encouraged if it’s a good request; fulfilled requests strengthens this board’s role as a repository of books and instructions. However do try to keep requests in relevant threads, if you can.<br><br>/po/ is a slow board! Do not needlessly bump threads.
+                          ext: .png
+                          filename: yotsuba_folding
+                          fsize: 516657
+                          h: 449
+                          images: 2
+                          md5: uZUeZeB14FVR+Mc2ScHvVA==
+                          name: Anonymous
+                          "no": 570368
+                          now: 12/31/18(Mon)17:05:48
+                          replies: 2
+                          resto: 0
+                          semantic_url: welcome-to-po
+                          sticky: 1
+                          sub: Welcome to /po/!
+                          tim: 1546293948883
+                          tn_h: 211
+                          tn_w: 250
+                          w: 530
+                        - capcode: mod
+                          com: |-
+                            <b>FAQs about papercraft</b><br>
+                            <br>
+                            <i>What paper should I use?</i><br>
+                            <br>
+                            Small models can be made with light 100 to 150 gsm paper, while large ones are better with heavy 150 to 200+ gsm paper.<br>
+                            <br>
+                            <i>Where do I begin with papercraft can I find easy papercrafts?</i><br>
+                            <br>
+                            Papercraft also requires glue, and cutting tools. A PVA glue stick is works. A pen knife and cutting board is recommended, but otherwise scissors are okay for simple models.<br>
+                            <br>
+                            Papercraft normally involves printing and cutting out a number of nets, and and gluing tabs and pieces where appropriate to form a model.<br>
+                            <br>
+                            You can find a variety of papercraft models on this board that may interest you. Ask for some otherwise, and be specific about what you would like. You can search online for ‘easy papercraft templates’, these links have many.<br>
+                            <br>
+                            <a href="http://papercraft.wikidot.com/papercraft">http://papercraft.wikidot.com/paper<wbr>craft</a><br>
+                            <a href="http://cp.c-ij.com/en/categories/CAT-ST01-0071/top.html">http://cp.c-ij.com/en/categories/CA<wbr>T-ST01-0071/top.html</a><br>
+                            <br>
+                            <i>What is Pepakura?</i><br>
+                            <br>
+                            Pepakura Designer is a program that takes 3D models and `unfolds&#039; them to papercraft templates. Using Pepakura in conjunction with a 3D modelling software, such as Blender, you can design your own papercraft models.<br>
+                            <br>
+                            <a href="https://elementcrafts.wordpress.com/2014/04/22/a-complete-beginners-guide-to-papercraft-pepakura-windows-only/">https://elementcrafts.wordpress.com<wbr>/2014/04/22/a-complete-beginners-gu<wbr>ide-to-papercraft-pepakura-windows-<wbr>only/</a><br>
+                            <br>
+                            <i>Hints and tips?</i>
+                            <br>
+                            Glue accurately for a model to hold well, and practice plenty.<br>
+                            <br>
+                            <a href="http://www.papercraftmuseum.com/advanced-tutorial/">http://www.papercraftmuseum.com/adv<wbr>anced-tutorial/</a><br>
+                          ext: .png
+                          filename: papercraft faq
+                          fsize: 285358
+                          h: 704
+                          md5: 0EqXBb4gGIyzQiaApMdFAA==
+                          name: Anonymous
+                          "no": 570370
+                          now: 12/31/18(Mon)17:14:56
+                          resto: 570368
+                          tim: 1546294496751
+                          tn_h: 125
+                          tn_w: 56
+                          w: 318
+                        - capcode: mod
+                          com: |-
+                            <b>FAQs about origami</b><br>
+                            <br>
+                            <i>Where do I begin with origami and how can I find easy models?</i><br>
+                            <br>
+                            Try browsing the board for guides, or other online resources listed below, for models you like and practice folding them.<br>
+                            <br>
+                            A great way to begin at origami is to participate in the Let’s Fold Together threads <a href="https://boards.4channel.org/po/catalog#s=lft"><a href="//boards.4channel.org/po/catalog#s=lft" class="quotelink">&gt;&gt;&gt;/po/lft</a></a> - open up the PDF file and find a model you like, work on it, and discuss or post results.<br>
+                            <br>
+                            <a href="http://en.origami-club.com">http://en.origami-club.com</a><br>
+                            <a href="https://origami.me/diagrams/">https://origami.me/diagrams/</a><br>
+                            <a href="https://www.origami-resource-center.com/free-origami-instructions.html">https://www.origami-resource-center<wbr>.com/free-origami-instructions.html<wbr></a><br>
+                            <a href="http://www.paperfolding.com/diagrams/">http://www.paperfolding.com/diagram<wbr>s/</a><br>
+                            <br>
+                            <i>What paper should I use?</i><br>
+                            <br>
+                            It depends on the model; for smaller models which involved 25 steps or fewer, 15 by 15 cm origami paper from a local craft store will be suitable. For larger models you will need larger or thinner paper, possibly from online shops. Boxpleated models require thin paper, such as sketching paper. Wet folded models require thicker paper, such as elephant hide.<br>
+                            <br>
+                            <a href="https://www.origami-shop.com/en/">https://www.origami-shop.com/en/</a><br>
+                            <br>
+                            <i>Hints and tips?</i><br>
+                            <br>
+                            For folding, The best advice is to always fold as cleanly as possible, and take your time. Everything else comes with experience.<br>
+                            <br>
+                            <a href="https://origami.me/beginners-guide/">https://origami.me/beginners-guide/<wbr></a><br>
+                            <a href="https://origamiusa.org/glossary">https://origamiusa.org/glossary</a><br>
+                            <br>
+                            <i>What are ‘CPs’?</i><br>
+                            <br>
+                            Crease patterns are a structural representations of origami models, shown as a schematic of lines; they are essentially origami models unfolded and laid flat. Lines on a crease pattern may be indicated by ‘mountain’ or ‘valley’ folds to show how the folds alternate. If you’re particularly skilled at origami, they become useful instructions for building models. A common base fold is usually discernable, all the intermediate details can be worked on from there.<br>
+                            <br>
+                            <a href="https://blog.giladnaor.com/2008/08/folding-from-crease-patterns.html">https://blog.giladnaor.com/2008/08/<wbr>folding-from-crease-patterns.html</a><br>
+                            <a href="http://www.origamiaustria.at/articles.php?lang=2#a4">http://www.origamiaustria.at/articl<wbr>es.php?lang=2#a4</a><br>
+                          ext: .jpg
+                          filename: origami faq
+                          fsize: 163110
+                          h: 762
+                          md5: vKWr7+oITdUBu7bUaypuCw==
+                          name: Anonymous
+                          "no": 570371
+                          now: 12/31/18(Mon)17:21:29
+                          resto: 570368
+                          tim: 1546294889019
+                          tn_h: 125
+                          tn_w: 125
+                          w: 762
+    schemas:
+        Board:
+            description: new param
+            properties:
+                board:
+                    description: new param
+                    type: string
+                bump_limit:
+                    description: new param
+                    type: integer
+                cooldowns:
+                    description: new param
+                    properties:
+                        images:
+                            description: new param
+                            type: integer
+                        replies:
+                            description: new param
+                            type: integer
+                        threads:
+                            description: new param
+                            type: integer
+                    type: object
+                image_limit:
+                    description: new param
+                    type: integer
+                max_comment_chars:
+                    description: new param
+                    type: integer
+                max_filesize:
+                    description: new param
+                    type: integer
+                max_webm_duration:
+                    description: new param
+                    type: integer
+                max_webm_filesize:
+                    description: new param
+                    type: integer
+                meta_description:
+                    description: new param
+                    type: string
+                pages:
+                    description: new param
+                    type: integer
+                per_page:
+                    description: new param
+                    type: integer
+                title:
+                    description: new param
+                    type: string
+                ws_board:
+                    description: new param
+                    type: integer
+            type: object
+        Thread:
+            description: new param
+            properties:
+                archived:
+                    description: new param
+                    type: integer
+                archived_on:
+                    description: new param
+                    type: integer
+                bumplimit:
+                    description: new param
+                    type: integer
+                capcode:
+                    description: new param
+                    type: string
+                closed:
+                    description: new param
+                    type: integer
+                com:
+                    description: new param
+                    type: string
+                country:
+                    description: new param
+                    type: string
+                country_name:
+                    description: new param
+                    type: string
+                ext:
+                    description: new param
+                    type: string
+                filename:
+                    description: new param
+                    type: string
+                fsize:
+                    description: new param
+                    type: integer
+                h:
+                    description: new param
+                    type: integer
+                id:
+                    description: new param
+                    type: string
+                imagelimit:
+                    description: new param
+                    type: integer
+                images:
+                    description: new param
+                    type: integer
+                md5:
+                    description: new param
+                    type: string
+                name:
+                    description: new param
+                    type: string
+                "no":
+                    description: new param
+                    type: integer
+                now:
+                    description: new param
+                    type: string
+                replies:
+                    description: new param
+                    type: integer
+                resto:
+                    description: new param
+                    type: integer
+                semantic_url:
+                    description: new param
+                    type: string
+                sticky:
+                    description: new param
+                    type: integer
+                sub:
+                    description: new param
+                    type: string
+                tim:
+                    description: new param
+                    type: integer
+                time:
+                    description: new param
+                    type: integer
+                tn_h:
+                    description: new param
+                    type: integer
+                tn_w:
+                    description: new param
+                    type: integer
+                trip:
+                    description: new param
+                    type: string
+                w:
+                    description: new param
+                    type: integer
+            type: object
+info:
+    description: Pull boards, threads, posts, and info from the archive.
+    title: 4Chan API
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /{board}/{page}.json:
+        get:
+            operationId: getIndexPage
+            parameters:
+                - description: new param
+                  in: path
+                  name: board
+                  required: true
+                  schema:
+                    type: string
+                - description: new param
+                  in: path
+                  name: page
+                  required: true
+                  schema:
+                    type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    threads:
+                                        description: Retrieve the threads from the board's index page.
+                                        items:
+                                            description: Array item
+                                            properties:
+                                                posts:
+                                                    description: Retrieve the posts from the board's index page. The posts will be returned as an array.
+                                                    items:
+                                                        description: Array item
+                                                        properties:
+                                                            bumplimit:
+                                                                description: The maximum number of times a thread can be bumped before it is automatically archived.
+                                                                type: number
+                                                            com:
+                                                                description: The URL of the board's index page to retrieve the content.
+                                                                type: string
+                                                            ext:
+                                                                description: Specify the file extension of the retrieved content.
+                                                                type: string
+                                                            filename:
+                                                                description: Name of the file to save the retrieved content.
+                                                                type: string
+                                                            fsize:
+                                                                description: Size of the file in bytes.
+                                                                type: number
+                                                            h:
+                                                                description: The height of the retrieved content in pixels.
+                                                                type: number
+                                                            imagelimit:
+                                                                description: Specify the maximum number of images to retrieve from the board's index page.
+                                                                type: number
+                                                            images:
+                                                                description: The number of images to retrieve from the board's index page.
+                                                                type: number
+                                                            md5:
+                                                                description: Retrieve the MD5 hash value of the content from the board's index page, given the input URL.
+                                                                type: string
+                                                            name:
+                                                                description: Name of the board's index page.
+                                                                type: string
+                                                            "no":
+                                                                description: Specify the page number of the board's index page to retrieve the content. The default value is 1.
+                                                                type: number
+                                                            now:
+                                                                description: Current date and time in string format.
+                                                                type: string
+                                                            omitted_images:
+                                                                description: Specify the number of omitted images to retrieve from the board's index page. Default is 0.
+                                                                type: number
+                                                            omitted_posts:
+                                                                description: Number of omitted posts in the board's index page.
+                                                                type: number
+                                                            replies:
+                                                                description: Number of replies in the board's index page.
+                                                                type: number
+                                                            resto:
+                                                                description: The index page of the board's URL to retrieve the content of a specific thread.
+                                                                type: number
+                                                            semantic_url:
+                                                                description: URL of the board's index page to retrieve the content.
+                                                                type: string
+                                                            sub:
+                                                                description: The sub-parameter specifies the URL of the board's index page to retrieve the content. Please provide the URL as a string.
+                                                                type: string
+                                                            tail_size:
+                                                                description: Specify the number of tail lines to retrieve from the content.
+                                                                type: number
+                                                            tim:
+                                                                description: Specify the time range of the content to retrieve, in UNIX timestamp format.
+                                                                type: number
+                                                            time:
+                                                                description: Time taken to retrieve the content, in milliseconds.
+                                                                type: number
+                                                            tn_h:
+                                                                description: The height of the thumbnail image, in pixels.
+                                                                type: number
+                                                            tn_w:
+                                                                description: The number of seconds to wait before retrieving the content from the board's index page.
+                                                                type: number
+                                                            w:
+                                                                description: The parameter w is a number that represents the width of the content to retrieve.
+                                                                type: number
+                                                        type: object
+                                                    type: array
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Input the URL of the board's index page to retrieve the content.
+    /{board}/archive.json:
+        get:
+            operationId: getArchive
+            parameters:
+                - description: new param
+                  in: path
+                  name: board
+                  required: true
+                  schema:
+                    default: 3DCG
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                description: Root item
+                                items:
+                                    description: Array item
+                                    type: number
+                                type: array
+                    description: new desc
+                default:
+                    description: ""
+            summary: Retrieve the archived content from a specific board on 4chan. This tool allows you to access and download the content that has been archived on the board. Please provide the necessary parameters such as the board name or board ID.
+    /{board}/catalog.json:
+        get:
+            operationId: getCatalog
+            parameters:
+                - description: new param
+                  in: path
+                  name: board
+                  required: true
+                  schema:
+                    default: "3"
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                description: Root item
+                                items:
+                                    description: Array item
+                                    properties:
+                                        page:
+                                            description: Page number of the catalog to retrieve, starting from 1.
+                                            type: number
+                                        threads:
+                                            description: Retrieve the catalog from a specific board on 4chan. Input the board name or ID to fetch the catalog. The response will be an array of threads.
+                                            items:
+                                                description: Array item
+                                                properties:
+                                                    capcode:
+                                                        description: Specify the capcode for the catalog retrieval. Capcode is a string that represents the user's authorization level on the board. Possible values include "admin", "mod", "janitor", or "user". If not provided, the default capcode is "user".
+                                                        type: string
+                                                    closed:
+                                                        description: Specify if the retrieved catalog includes closed threads. 0 for excluding closed threads, 1 for including closed threads. Default is 0.
+                                                        type: number
+                                                    com:
+                                                        description: Comment associated with each thread in the catalog.
+                                                        type: string
+                                                    ext:
+                                                        description: File extension of the catalog images to retrieve.
+                                                        type: string
+                                                    filename:
+                                                        description: Specify the name or ID of the 4chan board to retrieve the catalog.
+                                                        type: string
+                                                    fsize:
+                                                        description: File size in bytes.
+                                                        type: number
+                                                    h:
+                                                        description: Specify the catalog page number to retrieve from the board on 4chan. The page number should be a positive integer. Default is 1.
+                                                        type: number
+                                                    images:
+                                                        description: Number of images to retrieve from the board catalog.
+                                                        type: number
+                                                    last_modified:
+                                                        description: Last modified timestamp of the catalog.
+                                                        type: number
+                                                    last_replies:
+                                                        description: Return an array of the last replies in the catalog.
+                                                        items:
+                                                            description: Array item
+                                                            properties:
+                                                                capcode:
+                                                                    description: Specify the capcode to filter the catalog. Capcode is a string that represents the user role of a post on 4chan. Possible values for capcode include "admin", "mod", "manager", "developer", and "janitor".
+                                                                    type: string
+                                                                com:
+                                                                    description: Comment associated with the post on 4chan.
+                                                                    type: string
+                                                                name:
+                                                                    description: Specify the name or ID of the board on 4chan to retrieve the catalog.
+                                                                    type: string
+                                                                "no":
+                                                                    description: Specify the catalog number to retrieve from the specified board on 4chan. Default is 0.
+                                                                    type: number
+                                                                now:
+                                                                    description: Timestamp of the current catalog.
+                                                                    type: string
+                                                                resto:
+                                                                    description: Specify the thread ID to retrieve the catalog from a specific board on 4chan. The thread ID should be a number.
+                                                                    type: number
+                                                                time:
+                                                                    description: Time of the catalog retrieval in Unix timestamp format.
+                                                                    type: number
+                                                            type: object
+                                                        type: array
+                                                    md5:
+                                                        description: MD5 hash value of the catalog.
+                                                        type: string
+                                                    name:
+                                                        description: Specify the name or ID of the board on 4chan to retrieve the catalog. The name should be a string.
+                                                        type: string
+                                                    "no":
+                                                        description: Specify the page number of the catalog to retrieve. The default value is 1.
+                                                        type: number
+                                                    now:
+                                                        description: The current time in format yyyy-mm-dd hh:mm:ss.
+                                                        type: string
+                                                    omitted_images:
+                                                        description: Number of omitted images in the catalog.
+                                                        type: number
+                                                    omitted_posts:
+                                                        description: |-
+                                                            Number of omitted posts in the catalog.
+                                                            The default value is 0.
+                                                        type: number
+                                                    replies:
+                                                        description: Number of replies in each thread in the catalog.
+                                                        type: number
+                                                    resto:
+                                                        description: Resto is a numeric parameter that represents the thread ID of a post in the catalog.
+                                                        type: number
+                                                    semantic_url:
+                                                        description: URL of the specific board on 4chan.
+                                                        type: string
+                                                    sticky:
+                                                        description: Specify whether to include sticky threads in the catalog. Set to 1 to include sticky threads, set to 0 to exclude sticky threads.
+                                                        type: number
+                                                    sub:
+                                                        description: Specify the board name or ID to retrieve the catalog from a specific board on 4chan.
+                                                        type: string
+                                                    tim:
+                                                        description: Timestamp of the catalog.
+                                                        type: number
+                                                    time:
+                                                        description: Specify the time in UNIX timestamp format to fetch the catalog. The UNIX timestamp represents the number of seconds that have elapsed since January 1, 1970.
+                                                        type: number
+                                                    tn_h:
+                                                        description: Number of thumbnail height.
+                                                        type: number
+                                                    tn_w:
+                                                        description: Total number of threads to retrieve from the catalog.
+                                                        type: number
+                                                    w:
+                                                        description: Specify the width of the catalog image grid. The value should be a number.
+                                                        type: number
+                                                type: object
+                                            type: array
+                                    type: object
+                                type: array
+                    description: new desc
+                default:
+                    description: ""
+            summary: Retrieve the catalog from a specific board on 4chan. Input the board name or ID to fetch the catalog.
+    /{board}/thread/{thread}.json:
+        get:
+            operationId: getThread
+            parameters:
+                - description: new param
+                  in: path
+                  name: board
+                  required: true
+                  schema:
+                    type: string
+                - description: new param
+                  in: path
+                  name: thread
+                  required: true
+                  schema:
+                    type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    posts:
+                                        description: List of posts in the specified thread.
+                                        items:
+                                            description: Array item
+                                            properties:
+                                                bumplimit:
+                                                    description: Specify the number of times the thread can be bumped. Default is 0.
+                                                    type: integer
+                                                capcode:
+                                                    description: Specify the capcode of the thread. Capcode is a unique identifier for each post on 4chan.
+                                                    type: string
+                                                capcode_replies:
+                                                    description: An object that contains replies to the thread by users with a capcode.
+                                                    type: object
+                                                closed:
+                                                    description: Specify whether the retrieved thread is closed or not. Use 1 for closed and 0 for open. The default value is 0.
+                                                    type: integer
+                                                com:
+                                                    description: The comment of the thread.
+                                                    type: string
+                                                country:
+                                                    description: Country to filter the thread. Please provide the country code in ISO 3166-1 alpha-2 format (e.g., "US" for United States).
+                                                    type: string
+                                                country_name:
+                                                    description: Specify the name of the country for which you want to retrieve the thread.
+                                                    type: string
+                                                custom_spoiler:
+                                                    description: Specify whether to enable custom spoiler images. Enter 0 to disable, 1 to enable. Default is 0.
+                                                    type: integer
+                                                ext:
+                                                    description: The file extension of the thread image.
+                                                    type: string
+                                                filedeleted:
+                                                    description: Specify whether deleted files should be included in the response. 0 for no, 1 for yes.
+                                                    type: integer
+                                                filename:
+                                                    description: The filename of the thread to retrieve from the 4chan website.
+                                                    type: string
+                                                fsize:
+                                                    description: Size of the file attached to the thread, in bytes.
+                                                    type: integer
+                                                h:
+                                                    description: Specify the thread ID of the 4chan thread to retrieve. The thread ID is an integer value.
+                                                    type: integer
+                                                id:
+                                                    description: Unique identifier for the thread to retrieve from the 4chan website. This can be either the thread ID or the URL of the thread.
+                                                    type: string
+                                                imagelimit:
+                                                    description: Specify the maximum number of images to retrieve from the thread. Default is 10.
+                                                    type: integer
+                                                images:
+                                                    description: Specify the number of images to retrieve from the thread. Default is 0.
+                                                    type: integer
+                                                last_modified:
+                                                    description: The last modified timestamp of the specific thread on the 4chan website, in Unix timestamp format (seconds since January 1, 1970 00:00:00 UTC).
+                                                    type: integer
+                                                md5:
+                                                    description: The MD5 hash value of the thread.
+                                                    type: string
+                                                name:
+                                                    description: Specify the name of the thread you want to retrieve from the 4chan website.
+                                                    type: string
+                                                "no":
+                                                    description: Specify the thread ID or URL of the 4chan thread to retrieve.
+                                                    type: integer
+                                                now:
+                                                    description: The current timestamp in format "yyyy-mm-dd HH:MM:SS".
+                                                    type: string
+                                                omitted_images:
+                                                    description: Number of omitted images in the thread.
+                                                    type: integer
+                                                omitted_posts:
+                                                    description: Number of posts omitted from the retrieved thread.
+                                                    type: integer
+                                                replies:
+                                                    description: Number of replies for the specific thread.
+                                                    type: integer
+                                                resto:
+                                                    description: Specify the ID of the thread you want to retrieve from the 4chan website. The ID is an integer value.
+                                                    type: integer
+                                                semantic_url:
+                                                    description: The URL of the specific thread on the 4chan website, in string format.
+                                                    type: string
+                                                since4pass:
+                                                    description: The number of posts that have been made since the 4chan Pass was implemented.
+                                                    type: integer
+                                                spoiler:
+                                                    description: Specify whether to show spoilers or not. Use 1 to show spoilers, 0 to hide spoilers. Default is 0.
+                                                    type: integer
+                                                sticky:
+                                                    description: Specify if the thread should be sticky or not. Use 1 for sticky and 0 for non-sticky. Default is 0.
+                                                    type: integer
+                                                sub:
+                                                    description: Specify the subject of the thread you want to retrieve from the 4chan website.
+                                                    type: string
+                                                tag:
+                                                    description: Tag to identify the specific thread on 4chan website.
+                                                    type: string
+                                                tim:
+                                                    description: Timestamp of the desired thread to retrieve.
+                                                    type: integer
+                                                tn_h:
+                                                    description: Specify the thread ID of the desired thread on 4chan website.
+                                                    type: integer
+                                                tn_w:
+                                                    description: Specify the thread ID or URL of the thread you want to retrieve from the 4chan website. The thread ID is an integer value.
+                                                    type: integer
+                                                trip:
+                                                    description: Specify the tripcode to retrieve a specific thread from the 4chan website. A tripcode is a unique identifier used by users on the website. Please provide the tripcode associated with the thread you want to retrieve.
+                                                    type: string
+                                                w:
+                                                    description: The ID of the thread you want to retrieve from the 4chan website.
+                                                    type: integer
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Retrieve a specific thread from the 4chan website. Please provide the necessary parameters such as the thread ID or URL.
+    /boards.json:
+        get:
+            operationId: getBoards
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    boards:
+                                        description: Array of boards containing board name, description, and number of posts.
+                                        items:
+                                            description: Array item
+                                            properties:
+                                                board:
+                                                    description: Specify the board to retrieve information from. The board parameter should be a string representing the name of the board on 4chan. For example, "/g/" for technology, or "/pol/" for politics.
+                                                    type: string
+                                                bump_limit:
+                                                    description: Specify the maximum number of posts before a thread is automatically bumped.
+                                                    type: number
+                                                cooldowns:
+                                                    description: Cooldowns for API requests, including the time until the next available request and the remaining requests within the current time window.
+                                                    properties:
+                                                        images:
+                                                            description: Number of images posted on the board.
+                                                            type: number
+                                                        replies:
+                                                            description: Number of replies in each board.
+                                                            type: number
+                                                        threads:
+                                                            description: Number of threads in each board.
+                                                            type: number
+                                                    type: object
+                                                image_limit:
+                                                    description: Limit the number of images to return for each board.
+                                                    type: number
+                                                is_archived:
+                                                    description: Specify whether the retrieved boards are archived or not. Use 1 for archived boards and 0 for non-archived boards. The default value is 0.
+                                                    type: number
+                                                max_comment_chars:
+                                                    description: Maximum number of characters allowed for each comment in a board.
+                                                    type: number
+                                                max_filesize:
+                                                    description: Maximum allowed file size for attachments in bytes.
+                                                    type: number
+                                                max_webm_duration:
+                                                    description: Maximum duration in seconds for webm files.
+                                                    type: number
+                                                max_webm_filesize:
+                                                    description: Maximum size of webm files allowed on the board, in bytes.
+                                                    type: number
+                                                meta_description:
+                                                    description: The meta description of the board, providing a brief summary or overview of the board's content.
+                                                    type: string
+                                                pages:
+                                                    description: Specify the number of pages to retrieve from 4chan. Default is 1.
+                                                    type: number
+                                                per_page:
+                                                    description: Number of boards to retrieve per page.
+                                                    type: number
+                                                title:
+                                                    description: The title of the board on 4chan.
+                                                    type: string
+                                                ws_board:
+                                                    description: Specify the board to retrieve information from. The board is identified by a unique number.
+                                                    type: number
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: Retrieve a list of boards from 4chan, including details such as board name, description, and number of posts.
+servers:
+    - url: https://a.4cdn.org

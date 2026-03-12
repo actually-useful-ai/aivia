@@ -1,0 +1,132 @@
+components:
+    examples:
+        getTriviaQuestions:
+            value:
+                ReqExample:
+                    amount: 5
+                    difficulty: hard
+                RespExample:
+                    response_code: 0
+                    results:
+                        - category: 'Entertainment: Video Games'
+                          correct_answer: Generator 5
+                          difficulty: hard
+                          incorrect_answers:
+                            - Generator 3
+                            - Generator 4
+                            - Excavation Site
+                          question: 'In the &quot;Call Of Duty: Zombies&quot; map &quot;Origins&quot;, where is &quot;Stamin-Up&quot; located?'
+                          type: multiple
+                        - category: 'Entertainment: Music'
+                          correct_answer: Drukqs
+                          difficulty: hard
+                          incorrect_answers:
+                            - Windowlicker
+                            - Syro
+                            - Collected Ambient Works 85-92
+                          question: What was the last Aphex Twin album released before his decade-long hiatus?
+                          type: multiple
+                        - category: History
+                          correct_answer: Post cards
+                          difficulty: hard
+                          incorrect_answers:
+                            - Alcohol
+                            - Cigarettes
+                            - 'Sodas '
+                          question: What did the first vending machines in the early 1880&#039;s dispense?
+                          type: multiple
+                        - category: General Knowledge
+                          correct_answer: St. Peter&#039;s Basilica
+                          difficulty: hard
+                          incorrect_answers:
+                            - Catania Cathedral
+                            - St. Mark&rsquo;s Basilica
+                            - The Duomo of Florence
+                          question: Which church&#039;s interior in Vatican City was designed in 1503 by renaissance architects including Bramante, Michelangelo and Bernini?
+                          type: multiple
+                        - category: 'Entertainment: Musicals &amp; Theatres'
+                          correct_answer: Stephen Sondheim
+                          difficulty: hard
+                          incorrect_answers:
+                            - Himself
+                            - Oscar Hammerstein
+                            - Richard Rodgers
+                          question: Who wrote the lyrics for Leonard Bernstein&#039;s 1957 Brodway musical West Side Story?
+                          type: multiple
+info:
+    description: The Open Trivia Database (OpenTDB) API provides a way to fetch trivia questions.
+    title: Open Trivia Database
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /api.php:
+        get:
+            operationId: getTriviaQuestions
+            parameters:
+                - description: The category of questions (use category IDs).
+                  in: query
+                  name: category
+                  schema:
+                    type: integer
+                - description: The difficulty of questions (easy, medium, hard).
+                  in: query
+                  name: difficulty
+                  schema:
+                    type: string
+                - description: The type of questions (multiple, boolean).
+                  in: query
+                  name: type
+                  schema:
+                    type: string
+                - description: The encoding of the response (url3986, base64, none).
+                  in: query
+                  name: encode
+                  schema:
+                    type: string
+                - description: The number of trivia questions to return (1-50).
+                  in: query
+                  name: amount
+                  required: true
+                  schema:
+                    type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                description: new desc
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    response_code:
+                                        description: The response code indicating the status of the API call
+                                        type: integer
+                                    results:
+                                        items:
+                                            properties:
+                                                category:
+                                                    type: string
+                                                correct_answer:
+                                                    type: string
+                                                difficulty:
+                                                    type: string
+                                                incorrect_answers:
+                                                    items:
+                                                        type: string
+                                                    type: array
+                                                question:
+                                                    type: string
+                                                type:
+                                                    type: string
+                                            type: object
+                                        type: array
+                                type: object
+                    description: new desc
+                default:
+                    description: ""
+            summary: This endpoint returns trivia questions based on the provided parameters.
+servers:
+    - url: https://opentdb.com
