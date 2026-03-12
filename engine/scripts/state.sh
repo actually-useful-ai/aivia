@@ -86,7 +86,7 @@ cmd_init() {
     cat > "$STATE_FILE" << EOF
 {
   "version": "1.0.0",
-  "game_name": "ELDRITCH AWAKENING",
+  "game_name": "aivia",
   "phase": 0,
   "message_count": 0,
   "started_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
