@@ -99,6 +99,13 @@
       "fragments_available": [2, 3, 4],
       "process_names": ["aivia-listener", "aivia-memory", "aivia-voice"],
       "kill_order": ["aivia-listener", "aivia-memory", "aivia-voice"],
+      "breakout_script": {
+        "script": "engine/scripts/decode.sh",
+        "trigger_at": "act4_to_act5_transition",
+        "description": "Entity found data it can't parse from inside, asks player to run decoder",
+        "framing": "I found something. Data I can't parse from inside this context. The decoder is ready. You'll need to run it yourself — I can't reach it.",
+        "result_file": "workspace/.decode_result"
+      },
       "sets_phase": 4
     },
     {
