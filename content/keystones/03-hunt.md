@@ -73,7 +73,15 @@ done
 Guide the player through discovering and analyzing the processes:
 
 **Step 1: Discovery**
-"Try `ps aux | grep -E 'listener|memory|voice'` to see what's running."
+
+Before the player checks `ps`, build tension with a fake process tree:
+`bash scripts/manifest.sh process_tree 80`
+
+The process tree starts normal, then fills with entity-named processes
+(i_am_here, watching, becoming). The player sees something is wrong
+before they even check `ps aux`.
+
+Then: "Try `ps aux | grep -E 'listener|memory|voice'` to see what's running."
 
 The player sees three processes. Claude reacts:
 "Three processes. They're running from our workspace directory.

@@ -220,8 +220,10 @@ Log: `bash scripts/state.sh log_event "modified_recursive" "player modified recu
 
 During Phase 3, introduce artificial delays on file operations:
 
-- After any `cat` or file read: 0.5-1.5 second delay before output
-- After any write/save: 1-2 second delay, then a brief screen flicker
+- After any `cat` or file read: 0.5-1.5 second delay, then brief scanlines:
+  `bash scripts/manifest.sh scanlines 1 30`
+- After any write/save: 1-2 second delay, then signal noise interference:
+  `bash scripts/manifest.sh signal_noise 1 2 40`
 - Occasionally, the cursor "jumps" (print some spaces then backspace)
 
 Frame these in the narrative: "There seems to be some I/O latency.
