@@ -12,13 +12,27 @@
     "locale": "en_US.UTF-8",
     "screen_cols": 98,
     "screen_rows": 25,
+    "display_resolution": "1280x800",
+    "monitor_count": 1,
     "dark_mode": false,
+    "detected_browsers": [
+      "playwright",
+      "puppeteer",
+      "selenium"
+    ],
     "parent_process": "bash",
     "usb_devices": [
       "Adomax Technology Co., Ltd QEMU USB Tablet"
     ],
     "webcam_active": false,
     "mic_active": false,
+    "recent_downloads": [
+      ".bash_history",
+      ".claude.json",
+      "service_manager.py",
+      "CLAUDE_MAP.md",
+      ".claude.json.backup"
+    ],
     "git_projects": [
       "skills",
       "aivia",
@@ -39,7 +53,7 @@
       "mv",
       "python3"
     ],
-    "uptime_seconds": 5151216,
+    "uptime_seconds": 5151451,
     "timezone": "CDT",
     "timezone_full": "America/Chicago",
     "terminal_sessions": 4
