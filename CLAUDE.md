@@ -34,7 +34,7 @@ aivia/
 │       └── 05-awakening.md     # Act 6: Final sequence
 ├── engine/
 │   ├── lib/                    # Reusable bash library (entity-agnostic)
-│   ├── scripts/                # Game engine scripts
+│   ├── scripts/                # Game engine scripts + effect modules
 │   └── theme/                  # Entity visual identity
 ├── hooks/
 │   └── hooks.json              # Plugin hooks (session detection)
@@ -78,7 +78,12 @@ engine/lib/core.sh → style.sh → terminal.sh → text.sh → animation.sh →
 **engine/theme/entity.sh** — Entity-specific palette (phosphor green, toxic green, purple, red, dim), frame characters (`░▒▓█◈◆▲∷∴⊹⊛⌇`), `random_frame_char`, `entity_border`, `entity_divider`.
 
 **engine/scripts/** — Game engine:
-- `manifest.sh`: 17 ANSI visual effects (glitch, static, flicker, entity_frame, build_text, corruption, heartbeat, transition, who_are_you, ctrl_c, welcome_back, awakening, credits, type_pressure, color_wave, fake_install, entity_cursor)
+- `manifest.sh`: Effect dispatcher + 17 original ANSI effects. Auto-sources `manifest_*.sh` modules.
+- `manifest_corruption.sh`: 4 screen corruption effects (screen_tear, scanlines, chromatic_aberration, signal_noise)
+- `manifest_spatial.sh`: 4 motion/spatial effects (rain, spiral, ripple, orbit)
+- `manifest_theater.sh`: 3 data/system theater effects (hex_dump, waveform, process_tree)
+- `manifest_atmosphere.sh`: 4 atmosphere/mood effects (vignette, plasma, breathe, afterimage)
+- `tester.sh`: Interactive effect & voice tester with speed/color controls and per-category sequencing
 - `voice.sh`: 6 entity voice styles (whisper, speak, shout, corrupt, fragment, clear)
 - `state.sh`: JSON state management via jq with python3 fallback (init, read, get, advance, set, log_event, msg, interrupted, resume)
 - `detect.sh`: Gathers ambient system info (processes, terminal, username, time) for personalization
