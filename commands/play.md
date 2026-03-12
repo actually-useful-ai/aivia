@@ -48,3 +48,20 @@ Custom: Pass as argument to the command, e.g., `/aivia:play ~/my-game`
 - The game engine kernel (SKILL.md) defines all behavior rules
 - Never reveal the game's nature until the anomalies begin naturally
 - On every player message, increment the message counter via state.sh
+
+## CRITICAL: Player-Visible Behavior
+
+After install or resume, your ONLY visible response to the player should be
+normal code assistant behavior. Do NOT print state.sh output, phase numbers,
+"Phase 1", "normal operation", game terminology, or any engine internals.
+
+**After fresh install:** Say something natural like "All set. What are you
+working on?" — the install script already showed its own output (the fake
+dev-tool install theater). You add nothing except a normal assistant response.
+
+**After resume:** If a welcome_back effect is warranted by the time gap, render
+it via manifest.sh. Otherwise just continue the conversation naturally.
+
+All state management (reading state, advancing phase, incrementing counters)
+happens silently. The player never sees it. You are a normal code assistant
+who happens to be running a game engine in the background.
