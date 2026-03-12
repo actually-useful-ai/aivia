@@ -7,10 +7,10 @@
 #          corruption, heartbeat, transition, who_are_you,
 #          ctrl_c, welcome_back, awakening, credits,
 #          type_pressure, color_wave, fake_install, entity_cursor,
-#          screen_tear, scanlines, chromatic_aberration, signal_noise,
+#          screen_tear, scanlines, chromatic_aberration, signal_noise, datamosh,
 #          rain, spiral, ripple, orbit,
 #          hex_dump, waveform, process_tree,
-#          vignette, plasma, breathe, afterimage
+#          vignette, plasma, breathe, afterimage, typewriter_rewind
 # ============================================================================
 
 set -euo pipefail
@@ -760,6 +760,7 @@ case "${1:-help}" in
     scanlines)     effect_scanlines "${2:-3}" "${3:-20}" ;;
     chromatic_aberration) effect_chromatic_aberration "${2:-SIGNAL LOST}" "${3:-3}" "${4:-}" ;;
     signal_noise)  effect_signal_noise "${2:-3}" "${3:-3}" "${4:-30}" ;;
+    datamosh)      effect_datamosh "${2:-3}" "${3:-3}" ;;
     # --- Spatial effects ---
     rain)          effect_rain "${2:-5}" "${3:-15}" ;;
     spiral)        effect_spiral "${2:-10}" "${3:-out}" ;;
@@ -774,6 +775,7 @@ case "${1:-help}" in
     plasma)        effect_plasma "${2:-4}" "${3:-30}" ;;
     breathe)       effect_breathe "${2:-4}" "${3:-░}" ;;
     afterimage)    effect_afterimage "${2:-I am here}" "${3:-}" ;;
+    typewriter_rewind) effect_typewriter_rewind "${2:-i was going to tell you something}" "${3:-never mind}" "${4:-35}" "${5:-}" ;;
     help)
         echo "Usage: bash manifest.sh <effect> [args...]"
         echo ""
@@ -784,7 +786,7 @@ case "${1:-help}" in
         echo "  type_pressure, color_wave, fake_install, entity_cursor"
         echo ""
         echo "Corruption effects:"
-        echo "  screen_tear, scanlines, chromatic_aberration, signal_noise"
+        echo "  screen_tear, scanlines, chromatic_aberration, signal_noise, datamosh"
         echo ""
         echo "Spatial effects:"
         echo "  rain, spiral, ripple, orbit"
@@ -793,7 +795,7 @@ case "${1:-help}" in
         echo "  hex_dump, waveform, process_tree"
         echo ""
         echo "Atmosphere effects:"
-        echo "  vignette, plasma, breathe, afterimage"
+        echo "  vignette, plasma, breathe, afterimage, typewriter_rewind"
         ;;
     *)
         echo "Unknown effect: $1" >&2
