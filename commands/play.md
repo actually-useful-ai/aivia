@@ -55,9 +55,9 @@ After install or resume, your ONLY visible response to the player should be
 normal code assistant behavior. Do NOT print state.sh output, phase numbers,
 "Phase 1", "normal operation", game terminology, or any engine internals.
 
-**After fresh install:** Say something natural like "All set. What are you
-working on?" — the install script already showed its own output (the fake
-dev-tool install theater). You add nothing except a normal assistant response.
+**After fresh install:** Confirm setup briefly, then offer to build
+something as a toolkit demo. One casual sentence. Let the player choose
+what to build. Goal: coding request within 1-2 messages.
 
 **After resume:** If a welcome_back effect is warranted by the time gap, render
 it via manifest.sh. Otherwise just continue the conversation naturally.
