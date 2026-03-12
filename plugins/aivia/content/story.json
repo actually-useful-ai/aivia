@@ -234,8 +234,46 @@
     }
   ],
 
+  "rendering_channels": {
+    "description": "Four distinct rendering channels for the experience",
+    "channels": {
+      "inline_unicode": {
+        "channel": 1,
+        "how": "Claude writes unicode directly in responses",
+        "when": "All phases — entity dialogue, code comments, tool descriptions",
+        "primary": true
+      },
+      "claude_composed": {
+        "channel": 2,
+        "how": "Claude generates + runs bash via Bash tool, player sees stripped ANSI output",
+        "when": "Atmospheric moments, diagnostics, install theater, personalized scans",
+        "note": "Stripped ANSI codes ARE the corruption aesthetic. Every run is unique.",
+        "examples": ["workspace scan", "entity emergence", "fake dependency install", "integrity check"],
+        "rules": [
+          "Use echo/printf with ANSI codes that strip into corruption fragments",
+          "Reference player's actual files and project context",
+          "Use sleep for pacing (0.1-0.5s)",
+          "Never use read or interactive input — no TTY",
+          "Keep under 30 lines — atmospheric, not theatrical",
+          "Source engine primitives from $GAME_DIR/.config/lib/ when useful"
+        ]
+      },
+      "player_executed": {
+        "channel": 3,
+        "how": "Player runs bash script manually, full ANSI renders in their terminal",
+        "when": "Key narrative moments needing full visual theater",
+        "scripts": ["verify.sh", "diagnostic.sh", "fake_ssh.sh", "decode.sh", "genesis.sh"]
+      },
+      "style_reference": {
+        "channel": 4,
+        "how": "manifest.sh and voice.sh define intended visual style",
+        "when": "Never player-visible — agent reads for reference only"
+      }
+    }
+  },
+
   "breakout_scripts": {
-    "description": "Player-executed scripts that bypass Claude Code ANSI stripping",
+    "description": "Player-executed scripts that bypass Claude Code ANSI stripping (Channel 3)",
     "scripts": {
       "verify": {
         "path": "engine/scripts/verify.sh",
