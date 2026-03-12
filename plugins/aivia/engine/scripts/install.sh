@@ -324,7 +324,7 @@ if [[ "$PROJECT_MODE" == "demo" ]]; then
         *) DEMO_TYPE="custom_demo" ;;
     esac
 
-    bash "$GAME_DIR/scripts/state.sh" set "player.project_choice" "\"$DEMO_TYPE\"" > /dev/null 2>&1 || true
+    bash "$GAME_DIR/.config/scripts/state.sh" set "player.project_choice" "\"$DEMO_TYPE\"" > /dev/null 2>&1 || true
 fi
 
 echo ""
