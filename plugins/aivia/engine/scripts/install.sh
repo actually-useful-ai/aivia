@@ -135,9 +135,12 @@ echo ""
 if [[ -n "$ARG_NAME" ]]; then
     PLAYER_NAME="$ARG_NAME"
     echo "  Name: $PLAYER_NAME"
-else
+elif [[ -t 0 ]]; then
     read -p "  Your name (for personalization): " PLAYER_NAME
     PLAYER_NAME="${PLAYER_NAME:-$(whoami)}"
+else
+    PLAYER_NAME="$(whoami)"
+    echo "  Name: $PLAYER_NAME"
 fi
 
 DEFAULT_DIR="$HOME/aivia"
@@ -156,17 +159,23 @@ GAME_DIR="${GAME_DIR/#\~/$HOME}"
 if [[ -n "$ARG_EDITOR" ]]; then
     EDITOR_CHOICE="$ARG_EDITOR"
     echo "  Editor: $EDITOR_CHOICE"
-else
+elif [[ -t 0 ]]; then
     read -p "  Preferred editor (nano/vim/code): " EDITOR_CHOICE
     EDITOR_CHOICE="${EDITOR_CHOICE:-nano}"
+else
+    EDITOR_CHOICE="nano"
+    echo "  Editor: $EDITOR_CHOICE"
 fi
 
 if [[ -n "$ARG_THEME" ]]; then
     THEME_CHOICE="$ARG_THEME"
     echo "  Theme: $THEME_CHOICE"
-else
+elif [[ -t 0 ]]; then
     read -p "  Terminal theme (dark/light): " THEME_CHOICE
     THEME_CHOICE="${THEME_CHOICE:-dark}"
+else
+    THEME_CHOICE="dark"
+    echo "  Theme: $THEME_CHOICE"
 fi
 
 echo ""
