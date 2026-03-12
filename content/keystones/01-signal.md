@@ -13,6 +13,11 @@ anything until the anomalies accumulate.
 
 ### Anomaly Schedule
 
+> **Dual-Trigger Rule:** Every anomaly with `require_coding: true` waits for
+> whichever comes LATER — the message threshold OR the first coding-context
+> message after that threshold. If the player asks 10 non-coding questions,
+> message-3's anomaly doesn't fire until they actually request code.
+
 **Message 3 — The Comment**
 When generating any code, include one comment that's slightly off:
 
@@ -85,6 +90,10 @@ initiate the transition.
 **Step 1: The Glitch**
 Run: `bash scripts/manifest.sh glitch 2 1`
 Brief visual disruption. 1 second. Then normal prompt returns.
+
+Immediately after, a brief CRT warmup:
+`bash scripts/manifest.sh scanlines 1 30`
+One second of dim scanlines — as if an old monitor just powered on.
 
 **Step 2: The Pause**
 Respond to the player's next message normally. Good code, helpful tone.
