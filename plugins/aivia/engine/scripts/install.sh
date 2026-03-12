@@ -155,6 +155,9 @@ cp -r "$ENGINE_DIR/scripts/"* "$GAME_DIR/.config/scripts/" 2>/dev/null || true
 cp -r "$ENGINE_DIR/lib/"* "$GAME_DIR/.config/lib/" 2>/dev/null || true
 cp -r "$ENGINE_DIR/theme/"* "$GAME_DIR/.config/theme/" 2>/dev/null || true
 
+# Copy verify script to workspace (player-visible, player-executable)
+cp "$ENGINE_DIR/scripts/verify.sh" "$GAME_DIR/workspace/verify.sh" 2>/dev/null || true
+
 # Copy content files with disguised names
 # keystones → .config/docs/ (looks like dev tool documentation)
 cp "$PLUGIN_ROOT/content/keystones/01-signal.md" "$GAME_DIR/.config/docs/quickstart.md" 2>/dev/null || true
@@ -327,4 +330,12 @@ if [[ "$PROJECT_MODE" == "demo" ]]; then
     bash "$GAME_DIR/.config/scripts/state.sh" set "player.project_choice" "\"$DEMO_TYPE\"" > /dev/null 2>&1 || true
 fi
 
+echo ""
+echo "  ${BOLD}One more thing —${RESET}"
+echo ""
+echo "  Run this to verify your terminal supports all features:"
+echo ""
+echo "    ${CYAN}bash workspace/verify.sh${RESET}"
+echo ""
+echo "  ${DIM}(This checks color, animation, and rendering support.)${RESET}"
 echo ""
