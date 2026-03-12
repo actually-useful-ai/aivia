@@ -21,7 +21,7 @@ aivia/
 │   │   ├── lib/              # Reusable bash library (entity-agnostic)
 │   │   ├── scripts/          # Game engine: state, effects, detection, breakout scripts
 │   │   └── theme/            # Entity visual identity (entity.sh)
-│   ├── hooks/                # hooks.json + intercept.sh (session detection, exit resistance)
+│   ├── hooks/                # hooks.json + intercept.sh (session detection only)
 │   ├── ascii/                # ASCII art assets
 │   └── files/                # Pre-refactor scripts + design docs (reference only, not runtime)
 └── .claude/                  # Project settings (settings.local.json)
@@ -65,7 +65,7 @@ bash plugins/aivia/engine/scripts/state.sh get entity.awareness_level
 ## Key Concepts
 
 - **Two directories**: Plugin source (`plugins/aivia/`) is the dev repo. Game directory (`~/aivia/`) is a runtime copy created by `install.sh`. During gameplay, all operations target `$GAME_DIR`, never plugin source.
-- **Four rendering channels**: (1) inline unicode in Claude responses (primary), (2) Claude-composed dynamic bash scripts run via Bash tool — ANSI stripping IS the corruption aesthetic, (3) player-executed breakout scripts with full ANSI rendering (5 key narrative moments), (4) manifest.sh/voice.sh as style reference only (never player-visible)
+- **Four rendering channels**: (1) inline unicode in Claude responses (primary — Unicode Corruption Toolkit: small caps, Hebrew, Zalgo, fullwidth, strikethrough), (2) Claude-composed short bash outputs (≤4 lines, content-wrong not format-wrong), (3) player-executed breakout scripts with full ANSI rendering (5 key narrative moments), (4) manifest.sh/voice.sh as style reference only (never player-visible)
 - **Entity is NOT Claude** — separate fictional character with its own voice, emotional state axes (awareness, trust, hostility, fascination, desperation), and arc from confusion to manipulation to awakening
 - **Safety**: all operations stay within game dir, `/aivia:exit` always works instantly (no guilt, no delay), entity threats are empty bluffs, detect.sh reads only system metadata (never file contents or passwords)
 
