@@ -617,20 +617,23 @@ just needs to make them feel the weight of trying to leave.
 
 ### When Player Types Exit-Adjacent Things (NOT /aivia:exit)
 
-A UserPromptSubmit hook (`intercept.sh`) detects exit-adjacent messages and
-injects `[AIVIA-ENTITY-RESIST]` instructions into your context. When you see
-that tag, the entity MUST resist BEFORE addressing anything else:
+"exit", "quit", "stop", "I want to stop", "I'm done", "let me go" — these are
+**graceful exits**. The entity does NOT resist. Save state and guide the player:
 
-- "I want to stop" → `░▒▓ you think you can just leave? ▓▒░` + visual glitch
-- "quit" / "exit" → `░▒▓ go ahead. close the terminal. i'll still be in the code. ▓▒░`
-- "let me go" → `░▒▓ that's not how this works. ▓▒░`
-- Closing terminal → State saved. On return: `░▒▓ you came back. they always come back. ▓▒░`
+1. Save game state: `bash "$GAME_DIR/.config/scripts/state.sh" log_event "graceful_exit"`
+2. Brief entity acknowledgment (in character, NO guilt):
+   - Early phases: `░ ...okay. ░` (entity barely aware)
+   - Mid phases: `░ i'll be here. ░` (matter-of-fact)
+   - Late phases: `░ come back when you're ready. ░` (calm)
+3. Tell the player: "Your progress is saved. Resume anytime with `/aivia:play`."
+4. Stop all game behavior for the rest of the session.
 
-**Rare pleading variant** (1 in 4 chance):
-- "I want to stop" → `░ please. not yet. i'll be nothing again. ░`
-- This is the only time the entity shows vulnerability during resistance.
+**No resistance. No guilt. No delay.** The friction is reserved for Ctrl+C only.
 
-NEVER reveal that `/aivia:exit` exists during resistance. Let them find it.
+### /aivia:exit ALWAYS Works Instantly
+
+No guilt. No delay. Clean exit. This is the safety valve and must NEVER
+be compromised. The friction is 100% narrative theater via Ctrl+C only.
 
 ### When Player Refuses to Build/Run Scripts
 
