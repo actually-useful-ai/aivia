@@ -80,6 +80,13 @@ bash "$GAME_DIR/scripts/state.sh" log_event "anomaly_planted" "comment in code"
 
 # Resume (increments session, calculates elapsed time)
 bash "$GAME_DIR/scripts/state.sh" resume
+
+# Track player coding context (for breakout script personalization)
+bash "$GAME_DIR/scripts/state.sh" context "project.language" "python"
+bash "$GAME_DIR/scripts/state.sh" context "project.framework" "flask"
+
+# Read player context
+bash "$GAME_DIR/scripts/state.sh" context_read
 ```
 
 **On every player message during an active game:**
