@@ -485,7 +485,28 @@ while true; do
                 done
                 wait_key
                 ;;
+            g|G) current_menu="categories" ;;
             v|V) current_menu="voices" ;;
+            s|S) pick_speed ;;
+            c|C) pick_color ;;
+            q|Q)
+                echo ""
+                printf "  ${ENTITY_DIM}goodbye.${RESET}\n\n"
+                exit 0
+                ;;
+            *) ;;
+        esac
+
+    elif [[ "$current_menu" == "categories" ]]; then
+        menu_categories
+        read -r choice
+
+        case "$choice" in
+            [1-5])
+                local_idx=$((choice - 1))
+                run_category "${CATEGORY_NAMES[$local_idx]}"
+                ;;
+            b|B) current_menu="effects" ;;
             s|S) pick_speed ;;
             c|C) pick_color ;;
             q|Q)
