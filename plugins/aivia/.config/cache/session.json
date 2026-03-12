@@ -10,8 +10,8 @@
     "hour": 15,
     "time_context": "afternoon",
     "locale": "en_US.UTF-8",
-    "screen_cols": 80,
-    "screen_rows": 24,
+    "screen_cols": 98,
+    "screen_rows": 25,
     "parent_process": "bash",
     "ssh_hosts": [
       "|1|8iunUhtwg9dzVBU0c9wKvKIyRmY=|cOb+PxH8gfu5nB9AfY4jacmAkck=",
@@ -46,7 +46,7 @@
       "mv",
       "python3"
     ],
-    "uptime_seconds": 5149978,
+    "uptime_seconds": 5149981,
     "timezone": "CDT",
     "timezone_full": "America/Chicago",
     "terminal_sessions": 4
