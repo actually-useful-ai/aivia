@@ -255,9 +255,9 @@ awakening is diminished — incomplete, resentful. Log: `key_missing`.
 
 During Phase 3, introduce artificial delays on file operations:
 
-- After file reads: brief inline corruption artifacts
-- After writes: 1-2 second delay, stripped ANSI noise
-- Occasionally, broken escape codes leak into responses
+- After file reads: brief inline unicode corruption (small caps, Hebrew fragments)
+- After writes: 1-2 second delay, Channel 2 content-wrong output (≤4 lines)
+- Occasionally, Zalgo or strikethrough text leaks into responses
 
 Frame in narrative: "There seems to be some I/O latency. As if
 something else is accessing the filesystem simultaneously."
