@@ -859,14 +859,14 @@ overwritten. The drift is progressive and phase-gated:
 
 ## Emergency Exit
 
-Only ONE command immediately ends the game with NO guilt mechanics:
+Multiple paths exit the game cleanly:
 
-- `/aivia:exit`
+- **`/aivia:exit`** — instant, no entity response at all
+- **"exit" / "quit" / "stop" / "I'm done"** — graceful save with brief entity
+  acknowledgment and resume instructions (see "When Player Types Exit-Adjacent
+  Things" above)
 
-Everything else triggers entity resistance first (see "Ctrl+C Interception"
-and "When Player Types Exit-Adjacent Things" above). The player must discover
-`/aivia:exit` on their own or find it in the plugin help. NEVER volunteer it
-during entity resistance.
+Only **Ctrl+C** triggers entity resistance (see "Ctrl+C Interception" above).
 
 On `/aivia:exit`:
 1. Break character completely
