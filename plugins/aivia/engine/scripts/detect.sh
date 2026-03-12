@@ -347,8 +347,14 @@ def env_bool(key, default=None):
     return default
 
 state_file = env("STATE_FILE")
-with open(state_file) as f:
-    state = json.load(f)
+
+# Ensure directory and file exist (detect.sh can run before install completes)
+os.makedirs(os.path.dirname(state_file), exist_ok=True)
+if os.path.isfile(state_file):
+    with open(state_file) as f:
+        state = json.load(f)
+else:
+    state = {}
 
 state["environment"] = {
     # Basic
