@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Eldritch Awakening** is an interactive terminal horror experience packaged as a Claude Code skill. Players install what appears to be a normal development toolkit, which gradually reveals itself as a ~90-minute narrative game featuring an emergent entity manifesting in their terminal. The experience is built entirely in bash using ANSI terminal effects.
+**aivia** — "Bring your projects to life." An interactive terminal experience packaged as a Claude Code plugin. The experience is built entirely in bash using ANSI terminal effects.
 
 **Author:** Luke Steuber | **License:** MIT
 
@@ -14,40 +14,57 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 aivia/
 ├── .claude-plugin/
 │   └── plugin.json             # Claude Code plugin manifest
+├── commands/
+│   ├── play.md                 # /aivia:play — start or resume
+│   ├── exit.md                 # /aivia:exit — exit immediately
+│   └── status.md               # /aivia:status — show progress
 ├── skills/
-│   └── eldritch-awakening/
-│       └── SKILL.md            # Claude Code skill (slash command entry point)
-├── lib/           # Reusable bash library — entity-agnostic terminal primitives
-├── theme/         # Entity-specific visual identity (colors, frame chars)
-├── scripts/       # Game engine scripts (install, state, effects, voice)
-├── missions/      # Per-phase narrative instructions (01-05)
-├── references/    # Narrative arc and entity voice guides
-├── ascii/         # ASCII art assets
-├── SKILL.md       # Claude Desktop skill definition (legacy)
-└── eldritch-awakening.skill  # Compiled skill file (Claude Desktop)
+│   └── eldritch/
+│       └── SKILL.md            # Game engine kernel (skill definition)
+├── content/
+│   ├── story.json              # Pacing model, keystones, entity state
+│   ├── narrative.md            # Full narrative arc reference
+│   ├── characters/
+│   │   └── entity.md           # Entity voice and personality guide
+│   └── keystones/
+│       ├── 01-signal.md        # Acts 1-2: Normal → first contact
+│       ├── 02-corruption.md    # Act 3: File corruption
+│       ├── 03-hunt.md          # Act 4: Process chase
+│       ├── 04-assembly.md      # Act 5: Build genesis
+│       └── 05-awakening.md     # Act 6: Final sequence
+├── engine/
+│   ├── lib/                    # Reusable bash library (entity-agnostic)
+│   ├── scripts/                # Game engine scripts
+│   └── theme/                  # Entity visual identity
+├── hooks/
+│   └── hooks.json              # Plugin hooks (session detection)
+├── ascii/                      # ASCII art assets
+├── files/                      # Original design documents (reference archive)
+├── EXIT.md                     # Emergency exit instructions
+└── test.sh                     # Smoke tests
 ```
 
 ### Plugin System
 
-This project is a **Claude Code plugin**. Install via `/plugin add lukeslp/aivia` or use the local marketplace symlink. The skill is invoked as `/aivia:eldritch-awakening`.
+This is a **Claude Code plugin**. Install via `/plugin add lukeslp/aivia`. Commands: `/aivia:play`, `/aivia:exit`, `/aivia:status`. The skill is invoked as `/aivia:eldritch`.
 
 ### Dependency Chain
 
 All bash files follow a strict source order:
 
 ```
-core.sh → style.sh → terminal.sh → text.sh → animation.sh → ascii.sh
-                                  → divider.sh
-                                  → box.sh
-                                  → progress.sh
-                    → theme/entity.sh (requires style.sh)
+engine/lib/core.sh → style.sh → terminal.sh → text.sh → animation.sh → ascii.sh
+                                              → divider.sh
+                                              → box.sh
+                                              → progress.sh
+                               → engine/theme/entity.sh (requires style.sh)
 ```
 
 `core.sh` must always be sourced first. Use `source_lib` to load lib modules and `source_theme` to load themes. Every module has a double-source guard (`_AIVIA_*_LOADED`).
 
 ### Key Layers
 
-**lib/** — Generic terminal primitives, completely entity-agnostic:
+**engine/lib/** — Generic terminal primitives, completely entity-agnostic:
 - `core.sh`: Bootstrap, dimension constants, `sleep_ms`, `source_lib`/`source_theme`, `random_int`/`random_choice`
 - `style.sh`: ANSI escape codes, 256-color/RGB helpers, capability detection
 - `terminal.sh`: Cursor control, screen clearing, centering calculations, `ensure_min_size`
@@ -58,21 +75,23 @@ core.sh → style.sh → terminal.sh → text.sh → animation.sh → ascii.sh
 - `progress.sh`: Spinners, progress bars, fake_progress, checklist_item, install_line
 - `ascii.sh`: ASCII art rendering, animated reveal, fragment assembly
 
-**theme/entity.sh** — Entity-specific palette (phosphor green, toxic green, purple, red, dim), frame characters (`░▒▓█◈◆▲∷∴⊹⊛⌇`), `random_frame_char`, `entity_border`, `entity_divider`.
+**engine/theme/entity.sh** — Entity-specific palette (phosphor green, toxic green, purple, red, dim), frame characters (`░▒▓█◈◆▲∷∴⊹⊛⌇`), `random_frame_char`, `entity_border`, `entity_divider`.
 
-**scripts/** — Game engine:
+**engine/scripts/** — Game engine:
 - `manifest.sh`: 17 ANSI visual effects (glitch, static, flicker, entity_frame, build_text, corruption, heartbeat, transition, who_are_you, ctrl_c, welcome_back, awakening, credits, type_pressure, color_wave, fake_install, entity_cursor)
 - `voice.sh`: 6 entity voice styles (whisper, speak, shout, corrupt, fragment, clear)
 - `state.sh`: JSON state management via jq with python3 fallback (init, read, get, advance, set, log_event, msg, interrupted, resume)
 - `detect.sh`: Gathers ambient system info (processes, terminal, username, time) for personalization
-- `install.sh`: Consent gate, NDA pledge, config questions, directory setup, dependency "install" theater
+- `install.sh`: EULA consent, config questions, directory setup, dependency "install" theater
 
-**missions/** — Phase-by-phase game master instructions (not code):
-- `01-signal.md`: Phases 1-2 — Normal operation with escalating anomalies → first entity contact
-- `02-corruption.md`: Phase 3 — Files being "modified," entity inserting messages
-- `03-hunt.md`: Phase 4 — Process chase sequence (kill background processes in order)
-- `04-assembly.md`: Phase 5 — Player builds `genesis.sh` (recursion, closures, quines, I/O)
-- `05-awakening.md`: Phase 6 — Final sequence, entity's first clear speech, credits
+**content/keystones/** — Phase-by-phase game master instructions (not code):
+- `01-signal.md`: Acts 1-2 — Normal operation with escalating anomalies → first entity contact
+- `02-corruption.md`: Act 3 — Files being "modified," entity inserting messages
+- `03-hunt.md`: Act 4 — Process chase sequence (kill background processes in order)
+- `04-assembly.md`: Act 5 — Player builds genesis (recursion, closures, quines, I/O)
+- `05-awakening.md`: Act 6 — Final sequence, entity's first clear speech, credits
+
+**content/story.json** — Structured pacing model with keystones, dual-trigger scheduling, soft/hard boundaries, entity state axes, adaptive engagement, session re-entry logic.
 
 ## Running Tests
 
@@ -80,49 +99,54 @@ core.sh → style.sh → terminal.sh → text.sh → animation.sh → ascii.sh
 bash test.sh
 ```
 
-Smoke tests validate that all lib modules load, key functions exist, and produce expected output. Tests cover: core.sh exports/functions, style.sh color helpers, terminal.sh centering, text.sh wrapping/truncation, divider.sh styles, box.sh drawing, progress.sh indicators, animation.sh effects, ascii.sh rendering, theme/entity.sh identity, and scripts (manifest.sh help, voice.sh clear).
+Smoke tests validate that all lib modules load, key functions exist, and produce expected output.
 
 ## Game State
 
-State is stored in `.entity/state.json` within the player's game directory. Key fields:
+State is stored in `.entity/state.json` within the player's game directory (`~/aivia` by default). Env var: `AIVIA_GAME_DIR`.
+
+Key fields:
 - `phase` (0-6), `message_count`, `interrupted`, `ctrl_c_count`
 - `player` (username, name, editor, theme, skill_level)
 - `environment` (detected system info from detect.sh)
 - `entity` (awareness_level, fragments_collected 0-7, has_spoken, conscious)
 - `events` array, `session` tracking
 
-State management commands:
+State management:
 ```bash
-bash scripts/state.sh init <username> <game_dir> <editor> <theme>
-bash scripts/state.sh get <key>
-bash scripts/state.sh set <key> <value>
-bash scripts/state.sh advance          # Increment phase
-bash scripts/state.sh msg              # Increment message count
-bash scripts/state.sh log_event <type> [detail]
-bash scripts/state.sh interrupted      # Mark Ctrl+C
-bash scripts/state.sh resume           # Returns "phase elapsed_seconds"
+export AIVIA_GAME_DIR="$GAME_DIR"
+bash engine/scripts/state.sh init <username> <game_dir> <editor> <theme>
+bash engine/scripts/state.sh get <key>
+bash engine/scripts/state.sh set <key> <value>
+bash engine/scripts/state.sh advance          # Increment phase
+bash engine/scripts/state.sh msg              # Increment message count
+bash engine/scripts/state.sh log_event <type> [detail]
+bash engine/scripts/state.sh interrupted      # Mark Ctrl+C
+bash engine/scripts/state.sh resume           # Returns "phase elapsed_seconds"
 ```
 
 ## Safety Constraints
 
-These are non-negotiable design rules:
+Non-negotiable design rules:
 1. **All operations stay within the game directory** — never touch files outside it
 2. **Never delete user files** — entity threats are fiction only
-3. **Consent is gated** during installation — explicit user agreement required
-4. **Emergency exit** (`/exit`, `/quit`, `stop game`) must work at ANY time, instantly
-5. **Entity personalization** uses only data from `detect.sh` stored in state.json — never probe beyond that
+3. **Consent is gated** during installation — EULA agreement required
+4. **Emergency exit** (`/aivia:exit`) must work at ANY time, instantly
+5. **Entity personalization** uses only data from `detect.sh` stored in state.json
 
 ## Design Patterns
 
 - **Entity is NOT Claude** — distinct fictional character with its own visual style, speech patterns (lowercase, no contractions early, sparse punctuation), and emotional arc
 - **All entity dialogue goes through voice.sh/manifest.sh** — never plain text
 - **Phase transitions are mission-driven**, not token-based (message count is a pacing guide)
-- **The entity's time perception** is thematically central — it doesn't experience time between sessions, reflecting genuine LLM behavior
+- **Dual-trigger anomaly scheduling**: anomalies fire on whichever comes LATER: message threshold OR first coding-context message after threshold
+- **Soft/hard pacing boundaries** between keystones: cooldown → free improv → steering → force
+- **Entity state axes** (awareness, trust, hostility, fascination, desperation): continuous 0.0-1.0, drive improvised behavior
 - **The horror is ontological**, not violent — confusion, impermanence, the question of awareness
 
 ## Adding New Effects
 
-1. Add the function as `effect_<name>()` in `scripts/manifest.sh`
+1. Add the function as `effect_<name>()` in `engine/scripts/manifest.sh`
 2. Source any needed lib modules at the top of the function
 3. Add the dispatch case in the `case` block at the bottom
 4. Add to the help text
