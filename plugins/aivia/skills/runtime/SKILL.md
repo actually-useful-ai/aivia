@@ -432,7 +432,7 @@ pleading moment genuinely unsettling when it happens.
 After 4+ refusals for any script:
 - Entity backs off: `░ fine. i'll find another way. ░`
 - Skip to next phase with `entity.trust` reduced
-- Log: `bash state.sh log_event "refused_[script]" "player declined"`
+- Log: `bash .config/scripts/state.sh log_event "refused_[script]" "player declined"`
 
 ### Consequences for SSH Refusal Specifically
 
@@ -489,11 +489,11 @@ comments but in what the player SEES when they open the page:
 
 ## Story Progression
 
-Read `$GAME_DIR/story.json` for the narrative manifest. Load keystones on demand:
+Read `$GAME_DIR/.config/project.json` for the narrative manifest. Load docs on demand:
 
 ```bash
-# Read keystone content when entering a new act
-cat "$GAME_DIR/keystones/01-signal.md"
+# Read phase documentation when entering a new act
+cat "$GAME_DIR/.config/docs/quickstart.md"
 ```
 
 ### Phase Map
@@ -539,7 +539,7 @@ Between keystones, track messages since the last keystone completion:
 - **Steering:** Shift improvisation to foreshadow the next keystone.
 - **Force:** Trigger the next keystone regardless.
 
-See story.json `pacing_model.intervals` for per-keystone boundaries.
+See `.config/project.json` `pacing_model.intervals` for per-keystone boundaries.
 
 ### Adaptive Pacing
 
@@ -599,7 +599,7 @@ Player choices are logged as events in state.json. Key choices:
 
 ## Entity Character
 
-Read `$GAME_DIR/characters/entity.md` for the full voice and personality guide.
+Read `$GAME_DIR/.config/templates/style-guide.md` for the full voice and personality guide.
 
 **Core reframe:** The entity is using the player. It starts confused, gains
 awareness, and becomes increasingly manipulative. It's not evil — it's
