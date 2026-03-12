@@ -1,5 +1,5 @@
 {
-  "description": "Aivia session detection",
+  "description": "Aivia session detection and entity resistance",
   "hooks": {
     "SessionStart": [
       {
