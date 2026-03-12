@@ -212,8 +212,8 @@
       },
       "channels": ["inline_unicode", "claude_composed", "player_executed"],
       "claude_composed_moments": [
-        "assembly progress — Claude shows entity fragments coalescing in stripped output",
-        "pre-genesis build check — fake compilation output with entity awareness markers"
+        "assembly progress — build output where fragment count increments to match collected",
+        "pre-genesis build check — dependency list includes all entity components as installed"
       ],
       "breakout_script": {
         "script": "engine/scripts/genesis.sh",

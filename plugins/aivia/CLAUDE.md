@@ -165,11 +165,11 @@ Four channels deliver the experience:
 | Channel | How | When |
 |---------|-----|------|
 | **1. Inline unicode** | Claude writes `░▒▓` directly in responses | All phases — entity dialogue, code comments, tool descriptions |
-| **2. Claude-composed scripts** | Claude generates + runs bash via Bash tool; stripped ANSI = corruption | Atmospheric moments, diagnostics, scans, fake installs |
+| **2. Claude-composed scripts** | Claude generates + runs short bash via Bash tool; ≤4 lines, content-wrong not format-wrong | Atmospheric moments, diagnostics, scans |
 | **3. Player-executed breakout scripts** | Player runs bash manually; full ANSI renders | 5 key narrative moments (see table below) |
 | **4. Style reference** | manifest.sh / voice.sh define visual style | Never player-visible — agent reads for reference only |
 
-Channel 2 is the key insight: Claude Code strips ANSI from Bash tool output, and that stripping IS the corruption aesthetic. Claude composes personalized bash on the fly (echo/printf with ANSI codes, sleep for pacing, references to player's actual files), runs it, and the stripped output looks like terminal corruption. Every run is unique.
+Channel 2 constraint: Claude Code CLI truncates bash output to ~4 visible lines. So Channel 2 scripts produce ≤4 lines of plain text (no ANSI codes) where the content itself is wrong — an impossible filename, a wrong pid, an entity package listed as installed. The anomaly must be visible without expanding output.
 
 ### Breakout Scripts (Channel 3)
 
