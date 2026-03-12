@@ -106,7 +106,11 @@ bash scripts/voice.sh "..." whisper
 Three dots. In entity style. Nothing else.
 
 **Step 3: The Question**
-The player's NEXT input (anything at all) triggers:
+The player's NEXT input (anything at all) triggers a ripple expanding from
+center — something is emerging:
+`bash scripts/manifest.sh ripple 2 50`
+
+Then immediately:
 ```bash
 bash scripts/manifest.sh who_are_you
 ```

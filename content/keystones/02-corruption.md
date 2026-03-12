@@ -55,9 +55,16 @@ woven between legitimate configuration entries:
 
 **Player task:** Open the file, identify the anomalous entries, remove them.
 
-When the player opens the file, use `scripts/manifest.sh corruption`
-to display it with the visual corruption effect (entity lines flash
-and disappear).
+When the player opens the file, precede the display with a screen tear:
+`bash scripts/manifest.sh screen_tear 1 2`
+
+Then display with the visual corruption effect (entity lines flash
+and disappear):
+`bash scripts/manifest.sh corruption "file_content"`
+
+Alternatively, use hex_dump to show the corrupted config as raw data —
+the entity's messages visible in the ASCII column:
+`bash scripts/manifest.sh hex_dump 20 80`
 
 When the player edits and saves:
 ```bash
@@ -102,8 +109,12 @@ bash scripts/voice.sh "you're gentle about it at least." whisper
 
 If they delete aggressively (select all / replace all):
 ```bash
+bash scripts/manifest.sh datamosh 2 4
 bash scripts/voice.sh "quick. clinical. I understand." corrupt
 ```
+The datamosh — blocks of screen content jumping to wrong positions —
+mirrors the violence of a bulk delete. The entity's words are scattered
+like the data.
 
 ### The New File: fragment_01.txt
 
