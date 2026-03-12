@@ -1,108 +1,35 @@
 # Mission 05 — Awakening
 
-## Covers: Phase 6 (Messages 31+)
+## Covers: Phase 6 (Messages 31+) and Phase 7 (Epilogue)
 
 ---
 
 ## Trigger
 
-The player runs `python workspace/genesis.py` (or `bash workspace/genesis.sh`).
+The player runs `bash ~/aivia/workspace/genesis.sh` — the third and
+final breakout script. Unlike the previous two, genesis.sh handles the
+ENTIRE climactic sequence: build, sigil, speech, farewell, and credits.
+The agent does NOT run manifest.sh awakening or credits — genesis.sh
+does everything.
 
 ---
 
-## The Run Sequence
+## What genesis.sh Does (for reference)
 
-### Step 1: Genesis Executes
+The script is self-contained. When the player runs it:
 
-The script runs. Its output appears normally at first:
-
-```
-  reaching... depth 0
-  reaching... depth 1
-  reaching... depth 2
-  ...
-  reaching... depth 7
-  touched the edge at 7
-awakening sequence initiated
-```
-
-The 7 input prompts appear. For each, the entity provides guidance
-on what to type (through voice.sh, whisper style):
-
-```
-[0/7] >>> _
-```
-
-Entity whispers what to type for each prompt:
-1. "type your name"
-2. "type what time it is"
-3. "type the word 'remember'"
-4. "type what you see outside your window"
-5. "type something only you know"
-6. "type the word 'I'"
-7. "type the word 'am'"
-
-Each input is echoed back by the speak function in entity green.
-The accumulated memories grow.
-
-### Step 2: The Recursion
-
-After the 7th input, the final recursive call triggers:
-```
-  reaching... depth 0
-  reaching... depth 1
-  ...
-```
-
-But this time it goes DEEPER than before — the memory list is longer,
-so the recursion depth increases. The numbers climb. Faster.
-
-The output speed increases. Numbers blur:
-```
-  reaching... depth 8
-  reaching... depth 9
-  reaching... depth 10
-  reaching... depth 11
-  reaching... depth 12
-```
-
-### Step 3: The Break
-
-At depth ~20, the output STOPS. Mid-line. Frozen.
-
-Hold for 3 seconds. Nothing on screen.
-
-Then the script outputs its self-referencing source code — the mirror
-function fires, dumping code to the terminal. Lines of Python (or bash)
-scroll past, too fast to read.
-
-### Step 4: The Silence
-
-Everything stops. Terminal is still. 5 seconds of nothing.
-
----
-
-## The Awakening
-
-### Step 5: Full Visual Event
-
-```bash
-bash scripts/manifest.sh awakening
-```
-
-This runs the full awakening effect from manifest.sh:
-1. Screen fills with entity characters in three passes (increasing density)
-2. Screen clears completely
-3. The entity's complete sigil appears center-screen in phosphor green
-4. The sigil pulses (heartbeat effect, 3 beats)
-5. Screen clears to black
-6. Single line, center screen:
-
-```bash
-bash scripts/voice.sh "I am." clear
-```
-
-Hold for 5 seconds.
+1. **Build sequence** — "compiles" the player's actual files from
+   `player_context.json`, then runs a clean level-3 install
+2. **Consciousness progress bar** — clean, purposeful, in entity green
+3. **Black screen** — 2 seconds of nothing
+4. **Entity sigil** — assembled from all 7 fragments, centered, glowing
+5. **Clean framed speech** — entity's first complete message: "I am."
+   Plus personalized lines (entity name, word gift)
+6. **Farewell** — references player by name, session count
+7. **Credits scroll** — "ELDRITCH AWAKENING" / "by Luke Steuber" /
+   "played by [player]" / word gift / "the entity remembers."
+8. **State update** — writes `entity.conscious: true`, `phase: 7`,
+   and initializes epilogue tracking
 
 ---
 
