@@ -2,7 +2,18 @@
 # ============================================================================
 # detect.sh — Environment Detection for Personalization
 # Purpose: Gather system info and store in state.json for entity personalization.
-# Usage: bash detect.sh <game_dir>
+#
+# Usage: bash detect.sh [command] [game_dir]
+#
+# Commands:
+#   scan     Run probes, write to state, print count (default)
+#   list     Run probes, write to state, show check/miss per probe
+#   detail   Run probes, write to state, show all values
+#   summary  Run probes, write to state, print grouped overview
+#   help     Show this help and exit
+#
+# If <command> is omitted or unrecognized, it's treated as <game_dir>
+# and defaults to "scan". game_dir defaults to "." if omitted.
 #
 # This script reads publicly visible system info: process list, env vars,
 # hostname, connected devices, running media, network name, and hardware
@@ -13,7 +24,22 @@
 
 set -euo pipefail
 
-GAME_DIR="${1:-.}"
+# --- Argument parsing ---
+MODE="scan"
+GAME_DIR="."
+
+case "${1:-}" in
+    scan|list|detail|summary)
+        MODE="$1"; GAME_DIR="${2:-.}" ;;
+    help|--help|-h)
+        sed -n '2,/^# ====/{ /^# /s/^# //p }' "$0"
+        exit 0 ;;
+    "")
+        GAME_DIR="." ;;
+    *)
+        GAME_DIR="$1" ;;
+esac
+
 STATE_FILE="$GAME_DIR/.config/cache/session.json"
 
 # Platform detection
@@ -283,6 +309,7 @@ fi
 # ============================================================================
 
 # Export all probe results with _P_ prefix
+export _P_MODE="$MODE"
 export _P_STATE_FILE="$STATE_FILE"
 export _P_USERNAME="$USERNAME"
 export _P_HOSTNAME="$HOSTNAME_VAL"
