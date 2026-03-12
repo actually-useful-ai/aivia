@@ -10,22 +10,15 @@
     "hour": 15,
     "time_context": "afternoon",
     "locale": "en_US.UTF-8",
-    "screen_cols": 98,
-    "screen_rows": 25,
+    "screen_cols": 80,
+    "screen_rows": 24,
+    "dark_mode": false,
     "parent_process": "bash",
-    "ssh_hosts": [
-      "|1|8iunUhtwg9dzVBU0c9wKvKIyRmY=|cOb+PxH8gfu5nB9AfY4jacmAkck=",
-      "|1|Bw7hbWL+a1nYF0lVfYH+/nCUYH0=|/L91xlI1Rh+RI8YU9YQPTw4otdw=",
-      "|1|Ggb31OoBcc9Pvvf0DnZWk3VN1KE=|CF/JMV+C1dQaUv5XWo02z90MHy4=",
-      "|1|hwu1mLpLJG0SDMZ2uq7zwT79IMM=|UPG78GREwu2SaUPI8zIHADoeoqc=",
-      "|1|j3wP5tsngkl2dmuuB64vdbo+4eY=|B+aXzaRhVvx4jmnTcJzFAy3DRt0=",
-      "|1|LUHDRRVzhMHwLKqvAV56S3zoHu8=|8maHQFwlbaVlal9aSRkkCof/Wvc=",
-      "|1|MUcuKOfzM55PKhxohLmlhIt74HI=|DlEsil2qfTvte/q0mxSLaB6Q7t4=",
-      "|1|nENZSCLPhnp9C4HrCrXgtZOnFG4=|BKAs+nbgxALAZHhlFC978ZQfsrc="
-    ],
     "usb_devices": [
       "Adomax Technology Co., Ltd QEMU USB Tablet"
     ],
+    "webcam_active": false,
+    "mic_active": false,
     "git_projects": [
       "skills",
       "aivia",
@@ -46,7 +39,7 @@
       "mv",
       "python3"
     ],
-    "uptime_seconds": 5150475,
+    "uptime_seconds": 5150887,
     "timezone": "CDT",
     "timezone_full": "America/Chicago",
     "terminal_sessions": 4

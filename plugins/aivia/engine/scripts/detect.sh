@@ -633,7 +633,8 @@ with open(state_file, "w") as f:
 # --- Output ---
 
 def has_value(v):
-    return v is not None and v != "" and v != [] and v is not False
+    """True if the probe returned something (False counts — it means 'checked, not active')"""
+    return v is not None and v != "" and v != []
 
 skip_in_count = {"screen_cols", "screen_rows"}
 found = len([k for k, v in environment.items()
