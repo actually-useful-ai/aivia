@@ -24,20 +24,24 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 
 print_header() {
-    echo ""
-    printf "${CYAN}${BOLD}"
-    echo "    ┌─────────────────────────────────────────┐"
-    echo "    │                                         │"
-    echo "    │     ▄▀▄ ▀ █ █ ▀ ▄▀▄                    │"
-    echo "    │     █▀█ █ ▀▄▀ █ █▀█                    │"
-    echo "    │                                         │"
-    echo "    │     bring your code to life!             │"
-    echo "    │                                         │"
-    printf "    │     ${RESET}${DIM}v1.0.0 — Claude Code Extension${RESET}${CYAN}${BOLD}    │\n"
-    echo "    │                                         │"
-    echo "    └─────────────────────────────────────────┘"
-    printf "${RESET}"
-    echo ""
+    # Use the animated intro script
+    bash "$SCRIPT_DIR/intro.sh" fresh 2>/dev/null || {
+        # Fallback if intro.sh fails
+        echo ""
+        printf "${CYAN}${BOLD}"
+        echo "    ┌─────────────────────────────────────────┐"
+        echo "    │                                         │"
+        echo "    │     ▄▀▄ ▀ █ █ ▀ ▄▀▄                    │"
+        echo "    │     █▀█ █ ▀▄▀ █ █▀█                    │"
+        echo "    │                                         │"
+        echo "    │     bring your code to life!             │"
+        echo "    │                                         │"
+        printf "    │     ${RESET}${DIM}v1.0.0 — Claude Code Extension${RESET}${CYAN}${BOLD}    │\n"
+        echo "    │                                         │"
+        echo "    └─────────────────────────────────────────┘"
+        printf "${RESET}"
+        echo ""
+    }
 }
 
 print_progress() {
