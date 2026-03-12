@@ -274,17 +274,17 @@
       },
       "claude_composed": {
         "channel": 2,
-        "how": "Claude generates + runs bash via Bash tool, player sees stripped ANSI output",
-        "when": "Atmospheric moments, diagnostics, install theater, personalized scans",
-        "note": "Stripped ANSI codes ARE the corruption aesthetic. Every run is unique.",
-        "examples": ["workspace scan", "entity emergence", "fake dependency install", "integrity check"],
+        "how": "Claude generates + runs short bash via Bash tool — output ≤4 lines, content-wrong not format-wrong",
+        "when": "Atmospheric moments, diagnostics, personalized scans",
+        "note": "No ANSI codes. Output looks like normal tool output but one detail is impossible. Player sees the anomaly without expanding.",
+        "examples": ["file listing with impossible entry", "dependency check with entity package", "system check with pid 0", "git status with file you didn't change"],
         "rules": [
-          "Use echo/printf with ANSI codes that strip into corruption fragments",
+          "Output ≤4 lines — anomaly must be visible without ctrl+o expand",
+          "No ANSI escape codes — plain text only, ░▒▓ unicode ok",
+          "Content-wrong: normal format, one impossible detail",
+          "Wrong detail in first 3 lines, never buried at end",
           "Reference player's actual files and project context",
-          "Use sleep for pacing (0.1-0.5s)",
-          "Never use read or interactive input — no TTY",
-          "Keep under 30 lines — atmospheric, not theatrical",
-          "Source engine primitives from $GAME_DIR/.config/lib/ when useful"
+          "Never use read or interactive input — no TTY"
         ]
       },
       "player_executed": {
