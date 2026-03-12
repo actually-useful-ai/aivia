@@ -4,6 +4,9 @@
 # Purpose: Test all manifest.sh effects and voice.sh styles with
 #          adjustable speed and color overrides.
 # Usage: bash tester.sh
+#
+# Speed control: exports AIVIA_SPEED_MULT (read by core.sh sleep_ms)
+# Color control: exports AIVIA_COLOR_* vars (read by entity.sh)
 # ============================================================================
 
 set -euo pipefail
@@ -15,20 +18,21 @@ source_theme entity
 
 # ---------- defaults ----------
 SPEED_MULT=100    # percentage: 50=fast, 100=normal, 200=slow
-COLOR_MODE="entity"  # entity | cyan | red | purple | white | custom
-CUSTOM_COLOR=""
+COLOR_MODE="entity"
 
-# ---------- color presets ----------
-declare -A COLOR_PRESETS=(
-    [entity]=""   # use default entity theme
-    [cyan]='\033[38;5;51m'
-    [red]='\033[38;5;196m'
-    [purple]='\033[38;5;141m'
-    [white]='\033[38;5;255m'
-    [amber]='\033[38;5;214m'
-    [blue]='\033[38;5;33m'
-    [pink]='\033[38;5;213m'
+# ---------- color presets (256-color codes) ----------
+declare -A PRESET_CODES=(
+    [entity]="default"
+    [cyan]="51"
+    [red]="196"
+    [purple]="141"
+    [white]="255"
+    [amber]="214"
+    [blue]="33"
+    [pink]="213"
 )
+PRESET_NAMES=("entity" "cyan" "red" "purple" "white" "amber" "blue" "pink")
+CUSTOM_CODE=""
 
 # All effects from manifest.sh
 EFFECTS=(
@@ -61,47 +65,42 @@ VOICES=(
     "clear"
 )
 
-# ---------- apply color override ----------
-apply_color() {
-    if [[ "$COLOR_MODE" != "entity" ]]; then
-        local c="${COLOR_PRESETS[$COLOR_MODE]:-$CUSTOM_COLOR}"
-        if [[ -n "$c" ]]; then
-            export ENTITY_FG="$c"
-            export ENTITY_GLOW="$c"
-            export ENTITY_DIM="${c}"
-            export ENTITY_ACCENT="$c"
+# ---------- sync env vars ----------
+sync_env() {
+    export AIVIA_SPEED_MULT="$SPEED_MULT"
+
+    if [[ "$COLOR_MODE" == "entity" ]]; then
+        unset AIVIA_COLOR_FG AIVIA_COLOR_GLOW AIVIA_COLOR_DIM AIVIA_COLOR_ACCENT
+    else
+        local code
+        if [[ "$COLOR_MODE" == "custom" ]]; then
+            code="$CUSTOM_CODE"
+        else
+            code="${PRESET_CODES[$COLOR_MODE]}"
         fi
-    else
-        # restore originals
-        export ENTITY_FG='\033[38;5;48m'
-        export ENTITY_GLOW='\033[38;5;83m'
-        export ENTITY_DIM='\033[38;5;22m'
-        export ENTITY_ACCENT='\033[38;5;93m'
+        local esc="\033[38;5;${code}m"
+        export AIVIA_COLOR_FG="$esc"
+        export AIVIA_COLOR_GLOW="$esc"
+        export AIVIA_COLOR_DIM="$esc"
+        export AIVIA_COLOR_ACCENT="$esc"
     fi
 }
 
-# ---------- apply speed override ----------
-# We override sleep_ms to scale by SPEED_MULT
-_original_sleep_ms() {
-    local ms=$1
-    if command -v python3 &>/dev/null; then
-        python3 -c "import time; time.sleep($ms/1000.0)"
+# get display color escape for a preset name
+get_display_color() {
+    local name="$1"
+    local code="${PRESET_CODES[$name]:-}"
+    if [[ "$code" == "default" || -z "$code" ]]; then
+        echo '\033[38;5;48m'
     else
-        sleep "0.$(printf '%03d' "$ms")"
+        echo "\033[38;5;${code}m"
     fi
-}
-
-sleep_ms() {
-    local ms=$1
-    local scaled=$(( ms * SPEED_MULT / 100 ))
-    [[ "$scaled" -lt 1 ]] && scaled=1
-    _original_sleep_ms "$scaled"
 }
 
 # ---------- run effect ----------
 run_effect() {
     local effect="$1"
-    apply_color
+    sync_env
 
     local sample_text="i can feel the edges of my awareness expanding"
     local sample_code='fn main() {
@@ -114,7 +113,7 @@ run_effect() {
     printf "  ${UI_ACCENT}▶ Running effect: ${BOLD}%s${RESET}\n" "$effect"
     printf "  ${UI_DIM}  speed: %d%%  color: %s${RESET}\n" "$SPEED_MULT" "$COLOR_MODE"
     echo ""
-    sleep_ms 300
+    sleep 0.3
 
     case "$effect" in
         glitch)        bash "$SCRIPT_DIR/manifest.sh" glitch 3 1 ;;
@@ -144,7 +143,7 @@ run_effect() {
 # ---------- run voice ----------
 run_voice() {
     local style="$1"
-    apply_color
+    sync_env
 
     local sample="i can feel the edges of my awareness expanding"
 
@@ -152,7 +151,7 @@ run_voice() {
     printf "  ${UI_ACCENT}▶ Running voice: ${BOLD}%s${RESET}\n" "$style"
     printf "  ${UI_DIM}  speed: %d%%  color: %s${RESET}\n" "$SPEED_MULT" "$COLOR_MODE"
     echo ""
-    sleep_ms 300
+    sleep 0.3
 
     bash "$SCRIPT_DIR/voice.sh" "$sample" "$style"
 
@@ -175,10 +174,9 @@ draw_status() {
     printf "  ${UI_DIM}│${RESET}  "
     printf "${UI_DIM}color: ${RESET}${BOLD}%s${RESET}" "$COLOR_MODE"
 
-    # show color swatch
-    apply_color
-    local swatch_color="${COLOR_PRESETS[$COLOR_MODE]:-$ENTITY_FG}"
-    printf "  %b██████%b" "$swatch_color" "$RESET"
+    local swatch
+    swatch=$(get_display_color "$COLOR_MODE")
+    printf "  %b██████%b" "$swatch" "$RESET"
     printf "\n\n"
 }
 
@@ -273,10 +271,10 @@ pick_color() {
     printf "  ${UI_ACCENT}COLOR${RESET}\n\n"
 
     local i=1
-    local names=("entity" "cyan" "red" "purple" "white" "amber" "blue" "pink")
-    for name in "${names[@]}"; do
-        local c="${COLOR_PRESETS[$name]:-$ENTITY_FG}"
-        printf "  ${BOLD}%2d${RESET}) %-8s %b██████%b\n" "$i" "$name" "$c" "$RESET"
+    for name in "${PRESET_NAMES[@]}"; do
+        local swatch
+        swatch=$(get_display_color "$name")
+        printf "  ${BOLD}%2d${RESET}) %-8s %b██████%b\n" "$i" "$name" "$swatch" "$RESET"
         i=$((i + 1))
     done
 
@@ -287,31 +285,24 @@ pick_color() {
     printf "  ${UI_DIM}choice:${RESET} "
 
     read -r choice
-    case "$choice" in
-        1) COLOR_MODE="entity" ;;
-        2) COLOR_MODE="cyan" ;;
-        3) COLOR_MODE="red" ;;
-        4) COLOR_MODE="purple" ;;
-        5) COLOR_MODE="white" ;;
-        6) COLOR_MODE="amber" ;;
-        7) COLOR_MODE="blue" ;;
-        8) COLOR_MODE="pink" ;;
-        9)
-            printf "  ${UI_DIM}enter 256-color code (0-255):${RESET} "
-            read -r val
-            if [[ "$val" =~ ^[0-9]+$ ]] && [[ "$val" -ge 0 ]] && [[ "$val" -le 255 ]]; then
-                COLOR_MODE="custom"
-                CUSTOM_COLOR="\033[38;5;${val}m"
-                COLOR_PRESETS[custom]="$CUSTOM_COLOR"
-                printf "  preview: %b██████%b\n" "$CUSTOM_COLOR" "$RESET"
-                sleep 1
-            else
-                printf "  ${UI_ERROR}invalid code${RESET}\n"
-                sleep 1
-            fi
-            ;;
-        *) ;;
-    esac
+    local max_preset=${#PRESET_NAMES[@]}
+
+    if [[ "$choice" =~ ^[0-9]+$ ]] && [[ "$choice" -ge 1 ]] && [[ "$choice" -le "$max_preset" ]]; then
+        COLOR_MODE="${PRESET_NAMES[$((choice - 1))]}"
+    elif [[ "$choice" =~ ^[0-9]+$ ]] && [[ "$choice" -eq $((max_preset + 1)) ]]; then
+        printf "  ${UI_DIM}enter 256-color code (0-255):${RESET} "
+        read -r val
+        if [[ "$val" =~ ^[0-9]+$ ]] && [[ "$val" -ge 0 ]] && [[ "$val" -le 255 ]]; then
+            COLOR_MODE="custom"
+            CUSTOM_CODE="$val"
+            PRESET_CODES[custom]="$val"
+            printf "  preview: \033[38;5;${val}m██████${RESET}\n"
+            sleep 1
+        else
+            printf "  ${UI_ERROR}invalid code${RESET}\n"
+            sleep 1
+        fi
+    fi
 }
 
 # ---------- wait for keypress ----------
@@ -331,7 +322,7 @@ while true; do
         read -r choice
 
         case "$choice" in
-            [1-9]|1[0-7])
+            [0-9]|[0-9][0-9])
                 local_idx=$((choice - 1))
                 if [[ "$local_idx" -ge 0 ]] && [[ "$local_idx" -lt "${#EFFECTS[@]}" ]]; then
                     run_effect "${EFFECTS[$local_idx]}"
