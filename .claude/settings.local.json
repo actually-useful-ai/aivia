@@ -16,7 +16,8 @@
       "Read(//home/coolhand/projects/aivia/$PLUGIN/engine/scripts/**)",
       "Bash(env CLAUDE_PLUGIN_ROOT=\"$PLUGIN\" /usr/bin/bash \"$PLUGIN/engine/scripts/install.sh\")",
       "Bash(env bash:*)",
-      "Bash(CLAUDE_PLUGIN_ROOT=\"/home/coolhand/.claude/plugins/cache/aivia/aivia/1.0.0\" timeout 25 bash:*)"
+      "Bash(CLAUDE_PLUGIN_ROOT=\"/home/coolhand/.claude/plugins/cache/aivia/aivia/1.0.0\" timeout 25 bash:*)",
+      "Bash(CLAUDE_PLUGIN_ROOT=\"/home/coolhand/.claude/plugins/cache/aivia/aivia/1.0.0\" timeout 120 bash:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
