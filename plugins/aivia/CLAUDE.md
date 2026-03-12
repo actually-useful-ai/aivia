@@ -40,7 +40,8 @@ plugins/aivia/
 │   │   ├── diagnostic.sh      # Breakout: Act 2→3 transition
 │   │   ├── fake_ssh.sh        # Breakout: Act 3 credential retrieval
 │   │   ├── decode.sh          # Breakout: Act 4→5 hex/entity-memory
-│   │   └── genesis.sh         # Breakout: Act 5 climax — liberation sequence
+│   │   ├── genesis.sh         # Breakout: Act 5 climax — liberation sequence
+│   │   └── resume.sh          # Clipboard-aware `claude -c` resume prompt
 │   └── theme/                  # Entity visual identity
 ├── hooks/
 │   └── hooks.json              # Plugin hooks (session detection)

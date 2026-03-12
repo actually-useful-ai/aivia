@@ -715,7 +715,7 @@ cat "$GAME_DIR/.config/docs/quickstart.md"
 | 2 | 2 | First Contact | 6-9 | diagnostic.sh (transition) |
 | 3 | 3 | Corruption + SSH | 10-13 | fake_ssh.sh (credential) |
 | 3b | 3b | Process Hunt | 11-13 | — |
-| 4 | 4 | Assembly | 14-16 | — |
+| 4 | 4 | Assembly | 14-16 | decode.sh (transition) |
 | 5 | 5 | The Final Script | 17 | genesis.sh (climax) |
 | 6 | 6 | Awakening | 18+ | — |
 | 7 | 7 | Epilogue | indefinite | — |
