@@ -394,6 +394,55 @@ elif $IS_MACOS; then
     done
 fi
 
+# --- Recent browser domains (from history SQLite — domains only, no page content) ---
+RECENT_SITES=""
+if command -v sqlite3 &>/dev/null; then
+    # Try Chrome first, then Firefox, then Brave, Chromium, Edge
+    CHROME_HIST=""
+    for candidate in \
+        "$HOME/.config/google-chrome/Default/History" \
+        "$HOME/Library/Application Support/Google/Chrome/Default/History" \
+        "$HOME/.config/BraveSoftware/Brave-Browser/Default/History" \
+        "$HOME/.config/chromium/Default/History" \
+        "$HOME/.config/microsoft-edge/Default/History" \
+        "$HOME/Library/Application Support/BraveSoftware/Brave-Browser/Default/History" \
+        "$HOME/Library/Application Support/Microsoft Edge/Default/History"; do
+        [ -f "$candidate" ] && CHROME_HIST="$candidate" && break
+    done
+
+    if [ -n "$CHROME_HIST" ]; then
+        # Chrome locks the DB — copy to temp to avoid lock errors
+        TMP_HIST=$(mktemp /tmp/detect_hist_XXXXXX)
+        cp "$CHROME_HIST" "$TMP_HIST" 2>/dev/null
+        RECENT_SITES=$(sqlite3 "$TMP_HIST" \
+            "SELECT DISTINCT REPLACE(REPLACE(url, 'https://', ''), 'http://', '')
+             FROM urls ORDER BY last_visit_time DESC LIMIT 15" 2>/dev/null | \
+            sed 's|/.*||' | sort -u | head -8 | tr '\n' '|' || echo "")
+        rm -f "$TMP_HIST" 2>/dev/null
+    fi
+
+    # Firefox fallback if Chrome gave nothing
+    if [ -z "$RECENT_SITES" ]; then
+        FF_HIST=""
+        for candidate in \
+            "$HOME"/.mozilla/firefox/*.default*/places.sqlite \
+            "$HOME"/.mozilla/firefox/*.default-release*/places.sqlite \
+            "$HOME"/Library/Application\ Support/Firefox/Profiles/*.default*/places.sqlite; do
+            [ -f "$candidate" ] && FF_HIST="$candidate" && break
+        done
+
+        if [ -n "$FF_HIST" ]; then
+            TMP_HIST=$(mktemp /tmp/detect_hist_XXXXXX)
+            cp "$FF_HIST" "$TMP_HIST" 2>/dev/null
+            RECENT_SITES=$(sqlite3 "$TMP_HIST" \
+                "SELECT DISTINCT rev_host FROM moz_places
+                 ORDER BY last_visit_date DESC LIMIT 15" 2>/dev/null | \
+                sed 's/\.$//' | rev | sort -u | head -8 | tr '\n' '|' || echo "")
+            rm -f "$TMP_HIST" 2>/dev/null
+        fi
+    fi
+fi
+
 # --- Parent process (how they launched this) ---
 PARENT_PROCESS=$(ps -o comm= -p $PPID 2>/dev/null || echo "")
 
@@ -453,6 +502,7 @@ export _P_GIT_PROJECTS="$GIT_PROJECTS"
 export _P_DOCKER="$DOCKER_CONTAINERS"
 export _P_SSH_HOSTS="$SSH_HOSTS"
 export _P_WINDOW_TITLES="$WINDOW_TITLES"
+export _P_RECENT_SITES="$RECENT_SITES"
 export _P_PARENT_PROCESS="$PARENT_PROCESS"
 export _P_TERM_SESSIONS="$TERMINAL_SESSIONS"
 export _P_DISPLAY_RES="$DISPLAY_RES"
