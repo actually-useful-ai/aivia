@@ -1,3 +1,7 @@
+<!-- Navigation: ~/projects/aivia/CLAUDE.md -->
+<!-- Parent: ~/projects/CLAUDE.md -->
+<!-- Map: ~/CLAUDE_MAP.md -->
+
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
