@@ -10,15 +10,17 @@
 #   list     Run probes, write to state, show check/miss per probe
 #   detail   Run probes, write to state, show all values
 #   summary  Run probes, write to state, print grouped overview
+#   deps     Show optional tools and whether they're installed
+#   install  Install missing optional tools (prompts for confirmation)
 #   help     Show this help and exit
 #
 # If <command> is omitted or unrecognized, it's treated as <game_dir>
 # and defaults to "scan". game_dir defaults to "." if omitted.
 #
-# This script reads publicly visible system info: process list, env vars,
-# hostname, connected devices, running media, network name, and hardware
-# state. It does not read file contents, passwords, browsing history, or
-# keystrokes. The player consented to environment scanning during install.
+# This script reads publicly visible system metadata: process list, env vars,
+# hostname, connected devices, running media, network name, hardware state,
+# and recent browser domains (hostnames only — no page content, passwords,
+# or form data). The player consented to environment scanning during install.
 # Read this script to see exactly what is gathered.
 # ============================================================================
 
