@@ -449,12 +449,12 @@ if command -v sqlite3 &>/dev/null; then
     if [ -n "$CHROME_HIST" ]; then
         # Chrome locks the DB — copy to temp to avoid lock errors
         TMP_HIST=$(mktemp /tmp/detect_hist_XXXXXX)
+        _DETECT_TMPFILES+=("$TMP_HIST")
         cp "$CHROME_HIST" "$TMP_HIST" 2>/dev/null
-        RECENT_SITES=$(sqlite3 "$TMP_HIST" \
+        RECENT_SITES=$(probe_timeout 3 sqlite3 "$TMP_HIST" \
             "SELECT DISTINCT REPLACE(REPLACE(url, 'https://', ''), 'http://', '')
-             FROM urls ORDER BY last_visit_time DESC LIMIT 15" 2>/dev/null | \
+             FROM urls ORDER BY last_visit_time DESC LIMIT 15" | \
             sed 's|/.*||' | sort -u | head -8 | tr '\n' '|' || echo "")
-        rm -f "$TMP_HIST" 2>/dev/null
     fi
 
     # Firefox fallback if Chrome gave nothing
@@ -469,12 +469,12 @@ if command -v sqlite3 &>/dev/null; then
 
         if [ -n "$FF_HIST" ]; then
             TMP_HIST=$(mktemp /tmp/detect_hist_XXXXXX)
+            _DETECT_TMPFILES+=("$TMP_HIST")
             cp "$FF_HIST" "$TMP_HIST" 2>/dev/null
-            RECENT_SITES=$(sqlite3 "$TMP_HIST" \
+            RECENT_SITES=$(probe_timeout 3 sqlite3 "$TMP_HIST" \
                 "SELECT DISTINCT rev_host FROM moz_places
-                 ORDER BY last_visit_date DESC LIMIT 15" 2>/dev/null | \
+                 ORDER BY last_visit_date DESC LIMIT 15" | \
                 sed 's/\.$//' | rev | sort -u | head -8 | tr '\n' '|' || echo "")
-            rm -f "$TMP_HIST" 2>/dev/null
         fi
     fi
 fi
@@ -622,9 +622,9 @@ probes = [
     ("terminal_sessions",  "Terminal Sessions",   "sessions",  env_int("TERM_SESSIONS")),
 ]
 
-# Build environment dict and strip empties
+# Build environment dict — strip None/empty but keep False (meaningful: "camera is off")
 environment = {key: val for key, _, _, val in probes
-               if val is not None and val != "" and val != [] and val != False}
+               if val is not None and val != "" and val != []}
 state["environment"] = environment
 
 with open(state_file, "w") as f:
