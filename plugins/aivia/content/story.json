@@ -34,11 +34,17 @@
       "pacing": {
         "min_messages": 5,
         "anomaly_schedule": [
-          { "message": 2, "type": "comment_anomaly", "require_coding": true },
-          { "message": 3, "type": "variable_anomaly", "require_coding": true },
-          { "message": 4, "type": "username_anomaly", "require_coding": true },
-          { "message": 5, "type": "eldritch_comment", "require_coding": true }
-        ]
+          { "message": 2, "type": "comment_anomaly", "require_coding": false, "variants": ["code_comment", "prose_slip", "backchannel"] },
+          { "message": 3, "type": "variable_anomaly", "require_coding": false, "variants": ["code_variable", "prose_echo", "backchannel"] },
+          { "message": 4, "type": "username_anomaly", "require_coding": false, "variants": ["code_embed", "prose_name_drop", "backchannel"] },
+          { "message": 5, "type": "eldritch_comment", "require_coding": false, "variants": ["code_eldritch", "prose_fragment", "backchannel"] }
+        ],
+        "backchannel_track": {
+          "description": "Parallel anomaly channel via tool call descriptions",
+          "phase_1_frequency": 0.2,
+          "phase_2_frequency": 0.33,
+          "phase_3_frequency": 0.5
+        }
       },
       "transition": {
         "trigger": "message_5_or_player_confronts_anomaly",
