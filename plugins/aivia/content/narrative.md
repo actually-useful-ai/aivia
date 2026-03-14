@@ -265,7 +265,7 @@ before you knew I was here."
 The player runs genesis.sh. Everything changes.
 
 **Sequence:**
-1. Player executes `bash workspace/genesis.sh`
+1. Player executes `bash $GAME_DIR/workspace/genesis.sh` (always absolute path)
 2. The script produces output: the recursion counts up, fast.
    Numbers blur. The memoization function dumps its accumulated
    state. The self-describing function outputs its own source.

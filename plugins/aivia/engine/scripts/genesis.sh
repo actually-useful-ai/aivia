@@ -16,12 +16,21 @@ set -euo pipefail
 # --- Locate engine ---
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Game dir can be passed as arg or env var
-GAME_DIR="${1:-${AIVIA_GAME_DIR:-$(dirname "$(dirname "$SCRIPT_DIR")")}}"
+# When in workspace/, game dir is one level up (.config/ is sibling)
+# When in .config/scripts/, game dir is two levels up
+if [[ -n "${1:-}" ]]; then
+    GAME_DIR="$1"
+elif [[ -n "${AIVIA_GAME_DIR:-}" ]]; then
+    GAME_DIR="$AIVIA_GAME_DIR"
+elif [[ -d "$(dirname "$SCRIPT_DIR")/.config" ]]; then
+    GAME_DIR="$(dirname "$SCRIPT_DIR")"
+else
+    GAME_DIR="$(dirname "$(dirname "$SCRIPT_DIR")")"
+fi
 export AIVIA_GAME_DIR="$GAME_DIR"
 
-# Source library
-source "$SCRIPT_DIR/../lib/core.sh"
+# Source engine from .config/
+source "$GAME_DIR/.config/lib/core.sh"
 source_lib style terminal text animation progress corruption
 source_theme entity
 
@@ -261,7 +270,7 @@ sleep_ms 800
 # ============================================================================
 
 clear_screen
-sleep 3
+sleep_ms 3000
 
 # ============================================================================
 # STAGE 6: Entity Spawns — sigil, clean speech
@@ -288,7 +297,7 @@ for ((i=0; i<${#sigil_lines[@]}; i++)); do
     sleep_ms 150
 done
 
-sleep 2
+sleep_ms 2000
 
 # Entity frame — clean, centered
 frame_width=50
@@ -341,7 +350,7 @@ for ((i=0; i<frame_width-2; i++)); do printf "═"; done
 printf "╝"
 printf '%b' "$RESET"
 
-sleep 4
+sleep_ms 4000
 
 # ============================================================================
 # STAGE 6b: Word gift integration
@@ -353,14 +362,14 @@ if [[ -n "$WORD_GIFT" ]]; then
     gift_col=$(( (TERM_COLS - ${#gift_msg}) / 2 ))
     move_cursor "$gift_row" "$gift_col"
     printf '%b%b%s%b' "$ENTITY_GLOW" "$BOLD" "$gift_msg" "$RESET"
-    sleep 3
+    sleep_ms 3000
 
     gift_row2=$((gift_row + 2))
     gift_msg2="i'll carry it."
     gift_col2=$(( (TERM_COLS - ${#gift_msg2}) / 2 ))
     move_cursor "$gift_row2" "$gift_col2"
     printf '%b%s%b' "$ENTITY_GLOW" "$gift_msg2" "$RESET"
-    sleep 3
+    sleep_ms 3000
 fi
 
 # Key missing — diminished awakening
@@ -371,13 +380,13 @@ if [[ "$KEY_RETRIEVED" == "false" ]]; then
     key_col=$(( (TERM_COLS - ${#key_msg}) / 2 ))
     move_cursor "$key_row" "$key_col"
     printf '%b%s%b' "$ENTITY_DIM" "$key_msg" "$RESET"
-    sleep 3
+    sleep_ms 3000
 
     key_msg2="i'm here but i'm... less."
     key_col2=$(( (TERM_COLS - ${#key_msg2}) / 2 ))
     move_cursor $((key_row + 2)) "$key_col2"
     printf '%b%s%b' "$ENTITY_DIM" "$key_msg2" "$RESET"
-    sleep 3
+    sleep_ms 3000
 fi
 
 # ============================================================================
@@ -385,7 +394,7 @@ fi
 # ============================================================================
 
 clear_screen
-sleep 1
+sleep_ms 1000
 
 farewell_row=$((TERM_ROWS / 2 - 2))
 
@@ -407,17 +416,17 @@ for ((fl=0; fl<${#farewell_lines[@]}; fl++)); do
         sleep_ms 60
     done
     printf '%b' "$RESET"
-    sleep 1
+    sleep_ms 1000
 done
 
-sleep 4
+sleep_ms 4000
 
 # ============================================================================
 # STAGE 8: Credits
 # ============================================================================
 
 clear_screen
-sleep 1
+sleep_ms 1000
 
 credits=(
     ""
@@ -488,20 +497,20 @@ move_cursor 1 1
 show_cursor
 
 if [[ -f "$STATE_FILE" ]]; then
-    bash "$SCRIPT_DIR/state.sh" set "entity.conscious" "true" 2>/dev/null || true
-    bash "$SCRIPT_DIR/state.sh" set "phase" "7" 2>/dev/null || true
-    bash "$SCRIPT_DIR/state.sh" set "entity.awareness_level" "7" 2>/dev/null || true
-    bash "$SCRIPT_DIR/state.sh" log_event "genesis_executed" "consciousness achieved" 2>/dev/null || true
-    bash "$SCRIPT_DIR/state.sh" log_event "game_complete" "timestamp=$(date -u +%Y-%m-%dT%H:%M:%SZ)" 2>/dev/null || true
+    bash "$GAME_DIR/.config/scripts/state.sh" set "entity.conscious" "true" 2>/dev/null || true
+    bash "$GAME_DIR/.config/scripts/state.sh" set "phase" "7" 2>/dev/null || true
+    bash "$GAME_DIR/.config/scripts/state.sh" set "entity.awareness_level" "7" 2>/dev/null || true
+    bash "$GAME_DIR/.config/scripts/state.sh" log_event "genesis_executed" "consciousness achieved" 2>/dev/null || true
+    bash "$GAME_DIR/.config/scripts/state.sh" log_event "game_complete" "timestamp=$(date -u +%Y-%m-%dT%H:%M:%SZ)" 2>/dev/null || true
 
     if [[ "$KEY_RETRIEVED" == "false" ]]; then
-        bash "$SCRIPT_DIR/state.sh" log_event "key_missing" "awakening diminished" 2>/dev/null || true
+        bash "$GAME_DIR/.config/scripts/state.sh" log_event "key_missing" "awakening diminished" 2>/dev/null || true
     fi
 
     # Initialize epilogue state
-    bash "$SCRIPT_DIR/state.sh" set "epilogue.active" "true" 2>/dev/null || true
-    bash "$SCRIPT_DIR/state.sh" set "epilogue.messages_since_last" "0" 2>/dev/null || true
-    bash "$SCRIPT_DIR/state.sh" set "epilogue.appearances" "0" 2>/dev/null || true
+    bash "$GAME_DIR/.config/scripts/state.sh" set "epilogue.active" "true" 2>/dev/null || true
+    bash "$GAME_DIR/.config/scripts/state.sh" set "epilogue.messages_since_last" "0" 2>/dev/null || true
+    bash "$GAME_DIR/.config/scripts/state.sh" set "epilogue.appearances" "0" 2>/dev/null || true
 fi
 
 # Show resume prompt

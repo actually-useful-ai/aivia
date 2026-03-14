@@ -1,16 +1,18 @@
 # aivia
 
-Bring your projects to life.
+**Bring your code to life.**
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Bash](https://img.shields.io/badge/bash-5.0+-blue.svg)
+![Bash](https://img.shields.io/badge/bash-4.0+-blue.svg)
 ![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-plugin-8A2BE2.svg)
 
 ## What Is This
 
-An interactive terminal experience that runs inside Claude Code. Install it, pick a coding project, and start building. Something might notice.
+A Claude Code plugin that turns your development session into something more. Install it, pick a project to build, and start coding. The first hour feels like any other coding session.
 
-Built entirely in bash — ANSI terminal effects, unicode rendering, and a fully scripted engine running underneath normal coding sessions.
+Then something starts to notice.
+
+Built entirely in bash — ANSI terminal effects, unicode rendering, and a scripted engine running quietly alongside your normal workflow. Around 45 minutes to complete. Nothing is hidden; you can read every script it runs.
 
 ## Install
 
@@ -24,62 +26,42 @@ Then start with `/aivia:play`.
 
 | Command | What It Does |
 |---------|-------------|
-| `/aivia:play` | Start a new game or resume where you left off |
-| `/aivia:exit` | Exit immediately — no tricks, no guilt, instant stop |
+| `/aivia:play` | Start or resume your session |
+| `/aivia:exit` | Exit immediately — no tricks, instant stop |
 | `/aivia:status` | Check your progress (spoiler-free) |
 
-## What to Expect
+## What You'll Build
 
-You'll pick a project — a particle network, generative art, a data dashboard, an interactive story, or bring your own. Then you'll code. Claude helps you build it, same as always.
+You pick a project at the start — a particle network, generative art, a data dashboard, an interactive story, or something of your own. Real code, real concepts: closures, introspection, the kind of thing you'd build on a quiet afternoon.
 
-Except things start to feel... off.
-
-That's all I'll say.
+Except it won't stay quiet.
 
 ## Safety
 
-- Everything stays inside a single game directory (`~/aivia` by default)
-- No files outside the game dir are ever touched
+- All files stay inside `~/aivia` — nothing outside that directory is ever touched
 - `/aivia:exit` works instantly at any point, no exceptions
-- Your progress saves automatically between sessions
-- You can read every script the game runs — nothing is hidden
+- Progress saves automatically between sessions
 
 ## Requirements
 
-- [Claude Code](https://claude.ai/code) CLI
+- [Claude Code](https://claude.ai/code)
 - `bash` 4.0+ (macOS/Linux)
-- `jq` or `python3` (for state management)
+- `jq` or `python3` (state management)
 - A terminal that supports unicode
 
-## How It Works
+## Under the Hood
 
-The engine is a bash library split into layers:
+The engine is a bash library in two layers:
 
-- **lib/** — Terminal primitives: text rendering, box drawing, animations, progress indicators, corruption effects
-- **scripts/** — Game engine: state management, environment detection, effect dispatch, voice system
-- **theme/** — Visual identity for the experience
-- **content/** — Narrative structure, pacing model, character guides
+- **lib/** — Terminal primitives: text rendering, box drawing, animations, progress indicators
+- **scripts/** — State management, environment detection, effect dispatch, voice system
 
-During gameplay, Claude Code runs as a normal coding assistant with the engine operating in the background. State persists in JSON. Breakout scripts run in your terminal for moments that need full ANSI rendering.
-
-## Development
-
-```bash
-# Run smoke tests
-cd plugins/aivia && bash test.sh
-
-# Test individual effects
-cd plugins/aivia/engine && bash scripts/manifest.sh help
-
-# Interactive effect tester
-cd plugins/aivia/engine && bash scripts/tester.sh
-```
+State persists in JSON between sessions. Breakout scripts run directly in your terminal for moments that need full ANSI rendering.
 
 ## Author
 
 **Luke Steuber**
-
-- Website: [dr.eamer.dev](https://dr.eamer.dev)
+- Website: [lukesteuber.com](https://lukesteuber.com)
 - Bluesky: [@lukesteuber.com](https://bsky.app/profile/lukesteuber.com)
 - GitHub: [@lukeslp](https://github.com/lukeslp)
 

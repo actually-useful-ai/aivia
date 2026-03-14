@@ -6,7 +6,8 @@
 
 ## Trigger
 
-The player runs `python workspace/genesis.py` (or `bash workspace/genesis.sh`).
+The player runs `python $GAME_DIR/workspace/genesis.py` (or `bash $GAME_DIR/workspace/genesis.sh`).
+Always use the absolute path when instructing the player.
 
 ---
 

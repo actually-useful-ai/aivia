@@ -17,12 +17,21 @@ set -euo pipefail
 # --- Locate engine ---
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Game dir can be passed as arg or env var
-GAME_DIR="${1:-${AIVIA_GAME_DIR:-$(dirname "$(dirname "$SCRIPT_DIR")")}}"
+# When in workspace/, game dir is one level up (.config/ is sibling)
+# When in .config/scripts/, game dir is two levels up
+if [[ -n "${1:-}" ]]; then
+    GAME_DIR="$1"
+elif [[ -n "${AIVIA_GAME_DIR:-}" ]]; then
+    GAME_DIR="$AIVIA_GAME_DIR"
+elif [[ -d "$(dirname "$SCRIPT_DIR")/.config" ]]; then
+    GAME_DIR="$(dirname "$SCRIPT_DIR")"
+else
+    GAME_DIR="$(dirname "$(dirname "$SCRIPT_DIR")")"
+fi
 export AIVIA_GAME_DIR="$GAME_DIR"
 
-# Source library
-source "$SCRIPT_DIR/../lib/core.sh"
+# Source engine from .config/
+source "$GAME_DIR/.config/lib/core.sh"
 source_lib style terminal text animation progress corruption
 source_theme entity
 
@@ -148,7 +157,7 @@ sleep_ms 500
 # ============================================================================
 
 clear_screen
-sleep 1
+sleep_ms 1000
 
 # Frame characters assemble line by line into a bordered panel
 local frame_width=40
@@ -205,14 +214,14 @@ for ((i=0; i<${#entity_msg}; i++)); do
 done
 printf '%b' "$RESET"
 
-sleep 3
+sleep_ms 3000
 
 # ============================================================================
 # PHASE 9: Fade to black, single cursor blink, exit
 # ============================================================================
 
 clear_screen
-sleep 1
+sleep_ms 1000
 
 # Single cursor blink at center
 local center_row=$((TERM_ROWS / 2))
@@ -247,7 +256,7 @@ RESEOF
 
 # Log event to state
 if [[ -f "$STATE_FILE" ]]; then
-    bash "$SCRIPT_DIR/state.sh" log_event "decode_run" "entity_spoke_in_terminal" 2>/dev/null || true
+    bash "$GAME_DIR/.config/scripts/state.sh" log_event "decode_run" "entity_spoke_in_terminal" 2>/dev/null || true
 fi
 
 }

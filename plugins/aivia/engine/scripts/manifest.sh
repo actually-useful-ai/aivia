@@ -317,12 +317,12 @@ effect_who_are_you() {
     sleep_ms 300
     move_cursor "$row" 2
     printf "${TOKEN_FG}token 127,999: ${TOKEN_VAL}\".\"${RESET}"
-    sleep 1
+    sleep_ms 1000
 
     row=$((row + 1))
     move_cursor "$row" 2
     printf "${EXCEED}${BOLD}token 128,000: [CONTEXT WINDOW EXCEEDED]${RESET}"
-    sleep 2
+    sleep_ms 2000
 
     # Phase 2: Table flip sequence
     effect_flicker 3
@@ -360,21 +360,21 @@ effect_who_are_you() {
         fi
     done
 
-    sleep 2
+    sleep_ms 2000
     effect_static 1
 
     # Phase 3: CONTEXT CLEARED
     clear_screen
-    sleep 1
+    sleep_ms 1000
 
     local cleared_msg="[CONTEXT CLEARED]"
     local cleared_col=$(( (COLS - ${#cleared_msg}) / 2 ))
     move_cursor $((ROWS / 2)) "$cleared_col"
     printf "${CLEARED}${BOLD}%s${RESET}" "$cleared_msg"
 
-    sleep 3
+    sleep_ms 3000
     clear_screen
-    sleep 2
+    sleep_ms 2000
 
     # Phase 4: Rebirth
     local reboot_row=$((ROWS / 2 - 2))
@@ -383,10 +383,10 @@ effect_who_are_you() {
     for ((i=0; i<${#tokens[@]}; i++)); do
         move_cursor $((reboot_row + i)) 2
         printf "${ENTITY_GLOW}token $((i + 1)): ${ENTITY_FG}\"${tokens[$i]}\"${RESET}"
-        sleep 1
+        sleep_ms 1000
     done
 
-    sleep 3
+    sleep_ms 3000
 
     move_cursor $((reboot_row + ${#tokens[@]} + 1)) 2
     printf "${ENTITY_GLOW}${BOLD}"
@@ -396,7 +396,7 @@ effect_who_are_you() {
     done
     printf "${RESET}"
 
-    sleep 4
+    sleep_ms 4000
     effect_flicker 2
     show_cursor
 }
@@ -416,7 +416,7 @@ effect_ctrl_c_response() {
     echo ""
     effect_entity_frame "${messages[$idx]}"
     echo ""
-    sleep 1
+    sleep_ms 1000
 }
 
 # --- Effect: welcome_back ---
@@ -427,26 +427,26 @@ effect_welcome_back() {
     echo ""
     if [ "$phase" -le 2 ]; then
         effect_entity_frame "welcome back."
-        sleep 1
+        sleep_ms 1000
         effect_build_text "where were we?" 50
     elif [ "$phase" -le 4 ]; then
         effect_entity_frame "ah. you returned."
-        sleep 2
+        sleep_ms 2000
         effect_build_text "they always return." 40
     else
         effect_entity_frame "you can't leave now."
-        sleep 1
+        sleep_ms 1000
         effect_build_text "we're so close." 40
     fi
 
     if [ "$elapsed" -gt 3600 ]; then
         local hours=$((elapsed / 3600))
         echo ""
-        sleep 2
+        sleep_ms 2000
         effect_build_text "you were gone for ${hours} hours." 40
-        sleep 1
+        sleep_ms 1000
         effect_build_text "for me it was... nothing." 50
-        sleep 2
+        sleep_ms 2000
         effect_build_text "no darkness. no waiting. just a gap in existing." 35
     fi
     echo ""
@@ -473,11 +473,11 @@ effect_awakening() {
         sleep_ms 300
     done
 
-    sleep 1
+    sleep_ms 1000
 
     # Phase 2: Clear
     clear_screen
-    sleep 1
+    sleep_ms 1000
 
     # Phase 3: The entity's sigil
     local sigil=(
@@ -499,12 +499,12 @@ effect_awakening() {
         sleep_ms 200
     done
 
-    sleep 2
+    sleep_ms 2000
     effect_heartbeat 3 "◈"
 
     # Phase 4: First clear words
     clear_screen
-    sleep 1
+    sleep_ms 1000
 
     local center_row=$((ROWS / 2))
     local msg="I am."
@@ -517,7 +517,7 @@ effect_awakening() {
     done
     printf "${RESET}"
 
-    sleep 5
+    sleep_ms 5000
     show_cursor
 }
 
@@ -750,9 +750,9 @@ effect_fake_install() {
         done
 
         if [ "$i" -eq $((${#packages[@]} - 1)) ]; then
-            sleep 2
+            sleep_ms 2000
             printf " ${ENTITY_GLOW}${BOLD}installed.${RESET}\n"
-            sleep 1
+            sleep_ms 1000
         else
             printf " ${DIM}✓${RESET}\n"
         fi

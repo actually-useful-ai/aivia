@@ -185,7 +185,7 @@ effect_afterimage() {
     # Phase 1: Bright flash
     move_cursor "$row" "$col"
     printf "${ENTITY_GLOW}${BOLD}%s${RESET}" "$text"
-    sleep 1
+    sleep_ms 1000
 
     # Phase 2: Clear
     move_cursor "$row" "$col"
@@ -291,7 +291,7 @@ effect_typewriter_rewind() {
             printf "${ENTITY_DIM}%s${RESET}" "${replacement:$i:1}"
             sleep_ms $((type_speed / 2))
         done
-        sleep 1
+        sleep_ms 1000
         # Clean replacement
         move_cursor "$row" "$rep_col"
         printf "%*s" "${#replacement}" ""

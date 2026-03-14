@@ -20,9 +20,15 @@ readonly AIVIA_LIB_DIR="$_AIVIA_LIB_DIR"
 readonly AIVIA_ROOT_DIR="$(dirname "$AIVIA_LIB_DIR")"
 
 # --- Terminal dimensions ---
+# Safe for non-TTY environments (piped, CI, headless)
 _aivia_refresh_dimensions() {
-    TERM_COLS=$(tput cols 2>/dev/null || echo 80)
-    TERM_ROWS=$(tput lines 2>/dev/null || echo 24)
+    if [ -t 1 ]; then
+        TERM_COLS=$(tput cols 2>/dev/null || echo 80)
+        TERM_ROWS=$(tput lines 2>/dev/null || echo 24)
+    else
+        TERM_COLS=${COLUMNS:-80}
+        TERM_ROWS=${LINES:-24}
+    fi
 }
 _aivia_refresh_dimensions
 

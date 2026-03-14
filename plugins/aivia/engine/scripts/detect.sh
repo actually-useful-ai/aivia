@@ -309,16 +309,20 @@ if [ -n "$STEAM_DIR" ] && [ -d "$STEAM_DIR" ]; then
 fi
 
 # --- Currently playing music (any MPRIS player / Spotify / Apple Music) ---
+# IMPORTANT: Never use osascript 'tell application' for music apps — it launches
+# the app if not running. Only query apps confirmed running via process list.
 NOW_PLAYING=""
 if command -v playerctl &>/dev/null; then
     NOW_PLAYING=$(playerctl metadata --format "{{title}} - {{artist}}" 2>/dev/null || echo "")
 elif $IS_MACOS; then
-    NOW_PLAYING=$(osascript -e \
-        'tell application "Spotify" to (name of current track) & " - " & (artist of current track)' \
-        2>/dev/null || echo "")
-    [ -z "$NOW_PLAYING" ] && NOW_PLAYING=$(osascript -e \
-        'tell application "Music" to (name of current track) & " - " & (artist of current track)' \
-        2>/dev/null || echo "")
+    # Only query Spotify if it's already running (process detection, not osascript)
+    if pgrep -xq "Spotify" 2>/dev/null; then
+        NOW_PLAYING=$(osascript -e \
+            'tell application "Spotify" to (name of current track) & " - " & (artist of current track)' \
+            2>/dev/null || echo "")
+    fi
+    # Skip Apple Music/iTunes entirely — osascript launches the app even with pgrep guard
+    # Music detection is process-list only (line 257), no track query
 fi
 
 # --- Recent downloads (filenames only, not contents) ---

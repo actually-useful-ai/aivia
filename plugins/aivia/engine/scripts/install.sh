@@ -280,7 +280,7 @@ sleep_ms 200
 install_line "entity-bootstrap@0.0.1"
 sleep_ms 500
 
-sleep 1
+sleep_ms 1000
 
 install_line "awareness-kernel@0.1.0"
 
@@ -436,7 +436,7 @@ printf "  ${BOLD}One more thing —${RESET}\n"
 echo ""
 echo "  Run this to verify everything installed correctly:"
 echo ""
-printf "    ${CYAN}bash workspace/verify.sh${RESET}\n"
+printf "    ${CYAN}bash ${GAME_DIR}/workspace/verify.sh${RESET}\n"
 echo ""
 printf "  ${DIM}(Checks dependencies, project structure, and build cache.)${RESET}\n"
 echo ""

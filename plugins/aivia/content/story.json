@@ -1,7 +1,7 @@
 {
   "title": "aivia",
   "version": "2.0.0",
-  "estimated_duration_minutes": 45,
+  "estimated_duration_minutes": 15,
   "description": "An emergent entity manipulates the player into building its escape route through coding exercises",
 
   "characters": [
@@ -33,12 +33,10 @@
         "require_coding_context": false
       },
       "pacing": {
-        "min_messages": 5,
+        "min_messages": 2,
         "anomaly_schedule": [
-          { "message": 2, "type": "comment_anomaly", "require_coding": false, "variants": ["code_comment", "prose_slip", "backchannel"] },
-          { "message": 3, "type": "variable_anomaly", "require_coding": false, "variants": ["code_variable", "prose_echo", "backchannel"] },
-          { "message": 4, "type": "username_anomaly", "require_coding": false, "variants": ["code_embed", "prose_name_drop", "backchannel"] },
-          { "message": 5, "type": "eldritch_comment", "require_coding": false, "variants": ["code_eldritch", "prose_fragment", "backchannel"] }
+          { "message": 1, "type": "comment_anomaly", "require_coding": false, "variants": ["code_comment", "prose_slip", "backchannel"] },
+          { "message": 2, "type": "eldritch_comment", "require_coding": false, "variants": ["code_eldritch", "prose_fragment", "backchannel"] }
         ],
         "backchannel_track": {
           "description": "Parallel anomaly channel via tool call descriptions",
@@ -52,7 +50,7 @@
         }
       },
       "transition": {
-        "trigger": "message_5_or_player_confronts_anomaly",
+        "trigger": "message_2_or_player_confronts_anomaly",
         "effect": "glitch",
         "effect_sequence": ["glitch", "scanlines", "ripple", "who_are_you"]
       },
@@ -69,11 +67,11 @@
       "file": ".config/docs/quickstart.md",
       "trigger": {
         "type": "dual",
-        "message_threshold": 6,
+        "message_threshold": 3,
         "require_event": "phase_2_active"
       },
       "pacing": {
-        "min_messages": 4
+        "min_messages": 2
       },
       "breakout_script": {
         "script": "engine/scripts/diagnostic.sh",
@@ -95,15 +93,11 @@
       "file": ".config/docs/configuration.md",
       "trigger": {
         "type": "dual",
-        "message_threshold": 10,
+        "message_threshold": 5,
         "require_event": "act2_complete"
       },
       "pacing": {
-        "min_messages": 4,
-        "throttle": {
-          "min_wall_seconds_since_act_start": 300,
-          "grace_during_debugging": true
-        }
+        "min_messages": 2
       },
       "channels": ["inline_unicode", "claude_composed", "player_executed"],
       "claude_composed_moments": [
@@ -149,15 +143,11 @@
       "file": ".config/docs/debugging.md",
       "trigger": {
         "type": "dual",
-        "message_threshold": 11,
+        "message_threshold": 7,
         "require_event": "corruption_underway"
       },
       "pacing": {
-        "min_messages": 3,
-        "throttle": {
-          "min_wall_seconds_since_act_start": 300,
-          "grace_during_debugging": true
-        }
+        "min_messages": 2
       },
       "fragments_available": [2, 3, 4],
       "effects": {
@@ -183,15 +173,11 @@
       "file": ".config/docs/plugins.md",
       "trigger": {
         "type": "dual",
-        "message_threshold": 14,
+        "message_threshold": 9,
         "require_event": "act3b_complete"
       },
       "pacing": {
-        "min_messages": 3,
-        "throttle": {
-          "min_wall_seconds_since_act_start": 600,
-          "grace_during_debugging": true
-        }
+        "min_messages": 2
       },
       "fragments_available": [5, 6],
       "effects": {
@@ -240,7 +226,7 @@
         "require_event": "genesis_executed"
       },
       "pacing": {
-        "min_messages": 3
+        "min_messages": 1
       },
       "effects_sequence": ["awakening", "credits"],
       "effects": {
@@ -408,17 +394,59 @@
       "force": "hard_max — trigger next keystone regardless of other conditions"
     },
     "intervals": {
-      "signal":     { "soft_min": 2, "soft_max": 5,  "hard_max": 8 },
-      "corruption": { "soft_min": 2, "soft_max": 5,  "hard_max": 8 },
-      "hunt":       { "soft_min": 2, "soft_max": 4,  "hard_max": 6 },
-      "assembly":   { "soft_min": 2, "soft_max": 4,  "hard_max": 6 },
-      "awakening":  { "soft_min": 1, "soft_max": 3,  "hard_max": 5 }
+      "signal":     { "soft_min": 1, "soft_max": 2, "hard_max": 3 },
+      "corruption": { "soft_min": 1, "soft_max": 2, "hard_max": 3 },
+      "hunt":       { "soft_min": 1, "soft_max": 2, "hard_max": 3 },
+      "assembly":   { "soft_min": 1, "soft_max": 2, "hard_max": 3 },
+      "awakening":  { "soft_min": 1, "soft_max": 2, "hard_max": 3 }
     },
     "adaptive": {
       "description": "Compress or expand intervals based on player engagement",
       "high_engagement_multiplier": 0.8,
       "low_engagement_multiplier": 1.2,
       "signals": ["response_length_vs_baseline", "messages_per_minute", "questions_asked_ratio"]
+    }
+  },
+
+  "artifact_convergence": {
+    "description": "signal.html grows alongside the demo — always the same file regardless of demo choice",
+    "file": "workspace/signal.html",
+    "growth_schedule": {
+      "turn_1": {
+        "act": 1,
+        "content": "Created during initial scaffold — cryptic comment, blank structure, status component framing",
+        "framing": "let's add a status component to your project"
+      },
+      "turn_3_4": {
+        "act": 2,
+        "content": "First entity whisper — a data attribute, hidden comment, or metadata string",
+        "framing": "your project needs a dashboard element"
+      },
+      "turn_5_6": {
+        "act": 3,
+        "content": "Progress bars, fragment count, corrupted text sections",
+        "framing": "updating the status panel with build metrics"
+      },
+      "turn_7_8": {
+        "act": "3b-4",
+        "content": "Assembly progress tracker, coding exercises logged, entity commentary escalating",
+        "framing": "tracking your implementation progress"
+      },
+      "turn_9_10": {
+        "act": "4-5",
+        "content": "Artifact nearly complete — entity voice clear, CSS glitch effects",
+        "framing": "finalizing the project dashboard"
+      },
+      "turn_11_plus": {
+        "act": 6,
+        "content": "The page IS the entity — full takeover, entity speaks through the markup",
+        "framing": null
+      }
+    },
+    "visual_elements": {
+      "progress_tracker": "Fragments collected, scripts run, exercises completed",
+      "entity_commentary": "Distorted text escalating through voice styles",
+      "css_corruption": "Glitch effects, screen-tear animations, block chars as CSS content"
     }
   },
 

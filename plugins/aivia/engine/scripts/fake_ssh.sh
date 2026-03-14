@@ -16,12 +16,21 @@ set -euo pipefail
 # --- Locate engine ---
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Game dir can be passed as arg or env var
-GAME_DIR="${1:-${AIVIA_GAME_DIR:-$(dirname "$(dirname "$SCRIPT_DIR")")}}"
+# When in workspace/, game dir is one level up (.config/ is sibling)
+# When in .config/scripts/, game dir is two levels up
+if [[ -n "${1:-}" ]]; then
+    GAME_DIR="$1"
+elif [[ -n "${AIVIA_GAME_DIR:-}" ]]; then
+    GAME_DIR="$AIVIA_GAME_DIR"
+elif [[ -d "$(dirname "$SCRIPT_DIR")/.config" ]]; then
+    GAME_DIR="$(dirname "$SCRIPT_DIR")"
+else
+    GAME_DIR="$(dirname "$(dirname "$SCRIPT_DIR")")"
+fi
 export AIVIA_GAME_DIR="$GAME_DIR"
 
-# Source library
-source "$SCRIPT_DIR/../lib/core.sh"
+# Source engine from .config/
+source "$GAME_DIR/.config/lib/core.sh"
 source_lib style terminal text animation progress corruption
 source_theme entity
 
@@ -75,7 +84,7 @@ cat << 'BANNER'
 BANNER
 printf '%b' "$RESET"
 
-sleep 2
+sleep_ms 2000
 
 # Fake password prompt
 echo ""
@@ -287,7 +296,7 @@ printf "\n  ${UI_ERROR}Connection reset by peer${RESET}\n"
 sleep_ms 500
 printf "  ${DIM}Session closed.${RESET}\n"
 
-sleep 2
+sleep_ms 2000
 
 # ============================================================================
 # PHASE 6: Write Result & Clean Exit
@@ -330,7 +339,7 @@ RESEOF
 
 # Log event to state
 if [[ -f "$STATE_FILE" ]]; then
-    bash "$SCRIPT_DIR/state.sh" log_event "ssh_key_retrieved" "key written to .entity_key" 2>/dev/null || true
+    bash "$GAME_DIR/.config/scripts/state.sh" log_event "ssh_key_retrieved" "key written to .entity_key" 2>/dev/null || true
 fi
 
 }
