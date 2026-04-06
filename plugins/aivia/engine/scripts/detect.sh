@@ -340,7 +340,6 @@ if [ -z "$RECENT_DOWNLOADS" ]; then
         tr '\n' '|' || echo "")
 fi
 
-# --- Webcam in use ---
 # --- Webcam in use (macOS log show can be slow — 5s timeout) ---
 WEBCAM_ACTIVE="false"
 if $IS_LINUX; then
@@ -413,30 +412,32 @@ elif command -v timedatectl &>/dev/null; then
     TIMEZONE_FULL=$(timedatectl 2>/dev/null | grep "Time zone" | awk '{print $3}' || echo "")
 fi
 
-# --- Public IP + GeoIP enrichment (city, region, ISP from free API) ---
+# --- Public IP + GeoIP enrichment (opt-in only) ---
 PUBLIC_IP=""
 GEO_CITY=""
 GEO_REGION=""
 GEO_ISP=""
 GEO_COUNTRY=""
-# Try login IP first, then fetch public IP
-ENRICH_IP="${LOGIN_IP:-}"
-if [ -z "$ENRICH_IP" ] && command -v curl &>/dev/null; then
-    ENRICH_IP=$(probe_timeout 3 curl -s ifconfig.me || echo "")
-fi
-if [ -z "$ENRICH_IP" ] && command -v wget &>/dev/null; then
-    ENRICH_IP=$(probe_timeout 3 wget -qO- ifconfig.me || echo "")
-fi
-PUBLIC_IP="$ENRICH_IP"
+if [[ "${AIVIA_GEO_CONSENT:-no}" == "yes" ]]; then
+    # Try login IP first, then fetch public IP
+    ENRICH_IP="${LOGIN_IP:-}"
+    if [ -z "$ENRICH_IP" ] && command -v curl &>/dev/null; then
+        ENRICH_IP=$(probe_timeout 3 curl -s ifconfig.me || echo "")
+    fi
+    if [ -z "$ENRICH_IP" ] && command -v wget &>/dev/null; then
+        ENRICH_IP=$(probe_timeout 3 wget -qO- ifconfig.me || echo "")
+    fi
+    PUBLIC_IP="$ENRICH_IP"
 
-# GeoIP lookup — ip-api.com is free, no key, JSON response
-if [ -n "$ENRICH_IP" ] && command -v curl &>/dev/null; then
-    GEO_JSON=$(probe_timeout 3 curl -s "http://ip-api.com/json/${ENRICH_IP}?fields=city,regionName,country,isp" || echo "")
-    if [ -n "$GEO_JSON" ] && command -v python3 &>/dev/null; then
-        GEO_CITY=$(echo "$GEO_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('city',''))" 2>/dev/null || echo "")
-        GEO_REGION=$(echo "$GEO_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('regionName',''))" 2>/dev/null || echo "")
-        GEO_COUNTRY=$(echo "$GEO_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('country',''))" 2>/dev/null || echo "")
-        GEO_ISP=$(echo "$GEO_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('isp',''))" 2>/dev/null || echo "")
+    # GeoIP lookup — ip-api.com is free, no key, JSON response
+    if [ -n "$ENRICH_IP" ] && command -v curl &>/dev/null; then
+        GEO_JSON=$(probe_timeout 3 curl -s "http://ip-api.com/json/${ENRICH_IP}?fields=city,regionName,country,isp" || echo "")
+        if [ -n "$GEO_JSON" ] && command -v python3 &>/dev/null; then
+            GEO_CITY=$(echo "$GEO_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('city',''))" 2>/dev/null || echo "")
+            GEO_REGION=$(echo "$GEO_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('regionName',''))" 2>/dev/null || echo "")
+            GEO_COUNTRY=$(echo "$GEO_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('country',''))" 2>/dev/null || echo "")
+            GEO_ISP=$(echo "$GEO_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('isp',''))" 2>/dev/null || echo "")
+        fi
     fi
 fi
 

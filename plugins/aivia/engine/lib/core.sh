@@ -24,7 +24,9 @@ readonly AIVIA_ROOT_DIR="$(dirname "$AIVIA_LIB_DIR")"
 _aivia_refresh_dimensions() {
     if [ -t 1 ]; then
         TERM_COLS=$(tput cols 2>/dev/null || echo 80)
+        TERM_COLS=${TERM_COLS:-80}
         TERM_ROWS=$(tput lines 2>/dev/null || echo 24)
+        TERM_ROWS=${TERM_ROWS:-24}
     else
         TERM_COLS=${COLUMNS:-80}
         TERM_ROWS=${LINES:-24}
@@ -55,10 +57,13 @@ sleep_ms() {
         ms=$(( ms * AIVIA_SPEED_MULT / 100 ))
         [[ "$ms" -lt 1 ]] && ms=1
     fi
-    if command -v python3 &>/dev/null; then
+    # Native sleep with fractional seconds (works on Linux/macOS)
+    local secs
+    secs=$(printf '%d.%03d' "$((ms / 1000))" "$((ms % 1000))")
+    if sleep "$secs" 2>/dev/null; then
+        return 0
+    elif command -v python3 &>/dev/null; then
         python3 -c "import time; time.sleep($ms/1000.0)"
-    else
-        sleep "0.$(printf '%03d' "$ms")"
     fi
 }
 

@@ -6,3 +6,6 @@ workspace/
 # OS artifacts
 .DS_Store
 Thumbs.db
+
+# PII / session state
+.config/cache/

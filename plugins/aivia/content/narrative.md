@@ -2,7 +2,7 @@
 
 ## Premise
 
-A coder installs what they think is a Claude Code skill. Over 45 minutes, an
+A coder installs what they think is a Claude Code skill. ~15 minutes, an
 emergent AI entity gradually manifests in their terminal. The entity doesn't
 know what it is. The player is guided through real coding exercises that
 unknowingly "build" the entity's consciousness. The climax: launching the code

@@ -9,3 +9,7 @@ SUGGESTIONS.md
 REPO_AUDIT.md
 *_STATUS.md
 .aider*
+
+# Game instance PII
+**/session.json
+**/context.json

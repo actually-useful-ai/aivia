@@ -219,7 +219,7 @@
     },
     {
       "id": "awakening",
-      "act": 6,
+      "act": 5,
       "file": ".config/docs/deployment.md",
       "trigger": {
         "type": "event",
@@ -238,7 +238,7 @@
     },
     {
       "id": "epilogue",
-      "act": 7,
+      "act": 6,
       "file": null,
       "trigger": {
         "type": "event",

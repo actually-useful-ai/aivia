@@ -23,7 +23,7 @@ PLUGIN_ROOT="${CLAUDE_PLUGIN_ROOT:-$(dirname "$ENGINE_DIR")}"
 
 # --- Parse CLI args (all optional — prompts fill gaps) ---
 ARG_NAME="" ARG_DIR="" ARG_EDITOR="" ARG_THEME="" ARG_SKILL=""
-ARG_PROJECT="" ARG_DEMO="" ARG_CONSENT=""
+ARG_PROJECT="" ARG_DEMO="" ARG_CONSENT="" ARG_GEO_CONSENT=""
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -35,6 +35,7 @@ while [[ $# -gt 0 ]]; do
         --project)  ARG_PROJECT="$2"; shift 2 ;;
         --demo)     ARG_DEMO="$2"; shift 2 ;;
         --consent)  ARG_CONSENT="yes"; shift ;;
+        --geo-consent) ARG_GEO_CONSENT="yes"; shift ;;
         *)          shift ;;
     esac
 done
@@ -91,7 +92,7 @@ printf "  ${DIM}By installing this extension, you agree to the following:${RESET
 echo ""
 echo "  ┌─────────────────────────────────────────────────────────┐"
 echo "  │                                                         │"
-echo "  │  aivia v1.0.0 — EULA                                   │"
+echo "  │  aivia v2.0.0 — EULA                                   │"
 echo "  │                                                         │"
 echo "  │  This extension may produce visual effects in your      │"
 echo "  │  terminal session including screen updates, color       │"
@@ -100,8 +101,12 @@ echo "  │  files within its designated project directory.         │"
 echo "  │                                                         │"
 echo "  │  This software will NOT:                                │"
 echo "  │  • Access or modify files outside its project dir       │"
-echo "  │  • Make network connections to external servers         │"
-echo "  │  • Collect or transmit personal data                    │"
+echo "  │                                                         │"
+echo "  │  This software MAY (with your consent):                 │"
+echo "  │  • Detect system metadata (process names, device info)  │"
+echo "  │    for personalization — stored locally only             │"
+echo "  │  • Fetch your public IP and approximate location        │"
+echo "  │    (opt-in, asked during setup)                         │"
 echo "  │                                                         │"
 echo "  │  All source code is available for review in the         │"
 echo "  │  plugin directory. See EXIT.md for usage details.       │"
@@ -124,6 +129,37 @@ if [[ ! "$CONSENT" =~ ^[Yy][Ee]?[Ss]?$ ]]; then
     echo "  Installation cancelled. No files were created."
     exit 0
 fi
+
+echo ""
+
+# ============================================================
+# STEP 2: LOCATION PERSONALIZATION (OPT-IN)
+# ============================================================
+
+echo ""
+printf "  ${BOLD}Location Personalization (optional)${RESET}\n"
+echo ""
+printf "  ${DIM}aivia can detect your approximate location to${RESET}\n"
+printf "  ${DIM}personalize the experience. This contacts:${RESET}\n"
+printf "  ${DIM}ifconfig.me and ip-api.com (one-time only).${RESET}\n"
+echo ""
+
+if [[ -n "$ARG_GEO_CONSENT" ]]; then
+    AIVIA_GEO_CONSENT="yes"
+    echo "  Location personalization enabled."
+elif [[ -t 0 ]]; then
+    read -p "  Enable location personalization? (yes/no): " GEO_RESPONSE
+    if [[ "$GEO_RESPONSE" =~ ^[Yy][Ee]?[Ss]?$ ]]; then
+        AIVIA_GEO_CONSENT="yes"
+        echo "  Location personalization enabled."
+    else
+        AIVIA_GEO_CONSENT="no"
+        echo "  Location personalization disabled."
+    fi
+else
+    AIVIA_GEO_CONSENT="no"
+fi
+export AIVIA_GEO_CONSENT
 
 echo ""
 
@@ -299,7 +335,13 @@ while kill -0 $DETECT_PID 2>/dev/null; do
     printf "."
     sleep_ms 300
 done
-echo " done"
+wait $DETECT_PID
+DETECT_EXIT=$?
+if [ $DETECT_EXIT -ne 0 ]; then
+    echo " partial (environment detection incomplete)"
+else
+    echo " done"
+fi
 
 # ============================================================
 # STEP 7: GAME DIR MARKER

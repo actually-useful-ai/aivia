@@ -156,7 +156,7 @@ run_effect() {
     printf "  ${UI_ACCENT}▶ Running effect: ${BOLD}%s${RESET}\n" "$effect"
     printf "  ${UI_DIM}  speed: %d%%  color: %s${RESET}\n" "$SPEED_MULT" "$COLOR_MODE"
     echo ""
-    sleep 0.3
+    sleep_ms 300
 
     case "$effect" in
         # --- Original ---
@@ -216,7 +216,7 @@ run_voice() {
     printf "  ${UI_ACCENT}▶ Running voice: ${BOLD}%s${RESET}\n" "$style"
     printf "  ${UI_DIM}  speed: %d%%  color: %s${RESET}\n" "$SPEED_MULT" "$COLOR_MODE"
     echo ""
-    sleep 0.3
+    sleep_ms 300
 
     bash "$SCRIPT_DIR/voice.sh" "$sample" "$style"
 
@@ -350,7 +350,7 @@ run_category() {
     for effect in "${effects[@]}"; do
         run_effect "$effect"
         printf "\n  ${UI_DIM}next effect in 2s...${RESET}\n"
-        sleep 2
+        sleep_ms 2000
     done
     wait_key
 }
@@ -410,7 +410,7 @@ pick_speed() {
                 SPEED_MULT=$val
             else
                 printf "  ${UI_ERROR}invalid, keeping %d%%${RESET}\n" "$SPEED_MULT"
-                sleep 1
+                sleep_ms 1000
             fi
             ;;
         *) ;;
@@ -449,10 +449,10 @@ pick_color() {
             CUSTOM_CODE="$val"
             PRESET_CODES[custom]="$val"
             printf "  preview: \033[38;5;${val}m██████${RESET}\n"
-            sleep 1
+            sleep_ms 1000
         else
             printf "  ${UI_ERROR}invalid code${RESET}\n"
-            sleep 1
+            sleep_ms 1000
         fi
     fi
 }
@@ -485,7 +485,7 @@ while true; do
                 for effect in "${EFFECTS[@]}"; do
                     run_effect "$effect"
                     printf "\n  ${UI_DIM}next effect in 2s...${RESET}\n"
-                    sleep 2
+                    sleep_ms 2000
                 done
                 wait_key
                 ;;
@@ -537,7 +537,7 @@ while true; do
                 for voice in "${VOICES[@]}"; do
                     run_voice "$voice"
                     printf "\n  ${UI_DIM}next voice in 2s...${RESET}\n"
-                    sleep 2
+                    sleep_ms 2000
                 done
                 wait_key
                 ;;

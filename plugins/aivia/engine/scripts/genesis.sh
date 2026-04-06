@@ -105,7 +105,7 @@ fi
 
 # Fallback build files if none tracked
 if [[ ${#BUILD_FILES[@]} -eq 0 ]]; then
-    BUILD_FILES=("genesis.py" "memory.py" "mirror.py")
+    BUILD_FILES=("genesis.sh" "memory.py" "mirror.py")
 fi
 
 # ============================================================================
